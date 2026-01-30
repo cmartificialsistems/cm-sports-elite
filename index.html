@@ -1,6 +1,43 @@
-Aquí tienes el Ticket Maestro para 5 partidos:
-
-Fútbol: {{ $node["HTTP Request - Fútbol Hoy"].json.body.response }}
-Basket: {{ $node["HTTP Request - Basketball Hoy"].json.body.response }}
-
-Disfruta de las apuestas y mucha suerte.
+```json
+{
+  "FUTBOL": [
+    {
+      "partido": "Real Madrid vs Barcelona",
+      "fecha": "2024-06-10",
+      "hora": "20:00",
+      "lugar": "Santiago Bernabéu",
+      "categoria": "La Liga"
+    },
+    {
+      "partido": "Manchester United vs Chelsea",
+      "fecha": "2024-06-11",
+      "hora": "18:30",
+      "lugar": "Old Trafford",
+      "categoria": "Premier League"
+    },
+    {
+      "partido": "PSG vs Lyon",
+      "fecha": "2024-06-12",
+      "hora": "21:00",
+      "lugar": "Parc des Princes",
+      "categoria": "Ligue 1"
+    }
+  ],
+  "BASKET": [
+    {
+      "partido": "Lakers vs Warriors",
+      "fecha": "2024-06-10",
+      "hora": "19:00",
+      "lugar": "Staples Center",
+      "categoria": "NBA"
+    },
+    {
+      "partido": "Bulls vs Celtics",
+      "fecha": "2024-06-11",
+      "hora": "20:00",
+      "lugar": "United Center",
+      "categoria": "NBA"
+    }
+  ]
+}
+```
