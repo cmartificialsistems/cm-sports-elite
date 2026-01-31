@@ -1,54 +1,65 @@
-<!DOCTYPE html> <html lang="es"> <head><meta charset="UTF-8"><title>TERMINAL ELITE</title></head> <body style="background:#000;color:gold;font-family:sans-serif;padding:50px;text-align:center;">     <h1>💎 CM SPORTS ELITE ACTIVADO</h1>     <div style="border:1px solid gold;padding:20px;border-radius:15px;margin-top:30px;">         <article class="match-card">
-    <div class="vulnerability-alert">🚨 VULNERABILIDAD: DESAJUSTE EN RENDIMIENTO OFENSIVO</div>
-    <div class="teams-row">
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Arsenal_FC.svg"></div><div class="team-name">Arsenal</div></div>
-        <div class="vs-label">VS</div>
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/c/c9/Manchester_United_FC_crest.svg"></div><div class="team-name">Manchester United</div></div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💎 CM SPORTS ELITE | TERMINAL DE INTELIGENCIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.82); --border: rgba(191, 149, 63, 0.35); --bg: #010409; }
+        body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; min-height: 100vh; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        .logo-container { margin-bottom: 30px; animation: float 4s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+        .main-logo { width: 120px; height: 120px; border-radius: 50%; border: 2px solid #bf953f; box-shadow: 0 0 30px rgba(191, 149, 63, 0.4); }
+        h1 { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 4px; text-align: center; font-size: 2.2rem; }
+        .tag-line { font-family: 'Orbitron'; color: #10b981; font-size: 0.7rem; letter-spacing: 3px; margin-top: 10px; }
+        .container { width: 100%; max-width: 850px; display: flex; flex-direction: column; gap: 20px; margin-top: 40px; }
+        /* DISEÑO DE CARDS ELEGANTES */
+        .match-card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid var(--border); border-left: 6px solid #bf953f; position: relative; overflow: hidden; }
+        .vulnerability-alert { background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 5px 15px; border-radius: 50px; font-size: 0.7rem; font-weight: 900; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
+        .teams-row { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+        .team-box { text-align: center; flex: 1; }
+        .team-shield img { width: 60px; height: 60px; object-fit: contain; }
+        .vs-label { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; opacity: 0.3; }
+        .team-name { font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 10px; color: #fff; }
+        .odds-tag { background: var(--gold); color: #000; padding: 8px 20px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <div class="logo-container"><img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/logo_vip.jpg" class="main-logo"></div>
+    <h1>CM SPORTS ELITE</h1>
+    <div class="tag-line">● SCANNER CUÁNTICO ACTIVO V11.23</div>
+    <div class="container"><article class="match-card">
+    <div class="vulnerability-header">
+        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
+        <div class="vulnerability-text">ANÁLISIS CUÁNTICO INTEGRADO</div>
     </div>
-    <div class="analysis-box"><b>ANÁLISIS CUÁNTICO:</b><p>Arsenal muestra una solidez defensiva que contrasta con una baja efectividad en la finalización, mientras que Manchester United presenta un ataque explosivo pero vulnerable a contraataques rápidos, creando una brecha táctica crucial.</p></div>
-    <div class="footer-action"><div class="pick-info"><span class="pick-text">Ambos equipos marcan</span></div><div class="odds-tag">@1.85</div></div>
-</article>
+    
+    <div class="teams-grid">
+        <div class="team">
+            <div class="shield-wrapper"><img src="[teams.home.logo]"></div>
+            <div class="name">[LOCAL]</div>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <div class="shield-wrapper"><img src="[teams.away.logo]"></div>
+            <div class="name">[VISITANTE]</div>
+        </div>
+    </div>
 
-<article class="match-card">
-    <div class="vulnerability-alert">🚨 VULNERABILIDAD: INESTABILIDAD EN MEDIOCAMPO</div>
-    <div class="teams-row">
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Chelsea_FC.svg"></div><div class="team-name">Chelsea</div></div>
-        <div class="vs-label">VS</div>
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Liverpool_FC.svg"></div><div class="team-name">Liverpool</div></div>
+    <div class="intel-box">
+        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
+        <p class="intel-paragraph">Este análisis revela patrones estadísticos inexplorados que aumentan la precisión predictiva. Se identifica una ventaja competitiva oculta en el rendimiento reciente.</p>
     </div>
-    <div class="analysis-box"><b>ANÁLISIS CUÁNTICO:</b><p>La balanza del partido se inclina en función de la recuperación de balón en el mediocampo, donde ambos equipos presentan lagunas que generan espacios para transiciones rápidas, clave para definir la presión y dinámica del encuentro.</p></div>
-    <div class="footer-action"><div class="pick-info"><span class="pick-text">Hándicap Asiático Chelsea -0.25</span></div><div class="odds-tag">@1.95</div></div>
-</article>
 
-<article class="match-card">
-    <div class="vulnerability-alert">🚨 VULNERABILIDAD: FRAGILIDAD DEFENSIVA EN JUEGO AÉREO</div>
-    <div class="teams-row">
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/e/e0/Manchester_City_FC_badge.svg"></div><div class="team-name">Manchester City</div></div>
-        <div class="vs-label">VS</div>
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Bayern_Munich_logo_%282017%29.svg"></div><div class="team-name">Bayern Munich</div></div>
+    <div class="bet-footer">
+        <div class="market-info">
+            <span class="market-label">PICK SUGERIDO</span>
+            <span class="market-name">Resultado partido</span>
+        </div>
+        <div class="odds-display">@2.15</div>
     </div>
-    <div class="analysis-box"><b>ANÁLISIS CUÁNTICO:</b><p>Ambos equipos han evidenciado puntos críticos en la defensa aérea, especialmente en centros laterales, lo cual podría aprovecharse para generar oportunidades claras de gol en situaciones estáticas del juego.</p></div>
-    <div class="footer-action"><div class="pick-info"><span class="pick-text">Más de 2.5 goles</span></div><div class="odds-tag">@2.10</div></div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-alert">🚨 VULNERABILIDAD: RITMO DE JUEGO INCONSTANTE</div>
-    <div class="teams-row">
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/0/03/Real_Madrid_CF.svg"></div><div class="team-name">Real Madrid</div></div>
-        <div class="vs-label">VS</div>
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/4/47/Juventus_FC_2017_logo.svg"></div><div class="team-name">Juventus</div></div>
-    </div>
-    <div class="analysis-box"><b>ANÁLISIS CUÁNTICO:</b><p>Real Madrid presenta fluctuaciones en su presión alta que Juventus puede explotar con transiciones rápidas; la gestión del ritmo será decisiva para controlar el tempo y el cuadro físico durante el encuentro.</p></div>
-    <div class="footer-action"><div class="pick-info"><span class="pick-text">Resultado descanso/final: Empate/Real Madrid</span></div><div class="odds-tag">@3.40</div></div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-alert">🚨 VULNERABILIDAD: EFICIENCIA DE REMATE BAJA BAJO PRESIÓN</div>
-    <div class="teams-row">
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Atletico_Madrid_2017_logo.svg"></div><div class="team-name">Atlético Madrid</div></div>
-        <div class="vs-label">VS</div>
-        <div class="team-box"><div class="team-shield"><img src="https://upload.wikimedia.org/wikipedia/en/c/c8/AS_Roma_logo_%282017%29.svg"></div><div class="team-name">AS Roma</div></div>
-    </div>
-    <div class="analysis-box"><b>ANÁLISIS CUÁNTICO:</b><p>Ambos equipos muestran una eficiencia reducida en remates bajo alta presión defensiva, lo que sugiere partidos con pocas ocasiones claras y una posible batalla táctica con predominancia defensiva.</p></div>
-    <div class="footer-action"><div class="pick-info"><span class="pick-text">Menos de 2.5 goles</span></div><div class="odds-tag">@1.70</div></div>
-</article>     </div> </body> </html>
+</article></div>
+    <div style="margin-top: 60px; opacity: 0.2; font-family: 'Orbitron'; font-size: 0.6rem; letter-spacing: 2px;">TERMINAL DE ALTO NIVEL © 2026</div>
+</body>
+</html>
