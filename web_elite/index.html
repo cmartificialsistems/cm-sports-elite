@@ -3,60 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFORME ELITE - CM SPORTS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>⚡ ELITE TERMINAL | CM SPORTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #D4AF37; --secondary: #10b981; --bg: #020617; --card-bg: rgba(15, 23, 42, 0.95); --text: #f1f5f9; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 20px; text-align: center; }
-        .container { max-width: 600px; margin: 0 auto; }
-        .match-card { background: var(--card-bg); border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(212, 175, 55, 0.3); border-left: 5px solid var(--primary); white-space: pre-wrap; line-height: 1.6; text-align: left; }
-        .teams { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: var(--primary); text-align: center; margin-bottom: 15px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding-bottom: 10px; }
-        h1 { font-family: 'Orbitron'; color: var(--primary); letter-spacing: 2px; }
+        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.8); }
+        body { background: radial-gradient(circle at top, #1e293b, #020617); color: #f1f5f9; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; text-align: center; }
+        h1 { font-family: 'Orbitron'; font-size: 2.5rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-transform: uppercase; filter: drop-shadow(0 0 10px rgba(191,149,63,0.3)); }
+        .match-card { background: var(--glass); backdrop-filter: blur(15px); border-radius: 24px; padding: 30px; margin: 20px auto; max-width: 600px; border: 1px solid rgba(191,149,63,0.2); border-left: 5px solid #bf953f; text-align: left; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .teams { font-family: 'Orbitron'; color: #fff; font-size: 1.3rem; margin-bottom: 15px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .vulnerability { background: rgba(239, 68, 68, 0.2); color: #f87171; padding: 5px 12px; border-radius: 6px; font-size: 0.7rem; font-weight: 900; display: inline-block; margin-bottom: 15px; letter-spacing: 1px; }
+        .odds { background: var(--gold); color: #000; padding: 5px 15px; border-radius: 50px; font-weight: 900; font-family: 'Orbitron'; float: right; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>CM SPORTS ELITE</h1>
-        <article class="match-card">
-    <div class="teams">🏀 Washington Wizards vs Los Angeles Lakers</div>
-    <div class="bet-details">
-        <span>Predicción: <span class="bet-value">GANA WASHINGTON WIZARDS</span></span><br>
-        <small>Análisis: Los Wizards juegan en casa y su defensa ha mejorado significativamente, mientras que los Lakers muestran inconsistencias ofensivas últimamente.</small>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="teams">🏀 Boston Celtics vs Sacramento Kings</div>
-    <div class="bet-details">
-        <span>Predicción: <span class="bet-value">GANA BOSTON CELTICS / MENOS DE 215 PUNTOS</span></span><br>
-        <small>Análisis: Celtics tienen una defensa sólida y dominan juegos de ritmo controlado frente a equipos irregulares en ataque como Sacramento.</small>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="teams">🏀 Golden State Warriors vs Detroit Pistons</div>
-    <div class="bet-details">
-        <span>Predicción: <span class="bet-value">GANA GOLDEN STATE WARRIORS</span></span><br>
-        <small>Análisis: Warriors buscan afianzar su racha ganadora, aprovechando la joven plantilla de los Pistons con falta de experiencia defensiva.</small>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="teams">🏀 Orlando Magic vs Toronto Raptors</div>
-    <div class="bet-details">
-        <span>Predicción: <span class="bet-value">GANA TORONTO RAPTORS</span></span><br>
-        <small>Análisis: Raptors llevan mejor desempeño fuera de casa y el Magic tiene dificultades ofensivas recientes.</small>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="teams">🏀 Charlotte Hornets vs San Antonio Spurs</div>
-    <div class="bet-details">
-        <span>Predicción: <span class="bet-value">GANA CHARLOTTE HORNETS</span></span><br>
-        <small>Análisis: Hornets muestran solidez en casa y San Antonio tiene una defensa vulnerable que puede ser explotada.</small>
-    </div>
-</article>
-        <div style="margin-top:40px; opacity:0.6; font-size:0.8rem;">CM SPORTS ELITE © 2026</div>
-    </div>
+    <h1>CM SPORTS ELITE</h1>
+    <div id="injector"> [EDITA AQUÍ TUS PARTIDOS] </div>
 </body>
 </html>
