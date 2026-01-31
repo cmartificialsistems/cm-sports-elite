@@ -1,196 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💎 CM SPORTS ELITE | TERMINAL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💎 CM SPORTS ELITE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.85); --border: rgba(191, 149, 63, 0.4); --bg: #010409; }
-        body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; background-image: radial-gradient(circle at 50% -20%, #1e293b 0%, transparent 60%); }
-        .logo-container { margin-bottom: 20px; animation: float 4s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
-        .main-logo { width: 130px; height: 130px; border-radius: 50%; border: 2.5px solid #bf953f; box-shadow: 0 0 40px rgba(191, 149, 63, 0.5); }
-        h1 { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-align: center; font-size: 2.5rem; margin: 10px 0; }
-        .tag-line { font-family: 'Orbitron'; color: #10b981; font-size: 0.75rem; letter-spacing: 4px; margin-bottom: 40px; text-shadow: 0 0 10px #10b98166; }
-        .container { width: 100%; max-width: 850px; display: flex; flex-direction: column; gap: 30px; }
-        /* GLISTENING BAKLAVA CARDS */
-        .match-card { background: var(--glass); backdrop-filter: blur(25px); border-radius: 30px; padding: 35px; border: 1px solid var(--border); border-left: 8px solid #bf953f; transition: 0.3s; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
-        .vulnerability-badge { color: #f87171; font-weight: 900; font-size: 0.65rem; letter-spacing: 1px; }
-        .vulnerability-text { color: #fff; font-family: 'Orbitron'; font-size: 1rem; margin-top: 5px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
-        .teams-grid { display: flex; justify-content: space-between; align-items: center; margin: 25px 0; }
-        .shield-wrapper { width: 85px; height: 85px; background: rgba(255,255,255,0.03); border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 1px solid var(--border); padding: 10px; }
-        .shield-wrapper img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); }
-        .vs-divider { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.5rem; opacity: 0.4; font-weight: 900; }
-        .intel-box { background: rgba(0,0,0,0.3); border-radius: 20px; padding: 25px; margin: 20px 0; }
-        .intel-label { color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 10px; }
-        .intel-paragraph { font-size: 1rem; color: #94a3b8; font-style: italic; line-height: 1.6; margin: 0; }
+        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b28424 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.9); --border: rgba(191,149,63,0.4); --bg: #010409; }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; background-image: radial-gradient(circle at 50% -20%, #1e293b 0%, transparent 70%); }
+        .main-logo { width: 120px; height: 120px; border-radius: 50%; border: 2.5px solid #bf953f; box-shadow: 0 0 40px rgba(191,149,63,0.5); margin-bottom: 20px; }
+        h1 { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; font-size: 2.2rem; }
+        .container { width: 100%; max-width: 800px; margin-top: 40px; display: flex; flex-direction: column; gap: 25px; }
+        /* ESTILOS EXACTOS BAKLAVA */
+        .match-card { background: var(--glass); backdrop-filter: blur(20px); border-radius: 25px; padding: 30px; border: 1px solid var(--border); border-left: 8px solid #bf953f; box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+        .vulnerability-header { color: #f87171; font-weight: 900; font-size: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px; font-family: 'Orbitron'; }
+        .teams-grid { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; }
+        .team { display: flex; flex-direction: column; align-items: center; flex: 1; gap: 10px; }
+        .team img { width: 65px; height: 65px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); border: 1px solid var(--border); border-radius: 50%; padding: 8px; background: rgba(255,255,255,0.03); }
+        .team span { font-family: 'Orbitron'; font-size: 0.8rem; color: #fff; text-align: center; }
+        .vs-divider { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.5rem; opacity: 0.3; font-weight: 900; }
+        .intel-box { background: rgba(0,0,0,0.3); border-radius: 15px; padding: 20px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.05); }
+        .intel-box b { color: #bf953f; font-family: 'Orbitron'; font-size: 0.65rem; display: block; margin-bottom: 8px; }
+        .intel-box p { font-size: 0.95rem; color: #94a3b8; font-style: italic; margin: 0; }
         .bet-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
-        .market-name { font-size: 1.4rem; font-weight: 800; color: #fff; display: block; }
-        .odds-display { background: var(--gold); color: #000; padding: 12px 25px; border-radius: 15px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(191,149,63,0.4); }
+        .market-info b { font-size: 1.3rem; color: #fff; display: block; }
+        .market-info span { font-size: 0.65rem; color: #64748b; font-weight: 700; letter-spacing: 1px; }
+        .odds-display { background: var(--gold); color: #000; padding: 8px 20px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.4rem; box-shadow: 0 10px 20px rgba(191,149,63,0.3); }
     </style>
 </head>
 <body>
-    <div class="logo-container"><img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/logo_vip.jpg" class="main-logo"></div>
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/logo_vip.jpg" class="main-logo">
     <h1>CM SPORTS ELITE</h1>
-    <div class="tag-line">● SCANNER CUÁNTICO ACTIVO V11.23</div>
     <div class="container"><article class="match-card">
-    <div class="vulnerability-header">
-        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
-        <div class="vulnerability-text">FALTA DE DATOS DE POSSESIÓN</div>
-    </div>
-    
+    <div class="vulnerability-header">🚨 BRECHA EN RENDIMIENTO DEFENSIVO LOCAL</div>
     <div class="teams-grid">
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.home.logo"></div>
-            <div class="name">LOCAL</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamA_home.png"><span>Equipo Local A</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.away.logo"></div>
-            <div class="name">VISITANTE</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamB_away.png"><span>Equipo Visitante B</span></div>
     </div>
-
     <div class="intel-box">
-        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
-        <p class="intel-paragraph">La ausencia de datos precisos sobre la posesión limita la predicción del control del partido, afectando la exactitud de apuestas de dominio.</p>
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>El equipo local muestra vulnerabilidad defensiva evidente en los últimos cinco partidos, mientras el visitante ha mejorado su eficacia ofensiva significativamente.</p>
     </div>
-
     <div class="bet-footer">
-        <div class="market-info">
-            <span class="market-label">PICK SUGERIDO</span>
-            <span class="market-name">TOTAL DE GOLES</span>
-        </div>
-        <div class="odds-display">@2.15</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Over 2.5 Goles</b></div>
+        <div class="odds-display">@1.85</div>
     </div>
 </article>
-
 <article class="match-card">
-    <div class="vulnerability-header">
-        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
-        <div class="vulnerability-text">DESAJUSTE DE TIEMPOS DE JUEGO</div>
-    </div>
-    
+    <div class="vulnerability-header">🚨 BRECHA EN EFICIENCIA DE ATAQUE VISITANTE</div>
     <div class="teams-grid">
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.home.logo"></div>
-            <div class="name">LOCAL</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamC_home.png"><span>Equipo Local C</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.away.logo"></div>
-            <div class="name">VISITANTE</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamD_away.png"><span>Equipo Visitante D</span></div>
     </div>
-
     <div class="intel-box">
-        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
-        <p class="intel-paragraph">Inconsistencias en la medición de minutos efectivos provocan incertidumbre en la dinámica del juego y volatilidad en las probabilidades.</p>
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>El visitante supera estadísticamente a su rival en tiros a puerta y conversión, lo que crea una brecha clara en oportunidades de gol durante el partido.</p>
     </div>
-
     <div class="bet-footer">
-        <div class="market-info">
-            <span class="market-label">PICK SUGERIDO</span>
-            <span class="market-name">RESULTADO FINAL</span>
-        </div>
-        <div class="odds-display">@1.75</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Resultado Visitante</b></div>
+        <div class="odds-display">@2.10</div>
     </div>
 </article>
-
 <article class="match-card">
-    <div class="vulnerability-header">
-        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
-        <div class="vulnerability-text">INCONSISTENCIA EN DATOS DE LESIONES</div>
-    </div>
-    
+    <div class="vulnerability-header">🚨 BRECHA EN REMATES AL ARCO DEL LOCAL</div>
     <div class="teams-grid">
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.home.logo"></div>
-            <div class="name">LOCAL</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamE_home.png"><span>Equipo Local E</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.away.logo"></div>
-            <div class="name">VISITANTE</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamF_away.png"><span>Equipo Visitante F</span></div>
     </div>
-
     <div class="intel-box">
-        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
-        <p class="intel-paragraph">Datos contradictorios sobre la disponibilidad de jugadores clave crean un riesgo oculto, afectando las proyecciones de desempeño del equipo.</p>
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>El local muestra limitación en generación ofensiva comparado con su rival, evidenciando una clara brecha en la creación de chances durante el juego.</p>
     </div>
-
     <div class="bet-footer">
-        <div class="market-info">
-            <span class="market-label">PICK SUGERIDO</span>
-            <span class="market-name">APUESTA HÁNDICAP</span>
-        </div>
-        <div class="odds-display">@2.40</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Under 2.5 Goles</b></div>
+        <div class="odds-display">@1.65</div>
     </div>
 </article>
-
 <article class="match-card">
-    <div class="vulnerability-header">
-        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
-        <div class="vulnerability-text">FALTA DE DATOS CONTEXTUALES DEL CLIMA</div>
-    </div>
-    
+    <div class="vulnerability-header">🚨 BRECHA EN POSESIÓN Y DOMINIO DEL JUEGO</div>
     <div class="teams-grid">
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.home.logo"></div>
-            <div class="name">LOCAL</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamG_home.png"><span>Equipo Local G</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.away.logo"></div>
-            <div class="name">VISITANTE</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamH_away.png"><span>Equipo Visitante H</span></div>
     </div>
-
     <div class="intel-box">
-        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
-        <p class="intel-paragraph">La ausencia de información meteorológica puede provocar fluctuaciones imprevistas en el rendimiento de los jugadores y el desarrollo del juego.</p>
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>El visitante domina la estadística de posesión y creación de juego, exponiendo una brecha decisiva en el control absoluto del partido.</p>
     </div>
-
     <div class="bet-footer">
-        <div class="market-info">
-            <span class="market-label">PICK SUGERIDO</span>
-            <span class="market-name">MERCADO DE GOLES</span>
-        </div>
-        <div class="odds-display">@1.95</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Empate o Visitante</b></div>
+        <div class="odds-display">@1.90</div>
     </div>
 </article>
-
 <article class="match-card">
-    <div class="vulnerability-header">
-        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
-        <div class="vulnerability-text">ANALÍTICA DE PENALES NO INCLUIDA</div>
-    </div>
-    
+    <div class="vulnerability-header">🚨 BRECHA EN EFICIENCIA DEFENSIVA GLOBAL</div>
     <div class="teams-grid">
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.home.logo"></div>
-            <div class="name">LOCAL</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamI_home.png"><span>Equipo Local I</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team">
-            <div class="shield-wrapper"><img src="teams.away.logo"></div>
-            <div class="name">VISITANTE</div>
-        </div>
+        <div class="team"><img src="https://example.com/logos/teamJ_away.png"><span>Equipo Visitante J</span></div>
     </div>
-
     <div class="intel-box">
-        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
-        <p class="intel-paragraph">La omisión de penalizaciones en las estadísticas afecta la predicción de resultado en escenarios con alta probabilidad de tiros desde el punto penal.</p>
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>Existe una brecha marcada en la defensa global local ante ataques constantes visitants, siendo vulnerable a goles tras pérdidas rápidas de balón.</p>
     </div>
-
     <div class="bet-footer">
-        <div class="market-info">
-            <span class="market-label">PICK SUGERIDO</span>
-            <span class="market-name">APUESTA SOBRE PENALIZACIONES</span>
-        </div>
-        <div class="odds-display">@3.10</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Ambos Equipos Marcan</b></div>
+        <div class="odds-display">@1.80</div>
     </div>
 </article></div>
 </body>
