@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💎 CM SPORTS ELITE | TERMINAL DE INTELIGENCIA</title>
+    <title>💎 CM SPORTS ELITE | TERMINAL</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.82); --border: rgba(191, 149, 63, 0.35); --bg: #010409; }
-        body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; min-height: 100vh; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
-        .logo-container { margin-bottom: 30px; animation: float 4s ease-in-out infinite; }
+        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.85); --border: rgba(191, 149, 63, 0.4); --bg: #010409; }
+        body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; background-image: radial-gradient(circle at 50% -20%, #1e293b 0%, transparent 60%); }
+        .logo-container { margin-bottom: 20px; animation: float 4s ease-in-out infinite; }
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
-        .main-logo { width: 120px; height: 120px; border-radius: 50%; border: 2px solid #bf953f; box-shadow: 0 0 30px rgba(191, 149, 63, 0.4); }
-        h1 { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 4px; text-align: center; font-size: 2.2rem; }
-        .tag-line { font-family: 'Orbitron'; color: #10b981; font-size: 0.7rem; letter-spacing: 3px; margin-top: 10px; }
-        .container { width: 100%; max-width: 850px; display: flex; flex-direction: column; gap: 20px; margin-top: 40px; }
-        /* DISEÑO DE CARDS ELEGANTES */
-        .match-card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid var(--border); border-left: 6px solid #bf953f; position: relative; overflow: hidden; }
-        .vulnerability-alert { background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 5px 15px; border-radius: 50px; font-size: 0.7rem; font-weight: 900; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
-        .teams-row { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
-        .team-box { text-align: center; flex: 1; }
-        .team-shield img { width: 60px; height: 60px; object-fit: contain; }
-        .vs-label { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; opacity: 0.3; }
-        .team-name { font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 10px; color: #fff; }
-        .odds-tag { background: var(--gold); color: #000; padding: 8px 20px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.2rem; }
+        .main-logo { width: 130px; height: 130px; border-radius: 50%; border: 2.5px solid #bf953f; box-shadow: 0 0 40px rgba(191, 149, 63, 0.5); }
+        h1 { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-align: center; font-size: 2.5rem; margin: 10px 0; }
+        .tag-line { font-family: 'Orbitron'; color: #10b981; font-size: 0.75rem; letter-spacing: 4px; margin-bottom: 40px; text-shadow: 0 0 10px #10b98166; }
+        .container { width: 100%; max-width: 850px; display: flex; flex-direction: column; gap: 30px; }
+        /* GLISTENING BAKLAVA CARDS */
+        .match-card { background: var(--glass); backdrop-filter: blur(25px); border-radius: 30px; padding: 35px; border: 1px solid var(--border); border-left: 8px solid #bf953f; transition: 0.3s; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+        .vulnerability-badge { color: #f87171; font-weight: 900; font-size: 0.65rem; letter-spacing: 1px; }
+        .vulnerability-text { color: #fff; font-family: 'Orbitron'; font-size: 1rem; margin-top: 5px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+        .teams-grid { display: flex; justify-content: space-between; align-items: center; margin: 25px 0; }
+        .shield-wrapper { width: 85px; height: 85px; background: rgba(255,255,255,0.03); border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 1px solid var(--border); padding: 10px; }
+        .shield-wrapper img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); }
+        .vs-divider { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.5rem; opacity: 0.4; font-weight: 900; }
+        .intel-box { background: rgba(0,0,0,0.3); border-radius: 20px; padding: 25px; margin: 20px 0; }
+        .intel-label { color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 10px; }
+        .intel-paragraph { font-size: 1rem; color: #94a3b8; font-style: italic; line-height: 1.6; margin: 0; }
+        .bet-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .market-name { font-size: 1.4rem; font-weight: 800; color: #fff; display: block; }
+        .odds-display { background: var(--gold); color: #000; padding: 12px 25px; border-radius: 15px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(191,149,63,0.4); }
     </style>
 </head>
 <body>
@@ -32,34 +37,161 @@
     <div class="container"><article class="match-card">
     <div class="vulnerability-header">
         <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
-        <div class="vulnerability-text">ANÁLISIS CUÁNTICO INTEGRADO</div>
+        <div class="vulnerability-text">FALTA DE DATOS DE POSSESIÓN</div>
     </div>
     
     <div class="teams-grid">
         <div class="team">
-            <div class="shield-wrapper"><img src="[teams.home.logo]"></div>
-            <div class="name">[LOCAL]</div>
+            <div class="shield-wrapper"><img src="teams.home.logo"></div>
+            <div class="name">LOCAL</div>
         </div>
         <div class="vs-divider">VS</div>
         <div class="team">
-            <div class="shield-wrapper"><img src="[teams.away.logo]"></div>
-            <div class="name">[VISITANTE]</div>
+            <div class="shield-wrapper"><img src="teams.away.logo"></div>
+            <div class="name">VISITANTE</div>
         </div>
     </div>
 
     <div class="intel-box">
         <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
-        <p class="intel-paragraph">Este análisis revela patrones estadísticos inexplorados que aumentan la precisión predictiva. Se identifica una ventaja competitiva oculta en el rendimiento reciente.</p>
+        <p class="intel-paragraph">La ausencia de datos precisos sobre la posesión limita la predicción del control del partido, afectando la exactitud de apuestas de dominio.</p>
     </div>
 
     <div class="bet-footer">
         <div class="market-info">
             <span class="market-label">PICK SUGERIDO</span>
-            <span class="market-name">Resultado partido</span>
+            <span class="market-name">TOTAL DE GOLES</span>
         </div>
         <div class="odds-display">@2.15</div>
     </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">
+        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
+        <div class="vulnerability-text">DESAJUSTE DE TIEMPOS DE JUEGO</div>
+    </div>
+    
+    <div class="teams-grid">
+        <div class="team">
+            <div class="shield-wrapper"><img src="teams.home.logo"></div>
+            <div class="name">LOCAL</div>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <div class="shield-wrapper"><img src="teams.away.logo"></div>
+            <div class="name">VISITANTE</div>
+        </div>
+    </div>
+
+    <div class="intel-box">
+        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
+        <p class="intel-paragraph">Inconsistencias en la medición de minutos efectivos provocan incertidumbre en la dinámica del juego y volatilidad en las probabilidades.</p>
+    </div>
+
+    <div class="bet-footer">
+        <div class="market-info">
+            <span class="market-label">PICK SUGERIDO</span>
+            <span class="market-name">RESULTADO FINAL</span>
+        </div>
+        <div class="odds-display">@1.75</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">
+        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
+        <div class="vulnerability-text">INCONSISTENCIA EN DATOS DE LESIONES</div>
+    </div>
+    
+    <div class="teams-grid">
+        <div class="team">
+            <div class="shield-wrapper"><img src="teams.home.logo"></div>
+            <div class="name">LOCAL</div>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <div class="shield-wrapper"><img src="teams.away.logo"></div>
+            <div class="name">VISITANTE</div>
+        </div>
+    </div>
+
+    <div class="intel-box">
+        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
+        <p class="intel-paragraph">Datos contradictorios sobre la disponibilidad de jugadores clave crean un riesgo oculto, afectando las proyecciones de desempeño del equipo.</p>
+    </div>
+
+    <div class="bet-footer">
+        <div class="market-info">
+            <span class="market-label">PICK SUGERIDO</span>
+            <span class="market-name">APUESTA HÁNDICAP</span>
+        </div>
+        <div class="odds-display">@2.40</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">
+        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
+        <div class="vulnerability-text">FALTA DE DATOS CONTEXTUALES DEL CLIMA</div>
+    </div>
+    
+    <div class="teams-grid">
+        <div class="team">
+            <div class="shield-wrapper"><img src="teams.home.logo"></div>
+            <div class="name">LOCAL</div>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <div class="shield-wrapper"><img src="teams.away.logo"></div>
+            <div class="name">VISITANTE</div>
+        </div>
+    </div>
+
+    <div class="intel-box">
+        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
+        <p class="intel-paragraph">La ausencia de información meteorológica puede provocar fluctuaciones imprevistas en el rendimiento de los jugadores y el desarrollo del juego.</p>
+    </div>
+
+    <div class="bet-footer">
+        <div class="market-info">
+            <span class="market-label">PICK SUGERIDO</span>
+            <span class="market-name">MERCADO DE GOLES</span>
+        </div>
+        <div class="odds-display">@1.95</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">
+        <span class="vulnerability-badge">🚨 VULNERABILIDAD DETECTADA</span>
+        <div class="vulnerability-text">ANALÍTICA DE PENALES NO INCLUIDA</div>
+    </div>
+    
+    <div class="teams-grid">
+        <div class="team">
+            <div class="shield-wrapper"><img src="teams.home.logo"></div>
+            <div class="name">LOCAL</div>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <div class="shield-wrapper"><img src="teams.away.logo"></div>
+            <div class="name">VISITANTE</div>
+        </div>
+    </div>
+
+    <div class="intel-box">
+        <div class="intel-label">ANÁLISIS CUÁNTICO:</div>
+        <p class="intel-paragraph">La omisión de penalizaciones en las estadísticas afecta la predicción de resultado en escenarios con alta probabilidad de tiros desde el punto penal.</p>
+    </div>
+
+    <div class="bet-footer">
+        <div class="market-info">
+            <span class="market-label">PICK SUGERIDO</span>
+            <span class="market-name">APUESTA SOBRE PENALIZACIONES</span>
+        </div>
+        <div class="odds-display">@3.10</div>
+    </div>
 </article></div>
-    <div style="margin-top: 60px; opacity: 0.2; font-family: 'Orbitron'; font-size: 0.6rem; letter-spacing: 2px;">TERMINAL DE ALTO NIVEL © 2026</div>
 </body>
 </html>
