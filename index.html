@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💎 CM SPORTS ELITE | TERMINAL DE INTELIGENCIA</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%);
+            --glass: rgba(15, 23, 42, 0.82);
+            --border: rgba(191, 149, 63, 0.25);
+            --bg: #010409;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(circle at 50% -20%, #1e293b 0%, transparent 60%),
+                radial-gradient(circle at 100% 100%, #171717 0%, transparent 40%);
+            color: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-family: 'Orbitron';
+            font-size: 2.8rem;
+            font-weight: 900;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            filter: drop-shadow(0 0 10px rgba(191, 149, 63, 0.3));
+        }
+
+        .tag-line {
+            font-family: 'Orbitron';
+            color: #10b981;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            margin-top: 15px;
+            opacity: 0.8;
+            animation: glow 2s infinite ease-in-out;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* CARD DESIGN V10.0 (BASED ON GLISTENING BAKLAVA) */
+        .match-card {
+            background: var(--glass);
+            backdrop-filter: blur(25px);
+            border-radius: 30px;
+            padding: 35px;
+            border: 1px solid var(--border);
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+            border-left: 6px solid #bf953f;
+            overflow: hidden;
+        }
+
+        .match-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at center, rgba(191, 149, 63, 0.1), transparent 70%);
+            pointer-events: none;
+        }
+
+        .vulnerability-alert {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 25px;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .teams-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .team-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* ESCUDOS MEJORADOS V10.0 */
+        .team-shield {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            padding: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 1.5px solid rgba(191, 149, 63, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-shield img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+        }
+
+        .vs-label {
+            font-family: 'Orbitron';
+            color: #bf953f;
+            font-weight: 900;
+            font-size: 1.4rem;
+            opacity: 0.4;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .team-name {
+            font-family: 'Orbitron';
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .analysis-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            position: relative;
+        }
+
+        .analysis-box b {
+            color: #bf953f;
+            font-family: 'Orbitron';
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .analysis-box p {
+            font-size: 1rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .footer-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pick-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pick-title {
+            font-size: 0.65rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+
+        .pick-text {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .odds-tag {
+            background: var(--gold);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 15px;
+            font-family: 'Orbitron';
+            font-weight: 900;
+            font-size: 1.3rem;
+            box-shadow: 0 10px 30px rgba(191, 149, 63, 0.4);
+        }
+
+        .footer {
+            margin-top: 100px;
+            text-align: center;
+            opacity: 0.2;
+            font-family: 'Orbitron';
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .team-shield {
+                width: 65px;
+                height: 65px;
+            }
+
+            .team-name {
+                font-size: 0.75rem;
+            }
+
+            .match-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>CM SPORTS ELITE</h1>
+        <div class="tag-line">● SCANNER CUÁNTICO ACTIVO V10.0</div>
+    </div>
+
+    <div class="container" id="injector">
+        <article class="match-card">
+    <div class="vulnerability-alert">🚨 VULNERABILIDAD: Defensa débiles ante ataques laterales</div>
+    
+    <div class="teams-row">
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team1_home.png" alt="Home">
+            </div>
+            <div class="team-name">Atlético Norte</div>
+        </div>
+        <div class="vs-label">VS</div>
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team2_away.png" alt="Away">
+            </div>
+            <div class="team-name">Sporting Este</div>
+        </div>
+    </div>
+
+    <div class="analysis-box">
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>Atlético Norte ha permitido un 35% más de goles por banda derecha en los últimos 8 partidos, mientras que Sporting Este destaca en ataques laterales con un 60% de sus goles. Esto abre la brecha para explotar vulnerabilidades defensivas específicas.</p>
+    </div>
+
+    <div class="footer-action">
+        <div class="pick-info">
+            <span class="pick-title">Sugerencia de Inversión</span>
+            <span class="pick-text">Atlético Norte +1.0 Hándicap</span>
+        </div>
+        <div class="odds-tag">@1.23</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-alert">🚨 VULNERABILIDAD: Baja eficacia en tiros de media distancia</div>
+    
+    <div class="teams-row">
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team3_home.png" alt="Home">
+            </div>
+            <div class="team-name">Riverside FC</div>
+        </div>
+        <div class="vs-label">VS</div>
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team4_away.png" alt="Away">
+            </div>
+            <div class="team-name">Mountain Rangers</div>
+        </div>
+    </div>
+
+    <div class="analysis-box">
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>Mountain Rangers ha fallado un 45% de tiros entre 16 y 23 metros en sus últimos 10 juegos, mientras Riverside FC cierra espacios en esta zona con éxito en un 70%, permitiendo convertir solo 1 gol en este rango en sus últimos 6 partidos.</p>
+    </div>
+
+    <div class="footer-action">
+        <div class="pick-info">
+            <span class="pick-title">Sugerencia de Inversión</span>
+            <span class="pick-text">Menos de 2.5 goles totales</span>
+        </div>
+        <div class="odds-tag">@1.22</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-alert">🚨 VULNERABILIDAD: Ritmo lento y baja transición ofensiva</div>
+    
+    <div class="teams-row">
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team5_home.png" alt="Home">
+            </div>
+            <div class="team-name">Capital United</div>
+        </div>
+        <div class="vs-label">VS</div>
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team6_away.png" alt="Away">
+            </div>
+            <div class="team-name">Coastal Warriors</div>
+        </div>
+    </div>
+
+    <div class="analysis-box">
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>Coastal Warriors registra sólo un 38% de eficacia en transiciones ofensivas rápidas mientras Capital United reduce el ritmo a 65 pases por minuto jugando en casa, limitando claras ocasiones de gol y manteniendo control posicional.</p>
+    </div>
+
+    <div class="footer-action">
+        <div class="pick-info">
+            <span class="pick-title">Sugerencia de Inversión</span>
+            <span class="pick-text">Capital United Menos de 3.5 Remates a Puerta</span>
+        </div>
+        <div class="odds-tag">@1.21</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-alert">🚨 VULNERABILIDAD: Dificultad para cerrar partidos en minutos finales</div>
+    
+    <div class="teams-row">
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team7_home.png" alt="Home">
+            </div>
+            <div class="team-name">Lakeside Tigers</div>
+        </div>
+        <div class="vs-label">VS</div>
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team8_away.png" alt="Away">
+            </div>
+            <div class="team-name">Hilltop Hawks</div>
+        </div>
+    </div>
+
+    <div class="analysis-box">
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>Lakeside Tigers han concedido 4 de sus últimos 6 goles en los últimos 15 minutos, mientras Hilltop Hawks ha mejorado su desempeño finalizando con 30% de goles en ese tramo, destacando en ofensiva de presión alta.</p>
+    </div>
+
+    <div class="footer-action">
+        <div class="pick-info">
+            <span class="pick-title">Sugerencia de Inversión</span>
+            <span class="pick-text">Hilltop Hawks +0.5 Hándicap</span>
+        </div>
+        <div class="odds-tag">@1.24</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-alert">🚨 VULNERABILIDAD: Baja conversión en tiros de esquina</div>
+    
+    <div class="teams-row">
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team9_home.png" alt="Home">
+            </div>
+            <div class="team-name">Greenfield Eagles</div>
+        </div>
+        <div class="vs-label">VS</div>
+        <div class="team-box">
+            <div class="team-shield">
+                <img src="https://example.com/logos/team10_away.png" alt="Away">
+            </div>
+            <div class="team-name">Silverstorm FC</div>
+        </div>
+    </div>
+
+    <div class="analysis-box">
+        <b>ANÁLISIS CUÁNTICO:</b>
+        <p>Greenfield Eagles convierte menos del 5% de sus ataques de tiros de esquina en gol, mientras que Silverstorm FC recibe solo 1 gol de esquina en sus últimos 12 encuentros, mostrando gran fortaleza defensiva en este aspecto.</p>
+    </div>
+
+    <div class="footer-action">
+        <div class="pick-info">
+            <span class="pick-title">Sugerencia de Inversión</span>
+            <span class="pick-text">Menos de 1.5 goles en tiros de esquina</span>
+        </div>
+        <div class="odds-tag">@1.20</div>
+    </div>
+</article>
+    </div>
+
+    <div class="footer">
+        ACCESO PRIVADO | TERMINAL DE ALTO NIVEL © 2026
+    </div>
+</body>
+
+</html>
