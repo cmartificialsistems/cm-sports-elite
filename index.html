@@ -3,196 +3,187 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tickets de Apuestas - Baklava</title>
+<title>Tickets de Apuestas - CM Sports Elite</title>
 <style>
   body {
-    background: #f9f5f2;
+    background: #cdbf9a; /* Baklava base */
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #4a3c31;
-    margin: 20px;
+    margin: 2rem;
+    color: #3a2f0d;
   }
   .match-card {
-    background: linear-gradient(135deg, #f0e5d8, #efe0cc);
-    border: 2px solid #bfa77a;
+    background: rgba(255 255 255 / 0.85);
+    border: 2px solid #a1885f;
     border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(139, 103, 53, 0.35);
-    margin: 24px auto;
-    max-width: 460px;
-    padding: 20px 25px;
+    box-shadow: 0 0 12px #7a6d44 inset;
+    padding: 1.2rem 1rem 1.4rem 1rem;
+    margin-bottom: 2rem;
+    max-width: 480px;
+    backdrop-filter: saturate(180%) blur(12px);
   }
   .vulnerability-header {
-    font-size: 1.12rem;
+    background: #8f6f26;
+    color: #fff1bf;
     font-weight: 700;
-    background: #dab76a;
-    color: #573f1f;
-    border-radius: 6px;
+    border-radius: 8px 8px 0 0;
+    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
     text-align: center;
-    padding: 6px 12px;
-    margin-bottom: 16px;
     letter-spacing: 0.08em;
   }
   .teams-grid {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
+    margin: 1rem 0;
   }
   .team {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
-  }
-  .team img {
-    width: 56px;
-    height: 56px;
-    object-fit: contain;
-    margin-bottom: 8px;
-    border-radius: 6px;
-    border: 1.7px solid #bfa77a;
-    background: #fffdf8;
-  }
-  .team span {
+    width: 38%;
     font-weight: 600;
     font-size: 1rem;
-    color: #5a482b;
+    gap: 0.2rem;
+    color: #5a4820;
+  }
+  .team img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #a1885f;
+    background: white;
+    padding: 0.15rem;
   }
   .vs-divider {
-    flex-shrink: 0;
+    width: 24px;
     font-weight: 700;
-    font-size: 1.2rem;
-    color: #a4814a;
-    margin: 0 10px;
-    user-select: none;
+    font-size: 0.95rem;
+    color: #7f6526;
   }
   .intel-box {
-    background: #f3e8d7;
-    border-radius: 8px;
-    padding: 14px 18px;
-    font-size: 0.91rem;
-    color: #4a3c31;
-    box-shadow: inset 0 0 12px #c6af77;
-    margin-bottom: 18px;
-    line-height: 1.3;
+    background: #f5f0db;
+    border: 1px solid #c6b97c;
+    border-radius: 0 0 8px 8px;
+    padding: 0.8rem 1rem 0.75rem 1rem;
+    font-size: 0.92rem;
+    line-height: 1.2;
+    color: #5b4a18;
   }
   .intel-box b {
     display: block;
+    margin-bottom: 0.3rem;
     font-weight: 700;
-    margin-bottom: 8px;
-    color: #634d22;
   }
   .bet-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #6a5320;
   }
   .market-info span {
+    font-weight: 500;
     font-size: 0.85rem;
-    color: #7d6a40;
     text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-  }
-  .market-info b {
-    font-size: 1.1rem;
-    color: #543f11;
-    margin-left: 8px;
+    color: #8a7543;
+    margin-right: 0.6rem;
   }
   .odds-display {
-    background: #d3b566;
-    border-radius: 24px;
-    padding: 6px 18px;
+    background: #f9ead7;
+    border: 1.5px solid #a0832f;
+    padding: 0.15rem 0.6rem;
+    border-radius: 6px;
+    color: #7c6f3a;
     font-weight: 700;
-    font-size: 1.1rem;
-    color: #3a2b08;
-    box-shadow: 0 2px 5px #b6913aaa inset;
-    user-select: none;
   }
 </style>
 </head>
 <body>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 DEBILIDAD OFENSIVA DEL VISITANTE EN EL 1ER TIEMPO</div>
+    <div class="vulnerability-header">🚨 LOCAL CON DEFENSA FRÁGIL EN EL PRIMER TIEMPO</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamA.png"><span>Atlético Granada</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/teamA.png"><span>Team A</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamB.png"><span>Levante UD</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/teamB.png"><span>Team B</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Levante ha generado menos del 40% de sus remates en el primer tiempo en últimos 10 partidos. Atlético Granada domina duelos directos con mayor intensidad ofensiva temprana.</p>
+        <p>Team A concede un promedio elevado de remates en el 1er tiempo y Team B domina sus últimos enfrentamientos directos. Esto abre espacio para corners y presión temprana.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Remates de equipo en 1er tiempo (Atlético Granada)</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>CORNERS POR EQUIPO</b></div>
         <div class="odds-display">@1.22</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 CORNERS TOTALES ALTOS POR DEFENSORAS POBRES</div>
+    <div class="vulnerability-header">🚨 VISITANTE CON DEFICIT EN CONTENCIÓN DE TRIPLES</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamC.png"><span>Real Zaragoza</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/basketHome.png"><span>Basket Home</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamD.png"><span>UD Almería</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/basketAway.png"><span>Basket Away</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Ambos equipos conceden un promedio de 6 corners por partido en últimos 10 encuentros y en sus duelos directos la media supera los 11 corners, tendencia clara al alza.</p>
+        <p>Basket Away promedia 3 triples menos anotados que Basket Home en los últimos 10, y en duelos directos la defensa de triples visitante es débil en el 1er cuarto.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Corners totales (más de 10.5)</b></div>
-        <div class="odds-display">@1.24</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-header">🚨 DÉBIL DEFENSA EN EL 1ER CUARTO DEL VISITANTE</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamE.png"><span>Barcelona Basket</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamF.png"><span>Valencia Basket</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Valencia Basket ha perdido el 80% de sus primeros cuartos en últimos 10 juegos, acumulando hándicaps negativos superiores a -6. Barcelona Basket suele dominar el primer cuarto.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Hándicap 1er cuarto (+ Barcelona Basket)</b></div>
-        <div class="odds-display">@1.21</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-header">🚨 BAJO RENDIMIENTO INDIVIDUAL EN TRIPLES DEL VISITANTE</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamG.png"><span>Unicaja Málaga</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamH.png"><span>MoraBanc Andorra</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>El jugador clave de MoraBanc tiene un 25% de acierto en triples frente a un 40% del base rival en duelos directos y últimos 10 partidos, afectando el potencial ofensivo exterior.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Triples de jugador (Unicaja Málaga)</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>TRIPLES DE JUGADOR + HÁNDICAP 1Q</b></div>
         <div class="odds-display">@1.23</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 DUROS PARTIDOS EN CASA DEL LOCAL PROMUEVEN DOBLE OPORTUNIDAD</div>
+    <div class="vulnerability-header">🚨 LOCAL CON ALTA PROBABILIDAD DE GOLEO EN REMATES A PUERTA</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamI.png"><span>Espanyol</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/footballTeamC.png"><span>Football C</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamJ.png"><span>Girona FC</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/footballTeamD.png"><span>Football D</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Girona FC solo ha ganado 1 de sus últimos 10 partidos fuera y Espanyol mantiene invicto 7 partidos como local en el historial directo. La seguridad es clave.</p>
+        <p>Football C supera al rival en remates a puerta en un 40% en sus últimos enfrentamientos, mientras Football D presenta tendencia a bajar rendimiento en defensa tras el descanso.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Gana o Empata (Espanyol)</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>REMATES A PUERTA (EQUIPO)</b></div>
+        <div class="odds-display">@1.21</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 VISITANTE EN PÉRDIDA DE FOCO EN JUEGO OFENSIVO</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://assets.cm-sports.com/logos/basketballTeamE.png"><span>Basketball E</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/basketballTeamF.png"><span>Basketball F</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Basketball F ha caído en 7 de sus últimos 10 partidos en efectividad de asistencias y rebotes combinados, mientras Basketball E domina duelos directos en el 1er cuarto.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>PLAYER PROPS ASISTENCIAS + REBOTES</b></div>
+        <div class="odds-display">@1.24</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 LOCAL PREDOMINANTE EN DOBLE OPORTUNIDAD</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://assets.cm-sports.com/logos/footballTeamG.png"><span>Football G</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/footballTeamH.png"><span>Football H</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Football G presenta una brecha de rendimiento notable ganando o empatando 8/10 últimos partidos contra Football H, que tiene dificultades para vulnerar defensas cerradas.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>GANA O EMPATA (DOBLE OPORTUNIDAD)</b></div>
         <div class="odds-display">@1.25</div>
     </div>
 </article>
