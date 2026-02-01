@@ -11,136 +11,151 @@
         .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
         .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
         .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
-        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; }
         .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
-        .team img { width: 75px; height: 75px; object-fit: contain; background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
-        .vs { color: #bf953f; font-weight: 900; font-size: 1.4rem; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
+        .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; }
+        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; font-size: 1.4rem; }
         .analysis-box { background: rgba(255,255,255,0.04); border-radius: 15px; padding: 20px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.05); }
         .analysis-box b { color: #bf953f; font-size: 0.7rem; text-transform: uppercase; }
+        .analysis-box p { font-style: italic; color: #cbd5e1; line-height: 1.6; margin-top: 5px; font-size: 0.95rem; }
         .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
-        .odds { background: var(--gold); color: #000; padding: 10px 20px; border-radius: 10px; font-weight: 900; font-size: 1.3rem; }
+        .pick span { font-size: 1.2rem; font-weight: 800; color: #fff; }
+        .odds { background: var(--gold); color: #000; padding: 10px 20px; border-radius: 10px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; }
         .disclaimer { max-width: 700px; text-align: center; color: #64748b; font-size: 0.75rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(191,149,63,0.1); }
     </style>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Elite">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
-        <!-- Match 1: Boca Juniors vs Newells Old Boys - Fútbol -->
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/451.png" alt="Boca Juniors Logo">
-                    <div>Boca Juniors</div>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/457.png" alt="Newells Old Boys Logo">
-                    <div>Newells Old Boys</div>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>Fútbol - Mercado:</b> Remates a puerta equipo (Boca Juniors) + Remates de equipo en 1er tiempo<br>
-                Gran dominio ofensivo esperado por Boca Juniors, con alta probabilidad de múltiples remates y presión intensa en la primera mitad.
-            </div>
-            <div class="footer">
-                <div></div>
-                <div class="odds">1.22</div>
-            </div>
-        </div>
 
-        <!-- Match 2: Club Queretaro vs Pachuca - Fútbol -->
+        <!-- Pick 1 - Fútbol: Club Queretaro vs Pachuca - Gana Pachuca -->
         <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/2290.png" alt="Club Queretaro Logo">
-                    <div>Club Queretaro</div>
+                    <p>Club Queretaro</p>
                 </div>
-                <div class="vs">VS</div>
+                <div class="vs">vs</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/2292.png" alt="Pachuca Logo">
-                    <div>Pachuca</div>
+                    <p>Pachuca</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Fútbol - Mercado:</b> Corners totales + Doble oportunidad Gana o Empata (Pachuca)<br>
-                Partido con muchos córners en disputa y apuesta segura a que Pachuca no pierde, cubriendo empate y victoria.
+                <b>Justificación</b>
+                <p>1. Club Queretaro muestra debilidad defensiva en corners y remates recibidos bajo presión.<br>
+                   2. Pachuca ha promediado 6+ remates a puerta en últimos 10 partidos, con alta efectividad en primer tiempo.<br>
+                   3. Pachuca domina en remates y corners, lo que les da ventaja para ganar el partido.</p>
             </div>
             <div class="footer">
-                <div></div>
-                <div class="odds">1.24</div>
+                <div class="pick"><span>Pick:</span> Gana Pachuca</div>
+                <div class="odds">1.22</div>
             </div>
         </div>
 
-        <!-- Match 3: Detroit Pistons vs Brooklyn Nets - Basket -->
+        <!-- Pick 2 - Fútbol: Once Caldas vs Jaguares - Gana o Empata Once Caldas (Doble Oportunidad) -->
         <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/140.png" alt="Detroit Pistons Logo">
-                    <div>Detroit Pistons</div>
+                    <img src="https://media.api-sports.io/football/teams/1136.png" alt="Once Caldas Logo">
+                    <p>Once Caldas</p>
                 </div>
-                <div class="vs">VS</div>
+                <div class="vs">vs</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/134.png" alt="Brooklyn Nets Logo">
-                    <div>Brooklyn Nets</div>
+                    <img src="https://media.api-sports.io/football/teams/1133.png" alt="Jaguares Logo">
+                    <p>Jaguares</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Baloncesto - Mercado:</b> Handicap (-) 1er cuarto + Puntos totales (Alta)<br>
-                Nets dominan el primer cuarto y se espera un partido con alta anotación total.
+                <b>Justificación</b>
+                <p>1. Jaguares ha mostrado dificultades para mantener la posesión y genera pocos remates a puerta.<br>
+                   2. Once Caldas mantiene balance defensivo y ofensivo, con buen rendimiento en ataque en 1er tiempo.<br>
+                   3. Con la doble oportunidad, se cubre la fortaleza local y la debilidad rival en creación de peligro.</p>
             </div>
             <div class="footer">
-                <div></div>
-                <div class="odds">1.21</div>
+                <div class="pick"><span>Pick:</span> Gana o Empata Once Caldas</div>
+                <div class="odds">1.23</div>
             </div>
         </div>
 
-        <!-- Match 4: Miami Heat vs Chicago Bulls - Basket -->
+        <!-- Pick 3 - Basket: Miami Heat vs Chicago Bulls - Handicap +4.5 Miami Heat 1er Cuarto -->
         <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/147.png" alt="Miami Heat Logo">
-                    <div>Miami Heat</div>
+                    <p>Miami Heat</p>
                 </div>
-                <div class="vs">VS</div>
+                <div class="vs">vs</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/136.png" alt="Chicago Bulls Logo">
-                    <div>Chicago Bulls</div>
+                    <p>Chicago Bulls</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Baloncesto - Mercado:</b> Player Prop: Puntos + Rebotes (Jugador estrella Miami)<br>
-                Se espera gran desempeño ofensivo y reboteador de la figura principal del Miami Heat.
+                <b>Justificación</b>
+                <p>1. Chicago Bulls sufre en defensa el 1er cuarto, permitiendo más puntos y triples.<br>
+                   2. Miami Heat promedia +5 puntos en 1er cuarto en últimas 10 salidas.<br>
+                   3. Ventaja táctica de Miami para comenzar fuerte, aprovechando debilidades rivales tempranas.</p>
             </div>
             <div class="footer">
-                <div></div>
-                <div class="odds">1.24</div>
+                <div class="pick"><span>Pick:</span> Handicap +4.5 Miami Heat 1er Cuarto</div>
+                <div class="odds">1.21</div>
             </div>
         </div>
 
-        <!-- Match 5: Toronto Raptors vs Utah Jazz - Basket -->
+        <!-- Pick 4 - Basket: Toronto Raptors vs Utah Jazz - Puntos totales partido Over 211.5 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/159.png" alt="Toronto Raptors Logo">
-                    <div>Toronto Raptors</div>
+                    <p>Toronto Raptors</p>
                 </div>
-                <div class="vs">VS</div>
+                <div class="vs">vs</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/160.png" alt="Utah Jazz Logo">
-                    <div>Utah Jazz</div>
+                    <p>Utah Jazz</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Baloncesto - Mercado:</b> Triples de jugador clave + Puntos equipo Toronto<br>
-                Raptors con alta presión desde perímetro y fuerte ofensiva total esperada.
+                <b>Justificación</b>
+                <p>1. Ambos equipos tienen ofensivas potentes y ritmos acelerados en últimos 10 juegos.<br>
+                   2. Toronto Raptors y Utah Jazz promedian +107 puntos por encuentro.<br>
+                   3. La combinación de asistencias altas y capacidad de triples favorece puntos totales elevados.</p>
             </div>
             <div class="footer">
-                <div></div>
-                <div class="odds">1.23</div>
+                <div class="pick"><span>Pick:</span> Puntos Totales Over 211.5</div>
+                <div class="odds">1.24</div>
             </div>
         </div>
+
+        <!-- Pick 5 - Basket: Washington Wizards vs Sacramento Kings - Player Props: Puntos + Rebotes Bradley Beal + 25.5 -->
+        <div class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/161.png" alt="Washington Wizards Logo">
+                    <p>Washington Wizards</p>
+                </div>
+                <div class="vs">vs</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/157.png" alt="Sacramento Kings Logo">
+                    <p>Sacramento Kings</p>
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>Justificación</b>
+                <p>1. Bradley Beal destaca en puntos y rebotes, con alta frecuencia en últimos 10 partidos.<br>
+                   2. Wizards dependen mucho de su aporte y suelen aumentar su volumen frente a rivales con defensa débil interior.<br>
+                   3. Se espera que Beal supere ampliamente 25.5 combinando puntos y rebotes.</p>
+            </div>
+            <div class="footer">
+                <div class="pick"><span>Pick:</span> Pts + Rebotes Bradley Beal Over 25.5</div>
+                <div class="odds">1.20</div>
+            </div>
+        </div>
+
     </div>
     <div class="disclaimer">
         <b>Nota:</b> Recuerda que en el deporte nada es 100% seguro. Gestiona tu banca con responsabilidad y evita combinar demasiados "logros", ya que un solo fallo arruina el parley.
