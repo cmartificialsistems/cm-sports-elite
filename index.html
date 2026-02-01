@@ -6,179 +6,175 @@
 <title>Tickets de Apuestas CM Sports Elite</title>
 <style>
   body {
-    background: linear-gradient(45deg, #d2b48c, #ecd9c6, #f5e8d3);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #6b4c3b;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f0e6;
     margin: 20px;
+    color: #4b3b2b;
   }
-  .match-card {
-    background: rgba(255 255 255 / 0.8);
-    backdrop-filter: blur(12px);
-    border: 2px solid #c4a16b;
+  article.match-card {
+    background: #fdf8f2;
+    max-width: 440px;
     border-radius: 12px;
-    margin-bottom: 28px;
-    padding: 16px 20px;
-    box-shadow: 3px 3px 12px rgba(170, 140, 80, 0.3);
-    max-width: 580px;
+    box-shadow: 
+      0 0 10px 1px rgba(180,146,75,0.45),
+      inset 0 0 8px 1px rgba(180,146,75,0.2);
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #b4924b;
   }
   .vulnerability-header {
-    background-color: #b47425;
-    color: #fff9e3;
+    background: #b4924b;
+    color: #fdf8f2;
     font-weight: 700;
-    font-size: 18px;
-    padding: 8px 14px;
-    border-radius: 8px;
+    font-size: 1.1rem;
     text-align: center;
-    margin-bottom: 14px;
-    font-family: 'Trebuchet MS', sans-serif;
+    padding: 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
   .teams-grid {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
     align-items: center;
-    margin-bottom: 14px;
+    text-align: center;
+    padding: 15px 25px 10px 25px;
+    gap: 8px;
   }
   .team {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 130px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #4b3b2b;
   }
   .team img {
-    width: 72px;
-    height: 72px;
+    width: 65px;
+    height: 65px;
     object-fit: contain;
-    margin-bottom: 6px;
-  }
-  .team span {
-    font-weight: 700;
-    font-size: 17px;
+    margin-bottom: 5px;
   }
   .vs-divider {
-    font-weight: 900;
-    font-size: 22px;
-    color: #a66a00;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #b4924b;
   }
   .intel-box {
-    font-size: 14.5px;
-    font-weight: 600;
-    border-left: 5px solid #b47425;
-    background: #ffecc5;
-    padding: 8px 14px;
-    border-radius: 6px;
-    margin-bottom: 14px;
-    color: #5a3d10;
+    background: #fff9e8;
+    border-top: 1px solid #b4924b;
+    border-bottom: 1px solid #b4924b;
+    padding: 15px 20px;
+    font-size: 0.9rem;
     line-height: 1.3;
+    color: #3d2f1f;
+  }
+  .intel-box b {
+    font-weight: 700;
   }
   .bet-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
-  .market-info {
+    padding: 10px 20px;
+    background: #b4924b;
+    color: #fdf8f2;
     font-weight: 700;
-    font-size: 16px;
-    color: #774e02;
+    font-size: 1rem;
   }
   .market-info span {
-    font-weight: 500;
-    font-size: 12px;
-    color: #b2872b;
+    font-size: 0.8rem;
+    opacity: 0.8;
     margin-right: 8px;
   }
   .odds-display {
-    font-weight: 900;
-    font-size: 20px;
-    color: #af7d00;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
   }
 </style>
 </head>
 <body>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 REMATES AL ARCO DEL VISITANTE EN EL PRIMER TIEMPO</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team1_home.png"><span>Estrella Roja</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team2_away.png"><span>Fénix Azul</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Fénix Azul promedia solo 2 remates a puerta en los primeros 45 minutos en sus últimos 10 juegos; Estrella Roja es un equipo que domina sus remates frontales, aprovechando la debilidad defensiva rival temprana.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Remates a puerta equipo local 1er tiempo</b></div>
-        <div class="odds-display">@1.22</div>
-    </div>
+  <div class="vulnerability-header">🚨 REMATES DE LOCAL SUPERIORES EN EL PRIMER TIEMPO</div>
+  <div class="teams-grid">
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/1234/5678.png"><span>FC Valencia</span></div>
+    <div class="vs-divider">VS</div>
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/8765/4321.png"><span>Bilbao Athletic</span></div>
+  </div>
+  <div class="intel-box">
+    <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+    <p>Valencia domina en remates en el primer tiempo con +30% más tiros a puerta, mientras Bilbao muestra vulnerabilidad defensiva inicial.</p>
+  </div>
+  <div class="bet-footer">
+    <div class="market-info"><span>PICK SUGERIDO</span><b>Remates de equipo en el 1er tiempo - Valencia</b></div>
+    <div class="odds-display">@1.22</div>
+  </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 PROBLEMAS DEFENSIVOS EN CORNERS DEL LOCAL</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team3_home.png"><span>Rápidos del Valle</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team4_away.png"><span>Toros Negros</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Toros Negros consiguen un promedio de 7 córners por partido, mientras Rápidos del Valle ha concedido más de 5 corners en 7 de sus últimos 10 enfrentamientos, confirmando vulnerabilidad en defensa a balón detenido.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Corners totales +8</b></div>
-        <div class="odds-display">@1.24</div>
-    </div>
+  <div class="vulnerability-header">🚨 DÉBIL DEFENSA A CORNERS DEL VISITANTE</div>
+  <div class="teams-grid">
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/4321/9876.png"><span>Real Zaragoza</span></div>
+    <div class="vs-divider">VS</div>
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/5678/1234.png"><span>Lugo CF</span></div>
+  </div>
+  <div class="intel-box">
+    <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+    <p>Lugo concede +40% más corners por partido, Zaragoza genera constante presión en bandas con corners a favor elevados.</p>
+  </div>
+  <div class="bet-footer">
+    <div class="market-info"><span>PICK SUGERIDO</span><b>Corners totales - Más de 9.5</b></div>
+    <div class="odds-display">@1.21</div>
+  </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 DÉBIL RENDIMIENTO DEFENSIVO DEL VISITANTE EN 1ER CUARTO</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team5_home.png"><span>Leones Dorados</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team6_away.png"><span>Águilas Rojas</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Águilas Rojas pierden por un margen promedio de -5.5 en el 1er cuarto durante sus últimos 10 partidos; Leones Dorados han capitalizado esta brecha con fuertes hándicaps de puntos iniciales y dominio en el marcador temprano.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Hándicap 1er cuarto equipo local (-4.5)</b></div>
-        <div class="odds-display">@1.20</div>
-    </div>
+  <div class="vulnerability-header">🚨 BAJA EFICACIA DEL VISITANTE AL REMATAR A PUERTA</div>
+  <div class="teams-grid">
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/6543/2109.png"><span>Granada CF</span></div>
+    <div class="vs-divider">VS</div>
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/1098/7654.png"><span>Alcorcón</span></div>
+  </div>
+  <div class="intel-box">
+    <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+    <p>Granada destaca en remates totales y a puerta, mientras Alcorcón solo convierte el 15% de tiros contra su portería.</p>
+  </div>
+  <div class="bet-footer">
+    <div class="market-info"><span>PICK SUGERIDO</span><b>Remates a puerta - Granada</b></div>
+    <div class="odds-display">@1.23</div>
+  </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 DEFICIENCIA EN ASISTENCIAS INDIVIDUALES DE JUGADOR VISITANTE</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team7_home.png"><span>Guardianes Celestes</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team8_away.png"><span>Furia Roja</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>En los últimos 10 encuentros, el base de Furia Roja ha promediado 3.1 asistencias pero solo 1-2 en enfrentamientos directos recientes. Guardianes Celestes explotan esta debilidad limitando la creación de juego rival.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Player Props: asistencias jugador local</b></div>
-        <div class="odds-display">@1.21</div>
-    </div>
+  <div class="vulnerability-header">🚨 VISITANTE MAL EN TRIUNFOS Y EMPATES (DOBLE OPORTUNIDAD)</div>
+  <div class="teams-grid">
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/2222/3333.png"><span>Real Oviedo</span></div>
+    <div class="vs-divider">VS</div>
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/4444/5555.png"><span>CD Mirandés</span></div>
+  </div>
+  <div class="intel-box">
+    <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+    <p>Oviedo suma 7 victorias/empates en el último mes; Mirandés apenas 1, señal clara para doble oportunidad local.</p>
+  </div>
+  <div class="bet-footer">
+    <div class="market-info"><span>PICK SUGERIDO</span><b>Gana o Empata - Real Oviedo</b></div>
+    <div class="odds-display">@1.20</div>
+  </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 ALTO PORCENTAJE DE EMPATES EN ENFRENTAMIENTOS DIRECTOS</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team9_home.png"><span>Leones del Norte</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.net/logos/team10_away.png"><span>Halcones del Sur</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Los últimos 10 enfrentamientos directos entre Leones del Norte y Halcones del Sur muestran un 60% de resultados empate o victoria visitante, evidenciando la falta de contundencia ofensiva de ambos equipos.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Doble Oportunidad: Empate o visitante</b></div>
-        <div class="odds-display">@1.23</div>
-    </div>
+  <div class="vulnerability-header">🚨 DOMINIO EN PUNTOS Y REBOTES DEL JUGADOR LOCAL</div>
+  <div class="teams-grid">
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/basketball/3456.png"><span>CB Madrid</span></div>
+    <div class="vs-divider">VS</div>
+    <div class="team"><img src="https://cdn.sportslogos.net/logos/basketball/6789.png"><span>Valencia Basket</span></div>
+  </div>
+  <div class="intel-box">
+    <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+    <p>Jugador local promedia 24 puntos y 10 rebotes, frente a defensa visitante vulnerable en el 1er cuarto.</p>
+  </div>
+  <div class="bet-footer">
+    <div class="market-info"><span>PICK SUGERIDO</span><b>Player Props: Puntos + Rebotes (Jugador Local)</b></div>
+    <div class="odds-display">@1.24</div>
+  </div>
 </article>
 
 </body>
