@@ -1,84 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tickets CM Sports Elite</title>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #fef9f4;
+    margin: 20px;
+    color: #3a2c25;
+  }
+  .match-card {
+    background: #f7ead9;
+    border: 2px solid #c49e66;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #c49e6688;
+    width: 380px;
+    margin: 15px auto;
+    padding: 18px 22px 22px 22px;
+  }
+  .vulnerability-header {
+    background: #c49e66;
+    color: #fef9f4;
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px 0;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+  }
+  .teams-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+  }
+  .team img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+  .team span {
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
+    color: #5b4531;
+  }
+  .vs-divider {
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #c49e66;
+  }
+  .intel-box {
+    background: #f5f1e8;
+    border: 1.8px solid #c9a969;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    color: #423419;
+    margin-bottom: 18px;
+  }
+  .intel-box b {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+    color: #7a602c;
+  }
+  .bet-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .market-info span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #a07d3d;
+  }
+  .market-info b {
+    font-size: 1.05rem;
+    color: #5b3e0c;
+  }
+  .odds-display {
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: #b4822b;
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+
 <article class="match-card">
-    <div class="vulnerability-header">🚨 DEBILIDAD DEFENSIVA EN REMATES A PUERTA DEL VISITANTE</div>
+    <div class="vulnerability-header">🚨 REMATES A PUERTA PRECARIOS DEL RIVAL</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamA.png"><span>Team A</span></div>
+        <div class="team"><img src="https://example.com/logos/teamA.png"><span>Equipo A</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamB.png"><span>Team B</span></div>
+        <div class="team"><img src="https://example.com/logos/teamB.png"><span>Equipo B</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Team A remata 35% más a puerta que Team B concede en sus últimos 10 partidos. En sus últimos duelos, Team A dominó las llegadas claras.</p>
+        <p>Equipo B promedia solo 2 remates a puerta en sus últimos 10 partidos y concedió 4 en duelos directos. Equipo A dispara con alta efectividad.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Remates a puerta equipo local</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>REMATES A PUERTA EQUIPO LOCAL</b></div>
         <div class="odds-display">@1.22</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 VULNERABILIDAD EN EL 1ER TIEMPO CON CORNERS DEL VISITANTE</div>
+    <div class="vulnerability-header">🚨 DÉBIL ENTRADA DE CORNERS EN EL 1ER TIEMPO</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamC.png"><span>Team C</span></div>
+        <div class="team"><img src="https://example.com/logos/teamC.png"><span>Equipo C</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamD.png"><span>Team D</span></div>
+        <div class="team"><img src="https://example.com/logos/teamD.png"><span>Equipo D</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Team D concede un promedio de 5.2 corners en el 1er tiempo, un 30% más que Team C genera tras 10 juegos recientes.</p>
+        <p>Equipo D concede promedio de 3 corners en el primer tiempo, factor negativo tras 7 partidos seguidos. Equipo C genera alta presión inicial.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Corners 1er tiempo totales</b></div>
-        <div class="odds-display">@1.24</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-header">🚨 BRECHA EN DOBLE OPORTUNIDAD: VISITANTE NO SOPORTA PRESIÓN</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamE.png"><span>Team E</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamF.png"><span>Team F</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Team F sufrió empates o derrotas en 70% de choques directos recientes. Team E mantiene alta efectividad en doble oportunidad.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Gana o Empata local</b></div>
-        <div class="odds-display">@1.20</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-header">🚨 DÉFICIT DE REBOTES DEL VISITANTE EN BASKET</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamG.png"><span>Team G</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamH.png"><span>Team H</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Team H pierde 8 rebotes promedio por partido respecto a Team G. En enfrentamientos directos Team G domina el tablero.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Rebotes jugador local</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>CORNERS 1er TIEMPO EQUIPO LOCAL</b></div>
         <div class="odds-display">@1.23</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 BAJO RENDIMIENTO EN TRIPLES DEL VISITANTE</div>
+    <div class="vulnerability-header">🚨 BAJA DEFENSIVA EN DUELLOS DIRECTOS RECIENTES</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamI.png"><span>Team I</span></div>
+        <div class="team"><img src="https://example.com/logos/teamE.png"><span>Equipo E</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamJ.png"><span>Team J</span></div>
+        <div class="team"><img src="https://example.com/logos/teamF.png"><span>Equipo F</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Team J promedia 3.5 triples menos que Team I en sus últimos 10 partidos. En acciones directas, Team I domina desde fuera.</p>
+        <p>Equipo F no gana o empata en últimos 5 duelos directos y presenta media de 2 goles recibidos. Equipo E aprovecha para mantener ventaja.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Triples jugador local</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>GANA O EMPATA (DOBLE OPORTUNIDAD) LOCAL</b></div>
+        <div class="odds-display">@1.24</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 DÉFICIT DE REBOTES EN LA ZONA INTERIOR</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://example.com/logos/teamG.png"><span>Equipo G</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://example.com/logos/teamH.png"><span>Equipo H</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Equipo H promedia 6.7 rebotes menos por partido que Equipo G y sufrió 8 derrotas en duelos directos enfocándose en control interior.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>PLAYER PROPS REBOTES EQUIPO LOCAL</b></div>
         <div class="odds-display">@1.21</div>
     </div>
 </article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 BAJO % DE TRIPLES EN ENFRENTAMIENTOS DIRECTOS</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://example.com/logos/teamI.png"><span>Equipo I</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://example.com/logos/teamJ.png"><span>Equipo J</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Equipo J registra un 28% menos en triples convertidos en los últimos 10 enfrentamientos frente a Equipo I, quien domina el perímetro.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>TRIPLES JUGADOR LOCAL</b></div>
+        <div class="odds-display">@1.25</div>
+    </div>
+</article>
+
+</body>
+</html>
