@@ -1,112 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CM Sports Elite - Tickets de Apuestas</title>
-<style>
-  body { background: #F0E5D8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 2em; color: #4B3B2B; }
-  article.match-card { background: linear-gradient(145deg, #E3D3B0, #CDBA7C); border-radius: 15px; box-shadow: 6px 6px 12px #B59F68 inset, -6px -6px 12px #F2E8C4 inset; padding: 20px; margin-bottom: 30px; max-width: 600px; }
-  .vulnerability-header { font-weight: 900; font-size: 1.2em; color: #9C5E00; margin-bottom: 15px; letter-spacing: 1.2px; }
-  .teams-grid { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
-  .team { display: flex; align-items: center; gap: 12px; flex: 1; }
-  .team img { width: 50px; height: 50px; object-fit: contain; border-radius: 10px; box-shadow: 0 0 5px rgba(156,94,0,0.5); }
-  .team span { font-weight: 700; font-size: 1.1em; color: #704B18; }
-  .vs-divider { flex: 0 0 50px; text-align: center; font-weight: 900; font-size: 1.3em; color: #7A521A; }
-  .intel-box { background: #FFF6D8; border-radius: 10px; padding: 12px 15px; font-size: 0.95em; color: #6E513B; box-shadow: 3px 3px 6px #CDBA83 inset, -3px -3px 6px #FFFBE0 inset; margin-bottom: 15px; }
-  .intel-box b { color: #A26F00; }
-  .bet-footer { display: flex; justify-content: space-between; align-items: center; border-top: 2px solid #B89544; padding-top: 10px; font-weight: 700; }
-  .market-info span { font-size: 0.85em; color: #8A6E14; }
-  .market-info b { font-size: 1.05em; color: #AC8B00; }
-  .odds-display { font-size: 1.25em; color: #9C5E00; font-family: 'Consolas', monospace; }
-</style>
-</head>
-<body>
+<body style="background:#010409; color:#fff; font-family:sans-serif; margin:0; padding:40px 20px; display:flex; flex-direction:column; align-items:center; min-height:100vh;">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" style="width:110px; border-radius:50%; border:2px solid #bf953f; margin-bottom:20px;">
+    <h1 style="color:#bf953f; font-size:2.5rem; text-align:center; margin:0; letter-spacing:3px;">CM SPORTS ELITE</h1>
+    <p style="color:#10b981; letter-spacing:3px; font-size:0.8rem; margin-top:10px;">● ANÁLISIS BRUTAL DE LA IA</p>
+    
+    <div style="width:100%; max-width:800px; display:flex; flex-direction:column; gap:25px; margin-top:30px;">
+        <div style="background:rgba(15,23,42,0.95); border-radius:20px; padding:30px; border:1px solid rgba(191,149,63,0.3); border-left:6px solid #bf953f;">
+            <div style="display:flex; justify-content:space-between; align-items:center; text-align:center;">
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/football/teams/451.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Boca Juniors</p>
+                </div>
+                <div style="color:#bf953f; font-weight:900; font-size:1.2rem;">VS</div>
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/football/teams/457.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Newells Old Boys</p>
+                </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border-radius:12px; padding:15px; margin:20px 0; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#bf953f; font-size:0.7rem; text-transform:uppercase;">ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+                <p style="font-style:italic; font-size:1rem; color:#cbd5e1; margin-top:10px;">Boca Juniors muestra solidez defensiva en casa, mientras Newells ha tenido dificultades para concretar ofensivamente fuera. Se espera un dominio local con control en balón y creación de ocasiones claras.</p>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px;">
+                <div>
+                    <b style="color:#94a3b8; font-size:0.6rem; text-transform:uppercase;">PICK SELECCIONADO:</b>
+                    <div style="font-size:1.2rem; font-weight:800; color:#fff;">Boca Juniors gana</div>
+                </div>
+                <div style="background:#bf953f; color:#000; padding:10px 20px; border-radius:10px; font-weight:900; font-size:1.3rem;">@1.22</div>
+            </div>
+        </div>
 
-<article class="match-card">
-    <div class="vulnerability-header">🚨 CORNERS DEL VISITANTE NAUFRAGAN ANTE DEFENSA LOCAL</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/5/53/FC_Barcelona_%28crest%29.svg"><span>Barcelona</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/c/c9/Real_Madrid_CF.svg"><span>Real Madrid</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Barcelona ha concedido un 40% menos de corners en casa los últimos 10 partidos y Real Madrid genera poco en despliegues ofensivos fuera. Defensa local limita corners a rival.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Corners Totales Under</b></div>
-        <div class="odds-display">@1.23</div>
-    </div>
-</article>
+        <div style="background:rgba(15,23,42,0.95); border-radius:20px; padding:30px; border:1px solid rgba(191,149,63,0.3); border-left:6px solid #bf953f;">
+            <div style="display:flex; justify-content:space-between; align-items:center; text-align:center;">
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/basketball/teams/147.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Miami Heat</p>
+                </div>
+                <div style="color:#bf953f; font-weight:900; font-size:1.2rem;">VS</div>
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/basketball/teams/136.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Chicago Bulls</p>
+                </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border-radius:12px; padding:15px; margin:20px 0; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#bf953f; font-size:0.7rem; text-transform:uppercase;">ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+                <p style="font-style:italic; font-size:1rem; color:#cbd5e1; margin-top:10px;">Miami Heat ha mostrado alta efectividad ofensiva en su estadio y buena defensa perimetral, mientras Chicago tiene altibajos fuera. Se anticipa un partido controlado por Miami con ventaja en puntos.</p>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px;">
+                <div>
+                    <b style="color:#94a3b8; font-size:0.6rem; text-transform:uppercase;">PICK SELECCIONADO:</b>
+                    <div style="font-size:1.2rem; font-weight:800; color:#fff;">Miami Heat gana</div>
+                </div>
+                <div style="background:#bf953f; color:#000; padding:10px 20px; border-radius:10px; font-weight:900; font-size:1.3rem;">@1.22</div>
+            </div>
+        </div>
 
-<article class="match-card">
-    <div class="vulnerability-header">🚨 BAJA EFICACIA DE REMATES DEL VISITANTE EN EL PRIMER TIEMPO</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Bayern_Munich_logo.svg/1200px-Bayern_Munich_logo.svg.png"><span>Bayern Munich</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Borussia_Dortmund_logo.svg"><span>Borussia Dortmund</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Bayern promedia 9 remates en 1er tiempo y Dortmund apenas 2 en esa mitad, reflejando su falta de agresividad inicial que Dortmund explota poco.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Remates de Equipo en 1er Tiempo - Bayern + Handicap -1</b></div>
-        <div class="odds-display">@1.22</div>
-    </div>
-</article>
+        <div style="background:rgba(15,23,42,0.95); border-radius:20px; padding:30px; border:1px solid rgba(191,149,63,0.3); border-left:6px solid #bf953f;">
+            <div style="display:flex; justify-content:space-between; align-items:center; text-align:center;">
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/basketball/teams/159.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Toronto Raptors</p>
+                </div>
+                <div style="color:#bf953f; font-weight:900; font-size:1.2rem;">VS</div>
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/basketball/teams/160.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Utah Jazz</p>
+                </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border-radius:12px; padding:15px; margin:20px 0; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#bf953f; font-size:0.7rem; text-transform:uppercase;">ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+                <p style="font-style:italic; font-size:1rem; color:#cbd5e1; margin-top:10px;">Toronto Raptors aprovechan la localía con alto acierto en triples y defensa dinámica. Utah Jazz presenta dificultades en defensa exterior fuera. Favoritismo para Raptors con un juego rápido y efectivo.</p>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px;">
+                <div>
+                    <b style="color:#94a3b8; font-size:0.6rem; text-transform:uppercase;">PICK SELECCIONADO:</b>
+                    <div style="font-size:1.2rem; font-weight:800; color:#fff;">Toronto Raptors gana</div>
+                </div>
+                <div style="background:#bf953f; color:#000; padding:10px 20px; border-radius:10px; font-weight:900; font-size:1.3rem;">@1.22</div>
+            </div>
+        </div>
 
-<article class="match-card">
-    <div class="vulnerability-header">🚨 JUGADOR VISITANTE DESEA MÁS TRIPLES SIN EFECTIVIDAD</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/7/70/Golden_State_Warriors_logo.svg"><span>Golden State Warriors</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/0/03/Los_Angeles_Lakers_logo.svg"><span>Los Angeles Lakers</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Lakers promedian solo 3 triples acertados por partido, con el tirador estrella bajando su porcentaje en último decenio versus Warriors.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Triples de Jugador - Menos de 3.5</b></div>
-        <div class="odds-display">@1.21</div>
-    </div>
-</article>
+        <div style="background:rgba(15,23,42,0.95); border-radius:20px; padding:30px; border:1px solid rgba(191,149,63,0.3); border-left:6px solid #bf953f;">
+            <div style="display:flex; justify-content:space-between; align-items:center; text-align:center;">
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/basketball/teams/161.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Washington Wizards</p>
+                </div>
+                <div style="color:#bf953f; font-weight:900; font-size:1.2rem;">VS</div>
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/basketball/teams/157.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Sacramento Kings</p>
+                </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border-radius:12px; padding:15px; margin:20px 0; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#bf953f; font-size:0.7rem; text-transform:uppercase;">ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+                <p style="font-style:italic; font-size:1rem; color:#cbd5e1; margin-top:10px;">Washington Wizards tienen mejor registro ofensivo en casa y defensa sólida que limita tiros rápidos. Sacramento Kings ha sido inconsistente fuera y su defensa débil podría aprovecharse fácilmente.</p>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px;">
+                <div>
+                    <b style="color:#94a3b8; font-size:0.6rem; text-transform:uppercase;">PICK SELECCIONADO:</b>
+                    <div style="font-size:1.2rem; font-weight:800; color:#fff;">Washington Wizards gana</div>
+                </div>
+                <div style="background:#bf953f; color:#000; padding:10px 20px; border-radius:10px; font-weight:900; font-size:1.3rem;">@1.22</div>
+            </div>
+        </div>
 
-<article class="match-card">
-    <div class="vulnerability-header">🚨 DEFICIT DE ASISTENCIAS DEL EQUIPO LOCAL EN ENLACES DE JUEGO</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/8/86/Miami_Heat_logo.svg"><span>Miami Heat</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/2/24/Boston_Celtics.svg"><span>Boston Celtics</span></div>
+        <div style="background:rgba(15,23,42,0.95); border-radius:20px; padding:30px; border:1px solid rgba(191,149,63,0.3); border-left:6px solid #bf953f;">
+            <div style="display:flex; justify-content:space-between; align-items:center; text-align:center;">
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/football/teams/2290.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Club Queretaro</p>
+                </div>
+                <div style="color:#bf953f; font-weight:900; font-size:1.2rem;">VS</div>
+                <div style="flex:1;">
+                    <img src="https://media.api-sports.io/football/teams/2292.png" style="width:70px; height:70px; object-fit:contain; background:rgba(255,255,255,0.05); padding:5px; border-radius:10px;">
+                    <p style="font-size:0.8rem; font-weight:bold; margin-top:10px;">Pachuca</p>
+                </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); border-radius:12px; padding:15px; margin:20px 0; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#bf953f; font-size:0.7rem; text-transform:uppercase;">ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+                <p style="font-style:italic; font-size:1rem; color:#cbd5e1; margin-top:10px;">Club Queretaro juega agresivamente en casa con alta efectividad en tiros al arco; Pachuca presenta debilidades defensivas lejos de casa, lo que puede aprovecharse para un triunfo local.</p>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px;">
+                <div>
+                    <b style="color:#94a3b8; font-size:0.6rem; text-transform:uppercase;">PICK SELECCIONADO:</b>
+                    <div style="font-size:1.2rem; font-weight:800; color:#fff;">Club Queretaro gana</div>
+                </div>
+                <div style="background:#bf953f; color:#000; padding:10px 20px; border-radius:10px; font-weight:900; font-size:1.3rem;">@1.22</div>
+            </div>
+        </div>
     </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Miami muestra caída del 25% en asistencias por partido versus Boston, que permite solo 18 asistencias a rivales en sus últimos 10 encuentros.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Player Props Asistencias combinado - Boston + Miami Under 40</b></div>
-        <div class="odds-display">@1.24</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-header">🚨 SÓLIDA DEFENSA LOCAL NEUTRALIZA PUNTOS TOTALES ALTOS</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/0/0e/Chicago_Bulls_logo.svg"><span>Chicago Bulls</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/2/29/NY_Knicks_logo.svg"><span>New York Knicks</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Chicago promedia 98 puntos y Knicks 95 en últimos 10; sólido trabajo defensivo local mantiene puntos totales por debajo de la media de la liga.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Puntos Totales Under 210.5</b></div>
-        <div class="odds-display">@1.20</div>
-    </div>
-</article>
-
+    <div style="margin-top:60px; opacity:0.3; font-size:0.6rem; letter-spacing:3px; color:#bf953f;">TERMINAL VIP ELITE © 2026</div>
 </body>
 </html>
