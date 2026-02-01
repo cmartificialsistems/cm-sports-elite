@@ -3,188 +3,181 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tickets de Apuestas - CM Sports Elite</title>
+<title>Tickets de Apuestas CM Sports Elite</title>
 <style>
   body {
-    background: #cdbf9a; /* Baklava base */
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin: 2rem;
-    color: #3a2f0d;
+    background: linear-gradient(45deg, #d2b48c, #ecd9c6, #f5e8d3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #6b4c3b;
+    margin: 20px;
   }
   .match-card {
-    background: rgba(255 255 255 / 0.85);
-    border: 2px solid #a1885f;
+    background: rgba(255 255 255 / 0.8);
+    backdrop-filter: blur(12px);
+    border: 2px solid #c4a16b;
     border-radius: 12px;
-    box-shadow: 0 0 12px #7a6d44 inset;
-    padding: 1.2rem 1rem 1.4rem 1rem;
-    margin-bottom: 2rem;
-    max-width: 480px;
-    backdrop-filter: saturate(180%) blur(12px);
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    box-shadow: 3px 3px 12px rgba(170, 140, 80, 0.3);
+    max-width: 580px;
   }
   .vulnerability-header {
-    background: #8f6f26;
-    color: #fff1bf;
+    background-color: #b47425;
+    color: #fff9e3;
     font-weight: 700;
-    border-radius: 8px 8px 0 0;
-    padding: 0.3rem 0.7rem;
-    font-size: 1rem;
+    font-size: 18px;
+    padding: 8px 14px;
+    border-radius: 8px;
     text-align: center;
-    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
   }
   .teams-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 1rem 0;
+    margin-bottom: 14px;
   }
   .team {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 38%;
-    font-weight: 600;
-    font-size: 1rem;
-    gap: 0.2rem;
-    color: #5a4820;
+    width: 130px;
   }
   .team img {
-    max-width: 60px;
-    height: auto;
-    border-radius: 50%;
-    border: 2px solid #a1885f;
-    background: white;
-    padding: 0.15rem;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin-bottom: 6px;
+  }
+  .team span {
+    font-weight: 700;
+    font-size: 17px;
   }
   .vs-divider {
-    width: 24px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: #7f6526;
+    font-weight: 900;
+    font-size: 22px;
+    color: #a66a00;
   }
   .intel-box {
-    background: #f5f0db;
-    border: 1px solid #c6b97c;
-    border-radius: 0 0 8px 8px;
-    padding: 0.8rem 1rem 0.75rem 1rem;
-    font-size: 0.92rem;
-    line-height: 1.2;
-    color: #5b4a18;
-  }
-  .intel-box b {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-weight: 700;
+    font-size: 14.5px;
+    font-weight: 600;
+    border-left: 5px solid #b47425;
+    background: #ffecc5;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    color: #5a3d10;
+    line-height: 1.3;
   }
   .bet-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
+  }
+  .market-info {
     font-weight: 700;
-    font-size: 1rem;
-    color: #6a5320;
+    font-size: 16px;
+    color: #774e02;
   }
   .market-info span {
     font-weight: 500;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: #8a7543;
-    margin-right: 0.6rem;
+    font-size: 12px;
+    color: #b2872b;
+    margin-right: 8px;
   }
   .odds-display {
-    background: #f9ead7;
-    border: 1.5px solid #a0832f;
-    padding: 0.15rem 0.6rem;
-    border-radius: 6px;
-    color: #7c6f3a;
-    font-weight: 700;
+    font-weight: 900;
+    font-size: 20px;
+    color: #af7d00;
+    font-family: 'Courier New', Courier, monospace;
   }
 </style>
 </head>
 <body>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 LOCAL CON DEFENSA FRÁGIL EN EL PRIMER TIEMPO</div>
+    <div class="vulnerability-header">🚨 REMATES AL ARCO DEL VISITANTE EN EL PRIMER TIEMPO</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamA.png"><span>Team A</span></div>
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team1_home.png"><span>Estrella Roja</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/teamB.png"><span>Team B</span></div>
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team2_away.png"><span>Fénix Azul</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Team A concede un promedio elevado de remates en el 1er tiempo y Team B domina sus últimos enfrentamientos directos. Esto abre espacio para corners y presión temprana.</p>
+        <p>Fénix Azul promedia solo 2 remates a puerta en los primeros 45 minutos en sus últimos 10 juegos; Estrella Roja es un equipo que domina sus remates frontales, aprovechando la debilidad defensiva rival temprana.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>CORNERS POR EQUIPO</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Remates a puerta equipo local 1er tiempo</b></div>
         <div class="odds-display">@1.22</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 VISITANTE CON DEFICIT EN CONTENCIÓN DE TRIPLES</div>
+    <div class="vulnerability-header">🚨 PROBLEMAS DEFENSIVOS EN CORNERS DEL LOCAL</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/basketHome.png"><span>Basket Home</span></div>
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team3_home.png"><span>Rápidos del Valle</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/basketAway.png"><span>Basket Away</span></div>
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team4_away.png"><span>Toros Negros</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Basket Away promedia 3 triples menos anotados que Basket Home en los últimos 10, y en duelos directos la defensa de triples visitante es débil en el 1er cuarto.</p>
+        <p>Toros Negros consiguen un promedio de 7 córners por partido, mientras Rápidos del Valle ha concedido más de 5 corners en 7 de sus últimos 10 enfrentamientos, confirmando vulnerabilidad en defensa a balón detenido.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>TRIPLES DE JUGADOR + HÁNDICAP 1Q</b></div>
-        <div class="odds-display">@1.23</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-header">🚨 LOCAL CON ALTA PROBABILIDAD DE GOLEO EN REMATES A PUERTA</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/footballTeamC.png"><span>Football C</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/footballTeamD.png"><span>Football D</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Football C supera al rival en remates a puerta en un 40% en sus últimos enfrentamientos, mientras Football D presenta tendencia a bajar rendimiento en defensa tras el descanso.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>REMATES A PUERTA (EQUIPO)</b></div>
-        <div class="odds-display">@1.21</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-header">🚨 VISITANTE EN PÉRDIDA DE FOCO EN JUEGO OFENSIVO</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/basketballTeamE.png"><span>Basketball E</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/basketballTeamF.png"><span>Basketball F</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Basketball F ha caído en 7 de sus últimos 10 partidos en efectividad de asistencias y rebotes combinados, mientras Basketball E domina duelos directos en el 1er cuarto.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>PLAYER PROPS ASISTENCIAS + REBOTES</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Corners totales +8</b></div>
         <div class="odds-display">@1.24</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 LOCAL PREDOMINANTE EN DOBLE OPORTUNIDAD</div>
+    <div class="vulnerability-header">🚨 DÉBIL RENDIMIENTO DEFENSIVO DEL VISITANTE EN 1ER CUARTO</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://assets.cm-sports.com/logos/footballTeamG.png"><span>Football G</span></div>
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team5_home.png"><span>Leones Dorados</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://assets.cm-sports.com/logos/footballTeamH.png"><span>Football H</span></div>
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team6_away.png"><span>Águilas Rojas</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Football G presenta una brecha de rendimiento notable ganando o empatando 8/10 últimos partidos contra Football H, que tiene dificultades para vulnerar defensas cerradas.</p>
+        <p>Águilas Rojas pierden por un margen promedio de -5.5 en el 1er cuarto durante sus últimos 10 partidos; Leones Dorados han capitalizado esta brecha con fuertes hándicaps de puntos iniciales y dominio en el marcador temprano.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>GANA O EMPATA (DOBLE OPORTUNIDAD)</b></div>
-        <div class="odds-display">@1.25</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Hándicap 1er cuarto equipo local (-4.5)</b></div>
+        <div class="odds-display">@1.20</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 DEFICIENCIA EN ASISTENCIAS INDIVIDUALES DE JUGADOR VISITANTE</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team7_home.png"><span>Guardianes Celestes</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team8_away.png"><span>Furia Roja</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>En los últimos 10 encuentros, el base de Furia Roja ha promediado 3.1 asistencias pero solo 1-2 en enfrentamientos directos recientes. Guardianes Celestes explotan esta debilidad limitando la creación de juego rival.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Player Props: asistencias jugador local</b></div>
+        <div class="odds-display">@1.21</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 ALTO PORCENTAJE DE EMPATES EN ENFRENTAMIENTOS DIRECTOS</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team9_home.png"><span>Leones del Norte</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://assets.cm-sports.net/logos/team10_away.png"><span>Halcones del Sur</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Los últimos 10 enfrentamientos directos entre Leones del Norte y Halcones del Sur muestran un 60% de resultados empate o victoria visitante, evidenciando la falta de contundencia ofensiva de ambos equipos.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Doble Oportunidad: Empate o visitante</b></div>
+        <div class="odds-display">@1.23</div>
     </div>
 </article>
 
