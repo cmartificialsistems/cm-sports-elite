@@ -12,7 +12,8 @@
         .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
         .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
         .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
-        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; transform-style: preserve-3d; transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-15px) rotateX(8deg) rotateY(10deg); }
         .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
         .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
         .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; }
@@ -25,135 +26,124 @@
         .odds { background: var(--gold); color: #000; padding: 10px 20px; border-radius: 10px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; }
         .disclaimer { max-width: 700px; text-align: center; color: #64748b; font-size: 0.75rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(191,149,63,0.1); }
     </style>
-    <title>CM Sports Elite Picks 2026-02-01</title>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="CM Sports Elite Logo">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
 
-        <!-- 1) Guarani vs Rubio NU -->
-        <div class="card" tabindex="0" aria-label="Partido Club Guarani vs Rubio NU">
+        <!-- Match Card 1 - Fútbol -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1174.png" alt="Club Guarani logo">
-                    <p>Club Guarani</p>
+                    <img src="https://media.api-sports.io/football/teams/437.png" alt="Rosario Central">
+                    <p>Rosario Central</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1185.png" alt="Rubio NU logo">
-                    <p>Rubio NU</p>
+                    <img src="https://media.api-sports.io/football/teams/435.png" alt="River Plate">
+                    <p>River Plate</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>ANÁLISIS:</b>
-                <p>Club Guarani presenta una ofensiva consistente en sus últimos 10 partidos, con un promedio alto de remates y control de balón. Rubio NU ha mostrado debilidad defensiva especialmente en el segundo tiempo, concediendo corners y ocasiones. Por ello, se busca aprovechar la presión inicial con remates en 1T de Guarani.</p>
+                <b>Análisis:</b>
+                <p>River Plate mantiene un promedio sólido de remates y corners en sus últimos 10 partidos y la defensa de Rosario Central ha mostrado vulnerabilidad especialmente en el primer tiempo. Por esto, la apuesta a "Remates +8.5 River Plate" es atractiva, combinando la solidez ofensiva del visitante con las debilidades defensivas locales.</p>
             </div>
             <div class="footer">
-                <div class="pick">
-                    Pick: <span>Remates +5.5 1T Club Guarani</span>
-                </div>
+                <div class="pick"><span>Remates +8.5 River Plate</span></div>
                 <div class="odds">1.22</div>
             </div>
         </div>
 
-        <!-- 2) Real Espana vs CD Motagua -->
-        <div class="card" tabindex="0" aria-label="Partido Real Espana vs CD Motagua">
+        <!-- Match Card 2 - Fútbol -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1058.png" alt="Real Espana logo">
-                    <p>Real Espana</p>
+                    <img src="https://media.api-sports.io/football/teams/1125.png" alt="Millonarios">
+                    <p>Millonarios</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1055.png" alt="CD Motagua logo">
-                    <p>CD Motagua</p>
+                    <img src="https://media.api-sports.io/football/teams/1128.png" alt="Independiente Medellin">
+                    <p>Independiente Medellin</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>ANÁLISIS:</b>
-                <p>CD Motagua ha mostrado irregularidad sobre todo en corners, concediendo muchos a rivales locales. Real Espana mantiene una buena media de corners a favor y la capacidad de generar jugadas por banda. Confianza en corners para Real Espana en partido completo.</p>
+                <b>Análisis:</b>
+                <p>Millonarios ha sido fuerte en corners en partidos recientes, con un promedio de más de 6 corners por partido. Independiente Medellin suele ceder corners con frecuencia. Así que "Corners +5.5 Millonarios" es una apuesta segura basada en la tendencia ofensiva y balón parado.</p>
             </div>
             <div class="footer">
-                <div class="pick">
-                    Pick: <span>Corners +6.5 Real Espana</span>
-                </div>
+                <div class="pick"><span>Corners +5.5 Millonarios</span></div>
                 <div class="odds">1.21</div>
             </div>
         </div>
 
-        <!-- 3) Botafogo SP vs Palmeiras -->
-        <div class="card" tabindex="0" aria-label="Partido Botafogo SP vs Palmeiras">
+        <!-- Match Card 3 - NBA Basket -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/2618.png" alt="Botafogo SP logo">
-                    <p>Botafogo SP</p>
+                    <img src="https://media.api-sports.io/basketball/teams/151.png" alt="New York Knicks">
+                    <p>New York Knicks</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/121.png" alt="Palmeiras logo">
-                    <p>Palmeiras</p>
+                    <img src="https://media.api-sports.io/basketball/teams/145.png" alt="Los Angeles Lakers">
+                    <p>Los Angeles Lakers</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>ANÁLISIS:</b>
-                <p>Palmeiras destaca en sus últimos 10 encuentros con una defensa sólida y dominio en balón parado. Botafogo SP ha recibido muchos córners. Apostamos a Doble Oportunidad para Palmeiras, cubriendo empate y victoria, aprovechando la fortaleza visitante.</p>
+                <b>Análisis:</b>
+                <p>Los Angeles Lakers han cedido más de +5.5 puntos en hándicap general en sus últimos 10 partidos, mientras que New York Knicks muestran una defensa sólida. El hándicap +5.5 New York Knicks es ideal para cubrir la ventaja en este duelo ajustado.</p>
             </div>
             <div class="footer">
-                <div class="pick">
-                    Pick: <span>Doble Oportunidad Palmeiras o Empate</span>
-                </div>
+                <div class="pick"><span>Hándicap +5.5 New York Knicks</span></div>
                 <div class="odds">1.24</div>
             </div>
         </div>
 
-        <!-- 4) Botafogo vs Fluminense -->
-        <div class="card" tabindex="0" aria-label="Partido Botafogo vs Fluminense">
+        <!-- Match Card 4 - NBA Basket Player Prop -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/120.png" alt="Botafogo logo">
-                    <p>Botafogo</p>
+                    <img src="https://media.api-sports.io/basketball/teams/155.png" alt="Phoenix Suns">
+                    <p>Phoenix Suns</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/124.png" alt="Fluminense logo">
-                    <p>Fluminense</p>
+                    <img src="https://media.api-sports.io/basketball/teams/144.png" alt="Los Angeles Clippers">
+                    <p>Los Angeles Clippers</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>ANÁLISIS:</b>
-                <p>Fluminense tiene un sólido ataque liderado por Yago Felipe, destacando en remates totales y chances creadas. Botafogo sufre con atacantes habilidosos. Elegimos Player Prop: Yago Felipe +1.5 remates para asegurar la presión ofensiva de Fluminense.</p>
+                <b>Análisis:</b>
+                <p>Devin Booker de los Phoenix Suns tiene una racha consistente de más de 24.5 puntos por partido y se enfrenta a una defensa de Clippers que suele conceder puntos invitando a tiros abiertos. Por esto, "Devin Booker +24.5 Puntos" es un pick sólido.</p>
             </div>
             <div class="footer">
-                <div class="pick">
-                    Pick: <span>Yago Felipe +1.5 Remates</span>
-                </div>
+                <div class="pick"><span>Devin Booker +24.5 Puntos</span></div>
                 <div class="odds">1.23</div>
             </div>
         </div>
 
-        <!-- 5) Argentino vs Olimpico (Basketball) -->
-        <div class="card" tabindex="0" aria-label="Partido Argentino vs Olimpico">
+        <!-- Match Card 5 - NBA Basket Hándicap Primer Cuarto -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/280.png" alt="Argentino logo">
-                    <p>Argentino</p>
+                    <img src="https://media.api-sports.io/basketball/teams/156.png" alt="Portland Trail Blazers">
+                    <p>Portland Trail Blazers</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/292.png" alt="Olimpico logo">
-                    <p>Olimpico</p>
+                    <img src="https://media.api-sports.io/basketball/teams/137.png" alt="Cleveland Cavaliers">
+                    <p>Cleveland Cavaliers</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>ANÁLISIS:</b>
-                <p>Argentino ha mostrado gran defensa últimamente mientras que Olímpico sufre ante bases rápidos; sin embargo, Argentino cuenta con gran tirador Juan Manuel Torres que viene con 3PT +2.5 en sus últimos encuentros. Confiamos en su puntería para este partido.</p>
+                <b>Análisis:</b>
+                <p>Portland Trail Blazers han tenido un arranque fuerte en sus últimos partidos y Cleveland suele ceder puntos al inicio. Por esto "Hándicap -1.5 1Q Portland Trail Blazers" es un pick con alta probabilidad para el primer cuarto.</p>
             </div>
             <div class="footer">
-                <div class="pick">
-                    Pick: <span>Juan Manuel Torres +2.5 Triples</span>
-                </div>
+                <div class="pick"><span>Hándicap -1.5 1Q Portland Trail Blazers</span></div>
                 <div class="odds">1.20</div>
             </div>
         </div>
