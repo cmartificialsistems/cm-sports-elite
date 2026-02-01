@@ -3,77 +3,65 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tickets CM Sports Elite</title>
+<title>Tickets de Apuestas CM Sports Elite</title>
 <style>
   body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: #fef9f4;
+    background: #f4e9d8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a3c31;
     margin: 20px;
-    color: #3a2c25;
   }
   .match-card {
-    background: #f7ead9;
-    border: 2px solid #c49e66;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #c49e6688;
-    width: 380px;
+    background: #fff8e7;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #d1bfa3aa;
+    max-width: 480px;
     margin: 15px auto;
-    padding: 18px 22px 22px 22px;
+    padding: 20px;
+    border: 2px solid #d9b382;
   }
   .vulnerability-header {
-    background: #c49e66;
-    color: #fef9f4;
     font-weight: 900;
     font-size: 1.1rem;
+    color: #b54826;
+    margin-bottom: 12px;
     text-align: center;
-    border-radius: 8px;
-    padding: 6px 0;
-    letter-spacing: 0.05em;
-    margin-bottom: 14px;
+    text-transform: uppercase;
   }
   .teams-grid {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    margin-bottom: 16px;
+    justify-content: space-between;
+    margin-bottom: 12px;
   }
   .team {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 120px;
+    gap: 10px;
   }
   .team img {
-    width: 65px;
-    height: 65px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
-    margin-bottom: 8px;
   }
   .team span {
     font-weight: 700;
-    font-size: 0.95rem;
-    text-align: center;
-    color: #5b4531;
+    font-size: 1.05rem;
   }
   .vs-divider {
     font-weight: 900;
-    font-size: 1.3rem;
-    color: #c49e66;
+    font-size: 1.1rem;
+    color: #a76536;
   }
   .intel-box {
-    background: #f5f1e8;
-    border: 1.8px solid #c9a969;
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-size: 0.92rem;
-    color: #423419;
-    margin-bottom: 18px;
-  }
-  .intel-box b {
-    font-weight: 700;
-    display: block;
-    margin-bottom: 5px;
-    color: #7a602c;
+    background: #faf0dd;
+    border-radius: 6px;
+    border: 1px solid #d9b382;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    color: #4a3c31;
   }
   .bet-footer {
     display: flex;
@@ -81,106 +69,107 @@
     align-items: center;
   }
   .market-info span {
-    font-size: 0.78rem;
     font-weight: 600;
-    color: #a07d3d;
+    font-size: 0.9rem;
+    color: #b56e30;
   }
   .market-info b {
-    font-size: 1.05rem;
-    color: #5b3e0c;
+    font-weight: 900;
+    margin-left: 6px;
+    font-size: 1rem;
+    color: #813e09;
   }
   .odds-display {
     font-weight: 900;
-    font-size: 1.25rem;
-    color: #b4822b;
-    font-family: monospace;
+    font-size: 1.1rem;
+    color: #b54416;
   }
 </style>
 </head>
 <body>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 REMATES A PUERTA PRECARIOS DEL RIVAL</div>
+    <div class="vulnerability-header">🚨 REMATES DE EQUIPO EN 1ER TIEMPO</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamA.png"><span>Equipo A</span></div>
+        <div class="team"><img src="https://crests.football-data.org/18.svg"><span>Arsenal</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamB.png"><span>Equipo B</span></div>
+        <div class="team"><img src="https://crests.football-data.org/61.svg"><span>Brighton</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Equipo B promedia solo 2 remates a puerta en sus últimos 10 partidos y concedió 4 en duelos directos. Equipo A dispara con alta efectividad.</p>
+        <p>Arsenal domina en remates en el primer tiempo con un promedio 45% mayor que Brighton en últimos 10 partidos. Rival muestra debilidad defensiva al inicio.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>REMATES A PUERTA EQUIPO LOCAL</b></div>
-        <div class="odds-display">@1.22</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-header">🚨 DÉBIL ENTRADA DE CORNERS EN EL 1ER TIEMPO</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamC.png"><span>Equipo C</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamD.png"><span>Equipo D</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Equipo D concede promedio de 3 corners en el primer tiempo, factor negativo tras 7 partidos seguidos. Equipo C genera alta presión inicial.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>CORNERS 1er TIEMPO EQUIPO LOCAL</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>REMATES DE EQUIPO 1ER TIEMPO</b></div>
         <div class="odds-display">@1.23</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 BAJA DEFENSIVA EN DUELLOS DIRECTOS RECIENTES</div>
+    <div class="vulnerability-header">🚨 CORNERS TOTALES EXCESIVOS DEL LOCAL</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamE.png"><span>Equipo E</span></div>
+        <div class="team"><img src="https://crests.football-data.org/109.svg"><span>West Ham</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamF.png"><span>Equipo F</span></div>
+        <div class="team"><img src="https://crests.football-data.org/86.svg"><span>Everton</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Equipo F no gana o empata en últimos 5 duelos directos y presenta media de 2 goles recibidos. Equipo E aprovecha para mantener ventaja.</p>
+        <p>West Ham promedia 8.3 corners por juego, un 40% más que Everton. Además, en duelos directos, supera en corners en 9 de sus últimos 10 encuentros.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>GANA O EMPATA (DOBLE OPORTUNIDAD) LOCAL</b></div>
-        <div class="odds-display">@1.24</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-header">🚨 DÉFICIT DE REBOTES EN LA ZONA INTERIOR</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamG.png"><span>Equipo G</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamH.png"><span>Equipo H</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Equipo H promedia 6.7 rebotes menos por partido que Equipo G y sufrió 8 derrotas en duelos directos enfocándose en control interior.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>PLAYER PROPS REBOTES EQUIPO LOCAL</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>CORNERS TOTALES + LOCAL</b></div>
         <div class="odds-display">@1.21</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 BAJO % DE TRIPLES EN ENFRENTAMIENTOS DIRECTOS</div>
+    <div class="vulnerability-header">🚨 DOBLE OPORTUNIDAD: VISITANTE EN ALZA GLOBAL</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://example.com/logos/teamI.png"><span>Equipo I</span></div>
+        <div class="team"><img src="https://crests.football-data.org/676.svg"><span>Monterrey</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://example.com/logos/teamJ.png"><span>Equipo J</span></div>
+        <div class="team"><img src="https://crests.football-data.org/941.svg"><span>America</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Equipo J registra un 28% menos en triples convertidos en los últimos 10 enfrentamientos frente a Equipo I, quien domina el perímetro.</p>
+        <p>America no pierde en 8 de últimos 10 partidos y saca ventaja en duelos directos recientes. Monterrey muestra defensas vulnerables en últimos choques.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>TRIPLES JUGADOR LOCAL</b></div>
-        <div class="odds-display">@1.25</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>GANA O EMPATA (DOBLE OPORTUNIDAD)</b></div>
+        <div class="odds-display">@1.20</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 HÁNDICAP POSITIVO 1ER CUARTO VISITANTE</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/0/06/Utah_Jazz_logo_2016.svg"><span>Utah Jazz</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/0/0e/Denver_Nuggets.svg"><span>Denver Nuggets</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Denver ha +3 o más en hándicap 1er cuarto en 7 de últimos 10 partidos y supera a Utah en este parcial. Utah presenta débiles arranques recientes.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>HÁNDICAP + VISITANTE 1ER CUARTO</b></div>
+        <div class="odds-display">@1.22</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 PLAYER PROPS: PUNTOS Y REBOTES COMBINADOS</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/8/88/Golden_State_Warriors_logo.svg"><span>Golden State Warriors</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Los_Angeles_Lakers_logo.svg"><span>Los Angeles Lakers</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Stephen Curry y LeBron James combinan una media de 55 puntos y rebotes en los últimos 10 encuentros, con Lakers con debilidad defensiva al defender combos.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>PLAYER PROPS: PUNTOS + REBOTES</b></div>
+        <div class="odds-display">@1.24</div>
     </div>
 </article>
 
