@@ -1,108 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💎 VIP ELITE | TERMINAL IA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b28424 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.9); --border: rgba(191,149,63,0.4); --bg: #010409; }
-        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; background-image: radial-gradient(circle at 50% -20%, #1e293b 0%, transparent 70%); }
-        
-        /* LOGO FLOTANTE MAESTRO */
-        .header-logo { width: 180px; height: 180px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 50px rgba(191,149,63,0.6); margin-bottom: 25px; animation: levitate 4s ease-in-out infinite; object-fit: cover; }
-        @keyframes levitate { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(2deg); } }
-
-        h1 { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 6px; font-size: 2.6rem; text-transform: uppercase; }
-        .tag-line { font-family: 'Orbitron'; color: #10b981; font-size: 0.8rem; letter-spacing: 4px; margin-top: 10px; margin-bottom: 50px; text-shadow: 0 0 15px rgba(16,185,129,0.4); }
-        .container { width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 30px; }
-        
-        /* CARDS BAKLAVA SUPREMAS */
-        .match-card { background: var(--glass); backdrop-filter: blur(25px); border-radius: 30px; padding: 35px; border: 1px solid var(--border); border-left: 10px solid #bf953f; box-shadow: 0 30px 70px rgba(0,0,0,0.7); }
-        .vulnerability-header { color: #f87171; font-weight: 900; font-size: 0.7rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 25px; font-family: 'Orbitron'; letter-spacing: 1px; }
-        .teams-grid { display: flex; justify-content: space-between; align-items: center; margin: 25px 0; }
-        .team { display: flex; flex-direction: column; align-items: center; flex: 1; gap: 15px; }
-        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.6)); border: 1.5px solid var(--border); border-radius: 50%; padding: 10px; background: rgba(255,255,255,0.04); }
-        .team span { font-family: 'Orbitron'; font-size: 0.85rem; color: #fff; font-weight: 700; text-align: center; }
-        .vs-divider { font-family: 'Orbitron'; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.8rem; opacity: 0.4; font-weight: 900; }
-        .intel-box { background: rgba(0,0,0,0.4); border-radius: 20px; padding: 25px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.05); }
-        .intel-box b { color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; display: block; margin-bottom: 10px; letter-spacing: 2px; }
-        .intel-box p { font-size: 1rem; color: #94a3b8; font-style: italic; margin: 0; line-height: 1.7; }
-        .bet-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.08); }
-        .market-info b { font-size: 1.5rem; color: #fff; display: block; }
-        .market-info span { font-size: 0.65rem; color: #64748b; font-weight: 800; letter-spacing: 2px; }
-        .odds-display { background: var(--gold); color: #000; padding: 10px 25px; border-radius: 15px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.6rem; box-shadow: 0 10px 30px rgba(191,149,63,0.5); }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tickets de Apuestas Baklava</title>
+<style>
+  body {
+    background: #f9f4f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3a3a3a;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .match-card {
+    background: linear-gradient(135deg, #f5ebe0 0%, #e7cdc2 100%);
+    border: 2px solid #b38867;
+    border-radius: 14px;
+    padding: 16px 22px 22px 22px;
+    box-shadow: 0 8px 22px rgba(179, 136, 103, 0.28);
+  }
+  .vulnerability-header {
+    background: #b38867;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    padding: 8px 12px;
+    text-align: center;
+    margin-bottom: 14px;
+    letter-spacing: 1.1px;
+    font-family: "Georgia", serif;
+  }
+  .teams-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+  }
+  .team img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1.5px solid #b38867;
+    background: #fdf6f0;
+    padding: 4px;
+  }
+  .team span {
+    font-weight: 700;
+    font-size: 1.06rem;
+    color: #5a4423;
+    font-family: "Trebuchet MS", sans-serif;
+  }
+  .vs-divider {
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #7e5a39;
+    flex-basis: 48px;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    user-select: none;
+  }
+  .intel-box {
+    background: #e0c9b2cc;
+    border: 1.5px solid #d9ad86;
+    border-radius: 10px;
+    padding: 11px 14px;
+    margin-bottom: 14px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: #4f3a1d;
+    line-height: 1.3;
+  }
+  .intel-box b {
+    font-weight: 700;
+    font-style: normal;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .bet-footer {
+    display: flex;
+    justify-content: space-between;
+    background: #d4b893;
+    border-radius: 12px;
+    padding: 10px 16px;
+    box-shadow: inset 0 2px 6px #a67f58aa;
+  }
+  .market-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .market-info span {
+    font-size: 0.83rem;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    color: #452e0d;
+  }
+  .market-info b {
+    font-size: 1.12rem;
+    font-weight: 900;
+    color: #2f1e04;
+    margin-top: 2px;
+  }
+  .odds-display {
+    font-weight: 900;
+    font-size: 1.28rem;
+    color: #291a00;
+    font-family: "Impact", Charcoal, sans-serif;
+    user-select: none;
+    align-self: center;
+  }
+</style>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/logo_vip.jpg" class="header-logo">
-    <h1>CM SPORTS ELITE</h1>
-    <div class="tag-line">● ALGORITMO DE INTELIGENCIA ARTIFICIAL V11.25</div>
-    <div class="container"><article class="match-card">
-    <div class="vulnerability-header">🚨 DEFENSIVA DÉBIL EN EL 1ER TIEMPO</div>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 CORNERS TOTALES DOMINADOS POR EL LOCAL</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/0/09/Arsenal_FC.svg"><span>Arsenal</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/teamA.png"><span>Team A</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/c/c9/Chelsea_FC.svg"><span>Chelsea</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/teamB.png"><span>Team B</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Arsenal genera un promedio alto de remates a puerta en el primer tiempo mientras Chelsea recibe muchos. Esto crea oportunidades claras tempranas.</p>
+        <p>Team A ha conseguido una media de 7.8 corners por partido en sus últimos 10 encuentros, mientras que Team B promedia solo 3.2 y tiene la debilidad del bajo remate a puerta.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Remates de equipo en 1er tiempo - Arsenal Over 5.5</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>CORNERS TOTALES + OVER 9.5</b></div>
         <div class="odds-display">@1.22</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 BAJO RENDIMIENTO DEFENSIVO EN JUGADOR CLAVE</div>
+    <div class="vulnerability-header">🚨 DEBILIDAD EN DEFENSA EN 1ER CUARTO DEL VISITANTE</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/0/09/Arsenal_FC.svg"><span>Arsenal</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/basketHome.png"><span>Basket Home</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/c/c9/Chelsea_FC.svg"><span>Chelsea</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/basketAway.png"><span>Basket Away</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Chelsea tiene problemas con remates a puerta en defensa, especialmente ante jugadores ofensivos claves de Arsenal como Bukayo Saka.</p>
+        <p>Basket Home promedia +4 puntos de ventaja con handicap en el 1er cuarto ante Basket Away, que suele iniciar débil pese a su buen historial final.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Saka Over 3.5 remates a puerta</b></div>
-        <div class="odds-display">@1.24</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>HÁNDICAP 1ER CUARTO +4.0</b></div>
+        <div class="odds-display">@1.23</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 BAJAS EN EFECTIVIDAD EN LOS CORNERS DE CHELSEA</div>
+    <div class="vulnerability-header">🚨 REMATES A PUERTA DEL LOCAL SUPERAN AL RIVAL</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/0/09/Arsenal_FC.svg"><span>Arsenal</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/footballLocal.png"><span>Local FC</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/c/c9/Chelsea_FC.svg"><span>Chelsea</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/footballAway.png"><span>Away United</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Chelsea promedia pocos corners efectivos y su defensa concede muchos corners a favor de Arsenal, situación que Arsenal puede capitalizar.</p>
+        <p>Local FC convierte un 28% más de remates a puerta que Away United en los últimos 10 partidos, y en el duelo directo supera en tiros a puerta constante.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Corners totales Over 9.5</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>REMATES A PUERTA LOCAL + OVER 6.5</b></div>
         <div class="odds-display">@1.21</div>
     </div>
 </article>
 
 <article class="match-card">
-    <div class="vulnerability-header">🚨 TENDENCIA A RENUNCIAR AL EMPATE</div>
+    <div class="vulnerability-header">🚨 DÉBIL DEFENSA DEL VISITANTE FAVORECE DOBLE OPORTUNIDAD</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/0/09/Arsenal_FC.svg"><span>Arsenal</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/clubHome.png"><span>Club Home</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/c/c9/Chelsea_FC.svg"><span>Chelsea</span></div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/clubAway.png"><span>Club Away</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Ambos equipos muestran baja frecuencia de empates en los últimos 10 enfrentamientos directos, favoreciendo un resultado ganador o empate seguro.</p>
+        <p>Club Home lleva 8 partidos sin perder frente a Club Away, que muestra problemas defensivos claros, lo que apoya una doble oportunidad local o empate.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Gana o Empata (Doble Oportunidad) - Arsenal</b></div>
-        <div class="odds-display">@1.25</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>GANA O EMPATA LOCAL (DOBLE OPORTUNIDAD)</b></div>
+        <div class="odds-display">@1.24</div>
     </div>
-</article></div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 PLAYER PROPS EN TRIPLES DEL JUGADOR LOCAL EN ASCENSO</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://assets.cm-sports.com/logos/basketLocal.png"><span>Basket Local</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://assets.cm-sports.com/logos/basketVisitor.png"><span>Basket Visitor</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Jugadora Local promedia 3.2 triples con alta eficiencia tras analizar últimos duelos, y Basket Visitor no defiende bien el perímetro.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>TRIPLES JUGADOR LOCAL + OVER 2.5</b></div>
+        <div class="odds-display">@1.20</div>
+    </div>
+</article>
+
 </body>
 </html>
