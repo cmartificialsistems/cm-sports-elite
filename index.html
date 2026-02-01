@@ -1,80 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tickets de Apuestas CM Sports Elite</title>
+<style>
+  body {
+    background: #f3e1c8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 20px;
+    display: flex; flex-direction: column; gap: 20px;
+    color: #4a3c31;
+  }
+  .match-card {
+    background: linear-gradient(135deg, #d1b280 0%, #f6e9d7 100%);
+    border: 2px solid #8b6d42;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(171, 137, 77, 0.3);
+    padding: 18px 22px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .vulnerability-header {
+    font-weight: 900;
+    font-size: 1.15rem;
+    background: #b78f33;
+    color: #f6f2e7;
+    text-align: center;
+    border-radius: 10px;
+    padding: 6px 15px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .teams-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .team img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+  }
+  .team span {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .vs-divider {
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #946d24;
+    user-select: none;
+  }
+  .intel-box {
+    background: #f9f5ec;
+    border: 1.5px solid #c9b07b;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: #605132;
+  }
+  .intel-box b {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 800;
+  }
+  .bet-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .market-info span {
+    font-size: 0.8rem;
+    color: #a0842e;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .market-info b {
+    font-size: 1rem;
+    font-weight: 900;
+    color: #5a4611;
+  }
+  .odds-display {
+    font-weight: 900;
+    font-size: 1.05rem;
+    color: #7f6107;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
 <article class="match-card">
-    <div class="vulnerability-header">🚨 REMATES DE EQUIPO DEFICIENTES EN EL PRIMER TIEMPO</div>
+    <div class="vulnerability-header">🚨 REMATES A PUERTA DESIGUALES EN EL PRIMER TIEMPO</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://cdn.sportmonks.com/images/soccer/teams/16/16.png"><span>Barcelona</span></div>
+        <div class="team"><img src="https://example.com/logos/teamA.png"><span>Team A</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://cdn.sportmonks.com/images/soccer/teams/18/18.png"><span>Real Madrid</span></div>
+        <div class="team"><img src="https://example.com/logos/teamB.png"><span>Team B</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Barcelona muestra baja efectividad en remates en el primer tiempo, mientras Real Madrid es fuerte defendiendo en esa fase.</p>
+        <p>Team A promedia 7 remates a puerta en el 1T contra solo 3 del rival. Historial confirma dominio ofensivo del local desde inicio.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Remates de equipo en el 1er tiempo</b></div>
-        <div class="odds-display">@1.23</div>
-    </div>
-</article>
-<article class="match-card">
-    <div class="vulnerability-header">🚨 DEFICIENCIA EN ACUMULACIÓN DE CORNERS</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://cdn.sportmonks.com/images/soccer/teams/22/22.png"><span>Liverpool</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://cdn.sportmonks.com/images/soccer/teams/25/25.png"><span>Manchester City</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Liverpool tiene tendencia a menos corners totales y Manchester City genera pocos corners ofensivos.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Corners totales</b></div>
-        <div class="odds-display">@1.21</div>
-    </div>
-</article>
-<article class="match-card">
-    <div class="vulnerability-header">🚨 BAJA EFECTIVIDAD INDIVIDUAL EN REMATES A PUERTA</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://cdn.sportmonks.com/images/soccer/teams/32/32.png"><span>Bayern Munich</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://cdn.sportmonks.com/images/soccer/teams/37/37.png"><span>Dortmund</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Bayern Munich presenta baja precisión en remates a puerta individuales frente a una defensa sólida de Dortmund.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Remates a puerta individuales</b></div>
-        <div class="odds-display">@1.24</div>
-    </div>
-</article>
-<article class="match-card">
-    <div class="vulnerability-header">🚨 ALTO RIESGO EN DOBLE OPORTUNIDAD GANA O EMPATA</div>
-    <div class="teams-grid">
-        <div class="team"><img src="https://cdn.sportmonks.com/images/soccer/teams/44/44.png"><span>Juventus</span></div>
-        <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://cdn.sportmonks.com/images/soccer/teams/49/49.png"><span>AC Milan</span></div>
-    </div>
-    <div class="intel-box">
-        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Juventus tiene historial sólido de evitar derrotas contra AC Milan, incrementando valor en doble oportunidad gana o empata.</p>
-    </div>
-    <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Gana o Empata (Doble Oportunidad)</b></div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Remates de equipo en 1er tiempo</b></div>
         <div class="odds-display">@1.22</div>
     </div>
 </article>
+
 <article class="match-card">
-    <div class="vulnerability-header">🚨 BAJA PRODUCCIÓN DE TRIPLES DE JUGADOR CLAVE</div>
+    <div class="vulnerability-header">🚨 DÉFICIT DEFENSIVO RIVAL EN CANTIDAD DE CORNERS</div>
     <div class="teams-grid">
-        <div class="team"><img src="https://cdn.sportmonks.com/images/basketball/teams/193/193.png"><span>Lakers</span></div>
+        <div class="team"><img src="https://example.com/logos/teamC.png"><span>Team C</span></div>
         <div class="vs-divider">VS</div>
-        <div class="team"><img src="https://cdn.sportmonks.com/images/basketball/teams/196/196.png"><span>Warriors</span></div>
+        <div class="team"><img src="https://example.com/logos/teamD.png"><span>Team D</span></div>
     </div>
     <div class="intel-box">
         <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
-        <p>Jugador estrella Lakers muestra baja efectividad en triples recientes ante una defensa fuerte de Warriors.</p>
+        <p>Team D concede en promedio 6 corners por partido, siendo superado consistentemente en los últimos 10 encuentros directos.</p>
     </div>
     <div class="bet-footer">
-        <div class="market-info"><span>PICK SUGERIDO</span><b>Triples de jugador</b></div>
-        <div class="odds-display">@1.25</div>
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Corners por equipo (Team C)</b></div>
+        <div class="odds-display">@1.21</div>
     </div>
 </article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 FRAGILIDAD EN HÁNDICAP DEL 1ER CUARTO EN VISITANTE</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://example.com/logos/teamE.png"><span>Team E</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://example.com/logos/teamF.png"><span>Team F</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>En 8 de los últimos 10 partidos, Team F inició el primer cuarto con déficits de más de 5 puntos, reflejando un rendimiento inicial débil.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Hándicap 1er cuarto (Team E -5)</b></div>
+        <div class="odds-display">@1.24</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 BAJA EFECTIVIDAD DE TRIPLES EN EL RIVAL</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://example.com/logos/teamG.png"><span>Team G</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://example.com/logos/teamH.png"><span>Team H</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Jugador clave de Team H promedia solo 1 triple en los últimos 10 partidos, inferior a 3 triples por encuentro de Team G.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Triples de jugador (Team G)</b></div>
+        <div class="odds-display">@1.23</div>
+    </div>
+</article>
+
+<article class="match-card">
+    <div class="vulnerability-header">🚨 DÉBIL DEFENSA EN PUNTOS TOTALES DEL EQUIPO VISITANTE</div>
+    <div class="teams-grid">
+        <div class="team"><img src="https://example.com/logos/teamI.png"><span>Team I</span></div>
+        <div class="vs-divider">VS</div>
+        <div class="team"><img src="https://example.com/logos/teamJ.png"><span>Team J</span></div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE INTELIGENCIA ARTIFICIAL:</b>
+        <p>Team J encaja más de 95 puntos en 7 de los últimos 10 partidos, señalando vulnerabilidad en defensa para apostar puntos totales altos.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info"><span>PICK SUGERIDO</span><b>Puntos totales (más de 185)</b></div>
+        <div class="odds-display">@1.20</div>
+    </div>
+</article>
+
+</body>
+</html>
