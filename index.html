@@ -5,318 +5,153 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-        :root { 
-            --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); 
-            --glass: rgba(15, 23, 42, 0.95); 
-            --shadow-gold: 0 15px 45px rgba(191,149,63,0.7);
-        }
-        body { 
-            background: #010409; 
-            color: #fff; 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; 
-            padding: 40px 20px; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            min-height: 100vh; 
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .floating-logo { 
-            width: 130px; 
-            border-radius: 50%; 
-            border: 3px solid #bf953f; 
-            box-shadow: 0 0 35px rgba(191,149,63,0.5); 
-            animation: float 4s ease-in-out infinite; 
-            margin-bottom: 20px; 
-            background: radial-gradient(circle at center, #4a381d 0%, transparent 65%);
-        }
-        .main-title { 
-            background: var(--gold); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            font-family: 'Orbitron', sans-serif; 
-            font-size: 2.2rem; 
-            font-weight: 900; 
-            letter-spacing: 4px; 
-            text-align:center; 
-            margin:0; 
-            user-select: none;
-        }
-        .sub-title { 
-            color: #10b981; 
-            font-family: 'Orbitron', sans-serif; 
-            font-size: 0.8rem; 
-            margin: 15px 0 40px 0; 
-            letter-spacing: 2px; 
-            user-select: none;
-        }
-        .container {
-            width: 100%; 
-            max-width: 800px; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 30px; 
-            perspective: 1500px;
-        }
-        .card { 
-            background: var(--glass); 
-            border-radius: 25px; 
-            padding: 30px; 
-            border: 1px solid rgba(191,149,63,0.3); 
-            border-left: 6px solid #bf953f; 
-            box-shadow: var(--shadow-gold); 
-            position: relative; 
-            transform-style: preserve-3d;
-            transition: transform 0.35s ease;
-        }
-        .card:hover {
-            transform: translateY(-20px) rotateX(5deg) rotateY(7deg);
-            box-shadow: 0 27px 50px rgba(191,149,63,0.95);
-            cursor: default;
-        }
-        .teams { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 20px; 
-            text-align: center; 
-            gap: 10px;
-        }
-        .team { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            flex: 1;
-            user-select:none;
-        }
-        .team img { 
-            width: 75px; 
-            height: 75px; 
-            object-fit: contain; 
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); 
-            background: rgba(255,255,255,0.03); 
-            padding: 5px; 
-            border-radius: 12px; 
-            transition: filter 0.35s ease;
-        }
-        .team img:hover {
-            filter: drop-shadow(0 8px 22px rgba(191,149,63,0.8));
-        }
-        .team p { 
-            font-family: 'Orbitron', sans-serif; 
-            font-size: 0.8rem; 
-            font-weight: 700; 
-            margin-top: 10px; 
-            color: #fff; 
-            white-space: nowrap;
-        }
-        .vs { 
-            font-family: 'Orbitron', sans-serif; 
-            color: #bf953f; 
-            font-weight: 900; 
-            font-size: 1.4rem; 
-            flex-shrink: 0;
-            user-select:none;
-            margin: 0 10px;
-        }
-        .analysis-box { 
-            background: rgba(255,255,255,0.04); 
-            border-radius: 15px; 
-            padding: 20px; 
-            margin: 20px 0; 
-            border: 1px solid rgba(255,255,255,0.05); 
-            font-size: 0.95rem;
-            line-height: 1.5;
-            font-style: italic;
-            color: #cbd5e1;
-            user-select:none;
-        }
-        .analysis-box b { 
-            color: #bf953f; 
-            font-size: 0.7rem; 
-            text-transform: uppercase; 
-        }
-        .footer { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border-top: 1px solid rgba(255,255,255,0.1); 
-            padding-top: 15px; 
-        }
-        .pick { 
-            font-family: 'Orbitron', sans-serif; 
-            text-transform: uppercase; 
-            user-select:none;
-            font-weight: 700;
-            color: #fdda6b;
-            font-size: 1rem;
-        }
-        .odds { 
-            background: var(--gold); 
-            color: #000; 
-            padding: 10px 20px; 
-            border-radius: 10px; 
-            font-family: 'Orbitron', sans-serif; 
-            font-weight: 900; 
-            font-size: 1.3rem; 
-            user-select:none;
-            box-shadow: 0 0 12px rgba(191,149,63,0.75);
-        }
-        .disclaimer { 
-            max-width: 700px; 
-            text-align: center; 
-            color: #64748b; 
-            font-size: 0.75rem; 
-            margin-top: 60px; 
-            line-height: 1.6; 
-            padding: 20px; 
-            border-top: 1px solid rgba(191,149,63,0.1); 
-            user-select:none;
-        }
-        @media (max-width:600px) {
-            .teams {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .vs {
-                margin: 0;
-            }
-            .team img {
-                width: 60px;
-                height: 60px;
-            }
-            .card {
-                padding: 20px;
-            }
-        }
+        :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
+        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .floating-logo { width: 130px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 35px rgba(191,149,63,0.5); animation: float 4s ease-in-out infinite; margin-bottom: 20px; }
+        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
+        .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
+        .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; transition: all 0.3s ease; transform-origin: center; }
+        .card:hover { border-color: #bf953f; box-shadow: 0 0 30px rgba(191,149,63,0.2); transform: scale(1.01); /* NO DESPLAZAR */ }
+        .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
+        .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; }
+        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; font-size: 1.4rem; }
+        .analysis-box { background: rgba(255,255,255,0.04); border-radius: 15px; padding: 20px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; line-height: 1.4; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; margin-top: 15px; }
+        .pick { font-family: 'Orbitron'; text-transform: uppercase; font-size: 0.9rem; color: #bf953f; font-weight: 900; }
+        .odds { background: var(--gold); color: #000; padding: 10px 20px; border-radius: 10px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; }
+        .disclaimer { max-width: 700px; text-align: center; color: #64748b; font-size: 0.75rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(191,149,63,0.1); }
     </style>
+    <title>CM Sports Elite - Picks del Día</title>
 </head>
 <body>
     <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Logo CM Sports Elite" class="floating-logo">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
-
-        <!-- 1) Rosario Central vs River Plate -->
-        <article class="card" aria-label="Partido Rosario Central vs River Plate">
+        <!-- CARD 1: Rosario Central vs River Plate - Fútbol -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/437.png" alt="Rosario Central Logo" loading="lazy">
+                    <img src="https://media.api-sports.io/football/teams/437.png" alt="Rosario Central">
                     <p>Rosario Central</p>
                 </div>
-                <span class="vs">VS</span>
+                <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/435.png" alt="River Plate Logo" loading="lazy">
+                    <img src="https://media.api-sports.io/football/teams/435.png" alt="River Plate">
                     <p>River Plate</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis:</b>
-                <p>River Plate suele dominar la posesión y efectividad ante equipos argentinos. Además, Julián Álvarez ha sido clave en asistencias y generación ofensiva reciente.</p>
+                <b>Análisis:</b> Rosario Central ha mostrado solidez defensiva en casa, con partidos con pocos goles y control del ritmo. River Plate, aunque es favorito, ha tenido encuentros con dificultades para superar defensas ordenadas.<br><br>
+                Mercado recomendado de alta probabilidad en cuota baja: <b>Más de 1.5 goles</b> (cuota 1.23).<br>
+                Alternativa segura: <b>Doble Oportunidad: River Plate o Empate</b> (cuota 1.22).
             </div>
             <div class="footer">
-                <div class="pick">Pick: River Plate con hándicap -0.5 goles</div>
-                <div class="odds">1.22</div>
+                <div class="pick">Pick: Más 1.5 Goles</div>
+                <div class="odds">1.23</div>
             </div>
-        </article>
+        </div>
 
-        <!-- 2) Millonarios vs Independiente Medellín -->
-        <article class="card" aria-label="Partido Millonarios vs Independiente Medellin">
+        <!-- CARD 2: Millonarios vs Independiente Medellin - Fútbol -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1125.png" alt="Millonarios Logo" loading="lazy">
+                    <img src="https://media.api-sports.io/football/teams/1125.png" alt="Millonarios">
                     <p>Millonarios</p>
                 </div>
-                <span class="vs">VS</span>
+                <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1128.png" alt="Independiente Medellín Logo" loading="lazy">
-                    <p>Independiente Medellín</p>
+                    <img src="https://media.api-sports.io/football/teams/1128.png" alt="Independiente Medellin">
+                    <p>Independiente Medellin</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis:</b>
-                <p>Millonarios juega fuerte en casa y Jown Cardona es un jugador que ha marcado goles y asistido en los últimos encuentros.</p>
+                <b>Análisis:</b> Duelo clásico con ambos equipos mostrando tendencia a atacar intensamente. Millonarios cuenta con jugadores clave efectivos en ataque como <b>Jhon Duque</b>, generando chances constantes.<br><br>
+                Recomendación: <b>Más de 0.5 goles en tiros a puerta (Millonarios)</b> con cuota 1.25. También válido <b>Doble Oportunidad: Empate o Independiente Medellin</b> cuota 1.20.
             </div>
             <div class="footer">
-                <div class="pick">Pick: Jown Cardona marcará gol</div>
-                <div class="odds">1.24</div>
+                <div class="pick">Pick: +0.5 Remates a puerta (Millonarios)</div>
+                <div class="odds">1.25</div>
             </div>
-        </article>
+        </div>
 
-        <!-- 3) New York Knicks vs Los Angeles Lakers (NBA) -->
-        <article class="card" aria-label="Partido New York Knicks vs Los Angeles Lakers">
+        <!-- CARD 3: New York Knicks vs Los Angeles Lakers - Baloncesto -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/151.png" alt="New York Knicks Logo" loading="lazy">
+                    <img src="https://media.api-sports.io/basketball/teams/151.png" alt="New York Knicks">
                     <p>New York Knicks</p>
                 </div>
-                <span class="vs">VS</span>
+                <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/145.png" alt="Los Angeles Lakers Logo" loading="lazy">
+                    <img src="https://media.api-sports.io/basketball/teams/145.png" alt="Los Angeles Lakers">
                     <p>Los Angeles Lakers</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis:</b>
-                <p>LeBron James sigue como máximo referente de Lakers. Se espera que promedie más de 27.5 puntos, dominando la ofensiva frente a Knicks que juegan con defensa férrea.</p>
+                <b>Análisis:</b> Partido intenso entre dos históricos con rosters completos hoy. Knicks confían en <b>Julius Randle</b> (vigente jugador), mientras Lakers busca equilibrio defensivo.<br><br>
+                Pronóstico con alta probabilidad: <b>Hándicap +10.5 a favor de Los Angeles Lakers</b>, cuota 1.22,<br>
+                además <b>Puntos totales Over 210.5</b>, cuota 1.24.
             </div>
             <div class="footer">
-                <div class="pick">Pick: LeBron James +27.5 puntos</div>
-                <div class="odds">1.23</div>
+                <div class="pick">Pick: Lakers +10.5 Hándicap</div>
+                <div class="odds">1.22</div>
             </div>
-        </article>
+        </div>
 
-        <!-- 4) Phoenix Suns vs Los Angeles Clippers (NBA) -->
-        <article class="card" aria-label="Partido Phoenix Suns vs Los Angeles Clippers">
+        <!-- CARD 4: Phoenix Suns vs Los Angeles Clippers - Baloncesto -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/155.png" alt="Phoenix Suns Logo" loading="lazy">
+                    <img src="https://media.api-sports.io/basketball/teams/155.png" alt="Phoenix Suns">
                     <p>Phoenix Suns</p>
                 </div>
-                <span class="vs">VS</span>
+                <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/144.png" alt="Los Angeles Clippers Logo" loading="lazy">
+                    <img src="https://media.api-sports.io/basketball/teams/144.png" alt="Los Angeles Clippers">
                     <p>Los Angeles Clippers</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis:</b>
-                <p>Devin Booker ha mostrado consistencia anotadora y se espera que supere los 25.5 puntos anoche en casa ante Clippers sin Kawhi Leonard.</p>
+                <b>Análisis:</b> Phoenix Suns se apoya en el juego colectivo y la explosividad de <b>Kevin Durant</b>. Clippers dependen de la defensa que ha permitido pocos puntos arriba.<br><br>
+                Pick recomendado: <b>Más de 220.5 puntos totales Over</b>, cuota 1.23.<br>
+                Alternativa: <b>Hándicap +15.5 Phoenix Suns</b>, cuota 1.25.
             </div>
             <div class="footer">
-                <div class="pick">Pick: Devin Booker +25.5 puntos</div>
-                <div class="odds">1.21</div>
+                <div class="pick">Pick: Over 220.5 Puntos Totales</div>
+                <div class="odds">1.23</div>
             </div>
-        </article>
+        </div>
 
-        <!-- 5) San Antonio Spurs vs Orlando Magic (NBA) -->
-        <article class="card" aria-label="Partido San Antonio Spurs vs Orlando Magic">
+        <!-- CARD 5: Portland Trail Blazers vs Cleveland Cavaliers - Baloncesto -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/158.png" alt="San Antonio Spurs Logo" loading="lazy">
-                    <p>San Antonio Spurs</p>
+                    <img src="https://media.api-sports.io/basketball/teams/156.png" alt="Portland Trail Blazers">
+                    <p>Portland Trail Blazers</p>
                 </div>
-                <span class="vs">VS</span>
+                <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/153.png" alt="Orlando Magic Logo" loading="lazy">
-                    <p>Orlando Magic</p>
+                    <img src="https://media.api-sports.io/basketball/teams/137.png" alt="Cleveland Cavaliers">
+                    <p>Cleveland Cavaliers</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis:</b>
-                <p>El rookie Zach Edey ha sorprendido con su dominio en la pintura, se pronostica que logre al menos 15 puntos y 10 rebotes en este partido.</p>
+                <b>Análisis:</b> Portland mantiene intensidad ofensiva, liderados por <b>Lauri Markkanen</b>. Cleveland Cavaliers tienen defensa sólida pero muestran fatiga.<br><br>
+                Pick seguro: <b>Hándicap +14.5 Cleveland Cavaliers</b> cuota 1.21.<br>
+                Apoyo: <b>Más de 215.5 puntos totales</b>, cuota 1.24.
             </div>
             <div class="footer">
-                <div class="pick">Pick: Zach Edey con 15+ puntos y 10+ rebotes</div>
-                <div class="odds">1.20</div>
+                <div class="pick">Pick: Cavaliers +14.5 Hándicap</div>
+                <div class="odds">1.21</div>
             </div>
-        </article>
-        
+        </div>
     </div>
+
     <div class="disclaimer">
-        <b>Nota:</b> Recuerda que en el deporte nada es 100% seguro. Gestiona tu banca con responsabilidad.
+        <b>Nota:</b> Gestiona tu banca con responsabilidad.
     </div>
 </body>
 </html>
