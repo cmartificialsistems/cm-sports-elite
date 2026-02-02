@@ -5,50 +5,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-        :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --red-bg: #8B0000; --glass: rgba(25, 6, 6, 0.95); }
-        body { background: #2a0000; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
+        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .floating-logo { width: 130px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 35px rgba(191,149,63,0.5); animation: float 4s ease-in-out infinite; margin-bottom: 20px; }
         .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
-        .sub-title { color: #ef4444; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
+        .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
         .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
-        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(255,0,0,0.35); border-left: 6px solid #ef4444; box-shadow: 0 15px 45px rgba(139,0,0,0.7); position: relative; transition: transform 0.3s ease; }
-        .card:hover { transform: scale(1.01); border-color: #ef4444; }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; transition: transform 0.3s ease; }
+        .card:hover { transform: scale(1.01); border-color: #bf953f; }
         .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
         .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
         .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; text-transform: uppercase; }
-        .vs { font-family: 'Orbitron'; color: #ef4444; font-weight: 900; font-size: 1.4rem; }
-        .analysis-box { background: rgba(255,255,255,0.04); border-radius: 18px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255,0,0,0.1); }
-        .analysis-box b { color: #ef4444; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 15px; font-family: 'Orbitron'; border-bottom: 1px solid rgba(239,68,68,0.2); padding-bottom: 5px; }
-        .analysis-box p { color: #f3f4f6; line-height: 1.8; font-size: 1.05rem; margin: 0; font-family: 'Inter' !important; font-style: normal !important; text-align: justify; }
-        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,0,0,0.1); padding-top: 20px; }
-        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; text-transform: uppercase; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(239,68,68,0.3)); }
-        .odds { background: var(--gold); color: #000; padding: 8px 18px; border-radius: 8px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; }
-        .disclaimer { max-width: 700px; text-align: center; color: #9f1239; font-size: 0.7rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(239,68,68,0.1); }
+        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; font-size: 1.4rem; }
+        .analysis-box { background: rgba(255,255,255,0.04); border-radius: 18px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.08); }
+        .analysis-box b { color: #bf953f; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 15px; font-family: 'Orbitron'; border-bottom: 1px solid rgba(191,149,63,0.2); padding-bottom: 5px; }
+        .analysis-box p { color: #cbd5e1; line-height: 1.8; font-size: 1.05rem; margin: 0; font-family: 'Inter' !important; font-style: normal !important; text-align: justify; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; text-transform: uppercase; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(191,149,63,0.3)); }
+        .odds { font-family: 'bet365', 'Orbitron', sans-serif; font-weight: 700; font-size: 1.4rem; color: #0f9d58; padding: 6px 14px; background: #222; border-radius: 8px; border: 2px solid #0f9d58; user-select: none; }
+        @font-face {
+            font-family: 'bet365';
+            src: url('https://static.bet365.com/fonts/bet365-bold.woff2') format('woff2'),
+                 url('https://static.bet365.com/fonts/bet365-bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
     </style>
+    <title>Red Bet365 - CM Sports Elite</title>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="CM Sports Elite Logo">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
     <h1 class="main-title">CM SPORTS ELITE</h1>
-    <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS - RED BET365</div>
+    <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
+
         <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/2441.png" alt="PSM Makassar">
-                    <p>PSM Makassar</p>
+                    <p>PSM MAKASSAR</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/2456.png" alt="Semen Padang">
-                    <p>Semen Padang</p>
+                    <p>SEMEN PADANG</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>PSM Makassar llega con una sólida racha en sus últimos 10 partidos, mostrando especialmente fortaleza en el primer tiempo y un volumen elevado en remates y corners. Su rival, Semen Padang, presenta una notable debilidad defensiva y problemas para cerrar el medio campo, situación que favorece la doble oportunidad para PSM. Este enfoque táctico consolidado con la presión alta garantiza la probabilidad de éxito del pick.</p>
+                <b>ANÁLISIS</b>
+                <p>PSM Makassar muestra sólidas características ofensivas con una racha positiva en sus últimos 10 partidos, reflejo de su capacidad para dominar en tiros y corners, especialmente en la primera mitad. Semen Padang exhibe vulnerabilidades en defensa, con un rendimiento irregular que facilita oportunidades de doble ventaja para el local. Su capacidad limitada para contener ataques y remates del rival les coloca en desventaja clara, garantizando un pick de alta probabilidad.</p>
             </div>
             <div class="footer">
-                <div class="pick-line" style="font-family: 'Orbitron'; font-weight: 900; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">PICK: Doble Oportunidad PSM Makassar o Empate</div>
+                <div class="pick-line" style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Doble Oportunidad PSM Makassar o Empate</div>
                 <div class="odds">1.25</div>
             </div>
         </div>
@@ -57,21 +65,21 @@
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/582.png" alt="Alashkert">
-                    <p>Alashkert</p>
+                    <p>ALASHKERT</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/574.png" alt="Vardar Skopje">
-                    <p>Vardar Skopje</p>
+                    <p>VARDAR SKOPJE</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Alashkert exhibe una dinámica estable con un rendimiento eficaz en la generación de corners y dominio en la primera mitad. Vardar Skopje, por su parte, llega con una defensa inestable y dificultades en la presión alta, lo que favorece al local para mantener al menos la doble oportunidad ganadora. Este pick se fundamenta en la fortaleza ofensiva del equipo local y debilidad contrario.</p>
+                <b>ANÁLISIS</b>
+                <p>Alashkert confirma fortaleza en ataque con un promedio alto de remates y corners en sus últimos encuentros. Su rival, Vardar Skopje, viene con signos de debilidad defensiva y baja capacidad ofensiva, mostrando inconsistencia en la primera mitad de sus partidos. Este contraste táctico inclina el pronóstico a favor de una doble oportunidad para Alashkert, garantizando estabilidad y seguridad en la apuesta.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">PICK: Doble Oportunidad Alashkert o Empate</div>
-                <div class="odds">1.24</div>
+                <div class="pick-line" style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Doble Oportunidad Alashkert o Empate</div>
+                <div class="odds">1.23</div>
             </div>
         </div>
 
@@ -79,20 +87,20 @@
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/16931.png" alt="India W">
-                    <p>India W</p>
+                    <p>INDIA W</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/27444.png" alt="Hertha Berlin W">
-                    <p>Hertha Berlin W</p>
+                    <p>HERTHA BERLIN W</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>India W ha mostrado buen control de juego y capacidad para acumular corners y remates durante el primer tiempo. Hertha Berlin W, en cambio, presenta déficits defensivos y bajo índice de efectividad en duelos recientes. Esto refuerza el pick de doble oportunidad para India W que asegura cubrir la fluctuante ofensiva y la presión inicial táctica contra un rival en baja.</p>
+                <b>ANÁLISIS</b>
+                <p>India W atraviesa un momento positivo con un buen volumen de tiros a puerta y corners, sumado a un dominio claro en la primera mitad. Hertha Berlin W presenta dificultad para mantener presión durante los primeros 45 minutos, mostrando debilidad defensiva que permite remates frecuentes del rival. Esta dinámica justifica una doble oportunidad para India Women con cuota segura y alta probabilidad de éxito.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">PICK: Doble Oportunidad India W o Empate</div>
+                <div class="pick-line" style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Doble Oportunidad India W o Empate</div>
                 <div class="odds">1.27</div>
             </div>
         </div>
@@ -101,20 +109,20 @@
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/6501.png" alt="Veres Rivne">
-                    <p>Veres Rivne</p>
+                    <p>VERES RIVNE</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/3502.png" alt="Saburtalo">
-                    <p>Saburtalo</p>
+                    <p>SABURTALO</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Veres Rivne destaca por su rendimiento estable en corners y control de juego en el primer tiempo, además de una defensa ordenada. Saburtalo presenta inconsistencias en sus últimos 10 encuentros, especialmente en cerrar espacios y generar remates efectivos. La fórmula de doble oportunidad para Veres Rivne o empate es la más prudente porque capitaliza la fortaleza defensiva frente a un rival débil tácticamente.</p>
+                <b>ANÁLISIS</b>
+                <p>Veres Rivne mantiene una racha positiva con fuerte presencia ofensiva y dominio en corners, mientras Saburtalo evidencia debilidades claras en defensa y baja eficacia en remates. La desigualdad en la intensidad y táctica coloca a Veres en posición ventajosa, haciendo la apuesta por doble oportunidad local o empate una selección sólida y segura dentro del rango de cuotas establecidas.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">PICK: Doble Oportunidad Veres Rivne o Empate</div>
+                <div class="pick-line" style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Doble Oportunidad Veres Rivne o Empate</div>
                 <div class="odds">1.22</div>
             </div>
         </div>
@@ -123,26 +131,27 @@
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/2716.png" alt="Kheybar Khorramabad">
-                    <p>Kheybar Khorramabad</p>
+                    <p>KHEYBAR KHORRAMABAD</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/2734.png" alt="Foolad FC">
-                    <p>Foolad FC</p>
+                    <p>FOOLAD FC</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Kheybar Khorramabad llega con racha positiva y un desempeño sobresaliente en corners y control en la primera mitad. Foolad FC evidencia signos claros de vulnerabilidad defensiva y poca generación ofensiva en los últimos duelos. La estrategia de doble oportunidad para Kheybar o empate maximiza la seguridad apostando por fortaleza táctica y debilidad rival.</p>
+                <b>ANÁLISIS</b>
+                <p>Kheybar Khorramabad presenta mayor consistencia ofensiva con control en tiros y corners en sus últimos 10 encuentros, mientras Foolad FC muestra inestabilidad y problemas defensivos que facilitan la ventaja de su rival. Su débil rendimiento especialmente en la primera mitad permite confiar en una doble oportunidad a favor del local, con la seguridad de una apuesta de alta probabilidad dentro del margen regulado.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">PICK: Doble Oportunidad Kheybar Khorramabad o Empate</div>
-                <div class="odds">1.23</div>
+                <div class="pick-line" style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Doble Oportunidad Kheybar o Empate</div>
+                <div class="odds">1.28</div>
             </div>
         </div>
+
     </div>
-    <div class="disclaimer">
-        <b>DATO:</b> Selección de picks individuales de alta probabilidad con cuotas reguladas entre 1.20 y 1.30.
+    <div class="disclaimer" style="color:#475569; font-size:0.7rem; margin-top:60px; line-height:1.6; max-width:700px; text-align:center; border-top:1px solid rgba(191,149,63,0.1); padding:20px;">
+        <b>DATO:</b> Selección de picks individuales de alta probabilidad. Cuotas reguladas entre 1.20 y 1.30, apostando a doble oportunidad para máxima seguridad y rentabilidad.
     </div>
 </body>
 </html>
