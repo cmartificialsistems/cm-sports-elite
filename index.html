@@ -8,9 +8,11 @@
         :root {
             --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c);
             --glass: rgba(15, 23, 42, 0.95);
+            --bet365-green: #183f0f;
+            --bet365-yellow: #f3e432;
         }
         body {
-            background: #010409;
+            background: var(--bet365-green);
             color: #fff;
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -23,10 +25,12 @@
         .floating-logo {
             width: 130px;
             border-radius: 50%;
-            border: 3px solid #bf953f;
-            box-shadow: 0 0 35px rgba(191,149,63,0.5);
+            border: 3px solid var(--bet365-yellow);
+            box-shadow: 0 0 35px rgba(243, 228, 50, 0.5);
             animation: float 4s ease-in-out infinite;
             margin-bottom: 20px;
+            background: #183f0f;
+            padding: 7px;
         }
         .main-title {
             background: var(--gold);
@@ -40,9 +44,9 @@
             margin:0;
         }
         .sub-title {
-            color: #10b981;
+            color: var(--bet365-yellow);
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             margin: 15px 0 40px 0;
             letter-spacing: 2px;
         }
@@ -51,13 +55,13 @@
             max-width: 800px;
             display:flex;
             flex-direction:column;
-            gap:30px;
+            gap: 30px;
         }
         .card {
             background: var(--glass);
             border-radius: 25px;
             padding: 30px;
-            border: 1px solid rgba(191,149,63,0.3);
+            border: 1px solid rgba(243, 228, 50, 0.3);
             border-left: 6px solid #bf953f;
             box-shadow: 0 15px 45px rgba(0,0,0,0.5);
             position: relative;
@@ -75,10 +79,7 @@
             text-align: center;
         }
         .team {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 120px;
+            flex: 1;
         }
         .team img {
             width: 75px;
@@ -88,6 +89,7 @@
             background: rgba(255,255,255,0.03);
             padding: 5px;
             border-radius: 12px;
+            margin: 0 auto;
         }
         .team p {
             font-family: 'Orbitron', sans-serif;
@@ -96,46 +98,50 @@
             margin-top: 10px;
             color: #fff;
             text-transform: uppercase;
+            user-select: none;
         }
         .vs {
             font-family: 'Orbitron', sans-serif;
-            color: #bf953f;
+            color: #f3e432;
             font-weight: 900;
             font-size: 1.4rem;
-            margin: 0 15px;
+            padding: 0 15px;
             user-select: none;
         }
         .analysis-box {
-            background: rgba(255,255,255,0.04);
+            background: rgba(255,255,255,0.06);
             border-radius: 18px;
             padding: 25px;
-            margin: 20px 0;
-            border: 1px solid rgba(255,255,255,0.08);
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
-            line-height: 1.8;
-            color: #cbd5e1;
-            font-size: 1.05rem;
-            text-align: justify;
+            margin: 20px 0 5px 0;
+            border: 1px solid rgba(255,255,255,0.1);
         }
         .analysis-box b {
-            color: #bf953f;
+            color: #f3e432;
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             display: block;
             margin-bottom: 15px;
             font-family: 'Orbitron', sans-serif;
-            border-bottom: 1px solid rgba(191,149,63,0.2);
+            border-bottom: 1px solid rgba(243, 228, 50, 0.2);
             padding-bottom: 5px;
+        }
+        .analysis-box p {
+            color: #d4d7d0;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin: 0;
+            font-family: 'Inter', sans-serif !important;
+            font-style: normal !important;
+            text-align: justify;
+            user-select: text;
         }
         .footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(243, 228, 50, 0.1);
             padding-top: 20px;
-            margin-top: 15px;
         }
         .pick-line {
             font-family: 'Orbitron', sans-serif;
@@ -147,147 +153,157 @@
             -webkit-text-fill-color: transparent;
             letter-spacing: 1.5px;
             filter: drop-shadow(0 0 5px rgba(191,149,63,0.3));
-        }
-        .odds {
-            font-family: 'Bet365', sans-serif, Arial, sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-            background: #00a651;
-            color: #fff;
-            padding: 8px 18px;
-            border-radius: 8px;
-            box-shadow: 0 0 8px #00a651cc;
             user-select: none;
         }
-        /* Bet365 font style simulation */
-        @font-face {
-            font-family: 'Bet365';
-            src: local('Arial'); /* fallback */
+        .odds {
+            background: var(--gold);
+            color: #000;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 1.3rem;
+            user-select: none;
         }
         .disclaimer {
             max-width: 700px;
             text-align: center;
-            color: #475569;
-            font-size: 0.7rem;
+            color: #c9d1c8;
+            font-size: 0.75rem;
             margin-top: 60px;
             line-height: 1.6;
             padding: 20px;
-            border-top: 1px solid rgba(191,149,63,0.1);
-            font-family: 'Inter', sans-serif;
+            border-top: 1px solid rgba(243, 228, 50, 0.15);
+            user-select: none;
         }
     </style>
-    <title>CM Sports Elite - Bet365 Picks</title>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Logo CM Sports Elite" class="floating-logo">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
-        <div class="card">
+
+        <article class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/494.png" alt="Udinese">
-                    <p>UDINESE</p>
+                    <p>Udinese</p>
                 </div>
-                <div class="vs">VS</div>
+                <div class="vs">vs</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/497.png" alt="AS Roma">
-                    <p>AS ROMA</p>
+                    <p>AS Roma</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Udinese llega con una sólida racha de 10 partidos donde ha evitado la derrota en más del 70% de sus encuentros recientes. AS Roma presenta cierto desgaste defensivo evidenciado en sus últimos compromisos, especialmente fuera de casa donde ha concedido goles clave. La opción segura es la doble oportunidad local o empate, aprovechando la fortaleza de Udinese en casa y la vulnerabilidad visitante.</p>
+                <b>ANÁLISIS</b>
+                <p>
+                    Udinese ha mantenido un rendimiento sólido en sus últimos 10 juegos, logrando evitar derrotas fácilmente gracias a su defensa estable y estrategia conservadora. AS Roma, por otro lado, muestra cierta vulnerabilidad en partidos fuera de casa y ha sufrido importantes bajas que afectan su ataque. La racha favorable de Udinese junto a la inestabilidad visitante ofrece un alto valor en la doble oportunidad local segura, minimizando riesgos.
+                </p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble oportunidad: Udinese o Empate</div>
+                <div class="pick-line">Doble Oportunidad Udinese / Empate</div>
                 <div class="odds">1.25</div>
             </div>
-        </div>
-        <div class="card">
+        </article>
+
+        <article class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/746.png" alt="Sunderland">
-                    <p>SUNDERLAND</p>
+                    <p>Sunderland</p>
                 </div>
-                <div class="vs">VS</div>
+                <div class="vs">vs</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/44.png" alt="Burnley">
-                    <p>BURNLEY</p>
+                    <p>Burnley</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Sunderland ha mantenido un rendimiento estable con 7 victorias en sus últimos 10 encuentros jugando como local, mostrando solidez defensiva y buen control del juego. Burnley presenta ciertas debilidades en su ofensiva reciente y ha sido superado en la mayoría de sus salidas. La apuesta segura es la doble oportunidad a favor de Sunderland o empate, asegurando una alta probabilidad de éxito.</p>
+                <b>ANÁLISIS</b>
+                <p>
+                    Sunderland acumula una excelente racha reciente, con 7 de 10 partidos mostrando control y efectividad defensiva. Burnley ha sufrido en sus últimos encuentros, con una defensa que cede oportunidades claras. La estabilidad en casa de Sunderland, combinada con la debilidad defensiva visitante, refuerza la apuesta segura en la doble oportunidad local o empate. Un pick con alta probabilidad y cuota equilibrada.
+                </p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble oportunidad: Sunderland o Empate</div>
-                <div class="odds">1.22</div>
+                <div class="pick-line">Doble Oportunidad Sunderland / Empate</div>
+                <div class="odds">1.26</div>
             </div>
-        </div>
-        <div class="card">
+        </article>
+
+        <article class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/798.png" alt="Mallorca">
-                    <p>MALLORCA</p>
+                    <p>Mallorca</p>
                 </div>
-                <div class="vs">VS</div>
+                <div class="vs">vs</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/536.png" alt="Sevilla">
-                    <p>SEVILLA</p>
+                    <p>Sevilla</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Mallorca acumula una destacada racha positiva en calidad de local, con 8 encuentros sin derrota. Sevilla muestra inconsistencias defensivas en sus últimos 10 enfrentamientos y lesiones en piezas clave lo limitan. El pick recomendado es la doble oportunidad local o empate para minimizar riesgos y aprovechar el desgaste del rival visitante.</p>
+                <b>ANÁLISIS</b>
+                <p>
+                    Mallorca ha cerrado varios encuentros recientes con disciplina defensiva, encajando pocos goles y salvando empates importantes. Sevilla se enfrenta a un calendario exigente y ha mostrado cierta irregularidad, especialmente fuera de casa. La consistencia defensiva local y la duda en el ataque visitante marcan un panorama ideal para doble oportunidad con la casa y el empate, disminuyendo la posibilidad de derrota y ofreciendo cuota competitiva.
+                </p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble oportunidad: Mallorca o Empate</div>
-                <div class="odds">1.28</div>
+                <div class="pick-line">Doble Oportunidad Mallorca / Empate</div>
+                <div class="odds">1.24</div>
             </div>
-        </div>
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/434.png" alt="Gimnasia L.P.">
-                    <p>GIMNASIA L.P.</p>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/463.png" alt="Aldosivi">
-                    <p>ALDOSIVI</p>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Gimnasia L.P. lleva 10 partidos mostrando estabilidad tanto en defensa como en ataque, con tendencia a controlar los espacios y mantener la posesión. Aldosivi ha tenido dificultades visitando, con una defensa vulnerable en las últimas fechas. La opción segura es la doble oportunidad para Gimnasia L.P. o empate, maximizando la confianza en la ventaja local.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Doble oportunidad: Gimnasia L.P. o Empate</div>
-                <div class="odds">1.27</div>
-            </div>
-        </div>
-        <div class="card">
+        </article>
+
+        <article class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/442.png" alt="Defensa Y Justicia">
-                    <p>DEFENSA Y JUSTICIA</p>
+                    <p>Defensa Y Justicia</p>
                 </div>
-                <div class="vs">VS</div>
+                <div class="vs">vs</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/450.png" alt="Estudiantes L.P.">
-                    <p>ESTUDIANTES L.P.</p>
+                    <p>Estudiantes L.P.</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Defensa Y Justicia ha mantenido una racha de 10 partidos destacando por una defensa compacta y presión alta constante. Estudiantes L.P. ha cedido terreno en sus últimas visitas mostrando vulnerabilidad en defensa. Apuesta segura es la doble oportunidad local o empate, aprovechando la fortaleza defensiva y el mal momento del visitante.</p>
+                <b>ANÁLISIS</b>
+                <p>
+                    Defensa Y Justicia ha mostrado estabilidad en sus 10 partidos previos, obteniendo buenos resultados basados en sólida defensa y contragolpes precisos. Estudiantes L.P. enfrenta dificultades ofensivas recientes y su rendimiento como visitante está por debajo del promedio. Esta dinámica favorece la doble oportunidad local que asegura un respaldo frente a la fragilidad ofensiva visitante y fortalece la apuesta hacia un resultado conservador.
+                </p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble oportunidad: Defensa Y Justicia o Empate</div>
+                <div class="pick-line">Doble Oportunidad Defensa Y Justicia / Empate</div>
+                <div class="odds">1.27</div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/452.png" alt="Tigre">
+                    <p>Tigre</p>
+                </div>
+                <div class="vs">vs</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/436.png" alt="Racing Club">
+                    <p>Racing Club</p>
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>ANÁLISIS</b>
+                <p>
+                    Tigre ha experimentado una racha positiva con gran fortaleza defensiva y resultados que incluyen varios empates y victorias. Racing Club, aunque competitivo, muestra cierta inconsistencia en encuentros clave y ha cedido puntos importantes como visitante. Apostar a la doble oportunidad de Tigre o empate mitiga riesgos y capitaliza la superioridad táctica defensiva local, cumpliendo con un rango de cuota ideal para apuestas de alta seguridad.
+                </p>
+            </div>
+            <div class="footer">
+                <div class="pick-line">Doble Oportunidad Tigre / Empate</div>
                 <div class="odds">1.23</div>
             </div>
-        </div>
+        </article>
+
     </div>
     <div class="disclaimer">
         <b>DATO:</b> Selección de picks individuales de alta probabilidad.
