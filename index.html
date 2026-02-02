@@ -5,276 +5,149 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-        :root { 
-            --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); 
-            --glass: rgba(42, 1, 1, 0.95);
-            --redbet365: #e50000;
-        }
-        body { 
-            background: #150000; 
-            color: #fff; 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; 
-            padding: 40px 20px; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            min-height: 100vh; 
-        }
-        .floating-logo { 
-            width: 130px; 
-            border-radius: 50%; 
-            border: 3px solid var(--redbet365); 
-            box-shadow: 0 0 35px rgba(229, 0, 0, 0.6); 
-            animation: float 4s ease-in-out infinite; 
-            margin-bottom: 20px; 
-        }
-        .main-title { 
-            background: var(--gold); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            font-family: 'Orbitron'; 
-            font-size: 2.2rem; 
-            font-weight: 900; 
-            letter-spacing: 4px; 
-            text-align:center; 
-            margin:0; 
-        }
-        .sub-title { 
-            color: var(--redbet365); 
-            font-family: 'Orbitron'; 
-            font-size: 0.8rem; 
-            margin: 15px 0 40px 0; 
-            letter-spacing: 2px; 
-        }
-        .container { 
-            width: 100%; 
-            max-width: 800px; 
-            display:flex; 
-            flex-direction:column; 
-            gap:30px; 
-        }
-        .card { 
-            background: var(--glass); 
-            border-radius: 25px; 
-            padding: 30px; 
-            border: 1px solid rgba(229, 0, 0, 0.3); 
-            border-left: 6px solid var(--redbet365); 
-            box-shadow: 0 15px 45px rgba(0,0,0,0.5); 
-            position: relative; 
-            transition: transform 0.3s ease; 
-        }
-        .card:hover { 
-            transform: scale(1.01); 
-            border-color: var(--redbet365); 
-        }
-        .teams { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 20px; 
-            text-align: center; 
-        }
-        .team img { 
-            width: 75px; 
-            height: 75px; 
-            object-fit: contain; 
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.7)); 
-            background: rgba(255,255,255,0.03); 
-            padding: 5px; 
-            border-radius: 12px; 
-        }
-        .team p { 
-            font-family: 'Orbitron'; 
-            font-size: 0.8rem; 
-            font-weight: 700; 
-            margin-top: 10px; 
-            color: #fff; 
-            text-transform: uppercase; 
-        }
-        .vs { 
-            font-family: 'Orbitron'; 
-            color: var(--redbet365); 
-            font-weight: 900; 
-            font-size: 1.4rem; 
-        }
-        .analysis-box { 
-            background: rgba(255,255,255,0.04); 
-            border-radius: 18px; 
-            padding: 25px; 
-            margin: 20px 0; 
-            border: 1px solid rgba(255,255,255,0.08); 
-        }
-        .analysis-box b { 
-            color: var(--redbet365); 
-            font-size: 0.8rem; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            display: block; 
-            margin-bottom: 15px; 
-            font-family: 'Orbitron'; 
-            border-bottom: 1px solid rgba(229,0,0,0.2); 
-            padding-bottom: 5px; 
-        }
-        .analysis-box p { 
-            color: #cbd5e1; 
-            line-height: 1.8; 
-            font-size: 1.05rem; 
-            margin: 0; 
-            font-family: 'Inter' !important; 
-            font-style: normal !important; 
-            text-align: justify; 
-        }
-        .footer { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border-top: 1px solid rgba(255,255,255,0.1); 
-            padding-top: 20px; 
-        }
-        .pick-line { 
-            font-family: 'Orbitron'; 
-            font-weight: 900; 
-            font-size: 1rem; 
-            text-transform: uppercase; 
-            background: var(--gold); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            letter-spacing: 1.5px; 
-            filter: drop-shadow(0 0 5px rgba(191,149,63,0.3)); 
-        }
-        .odds { 
-            background: var(--gold); 
-            color: #000; 
-            padding: 8px 18px; 
-            border-radius: 8px; 
-            font-family: 'Orbitron'; 
-            font-weight: 900; 
-            font-size: 1.3rem; 
-            user-select:none;
-        }
-        .disclaimer { 
-            max-width: 700px; 
-            text-align: center; 
-            color: #8b0000; 
-            font-size: 0.7rem; 
-            margin-top: 60px; 
-            line-height: 1.6; 
-            padding: 20px; 
-            border-top: 1px solid rgba(229,0,0,0.1); 
-        }
+        :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
+        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .floating-logo { width: 130px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 35px rgba(191,149,63,0.5); animation: float 4s ease-in-out infinite; margin-bottom: 20px; }
+        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
+        .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
+        .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; transition: transform 0.3s ease; }
+        .card:hover { transform: scale(1.01); border-color: #bf953f; }
+        .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
+        .team { display: flex; flex-direction: column; align-items: center; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
+        .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; text-transform: uppercase; }
+        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; font-size: 1.4rem; }
+        .analysis-box { background: rgba(255,255,255,0.04); border-radius: 18px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.08); font-family: 'Inter', sans-serif; font-style: normal; font-weight: 400; font-size: 1.05rem; line-height: 1.8; color: #cbd5e1; text-align: justify; }
+        .analysis-box b { color: #bf953f; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 15px; font-family: 'Orbitron'; border-bottom: 1px solid rgba(191,149,63,0.2); padding-bottom: 5px; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; text-transform: uppercase; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(191,149,63,0.3)); }
+        .odds { background: #0b9f00; color: #fff; padding: 8px 18px; border-radius: 8px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; user-select:none; }
+        .disclaimer { max-width: 700px; text-align: center; color: #475569; font-size: 0.7rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(191,149,63,0.1); }
     </style>
+    <title>CM Sports Elite - Picks Bet365</title>
 </head>
 <body>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Bet365.svg/2560px-Bet365.svg.png" alt="Logo Bet365" class="floating-logo">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
+
+        <!-- PICK 1 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1125.png" alt="Millonarios">
-                    <p>Millonarios</p>
+                    <img src="https://media.api-sports.io/football/teams/2438.png" alt="Arema FC">
+                    <p>AREMA FC</p>
                 </div>
                 <div class="vs">vs</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1128.png" alt="Independiente Medellin">
-                    <p>Independiente Medellin</p>
+                    <img src="https://media.api-sports.io/football/teams/11132.png" alt="Persijap">
+                    <p>PERSIJAP</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Millonarios llega con una racha sólida de 7 victorias y 3 empates en sus últimos 10 encuentros, mostrando gran efectividad ofensiva y defensa estable. Independiente Medellin, en cambio, presenta debilidades notables en su línea defensiva y acumula 6 partidos sin ganar fuera de casa, susceptible a presión alta y errores en la entrega.</p>
+                <b>ANÁLISIS</b>
+                La racha de Arema FC en sus últimos 10 juegos muestra gran solidez, especialmente en casa con 8 partidos sin perder. Persijap ha evidenciado debilidad en defensa, concediendo múltiples tiros a puerta y corners, lo que favorece un resultado seguro para Arema FC en doble oportunidad. Se prevé un partido controlado con dominio local desde el inicio.
             </div>
             <div class="footer">
-                <div class="pick-line" style="font-family: 'Orbitron', sans-serif; font-weight:900; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Doble oportunidad Millonarios o Empate</div>
-                <div class="odds" aria-label="Cuota 1.27">1.27</div>
+                <p class="pick-line">Arema FC doble oportunidad (1X)</p>
+                <div class="odds">1.28</div>
             </div>
         </div>
+
+        <!-- PICK 2 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1464.png" alt="Llaneros">
-                    <p>Llaneros</p>
+                    <img src="https://media.api-sports.io/football/teams/7500.png" alt="Damash Gilanian">
+                    <p>DAMASH GILANIAN</p>
                 </div>
                 <div class="vs">vs</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1144.png" alt="Rionegro Aguilas">
-                    <p>Rionegro Aguilas</p>
+                    <img src="https://media.api-sports.io/football/teams/18302.png" alt="Shahrdari Noshahr">
+                    <p>SHAHRDARI NOSHAHR</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Llaneros ha mostrado consistencia en sus últimos 10 juegos con 6 triunfos, respaldando su localía con un estilo de juego defensivo sólido. Rionegro Aguilas presenta tendencia a partidos cerrados y baja capacidad ofensiva fuera de casa, acumulando 7 partidos sin marcar más de un gol.</p>
+                <b>ANÁLISIS</b>
+                Damash Gilanian mantiene una progresión favorable con seis victorias y dos empates en sus últimos 10 encuentros, destacando su fortaleza en casa. Shahrdari Noshahr presenta fragilidad en las jugadas a balón parado, por lo que apostar por un hándicap +0.5 para Damash es una opción segura dada su estabilidad y consistencia ofensiva.
             </div>
             <div class="footer">
-                <div class="pick-line">Doble oportunidad Llaneros o Empate</div>
-                <div class="odds" aria-label="Cuota 1.25">1.25</div>
+                <p class="pick-line">Damash Gilanian hándicap -0.5</p>
+                <div class="odds">1.26</div>
             </div>
         </div>
+
+        <!-- PICK 3 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/155.png" alt="Phoenix Suns">
-                    <p>Phoenix Suns</p>
+                    <img src="https://media.api-sports.io/football/teams/24735.png" alt="Lazio U20">
+                    <p>LAZIO U20</p>
                 </div>
                 <div class="vs">vs</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/144.png" alt="Los Angeles Clippers">
-                    <p>Los Angeles Clippers</p>
+                    <img src="https://media.api-sports.io/football/teams/24725.png" alt="Atalanta U20">
+                    <p>ATALANTA U20</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Phoenix Suns mantienen una exitosa racha ganadora en 8 de sus últimos 10 encuentros, dominando de local con defensa intensa y ataque equilibrado. Los Angeles Clippers han mostrado irregularidad y falta de consistencia, con 6 derrotas en su historial reciente y marcada debilidad en transición defensiva.</p>
+                <b>ANÁLISIS</b>
+                Lazio U20 llega con ocho partidos sin derrota, mostrando dominio en ataque y buen control del mediocampo. Atalanta U20 ha tenido problemas para contener los ataques rivales, especialmente permitiendo más de 10 corners en sus últimos encuentros. El pick de over de corners está recomendado dada la dinámica ofensiva y la vulnerabilidad defensiva manifiesta.
             </div>
             <div class="footer">
-                <div class="pick-line">Doble oportunidad Phoenix Suns o Empate</div>
-                <div class="odds" aria-label="Cuota 1.29">1.29</div>
+                <p class="pick-line">Over 9.5 corners total</p>
+                <div class="odds">1.22</div>
             </div>
         </div>
+
+        <!-- PICK 4 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/158.png" alt="San Antonio Spurs">
-                    <p>San Antonio Spurs</p>
+                    <p>SAN ANTONIO SPURS</p>
                 </div>
                 <div class="vs">vs</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/153.png" alt="Orlando Magic">
-                    <p>Orlando Magic</p>
+                    <p>ORLANDO MAGIC</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>San Antonio Spurs han conseguido un balance ganador en su campo con 7 victorias en los últimos 10 partidos, respaldados por un juego sólido en ambas canchas. Orlando Magic presentan deficiencias ofensivas y problemas en defensa, con solo 3 victorias en sus últimas 10 salidas.</p>
+                <b>ANÁLISIS</b>
+                San Antonio Spurs acumula seis triunfos consecutivos como local, con defensas sólidas que limitan el rendimiento ofensivo de Orlando Magic. Los visitantes han mostrado fragilidad en transiciones rápidas y baja efectividad desde la línea de tiros libres, lo que fortalece la confianza en la doble oportunidad para Spurs ante un rival irregular.
             </div>
             <div class="footer">
-                <div class="pick-line">Doble oportunidad San Antonio Spurs o Empate</div>
-                <div class="odds" aria-label="Cuota 1.26">1.26</div>
+                <p class="pick-line">San Antonio Spurs doble oportunidad (1X)</p>
+                <div class="odds">1.27</div>
             </div>
         </div>
+
+        <!-- PICK 5 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/139.png" alt="Denver Nuggets">
-                    <p>Denver Nuggets</p>
+                    <img src="https://media.api-sports.io/basketball/teams/156.png" alt="Portland Trail Blazers">
+                    <p>PORTLAND TRAIL BLAZERS</p>
                 </div>
                 <div class="vs">vs</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/152.png" alt="Oklahoma City Thunder">
-                    <p>Oklahoma City Thunder</p>
+                    <img src="https://media.api-sports.io/basketball/teams/137.png" alt="Cleveland Cavaliers">
+                    <p>CLEVELAND CAVALIERS</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Denver Nuggets llegan con una racha impresionante, ganando 8 de sus últimos 10 partidos con gran capacidad ofensiva y defensa compacta. Oklahoma City Thunder muestra inestabilidad y frecuentes errores defensivos, sumando 7 derrotas y bajo rendimiento como visitante.</p>
+                <b>ANÁLISIS</b>
+                Portland Trail Blazers exhibe un rendimiento sólido en sus últimos diez encuentros, sobresaliendo su defensa en casa y limitando tiros efectivos de Cleveland Cavaliers. Los Cavaliers han mostrado inconsistencias en ofensiva y fallos en defensa, por lo que la recomendación segura es apoyar a Portland con hándicap -2,5.
             </div>
             <div class="footer">
-                <div class="pick-line">Doble oportunidad Denver Nuggets o Empate</div>
-                <div class="odds" aria-label="Cuota 1.28">1.28</div>
+                <p class="pick-line">Portland Trail Blazers hándicap -2.5</p>
+                <div class="odds">1.24</div>
             </div>
         </div>
+
     </div>
     <div class="disclaimer">
         <b>DATO:</b> Selección de picks individuales de alta probabilidad.
