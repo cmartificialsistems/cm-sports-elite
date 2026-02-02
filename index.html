@@ -8,25 +8,24 @@
         :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
         body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
         .floating-logo { width: 100px; border-radius: 50%; border: 2px solid #bf953f; animation: float 4s ease-in-out infinite; margin-bottom: 10px; }
-        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron', sans-serif; font-size: 1.8rem; font-weight: 900; text-align:center; }
+        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 1.8rem; font-weight: 900; text-align:center; }
         .container { width: 100%; max-width: 600px; display:flex; flex-direction:column; gap:20px; margin-top: 20px; }
         .card { background: var(--glass); border-radius: 20px; padding: 20px; border-left: 5px solid #bf953f; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .teams { display: flex; justify-content: space-between; align-items: center; font-family: 'Orbitron', sans-serif; font-size: 0.7rem; }
-        .team { display: flex; flex-direction: column; align-items: center; width: 45%; }
-        .team img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 5px; }
+        .teams { display: flex; justify-content: space-between; align-items: center; font-family: 'Orbitron'; font-size: 0.7rem; }
+        .team { display: flex; align-items: center; gap: 8px; }
+        .team img { width: 50px; height: 50px; object-fit: contain; border-radius: 8px; background: #000; }
         .analysis-box { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 15px; margin: 15px 0; border: 1px solid rgba(191,149,63,0.1); }
-        .analysis-box b { color: #bf953f; font-size: 0.7rem; text-transform: uppercase; font-family: 'Orbitron', sans-serif; display: block; margin-bottom: 8px; }
+        .analysis-box b { color: #bf953f; font-size: 0.7rem; text-transform: uppercase; font-family: 'Orbitron'; display: block; margin-bottom: 8px; letter-spacing: 0.05em; }
         .analysis-box p { color: #cbd5e1; font-size: 0.9rem; line-height: 1.5; margin: 0; text-align: justify; }
         .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
-        .pick-line { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 0.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .odds { background: var(--gold); color: #000; padding: 5px 12px; border-radius: 6px; font-family: 'Orbitron', sans-serif; font-weight: 900; }
+        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 0.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .odds { background: var(--gold); color: #000; padding: 5px 12px; border-radius: 6px; font-family: 'Orbitron'; font-weight: 900; user-select:none; }
     </style>
 </head>
 <body>
     <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="container">
-
         <div class="card">
             <div class="teams">
                 <div class="team">
@@ -34,17 +33,17 @@
                     Defensa Y Justicia
                 </div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/450.png" alt="Estudiantes L.P.">
                     Estudiantes L.P.
+                    <img src="https://media.api-sports.io/football/teams/450.png" alt="Estudiantes L.P.">
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Pick: Más de 4.5 corners totales</b>
-                <p>La defensa algo vulnerable de Estudiantes L.P. ha permitido un promedio elevado de corners en sus últimos 10 encuentros. Defensa Y Justicia también mantiene alto ritmo ofensivo y presión constante, lo que aumenta la probabilidad de tiros de esquina en el partido. Ambos equipos promedian más de 5 corners por juego, haciendo viable esta apuesta. Cuota alrededor de 1.25 en Bet365.</p>
+                <b>Pick: Defensa Y Justicia - Total Remates a Portería +1.5</b>
+                <p>Defensa Y Justicia presenta un rendimiento sólido en ofensiva con promedio de 5 remates a puerta en sus últimos 5 juegos. Estudiantes L.P. exhibe debilidades defensivas rematando dentro del área, permitiendo 2.3 tiros al arco por partido en sus últimas salidas. La estrategia local apunta a tiros constantes desde dentro del área, garantizando actividad ofensiva para cumplir este mercado.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Corners totales &gt; 4.5</div>
-                <div class="odds">1.25</div>
+                <div class="pick-line">Total Remates a Portería +1.5</div>
+                <div class="odds">1.28</div>
             </div>
         </div>
 
@@ -55,17 +54,17 @@
                     Tigre
                 </div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/436.png" alt="Racing Club">
                     Racing Club
+                    <img src="https://media.api-sports.io/football/teams/436.png" alt="Racing Club">
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Pick: Más de 2 remates al arco en primer tiempo - Racing Club</b>
-                <p>Racing Club llega en buena forma ofensiva y su jugador principal mantiene alto rendimiento de remates en el primer tiempo durante sus últimos 10 encuentros. Tigre suele ceder espacios al inicio, permitiendo a sus rivales tiros temprano. La racha y la debilidad defensiva rival sostienen la opción de más de 2 remates al arco en 1T para Racing. Cuota estimada 1.28 en Bet365.</p>
+                <b>Pick: Racing Club - Corners Totales +7.5</b>
+                <p>Racing Club domina en posesión y velocidad por bandas, produciendo más de 5 córners en 8 de sus últimos 10 partidos. Tigre tiende a defender con línea baja dejando espacios para centros laterales. La dinámica ofensiva favorece el número elevado de córners, especialmente en encuentros con áreas muy disputadas como este.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Remates al arco 1T - Racing &gt; 2</div>
-                <div class="odds">1.28</div>
+                <div class="pick-line">Corners Totales +7.5</div>
+                <div class="odds">1.25</div>
             </div>
         </div>
 
@@ -76,37 +75,16 @@
                     Internacional de Bogota
                 </div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1142.png" alt="Deportes Tolima">
                     Deportes Tolima
+                    <img src="https://media.api-sports.io/football/teams/1142.png" alt="Deportes Tolima">
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Pick: Gana o Empata - Deportes Tolima</b>
-                <p>Deportes Tolima viene con una racha sólida de 7 partidos invicto y su defensa es superior a la de Internacional de Bogota, que ha dejado espacios en contras. Tolima mantiene consistencia y buen manejo del partido, lo que facilita al menos sacar un empate o victoria. La cuota para esta doble oportunidad ronda 1.22 en Bet365, ideal para apuestas seguras y con valor.</p>
+                <b>Pick: Deportes Tolima - Gana o Empata (Doble Oportunidad)</b>
+                <p>Deportes Tolima acumula 7 partidos invicto y mantiene defensa fuerte con menos de 1 gol recibido por juego en la última decena. Internacional de Bogota tiene dificultades ofensivas, marcando sólo 3 goles en últimos 10 partidos. La fortaleza en defensa y racha positiva hacen que apostar a doble oportunidad sea confiable en cuota baja y segura.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Gana o Empata - Deportes Tolima</div>
-                <div class="odds">1.22</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/7774.png" alt="Floresta">
-                    Floresta
-                </div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/1195.png" alt="Ferroviario">
-                    Ferroviario
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>Pick: Más de 3.5 remates totales</b>
-                <p>Ambos equipos presentan ataques poco efectivos, pero con tendencia a generar ocasiones y tiros a puerta. En últimos 10 partidos, la suma de remates ha superado las 4 en 6 partidos de Floresta y 5 de Ferroviario. Esta cifra permite confiar en un total de remates superior a 3.5 con cuota en torno a 1.27 en Bet365.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Remates totales &gt; 3.5</div>
+                <div class="pick-line">Doble Oportunidad: Tolima No Pierde</div>
                 <div class="odds">1.27</div>
             </div>
         </div>
@@ -114,24 +92,44 @@
         <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/2026.png" alt="N. Carolina Central">
-                    N. Carolina Central
+                    <img src="https://media.api-sports.io/football/teams/23306.png" alt="ABECAT Ouvidorense">
+                    ABECAT Ouvidorense
                 </div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/1991.png" alt="Md.-East. Shore">
-                    Md.-East. Shore
+                    Anápolis
+                    <img src="https://media.api-sports.io/football/teams/7852.png" alt="Anápolis">
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Pick: Hándicap +3.5 puntos - Md.-East. Shore</b>
-                <p>Md.-East. Shore ha mejorado mucho su ofensiva en últimas 10 jornadas, mostrando capacidad para mantener el nivel y reducir diferencias. N. Carolina Central tiene debilidades defensivas y registra varios partidos con desventajas pequeñas. La apuesta a hándicap +3.5 favorece a Md.-East. Shore en cuota aproximada de 1.24 en Bet365, una opción sólida con base en forma y análisis situacional.</p>
+                <b>Pick: Anápolis - Gana Partido</b>
+                <p>Anápolis posee un plantel con mejor efectividad ofensiva en los últimos 10 compromisos, logrando 6 victorias mientras ABECAT Ouvidorense sufre múltiples derrotas consecutivas. El factor local no pesa por la irregularidad general y la tendencia sugiere que Anápolis mantiene dinámicas positivas para llevarse el triunfo.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Hándicap +3.5 Md.-East. Shore</div>
-                <div class="odds">1.24</div>
+                <div class="pick-line">Resultado Final: Anápolis gana</div>
+                <div class="odds">1.29</div>
             </div>
         </div>
 
+        <div class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/337.png" alt="Pato">
+                    Pato
+                </div>
+                <div class="team">
+                    Vasco
+                    <img src="https://media.api-sports.io/basketball/teams/1437.png" alt="Vasco">
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>Pick: Vasco - Hándicap -5.5 Puntos (Partido)</b>
+                <p>Vasco presenta un alto promedio de puntos en sus últimos 10 encuentros con margen claro de diferencia especialmente fuera de casa. Pato muestra debilidad en defensa y baja conversión de tiros. El rendimiento ofensivo y físico de Vasco soporta una apuesta de hándicap con margen sólido asegurando confianza.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line">Hándicap Vasco -5.5</div>
+                <div class="odds">1.30</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
