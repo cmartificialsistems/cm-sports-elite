@@ -7,7 +7,8 @@
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
         @font-face {
             font-family: 'Bet365';
-            src: url('https://cdn.jsdelivr.net/gh/cmartificialsistems/cm-sports-elite/fonts/bet365.woff2') format('woff2');
+            src: url('https://cdn.jsdelivr.net/gh/cmartificialsistems/cm-sports-elite/fonts/Bet365-Regular.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/cmartificialsistems/cm-sports-elite/fonts/Bet365-Regular.woff') format('woff');
             font-weight: 700;
             font-style: normal;
         }
@@ -80,6 +81,12 @@
             margin-bottom: 20px;
             text-align: center;
         }
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+        }
         .team img {
             width: 75px;
             height: 75px;
@@ -102,6 +109,7 @@
             color: #bf953f;
             font-weight: 900;
             font-size: 1.4rem;
+            width: 60px;
         }
         .analysis-box {
             background: rgba(255,255,255,0.04);
@@ -150,17 +158,18 @@
         }
         .odds {
             font-family: 'Bet365', sans-serif;
-            background: #008a00;
-            color: #fff;
-            padding: 8px 18px;
-            border-radius: 8px;
             font-weight: 700;
             font-size: 1.3rem;
-            user-select: none;
-            box-shadow: 0 0 12px #00ff00b8 inset;
-            letter-spacing: 0.05em;
+            background: #f4d35e;
+            color: #000;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-feature-settings: "tnum", "liga";
             text-align: center;
-            min-width: 60px;
+            min-width: 72px;
+            user-select: none;
+            letter-spacing: 0.04em;
+            box-shadow: 0 0 10px rgba(244, 211, 94,0.8);
         }
         .disclaimer {
             max-width: 700px;
@@ -173,121 +182,120 @@
             border-top: 1px solid rgba(191,149,63,0.1);
         }
     </style>
-    <title>CM Sports Elite - Red Bet365 Picks</title>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Logo CM Sports Elite" class="floating-logo">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
-        <!-- PICK 1 -->
+        <!-- Pick 1 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/494.png" alt="Udinese">
-                    <p>Udinese</p>
+                    <p>UDINESE</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/497.png" alt="AS Roma">
-                    <p>AS Roma</p>
+                    <p>AS ROMA</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Udinese muestra una racha sólida en sus últimos 10 juegos, manteniendo buena consistencia defensiva. AS Roma ha tenido ciertos altibajos y presenta vulnerabilidades al atacar fuera de casa, lo que favorece un marcador equilibrado o doble oportunidad para Udinese o empate. Se espera un duelo tenso donde el local puede asegurar al menos no perder, siendo la opción más segura en esta contienda.</p>
+                <b>ANÁLISIS</b>
+                <p>Udinese llega mostrando una sólida racha de 10 partidos en la liga, exhibiendo una defensa compacta que ha complicado las llegadas ofensivas rivales. Frente a un AS Roma que aún muestra cierta inconsistencia fuera de casa, la oportunidad de que Udinese evite la derrota bajo doble oportunidad es alta, apoyada en su capacidad para controlar los tiempos y minimizar riesgos en su terreno.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble Oportunidad Udinese o Empate</div>
-                <div class="odds">1.25</div>
+                <div class="pick-line" style="font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(191,149,63,0.3));">UDINESE NO PIERDE (1X)</div>
+                <div class="odds">1.28</div>
             </div>
         </div>
-        <!-- PICK 2 -->
+        <!-- Pick 2 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/746.png" alt="Sunderland">
-                    <p>Sunderland</p>
+                    <p>SUNDERLAND</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/44.png" alt="Burnley">
-                    <p>Burnley</p>
+                    <p>BURNLEY</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Sunderland atraviesa una racha favorable de 10 partidos con resultados sólidos en casa. Burnley, aunque competitivo, ha mostrado debilidades en desplazamientos recientes. Estas circunstancias apuntan a que Sunderland asegurará al menos un empate, haciendo de la doble oportunidad local-empate una apuesta confiable dadas las tendencias y debilidades del visitante.</p>
+                <b>ANÁLISIS</b>
+                <p>Sunderland mantiene una sólida seguidilla positiva, con 10 encuentros donde ha sabido mantener la concentración y sacar puntos vitales. Burnley, aunque combativo, presenta vulnerabilidades notables en defensa, especialmente en partidos fuera de casa, facilitando que Sunderland al menos asegure el empate bajo la doble oportunidad (1X), privilegiando la seguridad sin arriesgar la dinámica ofensiva.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble Oportunidad Sunderland o Empate</div>
-                <div class="odds">1.24</div>
+                <div class="pick-line">SUNDERLAND NO PIERDE (1X)</div>
+                <div class="odds">1.26</div>
             </div>
         </div>
-        <!-- PICK 3 -->
+        <!-- Pick 3 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/798.png" alt="Mallorca">
-                    <p>Mallorca</p>
+                    <p>MALLORCA</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/536.png" alt="Sevilla">
-                    <p>Sevilla</p>
+                    <p>SEVILLA</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Mallorca ha demostrado gran consistencia en casa, manteniendo imbatibilidad parcial en 10 juegos. Sevilla ha tenido ciertos altibajos, principalmente en defensa. Por esto, el pick de doble oportunidad local o empate ofrece alta probabilidad de éxito, aprovechando la racha positiva de Mallorca y las vulnerabilidades visitantes en defensa.</p>
+                <b>ANÁLISIS</b>
+                <p>Mallorca ha demostrado gran solidez defensiva en sus últimos 10 juegos, logrando controlar las llegadas y mantener el equilibrio. Frente a un Sevilla que no encuentra consistencia completa en sus desplazamientos, la opción de doble oportunidad a favor del local es una jugada segura, confiando en su capacidad de hacer valiosa la localía y neutralizar las fortalezas visitantes.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble Oportunidad Mallorca o Empate</div>
-                <div class="odds">1.27</div>
+                <div class="pick-line">MALLORCA NO PIERDE (1X)</div>
+                <div class="odds">1.25</div>
             </div>
         </div>
-        <!-- PICK 4 -->
+        <!-- Pick 4 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/139.png" alt="Denver Nuggets">
-                    <p>Denver Nuggets</p>
+                    <img src="https://media.api-sports.io/football/teams/434.png" alt="Gimnasia L.P.">
+                    <p>GIMNASIA L.P.</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/152.png" alt="Oklahoma City Thunder">
-                    <p>Oklahoma City Thunder</p>
+                    <img src="https://media.api-sports.io/football/teams/463.png" alt="Aldosivi">
+                    <p>ALDOSIVI</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Denver Nuggets cuenta con una racha impresionante en sus últimos 10 encuentros, destacándose en ataque y defensa sólida. Oklahoma City Thunder ha tenido dificultades defensivas y erráticas salidas como visitante. Se recomienda confiar en el pick de doble oportunidad local o empate, dado que Denver tiene margen para controlar el partido y evitar sorpresas.</p>
+                <b>ANÁLISIS</b>
+                <p>Gimnasia La Plata ostenta una racha muy favorable en sus últimos 10 juegos, con una defensa acertada y un ataque equilibrado. Aldosivi ha sido débil especialmente en su último tramo, mostrando poca capacidad para sacar puntos fuera de casa, por lo que la doble oportunidad a favor de Gimnasia asegura un respaldo firme para esta contienda.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble Oportunidad Denver Nuggets o Empate</div>
-                <div class="odds">1.23</div>
+                <div class="pick-line">GIMNASIA L.P. NO PIERDE (1X)</div>
+                <div class="odds">1.27</div>
             </div>
         </div>
-        <!-- PICK 5 -->
+        <!-- Pick 5 -->
         <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/563.png" alt="Trier">
-                    <p>Trier</p>
+                    <p>TRIER</p>
                 </div>
                 <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/519.png" alt="Alba Berlin">
-                    <p>Alba Berlin</p>
+                    <p>ALBA BERLIN</p>
                 </div>
             </div>
             <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Trier registra una racha estable en casa en sus últimos 10 partidos, con defensa fuerte y pocas derrotas. Alba Berlin, aunque fuerte, ha mostrado debilidades al jugar fuera con altibajos en consistencia. La apuesta segura es la doble oportunidad a favor de Trier o empate, ya que el equipo local puede gestionar el partido y mantener el control frente a un rival errático fuera de casa.</p>
+                <b>ANÁLISIS</b>
+                <p>Trier ha mantenido una defensa sólida y organizada durante sus últimos 10 partidos, logrando contener rivales complejos. Alba Berlin si bien es fuerte, ha presentado fallas en sus salidas, lo cual da pie a una apuesta segura a que Trier no caerá en casa, respaldada por su desempeño estable y control del juego interior.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble Oportunidad Trier o Empate</div>
-                <div class="odds">1.28</div>
+                <div class="pick-line">TRIER NO PIERDE (1X)</div>
+                <div class="odds">1.23</div>
             </div>
         </div>
     </div>
