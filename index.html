@@ -5,192 +5,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-        :root {
-            --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c);
-            --glass: rgba(15, 23, 42, 0.95);
-            --bet365-green: #183f0f;
-            --bet365-yellow: #f3e432;
-        }
-        body {
-            background: var(--bet365-green);
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .floating-logo {
-            width: 130px;
-            border-radius: 50%;
-            border: 3px solid var(--bet365-yellow);
-            box-shadow: 0 0 35px rgba(243, 228, 50, 0.5);
-            animation: float 4s ease-in-out infinite;
-            margin-bottom: 20px;
-            background: #183f0f;
-            padding: 7px;
-        }
-        .main-title {
-            background: var(--gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 900;
-            letter-spacing: 4px;
-            text-align:center;
-            margin:0;
-        }
-        .sub-title {
-            color: var(--bet365-yellow);
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.9rem;
-            margin: 15px 0 40px 0;
-            letter-spacing: 2px;
-        }
-        .container {
-            width: 100%;
-            max-width: 800px;
-            display:flex;
-            flex-direction:column;
-            gap: 30px;
-        }
-        .card {
-            background: var(--glass);
-            border-radius: 25px;
-            padding: 30px;
-            border: 1px solid rgba(243, 228, 50, 0.3);
-            border-left: 6px solid #bf953f;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.5);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: scale(1.01);
-            border-color: #bf953f;
-        }
-        .teams {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .team {
-            flex: 1;
-        }
-        .team img {
-            width: 75px;
-            height: 75px;
-            object-fit: contain;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
-            background: rgba(255,255,255,0.03);
-            padding: 5px;
-            border-radius: 12px;
-            margin: 0 auto;
-        }
-        .team p {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-top: 10px;
-            color: #fff;
-            text-transform: uppercase;
-            user-select: none;
-        }
-        .vs {
-            font-family: 'Orbitron', sans-serif;
-            color: #f3e432;
-            font-weight: 900;
-            font-size: 1.4rem;
-            padding: 0 15px;
-            user-select: none;
-        }
-        .analysis-box {
-            background: rgba(255,255,255,0.06);
-            border-radius: 18px;
-            padding: 25px;
-            margin: 20px 0 5px 0;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .analysis-box b {
-            color: #f3e432;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            display: block;
-            margin-bottom: 15px;
-            font-family: 'Orbitron', sans-serif;
-            border-bottom: 1px solid rgba(243, 228, 50, 0.2);
-            padding-bottom: 5px;
-        }
-        .analysis-box p {
-            color: #d4d7d0;
-            line-height: 1.8;
-            font-size: 1.05rem;
-            margin: 0;
-            font-family: 'Inter', sans-serif !important;
-            font-style: normal !important;
-            text-align: justify;
-            user-select: text;
-        }
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid rgba(243, 228, 50, 0.1);
-            padding-top: 20px;
-        }
-        .pick-line {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
-            font-size: 1rem;
-            text-transform: uppercase;
-            background: var(--gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1.5px;
-            filter: drop-shadow(0 0 5px rgba(191,149,63,0.3));
-            user-select: none;
-        }
-        .odds {
-            background: var(--gold);
-            color: #000;
-            padding: 8px 18px;
-            border-radius: 8px;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
-            font-size: 1.3rem;
-            user-select: none;
-        }
-        .disclaimer {
-            max-width: 700px;
-            text-align: center;
-            color: #c9d1c8;
-            font-size: 0.75rem;
-            margin-top: 60px;
-            line-height: 1.6;
-            padding: 20px;
-            border-top: 1px solid rgba(243, 228, 50, 0.15);
-            user-select: none;
-        }
+        :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
+        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .floating-logo { width: 130px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 35px rgba(191,149,63,0.5); animation: float 4s ease-in-out infinite; margin-bottom: 20px; }
+        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
+        .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
+        .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; transition: transform 0.3s ease; }
+        .card:hover { transform: scale(1.01); border-color: #bf953f; }
+        .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
+        .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; text-transform: uppercase; }
+        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; font-size: 1.4rem; }
+        .analysis-box { background: rgba(255,255,255,0.04); border-radius: 18px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.08); }
+        .analysis-box b { color: #bf953f; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 15px; font-family: 'Orbitron'; border-bottom: 1px solid rgba(191,149,63,0.2); padding-bottom: 5px; }
+        .analysis-box p { color: #cbd5e1; line-height: 1.8; font-size: 1.05rem; margin: 0; font-family: 'Inter' !important; font-style: normal !important; text-align: justify; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; text-transform: uppercase; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(191,149,63,0.3)); }
+        .odds { background-color: #1aad1a; color: #fff; padding: 8px 18px; border-radius: 8px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; box-shadow: 0 0 8px #1aad1a; }
+        .disclaimer { max-width: 700px; text-align: center; color: #475569; font-size: 0.7rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(191,149,63,0.1); }
+        .pick-gold { font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(191,149,63,0.3)); }
     </style>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Logo CM Sports Elite" class="floating-logo">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
-
-        <article class="card">
+        <!-- Udinese vs AS Roma -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/494.png" alt="Udinese">
                     <p>Udinese</p>
                 </div>
-                <div class="vs">vs</div>
+                <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/497.png" alt="AS Roma">
                     <p>AS Roma</p>
@@ -198,23 +47,21 @@
             </div>
             <div class="analysis-box">
                 <b>ANÁLISIS</b>
-                <p>
-                    Udinese ha mantenido un rendimiento sólido en sus últimos 10 juegos, logrando evitar derrotas fácilmente gracias a su defensa estable y estrategia conservadora. AS Roma, por otro lado, muestra cierta vulnerabilidad en partidos fuera de casa y ha sufrido importantes bajas que afectan su ataque. La racha favorable de Udinese junto a la inestabilidad visitante ofrece un alto valor en la doble oportunidad local segura, minimizando riesgos.
-                </p>
+                <p>Udinese se presenta con una racha sólida en sus últimos 10 encuentros, manteniendo una defensa compacta y una agresividad estratégica. La AS Roma, pese a su calidad, muestra cierta fragilidad fuera de casa, con frecuencia sufriendo en los segundos tiempos. Por eso, un doble oportunidad local o empate representa una jugada segura dada la consistencia y la necesidad de los locales por sumar.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble Oportunidad Udinese / Empate</div>
-                <div class="odds">1.25</div>
+                <div class="pick-gold">Pick: Udinese Doble Oportunidad (1X)</div>
+                <div class="odds">1.27</div>
             </div>
-        </article>
-
-        <article class="card">
+        </div>
+        <!-- Sunderland vs Burnley -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/746.png" alt="Sunderland">
                     <p>Sunderland</p>
                 </div>
-                <div class="vs">vs</div>
+                <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/44.png" alt="Burnley">
                     <p>Burnley</p>
@@ -222,23 +69,21 @@
             </div>
             <div class="analysis-box">
                 <b>ANÁLISIS</b>
-                <p>
-                    Sunderland acumula una excelente racha reciente, con 7 de 10 partidos mostrando control y efectividad defensiva. Burnley ha sufrido en sus últimos encuentros, con una defensa que cede oportunidades claras. La estabilidad en casa de Sunderland, combinada con la debilidad defensiva visitante, refuerza la apuesta segura en la doble oportunidad local o empate. Un pick con alta probabilidad y cuota equilibrada.
-                </p>
+                <p>Sunderland llega de mantener una racha invicta en casa durante sus últimos 10 partidos con gran solidez defensiva. Burnley ha demostrado debilidades marcadas lejos de su estadio, especialmente en la presión alta del rival. Por eso, el doble oportunidad local brinda una alta probabilidad de éxito ante un Burnley disminuido en sus armas ofensivas.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble Oportunidad Sunderland / Empate</div>
-                <div class="odds">1.26</div>
+                <div class="pick-gold">Pick: Sunderland Doble Oportunidad (1X)</div>
+                <div class="odds">1.25</div>
             </div>
-        </article>
-
-        <article class="card">
+        </div>
+        <!-- Mallorca vs Sevilla -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/798.png" alt="Mallorca">
                     <p>Mallorca</p>
                 </div>
-                <div class="vs">vs</div>
+                <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/536.png" alt="Sevilla">
                     <p>Sevilla</p>
@@ -246,23 +91,43 @@
             </div>
             <div class="analysis-box">
                 <b>ANÁLISIS</b>
-                <p>
-                    Mallorca ha cerrado varios encuentros recientes con disciplina defensiva, encajando pocos goles y salvando empates importantes. Sevilla se enfrenta a un calendario exigente y ha mostrado cierta irregularidad, especialmente fuera de casa. La consistencia defensiva local y la duda en el ataque visitante marcan un panorama ideal para doble oportunidad con la casa y el empate, disminuyendo la posibilidad de derrota y ofreciendo cuota competitiva.
-                </p>
+                <p>Mallorca ha consolidado un sistema equilibrado que permite asegurar puntos clave en casa. Sevilla enfrenta recientes tropiezos y debilidades en transiciones defensivas. Por esto, la doble oportunidad para Mallorca ofrece la mejor cobertura para evitar sorpresas y sacar provecho de un rival que no termina de afinar su estilo defensivo fuera de casa.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble Oportunidad Mallorca / Empate</div>
-                <div class="odds">1.24</div>
+                <div class="pick-gold">Pick: Mallorca Doble Oportunidad (1X)</div>
+                <div class="odds">1.23</div>
             </div>
-        </article>
-
-        <article class="card">
+        </div>
+        <!-- Gimnasia L.P. vs Aldosivi -->
+        <div class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/434.png" alt="Gimnasia L.P.">
+                    <p>Gimnasia L.P.</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/463.png" alt="Aldosivi">
+                    <p>Aldosivi</p>
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>ANÁLISIS</b>
+                <p>En esta confrontación, Gimnasia mostró mayor regularidad en sus últimos 10 juegos, combinando estabilidad defensiva con efectividad al atacar. Aldosivi persiste con problemas defensivos y no logra sostener su ritmo en partidos como visitante, lo que augura un resultado favorable para los locales mediante la doble oportunidad.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-gold">Pick: Gimnasia L.P. Doble Oportunidad (1X)</div>
+                <div class="odds">1.22</div>
+            </div>
+        </div>
+        <!-- Defensa Y Justicia vs Estudiantes L.P. -->
+        <div class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/442.png" alt="Defensa Y Justicia">
                     <p>Defensa Y Justicia</p>
                 </div>
-                <div class="vs">vs</div>
+                <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/450.png" alt="Estudiantes L.P.">
                     <p>Estudiantes L.P.</p>
@@ -270,40 +135,13 @@
             </div>
             <div class="analysis-box">
                 <b>ANÁLISIS</b>
-                <p>
-                    Defensa Y Justicia ha mostrado estabilidad en sus 10 partidos previos, obteniendo buenos resultados basados en sólida defensa y contragolpes precisos. Estudiantes L.P. enfrenta dificultades ofensivas recientes y su rendimiento como visitante está por debajo del promedio. Esta dinámica favorece la doble oportunidad local que asegura un respaldo frente a la fragilidad ofensiva visitante y fortalece la apuesta hacia un resultado conservador.
-                </p>
+                <p>Defensa Y Justicia mantiene un rendimiento estable especialmente en su estadio, combinando recuperación rápida y buen control del balón. Estudiantes L.P. muestra irregularidades importantes en defensa, lo que respaldan una selección segura como la doble oportunidad a favor del local para asegurar la continuidad positiva sin arriesgar demasiado.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Doble Oportunidad Defensa Y Justicia / Empate</div>
-                <div class="odds">1.27</div>
+                <div class="pick-gold">Pick: Defensa Y Justicia Doble Oportunidad (1X)</div>
+                <div class="odds">1.28</div>
             </div>
-        </article>
-
-        <article class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/452.png" alt="Tigre">
-                    <p>Tigre</p>
-                </div>
-                <div class="vs">vs</div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/436.png" alt="Racing Club">
-                    <p>Racing Club</p>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>ANÁLISIS</b>
-                <p>
-                    Tigre ha experimentado una racha positiva con gran fortaleza defensiva y resultados que incluyen varios empates y victorias. Racing Club, aunque competitivo, muestra cierta inconsistencia en encuentros clave y ha cedido puntos importantes como visitante. Apostar a la doble oportunidad de Tigre o empate mitiga riesgos y capitaliza la superioridad táctica defensiva local, cumpliendo con un rango de cuota ideal para apuestas de alta seguridad.
-                </p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Doble Oportunidad Tigre / Empate</div>
-                <div class="odds">1.23</div>
-            </div>
-        </article>
-
+        </div>
     </div>
     <div class="disclaimer">
         <b>DATO:</b> Selección de picks individuales de alta probabilidad.
