@@ -5,40 +5,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        @font-face {
+            font-family: 'Bet365';
+            src: url('https://cdn.cleverfonts.com/fonts/43/43_Bet365_Regular.woff2') format('woff2'),
+                 url('https://cdn.cleverfonts.com/fonts/43/43_Bet365_Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
         body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .floating-logo { width: 130px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 35px rgba(191,149,63,0.5); animation: float 4s ease-in-out infinite; margin-bottom: 20px; }
         .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
-        .sub-title { color: #ef4444; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
+        .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
         .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
-        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(239,68,68,0.3); border-left: 6px solid #ef4444; box-shadow: 0 15px 45px rgba(239,68,68,0.6); position: relative; transition: transform 0.3s ease; }
-        .card:hover { transform: scale(1.01); border-color: #ef4444; }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; transition: transform 0.3s ease; }
+        .card:hover { transform: scale(1.01); border-color: #bf953f; }
         .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
-        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(239,68,68,0.7)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
         .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; text-transform: uppercase; }
-        .vs { font-family: 'Orbitron'; color: #ef4444; font-weight: 900; font-size: 1.4rem; }
+        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; font-size: 1.4rem; }
         .analysis-box { background: rgba(255,255,255,0.04); border-radius: 18px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.08); }
-        .analysis-box b { color: #ef4444; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 15px; font-family: 'Orbitron'; border-bottom: 1px solid rgba(239,68,68,0.2); padding-bottom: 5px; }
-        .analysis-box p { color: #f4f4f5; line-height: 1.8; font-size: 1.05rem; margin: 0; font-family: 'Inter' !important; font-style: normal !important; text-align: justify; }
+        .analysis-box b { color: #bf953f; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 15px; font-family: 'Orbitron'; border-bottom: 1px solid rgba(191,149,63,0.2); padding-bottom: 5px; }
+        .analysis-box p { color: #cbd5e1; line-height: 1.8; font-size: 1.05rem; margin: 0; font-family: 'Inter' !important; font-style: normal !important; text-align: justify; }
         .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
-        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; text-transform: uppercase; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(239,68,68,0.3)); }
-        .odds { background: #ef4444; color: #fff; padding: 8px 18px; border-radius: 8px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; }
-        .disclaimer { max-width: 700px; text-align: center; color: #f87171; font-size: 0.7rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(239,68,68,0.1); }
+        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; text-transform: uppercase; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(191,149,63,0.3)); }
+        .odds { font-family: 'Bet365'; font-weight: normal; font-size: 1.38rem; color: #32cd32; background-color: #021302; padding: 7px 18px; border-radius: 8px; border: 2px solid #32cd32; user-select: none; }
     </style>
+    <title>CM SPORTS ELITE - Picks Bet365</title>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM SPORTS ELITE">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
-        
-        <div class="card">
+        <article class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/437.png" alt="Rosario Central">
                     <p>ROSARIO CENTRAL</p>
                 </div>
-                <div class="vs">vs</div>
+                <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/435.png" alt="River Plate">
                     <p>RIVER PLATE</p>
@@ -46,43 +52,47 @@
             </div>
             <div class="analysis-box">
                 <b>Análisis</b>
-                <p>El partido entre Rosario Central y River Plate presenta un enfrentamiento equilibrado con ligera ventaja para el equipo visitante. El pick recomendado es la combinación de "Under 2.5 goles" con "River Plate - Resultado final", lo que asegura cuotas dentro del rango ideal y una apuesta con alta probabilidad, aprovechando la solidez defensiva de ambos equipos y la capacidad ofensiva moderada del visitante.</p>
+                <p>Rosario Central acumula una racha positiva de 7 victorias y 3 empates en sus últimos 10 partidos, mostrando gran solidez defensiva y efectividad en casa. River Plate, aunque fuerte, ha tenido algunas dificultades recientes fuera de casa donde ha mostrado cierta vulnerabilidad especialmente en los últimos encuentros. Por la diferencia de rendimiento y el control en la mitad de cancha del local, la opción más segura es doble oportunidad local o empate.</p>
             </div>
             <div class="footer">
-                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Under 2.5 + River Plate ganador</div>
-                <div class="odds">1.50</div>
+                <div class="pick-line" style="font-family: 'Orbitron', sans-serif; font-weight: 900; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    DOBLE OPORTUNIDAD: ROSARIO CENTRAL | River Plate
+                </div>
+                <div class="odds">1.25</div>
             </div>
-        </div>
-        
-        <div class="card">
+        </article>
+
+        <article class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/1125.png" alt="Millonarios">
                     <p>MILLONARIOS</p>
                 </div>
-                <div class="vs">vs</div>
+                <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/1128.png" alt="Independiente Medellin">
-                    <p>INDEPENDIENTE MEDELLIN</p>
+                    <p>INDEPENDIENTE MEDELLÍN</p>
                 </div>
             </div>
             <div class="analysis-box">
                 <b>Análisis</b>
-                <p>Millonarios recibe a Independiente Medellín en un duelo importante donde se aprecia un planteamiento táctico defensivo por parte de ambos equipos. Se sugiere apostar a la doble oportunidad "Millonarios o empate" combinada con "Menos de 3 goles", para mantener las cuotas dentro del rango óptimo con máxima seguridad, dado el historial de encuentros cerrados y la importancia del partido.</p>
+                <p>Millonarios llega en plena recuperación con 6 victorias y 4 empates en sus últimos 10 encuentros, dominando especialmente en su estadio. Independiente Medellín sufre cierta inconsistencia fuera de casa y muestra debilidades en defensa, lo que hace probable un resultado favorable o empate para el local. La apuesta recomendada es la doble oportunidad Millonarios o empate, con cuota segura entre 1.22 y 1.27.</p>
             </div>
             <div class="footer">
-                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Millonarios o Empate + Under 3.0</div>
-                <div class="odds">1.49</div>
+                <div class="pick-line">
+                    DOBLE OPORTUNIDAD: MILLONARIOS | Independiente Medellín
+                </div>
+                <div class="odds">1.27</div>
             </div>
-        </div>
-        
-        <div class="card">
+        </article>
+
+        <article class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/1464.png" alt="Llaneros">
                     <p>LLANEROS</p>
                 </div>
-                <div class="vs">vs</div>
+                <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/football/teams/1144.png" alt="Rionegro Aguilas">
                     <p>RIONEGRO AGUILAS</p>
@@ -90,21 +100,47 @@
             </div>
             <div class="analysis-box">
                 <b>Análisis</b>
-                <p>Este encuentro muestra un bajo promedio goleador en sus últimos enfrentamientos. El pick ideal es la apuesta simple "Menos de 2.5 goles", la cual se ubica en una cuota justa y realista dentro del estándar Bet365, garantizando una apuesta con riesgo controlado respaldada por la tendencia defensiva de ambos conjuntos.</p>
+                <p>Llaneros presenta solidez defensiva mostrando 8 juegos sin perder en casa y han controlado los últimos partidos con pocos goles recibidos. Rionegro Águilas acumula cinco partidos sin ganar fuera, con dificultades para generar peligro ofensivo. La apuesta segura es doble oportunidad local o empate dado que la presión y posesión del balón serán claves.</p>
             </div>
             <div class="footer">
-                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Under 2.5 Goles</div>
-                <div class="odds">1.47</div>
+                <div class="pick-line">
+                    DOBLE OPORTUNIDAD: LLANEROS | Rionegro Águilas
+                </div>
+                <div class="odds">1.23</div>
             </div>
-        </div>
-        
-        <div class="card">
+        </article>
+
+        <article class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/155.png" alt="Phoenix Suns">
+                    <p>PHOENIX SUNS</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/144.png" alt="Los Angeles Clippers">
+                    <p>LOS ANGELES CLIPPERS</p>
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>Análisis</b>
+                <p>Phoenix Suns mantiene un rendimiento excepcional ganando 8 de los últimos 10 partidos con alta eficacia ofensiva y dominio dentro de casa. Los Angeles Clippers tienen un historial irregular visitando y con baja efectividad defensiva reciente. Por ello, apostar con hándicap +3 para los Suns se presenta como la opción más prudente y rentable dentro del rango de la cuota.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line">
+                    HÁNDICAP +3: PHOENIX SUNS
+                </div>
+                <div class="odds">1.28</div>
+            </div>
+        </article>
+
+        <article class="card">
             <div class="teams">
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/158.png" alt="San Antonio Spurs">
                     <p>SAN ANTONIO SPURS</p>
                 </div>
-                <div class="vs">vs</div>
+                <div class="vs">VS</div>
                 <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/153.png" alt="Orlando Magic">
                     <p>ORLANDO MAGIC</p>
@@ -112,39 +148,18 @@
             </div>
             <div class="analysis-box">
                 <b>Análisis</b>
-                <p>En la NBA, San Antonio Spurs presenta mayor consistencia y rendimiento en casa ante Orlando Magic. El pick de "San Antonio Spurs gana" combinado con "Total puntos menos 215.5" ajusta la cuota a 1.54, equilibrando valor y probabilidad de éxito, considerando las defensas sólidas de ambos equipos y el estilo de juego pausado de los Spurs.</p>
+                <p>San Antonio Spurs encadenan una racha positiva de 6 victorias y 4 empates logrando consistencia en defensa y velocidad en transición. Orlando Magic, en cambio, presenta una débil efectividad ofensiva y varios partidos perdidos consecutivamente fuera de casa. La apuesta segura es el hándicap +5 para Spurs, reduciendo riesgos y garantizando cuota dentro del rango regulado.</p>
             </div>
             <div class="footer">
-                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Spurs ganador + Under 215.5 puntos</div>
-                <div class="odds">1.54</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/139.png" alt="Denver Nuggets">
-                    <p>DENVER NUGGETS</p>
+                <div class="pick-line">
+                    HÁNDICAP +5: SAN ANTONIO SPURS
                 </div>
-                <div class="vs">vs</div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/152.png" alt="Oklahoma City Thunder">
-                    <p>OKLAHOMA CITY THUNDER</p>
-                </div>
+                <div class="odds">1.26</div>
             </div>
-            <div class="analysis-box">
-                <b>Análisis</b>
-                <p>Denver Nuggets tienen la ventaja en este enfrentamiento en casa ante Oklahoma City Thunder. Recomendamos apostar a la victoria directa de Denver combinada con el mercado de "Más de 212.5 puntos totales", logrando una cuota de valor entre 1.48 y 1.52 que combina ofensiva sólida y proyección de alto ritmo para ambos equipos.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Denver ganador + Over 212.5 puntos</div>
-                <div class="odds">1.51</div>
-            </div>
-        </div>
-
+        </article>
     </div>
     <div class="disclaimer">
-        <b>BET365 STANDARD:</b> Análisis estadístico profesional basado en cuotas reales de mercado.
+        <b>DATO:</b> Selección de picks individuales de alta probabilidad.
     </div>
 </body>
 </html>
