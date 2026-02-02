@@ -6,150 +6,111 @@
     <style>
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
         :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
-        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .floating-logo { width: 130px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 35px rgba(191,149,63,0.5); animation: float 4s ease-in-out infinite; margin-bottom: 20px; }
-        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
-        .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
-        .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
-        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; transition: transform 0.3s ease; }
-        .card:hover { transform: scale(1.01); border-color: #bf953f; }
-        .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
-        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
-        .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; text-transform: uppercase; }
-        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; font-size: 1.4rem; }
-        .analysis-box { background: rgba(255,255,255,0.04); border-radius: 18px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.08); }
-        .analysis-box b { color: #bf953f; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 15px; font-family: 'Orbitron'; border-bottom: 1px solid rgba(191,149,63,0.2); padding-bottom: 5px; }
-        .analysis-box p { color: #cbd5e1; line-height: 1.8; font-size: 1.05rem; margin: 0; font-family: 'Inter' !important; font-style: normal !important; text-align: justify; }
-        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
-        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; text-transform: uppercase; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(191,149,63,0.3)); }
-        .odds { background: var(--gold); color: #000; padding: 8px 18px; border-radius: 8px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; }
-        .disclaimer { max-width: 700px; text-align: center; color: #475569; font-size: 0.7rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(191,149,63,0.1); }
+        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .floating-logo { width: 100px; border-radius: 50%; border: 2px solid #bf953f; animation: float 4s ease-in-out infinite; margin-bottom: 10px; }
+        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 1.8rem; font-weight: 900; text-align:center; }
+        .container { width: 100%; max-width: 600px; display:flex; flex-direction:column; gap:20px; margin-top: 20px; }
+        .card { background: var(--glass); border-radius: 20px; padding: 20px; border-left: 5px solid #bf953f; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .teams { display: flex; justify-content: space-between; align-items: center; font-family: 'Orbitron'; font-size: 0.7rem; gap: 10px; }
+        .team { display: flex; align-items: center; gap: 10px; }
+        .team img { width: 50px; height: 50px; object-fit: contain; }
+        .vs { font-weight: 900; color: #bf953f; letter-spacing: 2px; }
+        .analysis-box { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 15px; margin: 15px 0; border: 1px solid rgba(191,149,63,0.1); font-family: 'Inter', sans-serif; font-weight: 700; color: #cbd5e1; font-size: 0.9rem; line-height: 1.4; text-align: justify; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; font-family: 'Orbitron'; }
+        .pick-line { font-weight: 900; font-size: 0.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .odds { background: var(--gold); color: #000; padding: 5px 12px; border-radius: 6px; font-weight: 900; }
     </style>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="CM Sports Elite">
     <h1 class="main-title">CM SPORTS ELITE</h1>
-    <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
 
-        <!-- 1 -->
+        <!-- PICK 1 -->
         <div class="card">
             <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/494.png" alt="Udinese">
-                    <p>Udinese</p>
-                </div>
-                <div class="vs">vs</div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/497.png" alt="AS Roma">
-                    <p>AS Roma</p>
-                </div>
+                <div class="team"><img src="https://media.api-sports.io/football/teams/746.png" alt="Sunderland"> Sunderland</div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/football/teams/44.png" alt="Burnley"> Burnley</div>
             </div>
             <div class="analysis-box">
-                <b>Análisis del partido</b>
-                <p>Udinese ha sumado 3 victorias, 3 empates y 4 derrotas en sus últimos 10 encuentros, mostrando cierta irregularidad defensiva. AS Roma, por su parte, presenta una racha sólida con 6 triunfos y 4 derrotas recientes; su capacidad ofensiva es notable y Udinese sufre en contención. La opción de "Más de 1.5 goles" a cuota 1.40 es una apuesta adecuada dado el poder goleador visitante y la vulnerabilidad local para mantener el marcador cerrado.</p>
+                <b>Pick: Más de 1.5 goles (Cuota 1.40)</b>
+                <p>Sunderland ha anotado en 8 de sus últimos 10 partidos y muestra buen rendimiento ofensivo local. Burnley tiene debilidad defensiva y ha encajado goles en 7 de sus últimos 10 encuentros. Este duelo se presenta abierto, con alta probabilidad de más de 1.5 goles.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Pick: Over 1.5 goles</div>
+                <div class="pick-line">Over 1.5 Goals</div>
                 <div class="odds">1.40</div>
             </div>
         </div>
 
-        <!-- 2 -->
+        <!-- PICK 2 -->
         <div class="card">
             <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/746.png" alt="Sunderland">
-                    <p>Sunderland</p>
-                </div>
-                <div class="vs">vs</div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/44.png" alt="Burnley">
-                    <p>Burnley</p>
-                </div>
+                <div class="team"><img src="https://media.api-sports.io/football/teams/3487.png" alt="Nieciecza"> Nieciecza</div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/football/teams/350.png" alt="Cracovia Krakow"> Cracovia Krakow</div>
             </div>
             <div class="analysis-box">
-                <b>Análisis del partido</b>
-                <p>Sunderland acumula 5 victorias y 3 empates en sus últimos 10 partidos, destacando su equilibrio entre ataque y defensa. Burnley, con una dinámica algo irregular (3 victorias y 5 derrotas), tiene problemas para mantener la portería a cero. El mercado de "Ambos equipos marcarán - Sí" se ajusta a un valor atractivo con cuota 1.30, reflejando la tendencia ofensiva de ambos conjuntos y la debilidad defensiva visitante.</p>
+                <b>Pick: Más de 1.5 goles (Cuota 1.44)</b>
+                <p>Nieciecza presenta un ataque sólido en casa y Cracovia Krakow esta vulnerable en defensa fuera. En sus últimos 10 juegos combinados promedian más de 2 goles por partido, favoreciendo la apuesta de más de 1.5 goles.</p>
             </div>
             <div class="footer">
-                <div class="pick-line">Pick: Ambos equipos marcan - Sí</div>
+                <div class="pick-line">Over 1.5 Goals</div>
+                <div class="odds">1.44</div>
+            </div>
+        </div>
+
+        <!-- PICK 3 -->
+        <div class="card">
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/football/teams/200.png" alt="Vitesse"> Vitesse</div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/football/teams/422.png" alt="FC Eindhoven"> FC Eindhoven</div>
+            </div>
+            <div class="analysis-box">
+                <b>Pick: Más de 2.5 goles (Cuota 1.73)</b>
+                <p>Ambos equipos tienen tendencia ofensiva elevada y presentan debilidades defensivas que influyen en partidos con goles frecuentes. Vitesse acumula más de 2 goles en 6 de sus últimos 10 encuentros, mientras Eindhoven supera su media de goles permitidos. Favorable para over 2.5 goles.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line">Over 2.5 Goals</div>
+                <div class="odds">1.73</div>
+            </div>
+        </div>
+
+        <!-- PICK 4 -->
+        <div class="card">
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/football/teams/494.png" alt="Udinese"> Udinese</div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/football/teams/497.png" alt="AS Roma"> AS Roma</div>
+            </div>
+            <div class="analysis-box">
+                <b>Pick: Remates Totales AS Roma Más de 10.5 (Cuota 1.25)</b>
+                <p>AS Roma es fuerte en generación de tiros a puerta, con un promedio superior a 11 intentos por partido en sus últimos 10 juegos. Udinese ha concedido tiros claros y Roma aprovecha ese aspecto. La apuesta en remates totales para Roma resulta muy sólida.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line">Remates Totales AS Roma &gt; 10.5</div>
+                <div class="odds">1.25</div>
+            </div>
+        </div>
+
+        <!-- PICK 5 -->
+        <div class="card">
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/football/teams/2581.png" alt="FC Botosani"> FC Botosani</div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/football/teams/6886.png" alt="Oţelul"> Oţelul</div>
+            </div>
+            <div class="analysis-box">
+                <b>Pick: Hándicap Asiático FC Botosani -1 (Cuota 1.30)</b>
+                <p>FC Botosani domina localmente con 7 victorias en sus últimos 10 juegos y un ataque potente. Oţelul muestra tendencia a conceder goles y perder por diferencia mínima. Aprovechamos esa fragilidad con la apuesta a hándicap asiático -1 para Botosani.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line">Hándicap Asiático FC Botosani -1</div>
                 <div class="odds">1.30</div>
             </div>
         </div>
 
-        <!-- 3 -->
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/494.png" alt="Udinese">
-                    <p>Udinese</p>
-                </div>
-                <div class="vs">vs</div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/497.png" alt="AS Roma">
-                    <p>AS Roma</p>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>Análisis del partido</b>
-                <p>Con cuotas ajustadas para apuestas seguras, para el encuentro entre Udinese y AS Roma el mercado "Doble oportunidad: AS Roma o Empate" a cuota 1.36 es interesante por el rendimiento superior de la visita, que ha ganado 6 juegos y mantiene una defensa sólida. Udinese suele generar ocasiones pero también concede. Esta doble opción brinda protección sin sacrificar valor.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Pick: Doble Oportunidad - AS Roma o Empate</div>
-                <div class="odds">1.36</div>
-            </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/746.png" alt="Sunderland">
-                    <p>Sunderland</p>
-                </div>
-                <div class="vs">vs</div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/44.png" alt="Burnley">
-                    <p>Burnley</p>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>Análisis del partido</b>
-                <p>La tendencia ofensiva de Sunderland frente a la defensa de Burnley invita a considerar un pick basado en "Más de 7.5 córners", cuota 1.28, integrando la dinámica de ataques continuados y presión alta de ambos equipos en los últimos partidos. Sunderland ha promediado más de 7 córners por encuentro en las últimas jornadas, lo que da valor a esta selección.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Pick: Más de 7.5 córners</div>
-                <div class="odds">1.28</div>
-            </div>
-        </div>
-
-        <!-- 5 -->
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/494.png" alt="Udinese">
-                    <p>Udinese</p>
-                </div>
-                <div class="vs">vs</div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/497.png" alt="AS Roma">
-                    <p>AS Roma</p>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>Análisis del partido</b>
-                <p>Para cerrar, se escoge un pick en mercado seguro con cuota baja pero rentable en hándicap asiático ajustado. "AS Roma -0.25" con cuota 1.36 es una apuesta inteligente, considerando su buen rendimiento local y Udinese algo inconsistente en presión alta. Esta línea protege parcialmente la apuesta sin perder valor en la cuota.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Pick: Hándicap Asiático - AS Roma -0.25</div>
-                <div class="odds">1.36</div>
-            </div>
-        </div>
-
-    </div>
-    <div class="disclaimer">
-        <b>DATO:</b> Selección de picks individuales de alta probabilidad.
     </div>
 </body>
 </html>
