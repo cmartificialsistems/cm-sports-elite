@@ -2,342 +2,149 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c);
-            --glass: rgba(15, 23, 42, 0.95);
-        }
-        body {
-            background: #010409;
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .floating-logo {
-            width: 130px;
-            border-radius: 50%;
-            border: 3px solid #bf953f;
-            box-shadow: 0 0 35px rgba(191,149,63,0.5);
-            margin-bottom: 20px;
-        }
-        .main-title {
-            background: var(--gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 2.4rem;
-            letter-spacing: 4px;
-            text-align: center;
-            margin: 0;
-        }
-        .sub-title {
-            color: #10b981;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin: 15px 0 40px 0;
-            letter-spacing: 2px;
-            text-align: center;
-        }
-        .container {
-            width: 100%;
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        .card {
-            background: var(--glass);
-            border-radius: 25px;
-            padding: 30px;
-            border: 1px solid rgba(191,149,63,0.3);
-            border-left: 6px solid #bf953f;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.5);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: scale(1.01);
-            border-color: #bf953f;
-        }
-        .teams {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .team {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 120px;
-        }
-        .team img {
-            width: 75px;
-            height: 75px;
-            object-fit: contain;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
-            background: rgba(255,255,255,0.03);
-            padding: 5px;
-            border-radius: 12px;
-        }
-        .team p {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin-top: 10px;
-            color: #fff;
-            text-transform: uppercase;
-            user-select: none;
-        }
-        .vs {
-            font-family: 'Inter', sans-serif;
-            color: #bf953f;
-            font-weight: 700;
-            font-size: 1.5rem;
-            user-select: none;
-        }
-        .analysis-box {
-            background: rgba(255,255,255,0.03);
-            border-radius: 18px;
-            padding: 25px;
-            margin: 20px 0;
-            border: 1px solid rgba(255,255,255,0.08);
-            user-select: none;
-        }
-        .analysis-box b {
-            color: #bf953f;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 12px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-        }
-        .analysis-box p {
-            color: #cbd5e1;
-            line-height: 1.7;
-            font-size: 0.95rem;
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
-            text-align: justify;
-        }
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            user-select: none;
-        }
-        .pick {
-            font-family: 'Inter', sans-serif;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            color: #fff;
-            font-weight: 700;
-        }
-        .odds {
-            background: var(--gold);
-            color: #000;
-            padding: 8px 18px;
-            border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-        }
-        .disclaimer {
-            max-width: 700px;
-            text-align: center;
-            color: #475569;
-            font-size: 0.7rem;
-            margin-top: 60px;
-            line-height: 1.6;
-            padding: 20px;
-            border-top: 1px solid rgba(191,149,63,0.1);
-            user-select: none;
-        }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
+        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .floating-logo { width: 130px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 35px rgba(191,149,63,0.5); animation: float 4s ease-in-out infinite; margin-bottom: 20px; }
+        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
+        .sub-title { color: #ef4444; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
+        .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(239,68,68,0.3); border-left: 6px solid #ef4444; box-shadow: 0 15px 45px rgba(239,68,68,0.6); position: relative; transition: transform 0.3s ease; }
+        .card:hover { transform: scale(1.01); border-color: #ef4444; }
+        .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(239,68,68,0.7)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
+        .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; text-transform: uppercase; }
+        .vs { font-family: 'Orbitron'; color: #ef4444; font-weight: 900; font-size: 1.4rem; }
+        .analysis-box { background: rgba(255,255,255,0.04); border-radius: 18px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.08); }
+        .analysis-box b { color: #ef4444; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 15px; font-family: 'Orbitron'; border-bottom: 1px solid rgba(239,68,68,0.2); padding-bottom: 5px; }
+        .analysis-box p { color: #f4f4f5; line-height: 1.8; font-size: 1.05rem; margin: 0; font-family: 'Inter' !important; font-style: normal !important; text-align: justify; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; text-transform: uppercase; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px; filter: drop-shadow(0 0 5px rgba(239,68,68,0.3)); }
+        .odds { background: #ef4444; color: #fff; padding: 8px 18px; border-radius: 8px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; }
+        .disclaimer { max-width: 700px; text-align: center; color: #f87171; font-size: 0.7rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(239,68,68,0.1); }
     </style>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Logo CM Sports Elite" class="floating-logo" loading="lazy">
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
     <h1 class="main-title">CM SPORTS ELITE</h1>
     <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
-
     <div class="container">
-        <!-- CARD 1 - Rosario Central vs River Plate -->
-        <article class="card" role="article" aria-label="Análisis Rosario Central vs River Plate">
+        
+        <div class="card">
             <div class="teams">
-                <div class="team" aria-label="Equipo local Rosario Central">
-                    <img src="https://media.api-sports.io/football/teams/437.png" alt="Logo Rosario Central" loading="lazy">
-                    <p>Rosario Central</p>
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/437.png" alt="Rosario Central">
+                    <p>ROSARIO CENTRAL</p>
                 </div>
-                <div class="vs" aria-hidden="true">vs</div>
-                <div class="team" aria-label="Equipo visitante River Plate">
-                    <img src="https://media.api-sports.io/football/teams/435.png" alt="Logo River Plate" loading="lazy">
-                    <p>River Plate</p>
+                <div class="vs">vs</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/435.png" alt="River Plate">
+                    <p>RIVER PLATE</p>
                 </div>
             </div>
-            <section class="analysis-box" aria-label="Análisis profesional y pick para Rosario Central vs River Plate">
-                <b>Debilidad del Rival:</b>
-                <p>Rosario Central presenta inestabilidad defensiva jugando de local, con un promedio alto de goles encajados en sus últimos 10 partidos, especialmente tras errores en transición defensiva. River Plate ha mostrado buena capacidad ofensiva que puede explotar estas fallas.</p>
-
-                <b>Rendimiento (últimos 10 juegos):</b>
-                <p>River Plate ha ganado 7 de sus últimos 10 partidos, manteniendo una alta efectividad goleadora y control de balón. Rosario Central, en cambio, ganó sólo 3 y empató 2 de sus últimos 10.</p>
-
-                <b>Rendimiento Individual:</b>
-                <p>Los principales jugadores ofensivos de River Plate se encuentran en gran forma, con buena conexión en ataque. Rosario Central ha dependido mucho de su defensa, que viene siendo cuestionada.</p>
-
-                <b>Fortalezas vs Debilidades:</b>
-                <p>River Plate aprovechará la fragilidad de la defensa rival con presión alta y generación de espacios. El pick recomendado explota el buen momento ofensivo visitante y la vulnerabilidad defensiva local.</p>
-            </section>
-            <footer class="footer">
-                <div class="pick">Doble Oportunidad: River o Empate</div>
-                <div class="odds" aria-label="Cuota 1.22">1.22</div>
-            </footer>
-        </article>
-
-        <!-- CARD 2 - Millonarios vs Independiente Medellín -->
-        <article class="card" role="article" aria-label="Análisis Millonarios vs Independiente Medellín">
+            <div class="analysis-box">
+                <b>Análisis</b>
+                <p>El partido entre Rosario Central y River Plate presenta un enfrentamiento equilibrado con ligera ventaja para el equipo visitante. El pick recomendado es la combinación de "Under 2.5 goles" con "River Plate - Resultado final", lo que asegura cuotas dentro del rango ideal y una apuesta con alta probabilidad, aprovechando la solidez defensiva de ambos equipos y la capacidad ofensiva moderada del visitante.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Under 2.5 + River Plate ganador</div>
+                <div class="odds">1.50</div>
+            </div>
+        </div>
+        
+        <div class="card">
             <div class="teams">
-                <div class="team" aria-label="Equipo local Millonarios">
-                    <img src="https://media.api-sports.io/football/teams/1125.png" alt="Logo Millonarios" loading="lazy">
-                    <p>Millonarios</p>
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/1125.png" alt="Millonarios">
+                    <p>MILLONARIOS</p>
                 </div>
-                <div class="vs" aria-hidden="true">vs</div>
-                <div class="team" aria-label="Equipo visitante Independiente Medellín">
-                    <img src="https://media.api-sports.io/football/teams/1128.png" alt="Logo Independiente Medellín" loading="lazy">
-                    <p>Independiente Medellín</p>
+                <div class="vs">vs</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/1128.png" alt="Independiente Medellin">
+                    <p>INDEPENDIENTE MEDELLIN</p>
                 </div>
             </div>
-            <section class="analysis-box" aria-label="Análisis profesional y pick para Millonarios vs Independiente Medellín">
-                <b>Debilidad del Rival:</b>
-                <p>Independiente Medellín muestra desconexiones en ataque, lo que reduce su amenaza ofensiva, permitiendo a equipos con defensa sólida como Millonarios controlar el ritmo.</p>
-
-                <b>Rendimiento (últimos 10 juegos):</b>
-                <p>Millonarios mantiene una racha positiva de 6 victorias, con buen rendimiento defensivo y ofensivo. Independiente Medellín tiene 4 derrotas y 3 empates en este periodo.</p>
-
-                <b>Rendimiento Individual:</b>
-                <p>Millonarios presenta un mediocampo con gran manejo del balón, que domina posesión, mientras Medellín carece de finish clínico.</p>
-
-                <b>Fortalezas vs Debilidades:</b>
-                <p>El control del medio campo de Millonarios y su solidez defensiva maximizan la baja producción ofensiva visitante. La apuesta capitaliza la fortaleza local y la inseguridad visitante.</p>
-            </section>
-            <footer class="footer">
-                <div class="pick">Doble Oportunidad: Millonarios o Empate</div>
-                <div class="odds" aria-label="Cuota 1.21">1.21</div>
-            </footer>
-        </article>
-
-        <!-- CARD 3 - Llaneros vs Rionegro Águilas -->
-        <article class="card" role="article" aria-label="Análisis Llaneros vs Rionegro Águilas">
+            <div class="analysis-box">
+                <b>Análisis</b>
+                <p>Millonarios recibe a Independiente Medellín en un duelo importante donde se aprecia un planteamiento táctico defensivo por parte de ambos equipos. Se sugiere apostar a la doble oportunidad "Millonarios o empate" combinada con "Menos de 3 goles", para mantener las cuotas dentro del rango óptimo con máxima seguridad, dado el historial de encuentros cerrados y la importancia del partido.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Millonarios o Empate + Under 3.0</div>
+                <div class="odds">1.49</div>
+            </div>
+        </div>
+        
+        <div class="card">
             <div class="teams">
-                <div class="team" aria-label="Equipo local Llaneros">
-                    <img src="https://media.api-sports.io/football/teams/1464.png" alt="Logo Llaneros" loading="lazy">
-                    <p>Llaneros</p>
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/1464.png" alt="Llaneros">
+                    <p>LLANEROS</p>
                 </div>
-                <div class="vs" aria-hidden="true">vs</div>
-                <div class="team" aria-label="Equipo visitante Rionegro Águilas">
-                    <img src="https://media.api-sports.io/football/teams/1144.png" alt="Logo Rionegro Águilas" loading="lazy">
-                    <p>Rionegro Águilas</p>
+                <div class="vs">vs</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/football/teams/1144.png" alt="Rionegro Aguilas">
+                    <p>RIONEGRO AGUILAS</p>
                 </div>
             </div>
-            <section class="analysis-box" aria-label="Análisis profesional y pick para Llaneros vs Rionegro Águilas">
-                <b>Debilidad del Rival:</b>
-                <p>Rionegro Águilas ha tenido problemas para mantener la intensidad durante todo el partido, especialmente en defensiva en el segundo tiempo. Llaneros compensa con presión constante en casa.</p>
-
-                <b>Rendimiento (últimos 10 juegos):</b>
-                <p>Llaneros solo logró 3 victorias en sus últimos 10, pero con buena defensa en casa. Rionegro Águilas tiene 2 victorias y 5 derrotas, evidenciando irregularidad.</p>
-
-                <b>Rendimiento Individual:</b>
-                <p>Ningún jugador destacado, pero la disciplina táctica y el orden colectivo de Llaneros es notable.</p>
-
-                <b>Fortalezas vs Debilidades:</b>
-                <p>Apostar a que se superan 1.5 goles es acertado, ya que ambos equipos muestran tendencia a partidos abiertos y con anotaciones, sobre todo en estático y contragolpes.</p>
-            </section>
-            <footer class="footer">
-                <div class="pick">Over 1.5 Goles</div>
-                <div class="odds" aria-label="Cuota 1.23">1.23</div>
-            </footer>
-        </article>
-
-        <!-- CARD 4 - New York Knicks vs Los Angeles Lakers (NBA) -->
-        <article class="card" role="article" aria-label="Análisis New York Knicks vs Los Angeles Lakers">
+            <div class="analysis-box">
+                <b>Análisis</b>
+                <p>Este encuentro muestra un bajo promedio goleador en sus últimos enfrentamientos. El pick ideal es la apuesta simple "Menos de 2.5 goles", la cual se ubica en una cuota justa y realista dentro del estándar Bet365, garantizando una apuesta con riesgo controlado respaldada por la tendencia defensiva de ambos conjuntos.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Under 2.5 Goles</div>
+                <div class="odds">1.47</div>
+            </div>
+        </div>
+        
+        <div class="card">
             <div class="teams">
-                <div class="team" aria-label="Equipo local New York Knicks">
-                    <img src="https://media.api-sports.io/basketball/teams/151.png" alt="Logo New York Knicks" loading="lazy">
-                    <p>New York Knicks</p>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/158.png" alt="San Antonio Spurs">
+                    <p>SAN ANTONIO SPURS</p>
                 </div>
-                <div class="vs" aria-hidden="true">vs</div>
-                <div class="team" aria-label="Equipo visitante Los Angeles Lakers">
-                    <img src="https://media.api-sports.io/basketball/teams/145.png" alt="Logo Los Angeles Lakers" loading="lazy">
-                    <p>Los Angeles Lakers</p>
+                <div class="vs">vs</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/153.png" alt="Orlando Magic">
+                    <p>ORLANDO MAGIC</p>
                 </div>
             </div>
-            <section class="analysis-box" aria-label="Análisis profesional y pick para New York Knicks vs Los Angeles Lakers">
-                <b>Debilidad del Rival:</b>
-                <p>Los Lakers han mostrado altibajos defensivos permitiendo un ritmo alto de anotación de sus rivales a domicilio, lo que da ventaja a Knicks en cancha propia.</p>
-
-                <b>Rendimiento (últimos 10 juegos):</b>
-                <p>Knicks acumula 6 victorias con buen rendimiento defensivo local. Lakers perdió 4 de sus últimos 10, mostrando inconsistencia y baja en rebotes.</p>
-
-                <b>Rendimiento Individual:</b>
-                <p>Knicks cuenta con jugadores sólidos en defensa y triples, poniendo en aprietos a Los Angeles.</p>
-
-                <b>Fortalezas vs Debilidades:</b>
-                <p>La apuesta a victoria local con hándicap +15.5 puntos refleja el dominio defensivo y control del juego por los Knicks, explotando la irregularidad visitante.</p>
-            </section>
-            <footer class="footer">
-                <div class="pick">Victoria Knicks +15.5 pts (Hándicap)</div>
-                <div class="odds" aria-label="Cuota 1.24">1.24</div>
-            </footer>
-        </article>
-
-        <!-- CARD 5 - Portland Trail Blazers vs Cleveland Cavaliers (NBA) -->
-        <article class="card" role="article" aria-label="Análisis Portland Trail Blazers vs Cleveland Cavaliers">
+            <div class="analysis-box">
+                <b>Análisis</b>
+                <p>En la NBA, San Antonio Spurs presenta mayor consistencia y rendimiento en casa ante Orlando Magic. El pick de "San Antonio Spurs gana" combinado con "Total puntos menos 215.5" ajusta la cuota a 1.54, equilibrando valor y probabilidad de éxito, considerando las defensas sólidas de ambos equipos y el estilo de juego pausado de los Spurs.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Spurs ganador + Under 215.5 puntos</div>
+                <div class="odds">1.54</div>
+            </div>
+        </div>
+        
+        <div class="card">
             <div class="teams">
-                <div class="team" aria-label="Equipo local Portland Trail Blazers">
-                    <img src="https://media.api-sports.io/basketball/teams/156.png" alt="Logo Portland Trail Blazers" loading="lazy">
-                    <p>Portland Trail Blazers</p>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/139.png" alt="Denver Nuggets">
+                    <p>DENVER NUGGETS</p>
                 </div>
-                <div class="vs" aria-hidden="true">vs</div>
-                <div class="team" aria-label="Equipo visitante Cleveland Cavaliers">
-                    <img src="https://media.api-sports.io/basketball/teams/137.png" alt="Logo Cleveland Cavaliers" loading="lazy">
-                    <p>Cleveland Cavaliers</p>
+                <div class="vs">vs</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/152.png" alt="Oklahoma City Thunder">
+                    <p>OKLAHOMA CITY THUNDER</p>
                 </div>
             </div>
-            <section class="analysis-box" aria-label="Análisis profesional y pick para Portland Trail Blazers vs Cleveland Cavaliers">
-                <b>Debilidad del Rival:</b>
-                <p>Cleveland Cavaliers tiene problemas a nivel ofensivo en partidos fuera de casa, con baja efectividad en tiros de campo y pérdidas en transición.</p>
+            <div class="analysis-box">
+                <b>Análisis</b>
+                <p>Denver Nuggets tienen la ventaja en este enfrentamiento en casa ante Oklahoma City Thunder. Recomendamos apostar a la victoria directa de Denver combinada con el mercado de "Más de 212.5 puntos totales", logrando una cuota de valor entre 1.48 y 1.52 que combina ofensiva sólida y proyección de alto ritmo para ambos equipos.</p>
+            </div>
+            <div class="footer">
+                <div class="pick-line" style="background: linear-gradient(135deg, #ef4444, #fca5a5, #b91c1c, #fca5a5, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Denver ganador + Over 212.5 puntos</div>
+                <div class="odds">1.51</div>
+            </div>
+        </div>
 
-                <b>Rendimiento (últimos 10 juegos):</b>
-                <p>Trail Blazers ganó 5 de los últimos 10 y en casa su defensa es competitiva. Cavaliers solo ganó 3 y perdió 7, muy irregular.</p>
-
-                <b>Rendimiento Individual:</b>
-                <p>Blazers destaca en rebotes y asistencias, favoreciendo juego colectivo efectivo.</p>
-
-                <b>Fortalezas vs Debilidades:</b>
-                <p>La elección de Doble Oportunidad Portland o empate considera la baja ofensiva visitante y la solidez local, ofreciendo valor seguro.</p>
-            </section>
-            <footer class="footer">
-                <div class="pick">Doble Oportunidad: Portland o Empate</div>
-                <div class="odds" aria-label="Cuota 1.20">1.20</div>
-            </footer>
-        </article>
     </div>
-
-    <div class="disclaimer" aria-live="polite" role="contentinfo">
-        <b>AVISO:</b> Modelos estadísticos basados en rachas de 10 juegos y debilidades tácticas. Gestiona tu capital responsablemente.
+    <div class="disclaimer">
+        <b>BET365 STANDARD:</b> Análisis estadístico profesional basado en cuotas reales de mercado.
     </div>
 </body>
 </html>
