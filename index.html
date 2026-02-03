@@ -8,215 +8,228 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter&family=Orbitron&display=swap');
   body {
-    margin: 0;
+    margin:0;
     background: #010409;
-    color: #bf953f;
     font-family: 'Inter', sans-serif;
+    color: #bf953f;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     padding: 2rem 1rem 4rem;
   }
   h1 {
-    font-size: 2.4rem;
-    margin-bottom: 1rem;
     font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    user-select:none;
   }
-  .tickets-container {
-    max-width: 900px;
-    width: 100%;
-    display: grid;
-    gap: 1.8rem;
-  }
-  .ticket-card {
-    background: rgba(255 255 255 / 0.05);
-    border-left: 6px solid #bf953f;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 12px;
+  .ticket {
     display: flex;
-    padding: 1rem 1rem 1rem 1.2rem;
-    gap: 1rem;
-    align-items: center;
-    box-shadow: 0 0 18px #bf953f33;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1100px;
+    justify-content: center;
+    width: 100%;
   }
-  .team-logo, .player-photo {
-    width: 72px;
-    height: 72px;
-    object-fit: contain;
-    flex-shrink: 0;
-    border-radius: 6px;
-    box-shadow: 0 0 6px #bf953faa inset;
-  }
-  .match-info {
-    flex: 1;
+  .card {
+    background: rgba(255 255 255 / 0.08);
+    border-left: 6px solid #bf953f;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 0 15px rgba(191,149,63,0.3);
+    color: #bf953f;
+    width: 320px;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
+    user-select:none;
   }
-  .teams {
+  .card-header {
     display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    font-size: 1.15rem;
-    color: #bf953fcc;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
   }
-  .teams b {
+  .team {
+    text-align: center;
+    flex: 1;
+  }
+  .team-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto 0.25rem;
+    border-radius: 6px;
+  }
+  .team-name {
     font-weight: 700;
-    color: #bf953f;
+    font-size: 1.1rem;
   }
-  .market-type {
+  .vs {
+    flex: 0 0 40px;
+    font-weight: 900;
+    font-size: 1.25rem;
+    align-self: center;
+    user-select:none;
+  }
+  .market {
+    background: #191b1f;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
     font-style: italic;
-    font-size: 0.95rem;
-    color: #d3b76c;
-  }
-  .selection {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #e6ca7a;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    color: #d6b763;
   }
   .analysis {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    color: #bf953fcc;
-    margin-top: 0.22rem;
-    line-height: 1.3;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: #bfbb91;
+    flex-grow: 1;
   }
   .odds {
     font-family: 'Orbitron', monospace;
-    font-size: 1.9rem;
-    font-weight: 900;
-    color: #bf953f;
-    min-width: 72px;
-    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: right;
+    user-select:none;
+    margin-top: 0.5rem;
   }
-  .btn-container {
+  footer {
     margin-top: 3rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
-  .btn-vip {
-    background: linear-gradient(90deg, #bf953f, #e6ca7a);
-    border: none;
+  .btn-buy {
+    background: linear-gradient(135deg, #bf953f, #d7b85d);
     color: #010409;
-    font-family: 'Orbitron', monospace;
-    font-weight: 900;
-    font-size: 1.6rem;
-    padding: 15px 36px;
-    border-radius: 48px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 40px;
     cursor: pointer;
-    box-shadow: 0 0 20px #bf953fcc;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: background 0.4s ease;
     text-decoration: none;
-    user-select: none;
+    box-shadow: 0 0 10px #bf953f;
+    user-select:none;
+    display: inline-block;
+    transition: background 0.3s ease;
   }
-  .btn-vip:hover, .btn-vip:focus {
-    background: linear-gradient(90deg, #e6ca7a, #bf953f);
-    outline: 2px solid #e6ca7a;
-    outline-offset: 4px;
+  .btn-buy:hover,
+  .btn-buy:focus {
+    background: #d7b85d;
+    box-shadow: 0 0 18px #d7b85d;
+    outline: none;
   }
-  .separator {
-    width: 1px;
-    background: #bf953f55;
-    height: 40px;
-  }
-  /* Responsive */
-  @media (max-width: 580px) {
-    .ticket-card {
+  @media (max-width: 700px) {
+    .ticket {
       flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
+      align-items: center;
     }
-    .teams {
-      font-size: 1rem;
-    }
-    .odds {
-      font-size: 1.5rem;
-      min-width: auto;
-      align-self: flex-end;
+    .card {
+      width: 90vw;
     }
   }
 </style>
 </head>
 <body>
-<h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1>
-<section class="tickets-container">
+<h1>🎟️ <b>TICKET DE <i>INTELIGENCIA ARTIFICIAL</i></b> 🎟️</h1>
+<section class="ticket">
 
-  <!-- Partido 1: Ganador de Partido -->
-  <article class="ticket-card" aria-label="Bahcesehir Kol. vs Slask Wroclaw - Ganador de Partido">
-    <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Logo Bahcesehir Kol." class="team-logo" />
-    <div class="match-info">
-      <p class="teams"><b>Bahcesehir Kol.</b> vs Slask Wroclaw</p>
-      <p class="market-type"><i>Ganador de Partido</i></p>
-      <p class="selection">Bahcesehir Kol. gana</p>
-      <p class="analysis">El local ha mostrado solidez en casa esta temporada y parte favorito ante un Slask Wroclaw con problemas ofensivos fuera.</p>
+  <!-- Partido 1: Ganador Partido -->
+  <article class="card" aria-label="Bahcesehir Kol. vs Slask Wroclaw Ganador Partido">
+    <div class="card-header">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Logo Bahcesehir Kol." class="team-logo" loading="lazy" />
+        <div class="team-name"><b>Bahcesehir Kol.</b></div>
+      </div>
+      <div class="vs" aria-hidden="true"><b>vs</b></div>
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Logo Slask Wroclaw" class="team-logo" loading="lazy" />
+        <div class="team-name"><b>Slask Wroclaw</b></div>
+      </div>
     </div>
-    <div class="separator" aria-hidden="true"></div>
-    <div class="odds">1.28</div>
+    <div class="market"><i>Ganador Partido: <b>Bahcesehir Kol.</b></i></div>
+    <p class="analysis"><i>Favoritos en el torneo, con fuerte defensa y mando en casa. <b>Bahcesehir Kol.</b> está sólido y el equipo visitante ha mostrado inconsistencia fuera.</i></p>
+    <div class="odds" aria-label="Cuota 1.28"><b>1.28</b></div>
   </article>
 
-  <!-- Partido 2: Hándicap -1.5 1er Cuarto Dubai -->
-  <article class="ticket-card" aria-label="Dubai vs Olympiacos - Hándicap -1.5 1er Cuarto Dubai">
-    <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Logo Dubai" class="team-logo" />
-    <div class="match-info">
-      <p class="teams"><b>Dubai</b> vs Olympiacos</p>
-      <p class="market-type"><i>Hándicap 1er Cuarto</i></p>
-      <p class="selection"><b>Dubai</b> -1.5</p>
-      <p class="analysis">Dubai arranca fuerte sus partidos y suele dominar el primer cuarto. Olympiacos a probar resistencia temprana.</p>
+  <!-- Partido 2: Hándicap positivo 1er cuarto: Olympiacos +3.5 -->
+  <article class="card" aria-label="Dubai vs Olympiacos Hándicap 1er cuarto Olympiacos +3.5">
+    <div class="card-header">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Logo Dubai" class="team-logo" loading="lazy" />
+        <div class="team-name"><b>Dubai</b></div>
+      </div>
+      <div class="vs" aria-hidden="true"><b>vs</b></div>
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Logo Olympiacos" class="team-logo" loading="lazy" />
+        <div class="team-name"><b>Olympiacos</b></div>
+      </div>
     </div>
-    <div class="separator" aria-hidden="true"></div>
-    <div class="odds">1.33</div>
+    <div class="market"><i>Hándicap 1er Cuarto: <b>Olympiacos +3.5</b></i></div>
+    <p class="analysis"><i>Olympiacos cuenta con una defensa temprana sólida para mantenerse cerca o superar ese margen inicial ante Dubai.</i></p>
+    <div class="odds" aria-label="Cuota 1.33"><b>1.33</b></div>
   </article>
 
-  <!-- Partido 3: Prop Puntos Jugador Estrella Anadolu Efes - Shane Larkin -->
-  <article class="ticket-card" aria-label="Anadolu Efes - Shane Larkin Más de 18.5 Puntos">
-    <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Logo Anadolu Efes" class="team-logo" />
-    <div class="match-info">
-      <p class="teams"><b>Prop:</b> Shane Larkin (Anadolu Efes)</p>
-      <p class="market-type"><i>Puntos jugador estrella</i></p>
-      <p class="selection"><b>+18.5 puntos</b></p>
-      <p class="analysis">Larkin es el motor ofensivo, sistema creado para que anote en ráfagas, buen matchup para superar los 18.5 puntos.</p>
+  <!-- Partido 3: Prop - PRA (Puntos+Rebotes+Asistencias) jugador estrella: Vasilije Micić (Anadolu Efes) +26.5 -->
+  <article class="card" aria-label="Anadolu Efes Vs Valencia Prop PRA Vasilije Micić +26.5">
+    <div class="card-header">
+      <div style="flex: 1; text-align:center;">
+        <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Logo Anadolu Efes" class="team-logo" style="margin: 0 auto 0.25rem;" loading="lazy" />
+        <div class="team-name"><b>Anadolu Efes</b></div>
+      </div>
     </div>
-    <div class="separator" aria-hidden="true"></div>
-    <div class="odds">1.30</div>
+    <div class="market"><i>Prop: <b>PRA (Puntos + Rebotes + Asistencias) de <i>Vasilije Micić</i></b> +26.5</i></div>
+    <p class="analysis"><i>Un base dinámico, Micić suele superar esta línea con su gran manejo del balón y capacidad para asistir y anotar en momentos clave.</i></p>
+    <div style="text-align:center; margin-top:0.75rem;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Vasilije_Micic_getty.png" alt="Foto jugador Vasilije Micić" loading="lazy" style="height: 90px; border-radius: 10px; object-fit: cover; box-shadow: 0 0 15px #bf953f;" />
+    </div>
+    <div class="odds" aria-label="Cuota 1.27"><b>1.27</b></div>
   </article>
 
-  <!-- Partido 4: Combo PRA - Nikola Mirotic Barcelona -->
-  <article class="ticket-card" aria-label="Nikola Mirotic Barcelona - Combo Puntos+Rebotes+Asistencias +38.5">
-    <img src="https://media.api-sports.io/basketball/teams/2329.png" alt="Foto jugador Nikola Mirotic" class="team-logo" />
-    <div class="match-info">
-      <p class="teams"><b>Combo PRA:</b> Nikola Mirotic (Barcelona)</p>
-      <p class="market-type"><i>Puntos + Rebotes + Asistencias</i></p>
-      <p class="selection"><b>+38.5 combo</b></p>
-      <p class="analysis">Mirotic tiene gran impacto global en estadísticas, con match favorable para acumular puntos, rebounds y asistencias.</p>
+  <!-- Partido 4: Hándicap negativo Partido Completo: Real Madrid -5.5 -->
+  <article class="card" aria-label="Panathinaikos vs Real Madrid Hándicap Real Madrid -5.5">
+    <div class="card-header">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/614.png" alt="Logo Panathinaikos" class="team-logo" loading="lazy" />
+        <div class="team-name"><b>Panathinaikos</b></div>
+      </div>
+      <div class="vs" aria-hidden="true"><b>vs</b></div>
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/2338.png" alt="Logo Real Madrid" class="team-logo" loading="lazy" />
+        <div class="team-name"><b>Real Madrid</b></div>
+      </div>
     </div>
-    <div class="separator" aria-hidden="true"></div>
-    <div class="odds">1.26</div>
+    <div class="market"><i>Hándicap Partido Completo: <b>Real Madrid -5.5</b></i></div>
+    <p class="analysis"><i><b>Real Madrid</b> domina estadísticamente lejos de casa y suele imponer su ritmo para ganar con ventaja clara sobre Panathinaikos.</i></p>
+    <div class="odds" aria-label="Cuota 1.30"><b>1.30</b></div>
   </article>
 
-  <!-- Partido 5: Hándicap Positivo Buducnost +3.5 PT Completo vs Ulm -->
-  <article class="ticket-card" aria-label="Ulm vs Buducnost - Hándicap +3.5 Buducnost Partido Completo">
-    <img src="https://media.api-sports.io/basketball/teams/1615.png" alt="Logo Buducnost" class="team-logo" />
-    <div class="match-info">
-      <p class="teams">Ulm vs <b>Buducnost</b></p>
-      <p class="market-type"><i>Hándicap Partido Completo</i></p>
-      <p class="selection"><b>Buducnost +3.5</b></p>
-      <p class="analysis">Buducnost es competitivo fuera y un hándicap +3.5 ofrece buena cobertura vs el favorito local Ulm.</p>
+  <!-- Partido 5: Prop - Puntos jugador estrella: Nikola Mirotić (Barcelona) Over 22.5 -->
+  <article class="card" aria-label="Barcelona vs Fenerbahce Prop Puntos Nikola Mirotić Over 22.5">
+    <div class="card-header">
+      <div style="flex:1; text-align:center;">
+        <img src="https://media.api-sports.io/basketball/teams/2329.png" alt="Logo Barcelona" class="team-logo" style="margin: 0 auto 0.25rem;" loading="lazy" />
+        <div class="team-name"><b>Barcelona</b></div>
+      </div>
     </div>
-    <div class="separator" aria-hidden="true"></div>
-    <div class="odds">1.34</div>
+    <div class="market"><i>Prop: <b>Puntos <i>Nikola Mirotić</i></b> Over 22.5</i></div>
+    <p class="analysis"><i>El veterano anotador Mirotić lidera el ataque del Barcelona, y su capacidad para tiros de alta efectividad lo hace candidato para superar esta línea.</i></p>
+    <div style="text-align:center; margin-top:0.75rem;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Nikola_Mirotić_2022.jpg" alt="Foto jugador Nikola Mirotić" loading="lazy" style="height: 90px; border-radius: 10px; object-fit: cover; box-shadow: 0 0 15px #bf953f;" />
+    </div>
+    <div class="odds" aria-label="Cuota 1.29"><b>1.29</b></div>
   </article>
 
 </section>
-
-<div class="btn-container">
-  <a href="https://im.page/cmsportselite" target="_blank" rel="noopener" class="btn-vip" role="button" aria-label="Compra el acceso VIP">COMPRA EL ACCESO VIP</a>
-</div>
-
+<footer>
+<a href="https://im.page/cmsportselite" class="btn-buy" role="button" aria-label="Compra el acceso VIP a cmsportselite">COMPRA EL ACCESO VIP</a>
+</footer>
 </body>
 </html>
 ```
