@@ -1,136 +1,237 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-        :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
-        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        .floating-logo { width: 100px; border-radius: 50%; border: 2px solid #bf953f; animation: float 4s ease-in-out infinite; margin-bottom: 10px; }
-        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 1.8rem; font-weight: 900; text-align:center; }
-        .container { width: 100%; max-width: 600px; display:flex; flex-direction:column; gap:20px; margin-top: 20px; }
-        .card { background: var(--glass); border-radius: 20px; padding: 20px; border-left: 5px solid #bf953f; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .teams { display: flex; justify-content: space-between; align-items: center; font-family: 'Orbitron'; font-size: 0.7rem; }
-        .team { display: flex; flex-direction: column; align-items: center; width: 45%; }
-        .team img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 6px; }
-        .analysis-box { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 15px; margin: 15px 0; border: 1px solid rgba(191,149,63,0.1); }
-        .analysis-box b { color: #bf953f; font-size: 0.7rem; text-transform: uppercase; font-family: 'Orbitron'; display: block; margin-bottom: 8px; }
-        .analysis-box p { color: #cbd5e1; font-size: 0.9rem; line-height: 1.5; margin: 0; text-align: justify; }
-        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
-        .pick-line { font-family: 'Orbitron'; font-weight: 900; font-size: 0.8rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .odds { background: var(--gold); color: #000; padding: 5px 12px; border-radius: 6px; font-family: 'Orbitron'; font-weight: 900; }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️ - Baloncesto</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Orbitron&display=swap');
+  body {
+    margin:0; 
+    background: #010409; 
+    color: gold; 
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 40px 10px;
+  }
+  header {
+    width: 100%; 
+    max-width: 1200px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  header img {
+    height: 50px;
+  }
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    color: gold;
+  }
+  main {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  }
+  .card {
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 20px;
+    padding: 25px 20px;
+    box-shadow:
+      0 4px 30px rgba(255, 215, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: gold;
+  }
+  .matchup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .team {
+    flex: 1;
+    text-align: center;
+  }
+  .team img {
+    height: 60px;
+    display: block;
+    margin: 0 auto 8px auto;
+    filter: drop-shadow(0 0 2px gold);
+  }
+  .vs {
+    flex: 0 0 50px;
+    color: gold;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  .pick {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: gold;
+    color: #010409;
+    padding: 6px 12px;
+    border-radius: 12px;
+    width: fit-content;
+    margin-top: 5px;
+  }
+  .odds {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: 2px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .analysis {
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.3;
+    color: #ffd700cc;
+  }
+  button.vip-btn {
+    margin-top: 40px;
+    padding: 15px 40px;
+    border: none;
+    background: gold;
+    color: #010409;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 15px gold;
+    transition: all 0.3s ease;
+  }
+  button.vip-btn:hover {
+    background: #e6b800;
+    box-shadow: 0 0 20px #e6b800;
+  }
+</style>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
-    <h1 class="main-title">CM SPORTS ELITE</h1>
-    <div class="container">
-        <!-- PICK 1 -->
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/2599.png" alt="Universitatea Cluj">
-                    <span>Universitatea Cluj</span>
-                </div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/2592.png" alt="Arges Pitesti">
-                    <span>Arges Pitesti</span>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>ANÁLISIS</b>
-                <p>Universitatea Cluj enfrenta a un Arges Pitesti con baja precisión defensiva en tiros a puerta en sus últimos 10 partidos. Cluj muestra un buen rendimiento ofensivo con varios disparos al arco, lo que favorece un marcador con remates totales altos. Además, las estadísticas del equipo local indican fortaleza en generar ocasiones claras, mientras Arges Pitesti ha recibido un promedio alto de tiros directos en sus encuentros recientes.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Pick: Remates Totales Universitatea Cluj Over 6.5</div>
-                <div class="odds">1.28</div>
-            </div>
-        </div>
-        <!-- PICK 2 -->
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/4374.png" alt="Koper">
-                    <span>Koper</span>
-                </div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/14007.png" alt="Primorje">
-                    <span>Primorje</span>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>ANÁLISIS</b>
-                <p>Koper domina su liga y presenta una sólida ofensiva con un promedio claro de tiros a portería frecuentes en sus últimos encuentros. Primorje muestra deficiencias defensivas permitiendo opciones de gol frecuentes en el primer tiempo. Por ello, apostar por más de 2.5 corners totales se justifica ya que ambos equipos muestran tendencias a la generación de jugadas por las bandas y tiros de esquina constantes en el último mes.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Pick: Corners Totales Over 2.5</div>
-                <div class="odds">1.26</div>
-            </div>
-        </div>
-        <!-- PICK 3 -->
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/2599.png" alt="Universitatea Cluj">
-                    <span>Universitatea Cluj</span>
-                </div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/2592.png" alt="Arges Pitesti">
-                    <span>Arges Pitesti</span>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>ANÁLISIS</b>
-                <p>En este duelo, el jugador destacado de Universitatea Cluj ha incrementado su actividad en tiros al arco en partidos recientes. La presión ofensiva es fuerte especialmente en la primera mitad. Argues Pitesti ha mostrado vulnerabilidad en la defensa inicial por lo que apostar a que <b>Jugador Local: Remates a Arco Over 2.5</b> es acertado considerando su rendimiento sostenido.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Pick: Remates a Arco Jugador Principal Universitatea Cluj Over 2.5</div>
-                <div class="odds">1.25</div>
-            </div>
-        </div>
-        <!-- PICK 4 -->
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/4374.png" alt="Koper">
-                    <span>Koper</span>
-                </div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/14007.png" alt="Primorje">
-                    <span>Primorje</span>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>ANÁLISIS</b>
-                <p>La defensa de Primorje ha recibido más de 4 corners en el 70% de sus últimos partidos. Koper precisa generar presión desde los laterales para encontrar espacios, lo que incrementa tiros de esquina a favor del local. Se espera un partido activo en generacion de corners, impulsando una apuesta segura a que Koper supera 3 corners en el encuentro.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Pick: Corners Koper Over 3.0</div>
-                <div class="odds">1.27</div>
-            </div>
-        </div>
-        <!-- PICK 5 -->
-        <div class="card">
-            <div class="teams">
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/2599.png" alt="Universitatea Cluj">
-                    <span>Universitatea Cluj</span>
-                </div>
-                <div class="team">
-                    <img src="https://media.api-sports.io/football/teams/2592.png" alt="Arges Pitesti">
-                    <span>Arges Pitesti</span>
-                </div>
-            </div>
-            <div class="analysis-box">
-                <b>ANÁLISIS</b>
-                <p>Universitatea Cluj tiene un margen ofensivo alto pero enfrenta un rival que prioriza defender bajo y salir rápido. Es previsible un partido táctico y con bajo total de goles. El mercado Under 1.5 goles ofrece un valor seguro basado en la racha ofensiva limitada del visitante y la solidez defensiva local.</p>
-            </div>
-            <div class="footer">
-                <div class="pick-line">Pick: Under 1.5 Goles</div>
-                <div class="odds">1.29</div>
-            </div>
-        </div>
+<header>
+  <img src="https://cm-sports-elite.vip/logo-vip.png" alt="Logo VIP CM Sports Elite" />
+  <h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1>
+</header>
+<main>
+  <!-- 1 -->
+  <article class="card">
+    <div class="matchup">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/144.png" alt="Los Angeles Clippers" />
+        <b>Los Angeles Clippers</b>
+      </div>
+      <div class="vs">vs</div>
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/154.png" alt="Philadelphia 76ers" />
+        <b>Philadelphia 76ers</b>
+      </div>
     </div>
+    <div class="pick">Pick: <b>Los Angeles Clippers - Handicap -4.5</b></div>
+    <div class="odds">Cuota: <b>1.28</b></div>
+    <p class="analysis">
+      <i>Debilidad Rival:</i> Los 76ers vienen con serias inconsistencias defensivas, especialmente ante equipos con buen contraataque.<br/>
+      <i>Racha Reciente:</i> Clippers han ganado 7 de sus últimos 10 juegos mostrando agresividad y profundidad en el banquillo.
+    </p>
+  </article>
+  <!-- 2 -->
+  <article class="card">
+    <div class="matchup">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes" />
+        <b>Anadolu Efes</b>
+      </div>
+      <div class="vs">vs</div>
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia" />
+        <b>Valencia</b>
+      </div>
+    </div>
+    <div class="pick">Pick: <b>Anadolu Efes - Total Puntos Más de 165.5</b></div>
+    <div class="odds">Cuota: <b>1.30</b></div>
+    <p class="analysis">
+      <i>Debilidad Rival:</i> Valencia ha demostrado problemas para controlar el ritmo en juegos de alta velocidad.<br/>
+      <i>Racha Reciente:</i> Anadolu Efes con 8 victorias en sus últimos 10 partidos, destacando su ofensiva explosiva.
+    </p>
+  </article>
+  <!-- 3 -->
+  <article class="card">
+    <div class="matchup">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/1276.png" alt="Tofas" />
+        <b>Tofas</b>
+      </div>
+      <div class="vs">vs</div>
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/605.png" alt="AEK Athens" />
+        <b>AEK Athens</b>
+      </div>
+    </div>
+    <div class="pick">Pick: <b>Tofas Ganador</b></div>
+    <div class="odds">Cuota: <b>1.22</b></div>
+    <p class="analysis">
+      <i>Debilidad Rival:</i> AEK Athens viene en bajón con baja eficiencia en tiros exteriores.<br/>
+      <i>Racha Reciente:</i> Tofas ha ganado 6 de sus últimos 10 juegos, imponiéndose fuerte como local.
+    </p>
+  </article>
+  <!-- 4 -->
+  <article class="card">
+    <div class="matchup">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/796.png" alt="Zalgiris Kaunas" />
+        <b>Zalgiris Kaunas</b>
+      </div>
+      <div class="vs">vs</div>
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/16.png" alt="Monaco" />
+        <b>Monaco</b>
+      </div>
+    </div>
+    <div class="pick">Pick: <b>Zalgiris Kaunas - Total Rebotes Más de 38.5</b></div>
+    <div class="odds">Cuota: <b>1.25</b></div>
+    <p class="analysis">
+      <i>Debilidad Rival:</i> Monaco ha mostrado debilidad clara en el rebote defensivo en sus últimos partidos.<br/>
+      <i>Racha Reciente:</i> Zalgiris con 7 victorias en 10 encuentros recientes y dominio en la pintura.
+    </p>
+  </article>
+  <!-- 5 -->
+  <article class="card">
+    <div class="matchup">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/5923.png" alt="Wurzburg" />
+        <b>Wurzburg</b>
+      </div>
+      <div class="vs">vs</div>
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/2334.png" alt="Joventut Badalona" />
+        <b>Joventut Badalona</b>
+      </div>
+    </div>
+    <div class="pick">Pick: <b>Joventut Badalona Ganador</b></div>
+    <div class="odds">Cuota: <b>1.33</b></div>
+    <p class="analysis">
+      <i>Debilidad Rival:</i> Wurzburg tiene baja efectividad en defensa perimetral y rotaciones lentas.<br/>
+      <i>Racha Reciente:</i> Joventut se mantiene sólido con 6 triunfos en los últimos 10 partidos, destacando el trabajo colectivo.
+    </p>
+  </article>
+</main>
+<button class="vip-btn" onclick="window.location.href='https://pay.cm-sports-elite.vip'">COMPRA EL ACCESO VIP</button>
 </body>
 </html>
+```
