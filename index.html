@@ -3,72 +3,231 @@
 <head>
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<style>:root{--gold:linear-gradient(135deg,#bf953f,#fcf6ba,#aa771c);--bg:#010409;--card-bg:#0f172a}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:#f1f5f9;font-family:'Inter',sans-serif;padding:20px;display:flex;flex-direction:column;align-items:center}.header h1{font-family:'Orbitron';background:var(--gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:1.8rem;margin-bottom:40px;letter-spacing:3px;text-align:center}.container{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1400px}.match-card{background:var(--card-bg);border:1px solid rgba(191,149,63,0.2);border-left:5px solid #bf953f;border-radius:25px;padding:25px;width:400px;position:relative;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(0,0,0,0.5)}.team-row{display:flex;align-items:center;margin-bottom:15px;gap:15px}.team-row img{width:50px;height:50px;object-fit:contain}.team-row span{font-family:'Orbitron';font-size:0.9rem;font-weight:700;color:#fff}.analysis-box{background:rgba(0,0,0,0.3);border-radius:15px;padding:18px;margin-bottom:20px;border:1px solid rgba(255,255,255,0.05)}.analysis-box h3{font-family:'Orbitron';font-size:0.65rem;color:#bf953f;margin-bottom:10px}.analysis-box p{font-size:0.85rem;color:#cbd5e1;line-height:1.6}.footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.05);padding-top:20px}.pick-label{font-family:'Orbitron';font-size:0.75rem;font-weight:900;color:#fff}.odds-button{background:var(--gold);color:#000;padding:8px 25px;border-radius:12px;font-family:'Orbitron';font-weight:900;font-size:1.5rem;box-shadow:0 5px 15px rgba(170, 119, 28, 0.4)}.btn-vip{margin-top:50px;background:var(--gold);color:#000;padding:18px 50px;border-radius:50px;font-family:'Orbitron';font-weight:900;text-decoration:none;text-transform:uppercase}</style>
+<style>
+:root {
+  --gold: linear-gradient(135deg,#bf953f,#fcf6ba,#aa771c);
+  --bg: #010409;
+  --card-bg: #0f172a
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+body {
+  background: var(--bg);
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.header h1 {
+  font-family: 'Orbitron';
+  background: var(--gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  text-align: center
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1400px
+}
+.match-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(191,149,63,0.2);
+  border-left: 5px solid #bf953f;
+  border-radius: 25px;
+  padding: 25px;
+  width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5)
+}
+.team-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px
+}
+.team-row img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain
+}
+.team-row span {
+  font-family: 'Orbitron';
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff
+}
+.analysis-box {
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  padding: 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.05)
+}
+.analysis-box h3 {
+  font-family: 'Orbitron';
+  font-size: 0.65rem;
+  color: #bf953f;
+  margin-bottom: 10px
+}
+.analysis-box p {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.6
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 20px
+}
+.pick-label {
+  font-family: 'Orbitron';
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #fff
+}
+.odds-button, .odds-pill {
+  background: var(--gold);
+  color: #000;
+  padding: 8px 25px;
+  border-radius: 12px;
+  font-family: 'Orbitron';
+  font-weight: 900;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 15px rgba(170, 119, 28, 0.4)
+}
+.btn-vip {
+  margin-top: 50px;
+  background: var(--gold);
+  color: #000;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-family: 'Orbitron';
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center
+}
+</style>
 </head>
 <body>
-<div class="header"><h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1></div>
+<div class="header">
+  <h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1>
+</div>
 <div class="container">
-<!--CARDS-->
-<article class="match-card">
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="analysis-box">
-<h3>ANÁLISIS PROFESIONAL</h3>
-<p>Analizando cuotas en vivo para este evento...</p>
-</div>
-<div class="footer">
-<div class="pick-label">PICK: SINC.</div>
-<div class="odds-pill">SINC.</div>
-</div>
-</article>
-<article class="match-card">
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="analysis-box">
-<h3>ANÁLISIS PROFESIONAL</h3>
-<p>Analizando cuotas en vivo para este evento...</p>
-</div>
-<div class="footer">
-<div class="pick-label">PICK: SINC.</div>
-<div class="odds-pill">SINC.</div>
-</div>
-</article>
-<article class="match-card">
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="analysis-box">
-<h3>ANÁLISIS PROFESIONAL</h3>
-<p>Analizando cuotas en vivo para este evento...</p>
-</div>
-<div class="footer">
-<div class="pick-label">PICK: SINC.</div>
-<div class="odds-pill">SINC.</div>
-</div>
-</article>
-<article class="match-card">
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="analysis-box">
-<h3>ANÁLISIS PROFESIONAL</h3>
-<p>Analizando cuotas en vivo para este evento...</p>
-</div>
-<div class="footer">
-<div class="pick-label">PICK: SINC.</div>
-<div class="odds-pill">SINC.</div>
-</div>
-</article>
-<article class="match-card">
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="team-row"><img src=""><span>SINC.</span></div>
-<div class="analysis-box">
-<h3>ANÁLISIS PROFESIONAL</h3>
-<p>Analizando cuotas en vivo para este evento...</p>
-</div>
-<div class="footer">
-<div class="pick-label">PICK: SINC.</div>
-<div class="odds-pill">SINC.</div>
-</div>
-</article>
+  <!--SINC 1-->
+  <article class="match-card">
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/533.png">
+      <span>Ulm</span>
+    </div>
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/1615.png">
+      <span>Buducnost</span>
+    </div>
+    <div class="analysis-box">
+      <h3>ANÁLISIS PROFESIONAL</h3>
+      <p>Analizando cuotas en vivo para este evento...</p>
+    </div>
+    <div class="footer">
+      <div class="pick-label">SINC.</div>
+      <div class="odds-pill">-</div>
+    </div>
+  </article>
+
+  <!--SINC 2-->
+  <article class="match-card">
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/796.png">
+      <span>Zalgiris Kaunas</span>
+    </div>
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/16.png">
+      <span>Monaco</span>
+    </div>
+    <div class="analysis-box">
+      <h3>ANÁLISIS PROFESIONAL</h3>
+      <p>Analizando cuotas en vivo para este evento...</p>
+    </div>
+    <div class="footer">
+      <div class="pick-label">SINC.</div>
+      <div class="odds-pill">-</div>
+    </div>
+  </article>
+
+  <!--SINC 3-->
+  <article class="match-card">
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/5923.png">
+      <span>Wurzburg</span>
+    </div>
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/2334.png">
+      <span>Joventut Badalona</span>
+    </div>
+    <div class="analysis-box">
+      <h3>ANÁLISIS PROFESIONAL</h3>
+      <p>Analizando cuotas en vivo para este evento...</p>
+    </div>
+    <div class="footer">
+      <div class="pick-label">SINC.</div>
+      <div class="odds-pill">-</div>
+    </div>
+  </article>
+
+  <!--SINC 4-->
+  <article class="match-card">
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/1065.png">
+      <span>Crvena zvezda</span>
+    </div>
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/682.png">
+      <span>Hapoel Tel-Aviv</span>
+    </div>
+    <div class="analysis-box">
+      <h3>ANÁLISIS PROFESIONAL</h3>
+      <p>Analizando cuotas en vivo para este evento...</p>
+    </div>
+    <div class="footer">
+      <div class="pick-label">SINC.</div>
+      <div class="odds-pill">-</div>
+    </div>
+  </article>
+
+  <!--SINC 5-->
+  <article class="match-card">
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/687.png">
+      <span>Maccabi Tel Aviv</span>
+    </div>
+    <div class="team-row">
+      <img src="https://media.api-sports.io/basketball/teams/1068.png">
+      <span>Partizan Mozzart Bet</span>
+    </div>
+    <div class="analysis-box">
+      <h3>ANÁLISIS PROFESIONAL</h3>
+      <p>Analizando cuotas en vivo para este evento...</p>
+    </div>
+    <div class="footer">
+      <div class="pick-label">SINC.</div>
+      <div class="odds-pill">-</div>
+    </div>
+  </article>
 </div>
 <a href="https://im.page/cmsportselite" class="btn-vip">COMPRA EL ACCESO VIP</a>
 </body>
