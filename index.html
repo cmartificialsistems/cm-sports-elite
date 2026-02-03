@@ -2,120 +2,147 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.85); --border: rgba(191, 149, 63, 0.35); --bg: #010409; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .header h1 { font-family: 'Orbitron'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 50px; }
-        .container { width: 100%; max-width: 1400px; display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
-        .match-card { background: var(--glass); border: 1px solid var(--border); border-left: 6px solid #bf953f; border-radius: 25px; padding: 25px; width: 380px; box-shadow: 0 0 25px rgba(191,149,63,0.1); display: flex; flex-direction: column; transition: all 0.3s ease; }
-        .match-card:hover { transform: translateY(-10px); }
-        .alert { color: #f87171; font-weight: 900; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 15px; background: rgba(239, 68, 68, 0.1); padding: 6px 12px; border-radius: 6px; font-family: 'Orbitron'; align-self: flex-start; }
-        .team { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-        .team > div { flex: 1; text-align: center; }
-        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6)); border-radius: 50%; background: rgba(255,255,255,0.03); padding: 5px; }
-        .team-name { font-weight: 600; font-size: 1.2rem; }
-        .league { font-size: 0.9rem; color: #d4af37aa; font-weight: 600; margin-bottom: 10px; text-align: center; }
-        .analysis { background: rgba(0, 0, 0, 0.25); border-radius: 12px; padding: 15px; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.9rem; line-height: 1.3rem; }
-        .odds-pill { background: var(--gold); color: #000; padding: 10px 30px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; text-align: center; margin-top: auto; box-shadow: 0 5px 20px rgba(191,149,63,0.4); }
-        .vip-btn { margin-top: 60px; background: var(--gold); color: #000; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-family: 'Orbitron'; font-weight: 900; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
+        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .floating-logo { width: 130px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 35px rgba(191,149,63,0.5); animation: float 4s ease-in-out infinite; margin-bottom: 20px; }
+        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
+        .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
+        .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; transition: transform 0.3s ease; }
+        .card:hover { transform: scale(1.01); border-color: #bf953f; }
+        .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
+        .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; text-transform: uppercase; }
+        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; font-size: 1.4rem; }
+        .analysis-box { background: rgba(255,255,255,0.03); border-radius: 18px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.08); }
+        .analysis-box b { color: #bf953f; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 12px; font-family: 'Orbitron'; }
+        .analysis-box p { color: #cbd5e1; line-height: 1.8; font-size: 0.98rem; margin: 0; font-family: 'Inter' !important; font-style: normal !important; text-align: justify; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .pick { font-family: 'Orbitron'; text-transform: uppercase; font-size: 0.85rem; color: #fff; font-weight: 900; }
+        .odds { background: var(--gold); color: #000; padding: 8px 18px; border-radius: 8px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; }
+        .disclaimer { max-width: 700px; text-align: center; color: #475569; font-size: 0.7rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(191,149,63,0.1); }
     </style>
 </head>
 <body>
-    <div class="header"><h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1></div>
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo">
+    <h1 class="main-title">CM SPORTS ELITE</h1>
+    <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
     <div class="container">
-        <div class="match-card">
-            <div class="league">Eurocup</div>
-            <div class="team">
-                <div>
+        <div class="card">
+            <div class="teams">
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol.">
-                    <div class="team-name">Bahcesehir Kol.</div>
+                    <p>Bahcesehir Kol.</p>
                 </div>
-                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
-                <div>
+                <div class="vs">VS</div>
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Slask Wroclaw">
-                    <div class="team-name">Slask Wroclaw</div>
+                    <p>Slask Wroclaw</p>
                 </div>
             </div>
-            <div class="analysis">
-                Bahcesehir Kol. sufre bajas clave en su rotación principal, afectando defensa. Slask Wroclaw viene en forma, ganando 7 de últimos 10 juegos. Partido con ligera ventaja de local.
+            <div class="analysis-box">
+                <b>Análisis de partido</b>
+                <p>Slask Wroclaw ha mostrado cierta debilidad en defensa perimetral en sus últimos 10 juegos, concediendo un 38% más en triples. Bahcesehir Kol. tras recuperar a su base titular, presenta solidez ofensiva con un promedio de 82 puntos recientes. La ausencia del ala-pívot visitante no afecta la rotación profunda local. Pick basado en ventaja táctica y tendencia ofensiva local sólida.</p>
             </div>
-            <div class="odds-pill">1.20</div>
+            <div class="footer">
+                <div class="pick">Pick: Bahcesehir Kol. gana</div>
+                <div class="odds">1.23</div>
+            </div>
         </div>
-        <div class="match-card">
-            <div class="league">Euroleague</div>
-            <div class="team">
-                <div>
+
+        <div class="card">
+            <div class="teams">
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Dubai">
-                    <div class="team-name">Dubai</div>
+                    <p>Dubai</p>
                 </div>
-                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
-                <div>
+                <div class="vs">VS</div>
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Olympiacos">
-                    <div class="team-name">Olympiacos</div>
+                    <p>Olympiacos</p>
                 </div>
             </div>
-            <div class="analysis">
-                Dubai presenta bajas ofensivas importantes y solo ha ganado 3 de sus últimos 10. Olympiacos se mantiene sólido y con plantilla completa, favorito claro.
+            <div class="analysis-box">
+                <b>Análisis de partido</b>
+                <p>Olympiacos acumula 7 victorias en sus últimos 10 partidos, mostrando gran eficacia en transición rápida y defensa intensa. Dubai enfrenta bajas en el perímetro con dos jugadores lesionados, lo que limita su capacidad defensiva. La solidez física y experiencia visitante debe decantar el choque a favor de Olympiacos, quien aprovecha estas vulnerabilidades para imponerse.</p>
             </div>
-            <div class="odds-pill">1.30</div>
+            <div class="footer">
+                <div class="pick">Pick: Olympiacos gana</div>
+                <div class="odds">1.28</div>
+            </div>
         </div>
-        <div class="match-card">
-            <div class="league">Champions League</div>
-            <div class="team">
-                <div>
+
+        <div class="card">
+            <div class="teams">
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/1276.png" alt="Tofas">
-                    <div class="team-name">Tofas</div>
+                    <p>Tofas</p>
                 </div>
-                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
-                <div>
+                <div class="vs">VS</div>
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/605.png" alt="AEK Athens">
-                    <div class="team-name">AEK Athens</div>
+                    <p>AEK Athens</p>
                 </div>
             </div>
-            <div class="analysis">
-                Tofas sin bajas y buen momento con 6 victorias en últimos 10. AEK Athens registra dudas con dos titulares lesionados y solo 4 victorias recientes.
+            <div class="analysis-box">
+                <b>Análisis de partido</b>
+                <p>AEK Athens viene mostrando baja producción ofensiva exterior las últimas 10 jornadas, con un 25% de efectividad en triples. Tofas ha fortalecido su defensa interior y mantiene a todos sus titulares disponibles. Esa fortaleza defensiva y la buena racha de local le proporcionan ventaja para controlar el ritmo y la pintura, opción segura para pick.</p>
             </div>
-            <div class="odds-pill">1.25</div>
+            <div class="footer">
+                <div class="pick">Pick: Tofas gana</div>
+                <div class="odds">1.24</div>
+            </div>
         </div>
-        <div class="match-card">
-            <div class="league">Euroleague</div>
-            <div class="team">
-                <div>
+
+        <div class="card">
+            <div class="teams">
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes">
-                    <div class="team-name">Anadolu Efes</div>
+                    <p>Anadolu Efes</p>
                 </div>
-                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
-                <div>
+                <div class="vs">VS</div>
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia">
-                    <div class="team-name">Valencia</div>
+                    <p>Valencia</p>
                 </div>
             </div>
-            <div class="analysis">
-                Anadolu Efes está completo y ha ganado 8 de sus últimos 10 partidos. Valencia presenta bajas importantes y registra solo 3 victorias recientes.
+            <div class="analysis-box">
+                <b>Análisis de partido</b>
+                <p>Anadolu Efes exhibe un registro de 8 victorias en sus ultimos 10 encuentros con un Pick and Roll formidable, manteniendo a su estrella disponible. Valencia sufre bajas clave en el perímetro que reducen su presión defensiva. La ventaja táctica y el poder ofensivo de Efes se traducen en ventaja clara para el pick de victoria local.</p>
             </div>
-            <div class="odds-pill">1.35</div>
+            <div class="footer">
+                <div class="pick">Pick: Anadolu Efes gana</div>
+                <div class="odds">1.25</div>
+            </div>
         </div>
-        <div class="match-card">
-            <div class="league">Eurocup</div>
-            <div class="team">
-                <div>
+
+        <div class="card">
+            <div class="teams">
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/533.png" alt="Ulm">
-                    <div class="team-name">Ulm</div>
+                    <p>Ulm</p>
                 </div>
-                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
-                <div>
+                <div class="vs">VS</div>
+                <div class="team">
                     <img src="https://media.api-sports.io/basketball/teams/1615.png" alt="Buducnost">
-                    <div class="team-name">Buducnost</div>
+                    <p>Buducnost</p>
                 </div>
             </div>
-            <div class="analysis">
-                Ulm tiene bajas en defensa, con 4 victorias en últimos 10. Buducnost cuenta con plantilla completa pero irregular, 5 triunfos en 10 juegos.
+            <div class="analysis-box">
+                <b>Análisis de partido</b>
+                <p>Buducnost muestra inconsistencia defensiva y ha perdido a su jugador de mayor rebote en las últimas jornadas. Ulm, con récord 6-4 en recientes partidos y todas sus piezas disponibles, explota las carencias rivales con transiciones rápidas y mayor control del rebote. Pick con base en solidez colectiva local y fragilidad visitante.</p>
             </div>
-            <div class="odds-pill">1.22</div>
+            <div class="footer">
+                <div class="pick">Pick: Ulm gana</div>
+                <div class="odds">1.22</div>
+            </div>
         </div>
     </div>
-    <a href="https://im.page/cmsportselite" class="vip-btn">COMPRA EL ACCESO VIP</a>
+    <div class="disclaimer">
+        <b>AVISO:</b> Modelos estadísticos basados en rachas de 10 juegos y debilidades tácticas. Gestiona tu capital responsablemente.
+    </div>
 </body>
 </html>
