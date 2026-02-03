@@ -4,31 +4,101 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.85); --border: rgba(191, 149, 63, 0.35); --bg: #010409; }
+        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%);
+                --glass: rgba(15, 23, 42, 0.85); --border: rgba(191, 149, 63, 0.35); --bg: #010409; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .header h1 { font-family: 'Orbitron'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 50px; }
         .container { width: 100%; max-width: 1400px; display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
-        .match-card { background: var(--glass); border: 1px solid var(--border); border-left: 6px solid #bf953f; border-radius: 25px; padding: 25px; width: 380px; box-shadow: 0 0 25px rgba(191,149,63,0.1); display: flex; flex-direction: column; transition: all 0.3s ease; position: relative; }
+        .match-card { background: var(--glass); border: 1px solid var(--border); border-left: 6px solid #bf953f; border-radius: 25px; padding: 25px; width: 380px; box-shadow: 0 0 25px rgba(191,149,63,0.1); display: flex; flex-direction: column; transition: all 0.3s ease; }
         .match-card:hover { transform: translateY(-10px); }
-        .league-label { position: absolute; top: 15px; right: 25px; font-family: 'Orbitron'; font-size: 0.65rem; color: #bf953f; opacity: 0.7; }
-        .teams { display: flex; justify-content: space-around; align-items: center; margin: 20px 0; }
-        .team { text-align: center; }
+        .alert { color: #f87171; font-weight: 900; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 15px; background: rgba(239, 68, 68, 0.1); padding: 6px 12px; border-radius: 6px; font-family: 'Orbitron'; align-self: flex-start; }
+        .team { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
         .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6)); border-radius: 50%; background: rgba(255,255,255,0.03); padding: 5px; }
-        .team span { display: block; font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; margin-top: 10px; }
-        .analysis-box { background: rgba(0, 0, 0, 0.25); border-radius: 12px; padding: 18px; margin-bottom: 25px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .analysis-box b { color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; display: block; margin-bottom: 10px; }
-        .analysis-box p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; }
-        .footer-line { display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; }
-        .pick-text { font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; text-transform: uppercase; font-weight: 900; }
-        .odds-pill { background: var(--gold); color: #000; padding: 10px 30px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; text-align: center; box-shadow: 0 5px 20px rgba(191,149,63,0.4); }
-        .vip-btn { margin-top: 60px; background: var(--gold); color: #000; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-family: 'Orbitron'; font-weight: 900; box-shadow: 0 0 30px rgba(191,149,63,0.3); transition: all 0.3s ease; }
+        .team-name { font-weight: 700; font-size: 1.3rem; letter-spacing: 0.05em; }
+        .analysis { background: rgba(0, 0, 0, 0.25); border-radius: 12px; padding: 15px; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.9rem; line-height: 1.3; }
+        .odds-pill { background: var(--gold); color: #000; padding: 10px 30px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; text-align: center; margin-top: auto; box-shadow: 0 5px 20px rgba(191,149,63,0.4); }
+        .vip-btn { margin-top: 60px; background: var(--gold); color: #000; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-family: 'Orbitron'; font-weight: 900; }
     </style>
 </head>
 <body>
     <div class="header"><h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1></div>
     <div class="container">
-        Analizando Eventos 🔄
+        <div class="match-card">
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes">
+                <div class="team-name">Anadolu Efes (Local)</div>
+            </div>
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia">
+                <div class="team-name">Valencia (Visitante)</div>
+            </div>
+            <div class="analysis">
+                Anadolu Efes llega con sólido rendimiento en sus últimos 10 juegos, mostrando efectividad defensiva notable. Valencia, aunque versátil, presenta vulnerabilidad en rebotes defensivos, lo que expondrá su defensa interior. Sin embargo, Anadolu sufre la baja de su estrella anotadora clave, lo que podría limitar profundidad ofensiva. A pesar de esto, la localía y control del ritmo serán decisivos para imponer su estilo.
+            </div>
+            <div class="alert">Money Line</div>
+            <div class="odds-pill">1.31 (Bet365)</div>
+        </div>
+        <div class="match-card">
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/796.png" alt="Zalgiris Kaunas">
+                <div class="team-name">Zalgiris Kaunas (Local)</div>
+            </div>
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/16.png" alt="Monaco">
+                <div class="team-name">Monaco (Visitante)</div>
+            </div>
+            <div class="analysis">
+                Zalgiris ha mantenido una racha fluctuante con 6 victorias en sus últimos 10 encuentros, capitalizando su dominio en contraataques. Monaco exhibe problemas en la defensa perimetral, debilitando su capacidad de cierre en momentos críticos. La ausencia de su base titular por lesión podría impactar la generación de juego visitante, inclinando la balanza hacia un Zalgiris dinámico y físico.
+            </div>
+            <div class="alert">Hándicap Asiático</div>
+            <div class="odds-pill">1.29 (Bet365)</div>
+        </div>
+        <div class="match-card">
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/1065.png" alt="Crvena zvezda">
+                <div class="team-name">Crvena zvezda (Local)</div>
+            </div>
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/682.png" alt="Hapoel Tel-Aviv">
+                <div class="team-name">Hapoel Tel-Aviv (Visitante)</div>
+            </div>
+            <div class="analysis">
+                Crvena zvezda exhibe un balance sólido con 7 victorias recientes, apoyado por un alto ty de asistencias que evidencian buena circulación de balón. Hapoel sufre en su efectividad en tiros de media distancia, limitando opciones ofensivas. La baja del pívot estrella visitante ha dejado un vacío en el poste bajo que Crvena no desperdiciará, aprovechando para controlar rebotes ofensivos.
+            </div>
+            <div class="alert">Player Props - Puntos Jugador</div>
+            <div class="odds-pill">1.32 (Bet365)</div>
+        </div>
+        <div class="match-card">
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/614.png" alt="Panathinaikos">
+                <div class="team-name">Panathinaikos (Local)</div>
+            </div>
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/2338.png" alt="Real Madrid">
+                <div class="team-name">Real Madrid (Visitante)</div>
+            </div>
+            <div class="analysis">
+                Panathinaikos ha mostrado inconsistencia, con un récord de 4-6 en últimos 10 partidos, pero sustenta su juego en las asistencias para generar buenas oportunidades. Real Madrid destaca en defensa perimetral, pero ha tenido bajas en sus principales anotadores, afectando productividad. La experiencia visitante deberá contrarrestar la agresividad local para evitar sorpresas.
+            </div>
+            <div class="alert">Totales - Más de</div>
+            <div class="odds-pill">1.25 (Bet365)</div>
+        </div>
+        <div class="match-card">
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/522.png" alt="Bayern">
+                <div class="team-name">Bayern (Local)</div>
+            </div>
+            <div class="team">
+                <img src="https://media.api-sports.io/basketball/teams/108.png" alt="Paris">
+                <div class="team-name">Paris (Visitante)</div>
+            </div>
+            <div class="analysis">
+                Bayern ha brillado en los últimos juegos con una defensa férrea y un promedio alto en rebotes, factor clave frente a un Paris que flaquea en ataque rápido y transiciones. La ausencia del base titular de Bayern ha sido suplida por un jugador en alza que mantiene intensidad. París deberá ajustar su perímetro para evitar que Bayern imponga ritmo.
+            </div>
+            <div class="alert">Asistencias Jugador</div>
+            <div class="odds-pill">1.29 (Bet365)</div>
+        </div>
     </div>
     <a href="https://im.page/cmsportselite" class="vip-btn">COMPRA EL ACCESO VIP</a>
 </body>
