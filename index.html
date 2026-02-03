@@ -1,245 +1,134 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</title>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: linear-gradient(135deg,#bf953f,#fcf6ba,#aa771c);
-    --bg: #f9fafb;
-    --card-bg: #ffffff;
-    --text-dark: #1f2937;
-    --text-light: #4b5563;
-    --border: #d1d5db;
-  }
-  * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-  }
-  body {
-    background: var(--bg);
-    color: var(--text-dark);
-    font-family: 'Inter', sans-serif;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-  }
-  .header h1 {
-    font-family: 'Orbitron', sans-serif;
-    background: var(--gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 2rem;
-    margin-bottom: 36px;
-    letter-spacing: 3px;
-    text-align: center;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-    max-width: 1400px;
-    width: 100%;
-  }
-  article.match-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-left: 6px solid #bf953f;
-    border-radius: 20px;
-    padding: 24px;
-    width: 360px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  }
-  .team-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    gap: 14px;
-  }
-  .team-row img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-  }
-  .team-row span {
-    font-family: 'Orbitron', monospace;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--text-dark);
-  }
-  .analysis-box {
-    background: #f3f4f6;
-    border-radius: 12px;
-    padding: 16px;
-    margin: 14px 0;
-    border: 1px solid #e5e7eb;
-    font-size: 0.875rem;
-    color: var(--text-light);
-    line-height: 1.5;
-  }
-  .analysis-box b {
-    color: #b7791f;
-    font-family: 'Orbitron', monospace;
-    font-size: 0.75rem;
-    display: block;
-    margin-bottom: 8px;
-  }
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-    padding-top: 16px;
-    border-top: 1px solid #e5e7eb;
-  }
-  .pick-text {
-    font-family: 'Orbitron', monospace;
-    font-size: 0.75rem;
-    color: var(--text-dark);
-    font-weight: 900;
-  }
-  .odds-pill {
-    background: var(--gold);
-    color: #000;
-    padding: 10px 28px;
-    border-radius: 14px;
-    font-family: 'Orbitron', monospace;
-    font-weight: 900;
-    font-size: 1.45rem;
-  }
-  a.vip-btn {
-    margin-top: 38px;
-    background: var(--gold);
-    color: #000;
-    padding: 18px 52px;
-    border-radius: 50px;
-    font-family: 'Orbitron', monospace;
-    font-weight: 900;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: background 0.3s ease;
-  }
-  a.vip-btn:hover {
-    background: #9a7718;
-  }
+:root {
+  --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #aa771c);
+  --bg: #010409;
+  --card-bg: #0f172a
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+body {
+  background: var(--bg);
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.header h1 {
+  font-family: 'Orbitron';
+  background: var(--gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  text-align: center
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1400px
+}
+.match-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(191, 149, 63, 0.2);
+  border-left: 5px solid #bf953f;
+  border-radius: 25px;
+  padding: 25px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5)
+}
+.team-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 15px
+}
+.team-row img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain
+}
+.team-row span {
+  font-family: 'Orbitron';
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff
+}
+.analysis-box {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 18px;
+  margin: 15px 0;
+  border: 1px solid rgba(255, 255, 255, 0.05)
+}
+.analysis-box b {
+  color: #bf953f;
+  font-family: 'Orbitron';
+  font-size: 0.7rem;
+  display: block;
+  margin-bottom: 8px
+}
+.analysis-box p {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.6
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05)
+}
+.pick-text {
+  font-family: 'Orbitron';
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 900
+}
+.odds-pill {
+  background: var(--gold);
+  color: #000;
+  padding: 10px 30px;
+  border-radius: 12px;
+  font-family: 'Orbitron';
+  font-weight: 900;
+  font-size: 1.6rem
+}
+.vip-btn {
+  margin-top: 40px;
+  background: var(--gold);
+  color: #000;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-family: 'Orbitron';
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase
+}
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-<div class="header"><h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1></div>
+<div class="header">
+  <h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1>
+</div>
 <div class="container">
-<article class="match-card">
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/anadolu-efes.png" alt="Anadolu Efes Logo" />
-    <span>ANADOLU EFES (Local)</span>
-  </div>
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/fenerbahce-beko.png" alt="Fenerbahce Logo" />
-    <span>FENERBAHÇE (Visitante)</span>
-  </div>
-  <div class="analysis-box">
-    <b>ANÁLISIS PROFESIONAL:</b>
-    <p>
-      Anadolu Efes llega con una racha dominante incluyendo 8 victorias en sus últimos 10 partidos, marcando un promedio ofensivo alto y consolidando su defensa en la pintura, justo donde Fenerbahçe ha mostrado vulnerabilidades recientes, sufriendo pérdidas importantes por lesión en su línea interior. La baja de su pivot titular limita su control reboteador, lo que facilita a Anadolu Efes imponer ritmo y finalización bajo aro. La solidez táctica de Efes para controlar el tempo y minimizar errores es clave ante un Fenerbahçe que depende del perímetro pero falla en triples en el 60% de sus últimos encuentros.
-    </p>
-  </div>
-  <div class="footer">
-    <div class="pick-text">PICK: HÁNDICAP -5.5 ANADOLU EFES</div>
-    <div class="odds-pill">1.32</div>
-  </div>
-</article>
-
-<article class="match-card">
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/real-madrid.png" alt="Real Madrid Logo" />
-    <span>REAL MADRID (Local)</span>
-  </div>
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/olympiacos.png" alt="Olympiacos Logo" />
-    <span>OLYMPIACOS (Visitante)</span>
-  </div>
-  <div class="analysis-box">
-    <b>ANÁLISIS PROFESIONAL:</b>
-    <p>
-      Real Madrid exhibe consistencia con 7 victorias en sus últimos 10 encuentros, su ofensiva balanceada y dominio en rebotes ofensivos es diferencial ante un Olympiacos diezmado por bajas en su línea exterior y baja efectividad en triples (31% últimos 10 partidos). La defensa de Madrid limita especialmente las transiciones y marca férrea defensa en la pintura, donde Olympiacos no logra imponer intensidad debido a la ausencia de su hombre fuerte. Este desequilibrio táctico favorece a un Madrid que encuentra comodidad para elevar su margen en casa.
-    </p>
-  </div>
-  <div class="footer">
-    <div class="pick-text">PICK: HÁNDICAP -6.0 REAL MADRID</div>
-    <div class="odds-pill">1.28</div>
-  </div>
-</article>
-
-<article class="match-card">
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/bayern-munich.png" alt="Bayern Munich Logo" />
-    <span>BAYERN MUNICH (Local)</span>
-  </div>
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/zalgiris-kaunas.png" alt="Zalgiris Kaunas Logo" />
-    <span>ZALGIRIS KAUNAS (Visitante)</span>
-  </div>
-  <div class="analysis-box">
-    <b>ANÁLISIS PROFESIONAL:</b>
-    <p>
-      Bayern Munich ha sido implacable con 9 victorias en sus últimos 10 partidos, mostrando eficiencia ofensiva superior y capacidad de remontada en los minutos finales, saxet basquetbol táctico que explota la defensa débil de Zalgiris en el perímetro y su baja rotación por lesiones claves en el backcourt. Zalgiris ha sido inconsistente y su promedio de anotación ha caído a 68 puntos, lejos del ritmo de Bayern que se apoya en jugadas rápidas y alta precisión en tiros de media distancia. Este contexto es ideal para un triunfo cómodo local con amplio margen.
-    </p>
-  </div>
-  <div class="footer">
-    <div class="pick-text">PICK: HÁNDICAP -7.0 BAYERN MUNICH</div>
-    <div class="odds-pill">1.30</div>
-  </div>
-</article>
-
-<article class="match-card">
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/maccabi-tel-aviv.png" alt="Maccabi Tel Aviv Logo" />
-    <span>MACCABI TEL AVIV (Local)</span>
-  </div>
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/baskonia.png" alt="Baskonia Logo" />
-    <span>BASKONIA (Visitante)</span>
-  </div>
-  <div class="analysis-box">
-    <b>ANÁLISIS PROFESIONAL:</b>
-    <p>
-      Maccabi Tel Aviv llega con 7 victorias en 10 partidos recientes, desplegando una defensa compacta que ha neutralizado ataques rivales, particularmente bloqueando tiros desde el perímetro. Baskonia sufre bajas de jugadores clave en la defensa externa y su porcentaje en triples incluso en partidos ganados no supera un 33%. La reciente fragilidad defensiva de Baskonia permitirá a Maccabi controlar el tempo y ejecutar ofensivas rápidas aprovechando su superioridad física. La localía y el ritmo impusieron confianza para dominar el marcador.
-    </p>
-  </div>
-  <div class="footer">
-    <div class="pick-text">PICK: HÁNDICAP -4.5 MACCABI TEL AVIV</div>
-    <div class="odds-pill">1.25</div>
-  </div>
-</article>
-
-<article class="match-card">
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/barcelona.png" alt="Barcelona Logo" />
-    <span>BARCELONA (Local)</span>
-  </div>
-  <div class="team-row">
-    <img src="https://cdn.sportlogos.it/loghi/basketball/euroleague/panathinaikos.png" alt="Panathinaikos Logo" />
-    <span>PANATHINAIKOS (Visitante)</span>
-  </div>
-  <div class="analysis-box">
-    <b>ANÁLISIS PROFESIONAL:</b>
-    <p>
-      Barcelona muestra rigidez táctica y una defensa férrea en su último decálogo de partidos con 8 triunfos, limitando a Panathinaikos, que sufre con bajas relevantes en su rotación interior y ha perdido exceso de creatividad ofensiva. El equipo visitante registra baja efectividad en tiros abiertos y exhibe debilidad para cerrar pérdidas. Barcelona domina el rebote y mantiene alta ventaja tras el descanso, imponiendo un ritmo controlado que desgasta a su rival. La localía potencia la ejecución ofensiva para un triunfo claro con margen.
-    </p>
-  </div>
-  <div class="footer">
-    <div class="pick-text">PICK: HÁNDICAP -5.0 BARCELONA</div>
-    <div class="odds-pill">1.30</div>
-  </div>
-</article>
+  <!-- No eventos cuentan con cuotas reales entre 1.20 y 1.45 -->
 </div>
 <a href="https://im.page/cmsportselite" class="vip-btn">COMPRA EL ACCESO VIP</a>
 </body>
