@@ -3,174 +3,170 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ticket Basket Eurocup & Euroleague</title>
+<title>Ticket Baloncesto Eurocup & Euroleague</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-body {
-  margin:0;
-  background:#121212;
-  font-family: 'Orbitron', sans-serif;
-  color:#f0d274;
-}
-.ticket {
-  max-width: 440px;
-  margin: 20px auto;
-  background: #181818;
-  border-left: 6px solid #f0d274;
-  box-sizing: border-box;
-  padding: 14px 18px;
-}
-.partido {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #4a4a20;
-  padding: 10px 0;
-}
-.partido:last-child {
-  border-bottom: none;
-}
-.liga {
-  font-size: 12px;
-  color: #a08822;
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-}
-.equipos {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 70%;
-  min-width: 210px;
-}
-.equipo {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.equipo img {
-  height: 28px;
-  width: 28px;
-  object-fit: contain;
-  border-radius: 4px;
-}
-.nombre {
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-  color:#f0d274;
-}
-.pick_cuota {
-  text-align: right;
-  min-width: 67px;
-}
-.pick {
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 3px;
-  color:#f0d274;
-}
-.cuota {
-  font-size: 13px;
-  font-weight: 700;
-  color:#f0d274;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  body {
+    margin: 0;
+    background-color: #0a0a0a;
+    font-family: 'Orbitron', sans-serif;
+    color: #ddd;
+  }
+  .ticket {
+    max-width: 480px;
+    margin: 20px auto;
+    border-left: 6px solid #cda434;
+    background: #121212;
+    padding: 20px 15px 30px 15px;
+    box-sizing: border-box;
+    letter-spacing: 0.03em;
+  }
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-weight: 700;
+    color: #cda434;
+    margin-bottom: 15px;
+  }
+  .match {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding: 12px 0;
+  }
+  .match:first-child {
+    border-top: none;
+  }
+  .logos {
+    display: flex;
+    flex-shrink: 0;
+    gap: 10px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+  }
+  .logos img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+  .teams {
+    flex: 1;
+    font-size: 16px;
+    color: #eee;
+    user-select: none;
+  }
+  .teams .local {
+    font-weight: 700;
+    color: #f7f7f7;
+  }
+  .teams .vs {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin: 3px 0;
+  }
+  .teams .visitante {
+    font-weight: 600;
+    color: #cfcfcf;
+  }
+  .bottom {
+    margin-top: 25px;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    color: #cda434;
+  }
+  .pick {
+    text-transform: uppercase;
+  }
+  .cuota {
+    font-family: 'Orbitron', monospace;
+    background: #222;
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
 </style>
 </head>
 <body>
-<div class="ticket">
-  <div class="partido" style="position:relative;">
-    <div class="liga">Eurocup</div>
-    <div class="equipos">
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol." />
-        <div class="nombre">Bahcesehir Kol.</div>
-      </div>
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Slask Wroclaw" />
-        <div class="nombre">Slask Wroclaw</div>
-      </div>
+<div class="ticket" role="main" aria-label="Ticket de apuestas baloncesto Eurocup y Euroleague">
+  <div class="header" aria-label="Liga">
+    Eurocup
+  </div>
+
+  <div class="match" aria-label="Partido Bahcesehir Kol. contra Slask Wroclaw">
+    <div class="logos" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol." />
+      <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Slask Wroclaw" />
     </div>
-    <div class="pick_cuota">
-      <div class="pick">NO PICK</div>
-      <div class="cuota">-</div>
+    <div class="teams">
+      <span class="local">Bahcesehir Kol.</span>
+      <span class="vs">vs</span>
+      <span class="visitante">Slask Wroclaw</span>
     </div>
   </div>
 
-  <div class="partido" style="position:relative;">
-    <div class="liga">Euroleague</div>
-    <div class="equipos">
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Dubai" />
-        <div class="nombre">Dubai</div>
-      </div>
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Olympiacos" />
-        <div class="nombre">Olympiacos</div>
-      </div>
+  <div class="header" aria-label="Liga">
+    Euroleague
+  </div>
+  <div class="match" aria-label="Partido Dubai contra Olympiacos">
+    <div class="logos" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Dubai" />
+      <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Olympiacos" />
     </div>
-    <div class="pick_cuota">
-      <div class="pick">NO PICK</div>
-      <div class="cuota">-</div>
+    <div class="teams">
+      <span class="local">Dubai</span>
+      <span class="vs">vs</span>
+      <span class="visitante">Olympiacos</span>
     </div>
   </div>
 
-  <div class="partido" style="position:relative;">
-    <div class="liga">Champions League</div>
-    <div class="equipos">
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/1276.png" alt="Tofas" />
-        <div class="nombre">Tofas</div>
-      </div>
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/605.png" alt="AEK Athens" />
-        <div class="nombre">AEK Athens</div>
-      </div>
+  <div class="match" aria-label="Partido Anadolu Efes contra Valencia">
+    <div class="logos" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes" />
+      <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia" />
     </div>
-    <div class="pick_cuota">
-      <div class="pick">NO PICK</div>
-      <div class="cuota">-</div>
+    <div class="teams">
+      <span class="local">Anadolu Efes</span>
+      <span class="vs">vs</span>
+      <span class="visitante">Valencia</span>
     </div>
   </div>
 
-  <div class="partido" style="position:relative;">
-    <div class="liga">Euroleague</div>
-    <div class="equipos">
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes" />
-        <div class="nombre">Anadolu Efes</div>
-      </div>
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia" />
-        <div class="nombre">Valencia</div>
-      </div>
+  <div class="match" aria-label="Partido Zalgiris Kaunas contra Monaco">
+    <div class="logos" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/796.png" alt="Zalgiris Kaunas" />
+      <img src="https://media.api-sports.io/basketball/teams/16.png" alt="Monaco" />
     </div>
-    <div class="pick_cuota">
-      <div class="pick">NO PICK</div>
-      <div class="cuota">-</div>
+    <div class="teams">
+      <span class="local">Zalgiris Kaunas</span>
+      <span class="vs">vs</span>
+      <span class="visitante">Monaco</span>
     </div>
   </div>
 
-  <div class="partido" style="position:relative;">
-    <div class="liga">Eurocup</div>
-    <div class="equipos">
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/533.png" alt="Ulm" />
-        <div class="nombre">Ulm</div>
-      </div>
-      <div class="equipo">
-        <img src="https://media.api-sports.io/basketball/teams/1615.png" alt="Buducnost" />
-        <div class="nombre">Buducnost</div>
-      </div>
+  <div class="header" aria-label="Liga">
+    Eurocup
+  </div>
+  <div class="match" aria-label="Partido Ulm contra Buducnost">
+    <div class="logos" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/533.png" alt="Ulm" />
+      <img src="https://media.api-sports.io/basketball/teams/1615.png" alt="Buducnost" />
     </div>
-    <div class="pick_cuota">
-      <div class="pick">NO PICK</div>
-      <div class="cuota">-</div>
+    <div class="teams">
+      <span class="local">Ulm</span>
+      <span class="vs">vs</span>
+      <span class="visitante">Buducnost</span>
     </div>
+  </div>
+
+  <div class="bottom" aria-label="Pick y cuota">
+    <div class="pick">No hay datos para apuesta</div>
+    <div class="cuota">N/A</div>
   </div>
 </div>
 </body>
