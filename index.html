@@ -1,266 +1,129 @@
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️ - CM Sports Elite</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Orbitron&display=swap');
-  body {
-    margin: 0;
-    background-color: #010409;
-    font-family: 'Inter', sans-serif;
-    color: #d4af37;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  header {
-    text-align: center;
-    padding: 1rem 0;
-    border-bottom: 2px solid #d4af37;
-    margin-bottom: 1.5rem;
-  }
-  header img {
-    height: 70px;
-    vertical-align: middle;
-    margin-right: 15px;
-  }
-  header h1 {
-    display: inline-block;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    font-size: 1.9rem;
-    vertical-align: middle;
-    color: #d4af37;
-    user-select: none;
-  }
-  main {
-    max-width: 900px;
-    margin: 0 auto 3rem;
-    padding: 0 15px;
-  }
-  h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #d4af37;
-    user-select: none;
-  }
-  .ticket-card {
-    background: rgba(212, 175, 55, 0.15);
-    border-radius: 15px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    color: #d4af37;
-    margin-bottom: 1.8rem;
-    box-shadow: 0 0 12px rgba(212,175,55,0.4);
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 2rem;
-  }
-  .match-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 1rem;
-    gap: 12px;
-    user-select:none;
-  }
-  .team {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-  .team img {
-    width: 48px;
-    height: 48px;
-    border-radius: 6px;
-    object-fit: contain;
-    background: rgba(212,175,55,0.1);
-    padding: 4px;
-  }
-  .versus {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 600;
-    font-size: 1.2rem;
-    user-select:none;
-  }
-  .pick-info {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #fff;
-    user-select:none;
-  }
-  .pick-info b {
-    color: #d4af37;
-  }
-  .odds {
-    float: right;
-    background: #d4af37;
-    color: #010409;
-    font-weight: 700;
-    font-family: 'Orbitron', sans-serif;
-    padding: 3px 10px;
-    border-radius: 12px;
-    user-select:none;
-  }
-  .analysis {
-    font-style: italic;
-    line-height: 1.48;
-    font-size: 0.95rem;
-    color: #e6d79c;
-  }
-  button.vip-access {
-    display: block;
-    background: linear-gradient(45deg, #d4af37, #f5e27a);
-    color: #010409;
-    font-weight: 700;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 30px;
-    padding: 15px 0;
-    width: 100%;
-    max-width: 380px;
-    margin: 3rem auto 0;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    user-select:none;
-    box-shadow: 0 0 15px #d4af37;
-  }
-  button.vip-access:hover {
-    background: linear-gradient(45deg, #f5e27a, #d4af37);
-  }
-</style>
-</head>
-<body>
-<header>
-  <img src="https://i.imgur.com/bflYsVJ.png" alt="CM Sports Elite VIP Logo" />
-  <h1>CM Sports Elite VIP</h1>
-</header>
-<main>
-  <h2>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h2>
+<div class="match-card">
+    <div class="vulnerability-header">● ANÁLISIS DE INTELIGENCIA PREDICTIVA</div>
+    <div class="teams-grid">
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/146.png">
+            <span>Memphis Grizzlies</span>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/149.png">
+            <span>Minnesota Timberwolves</span>
+        </div>
+    </div>
+    <div class="intel-box">
+        <b>ANÁLISIS DE LA IA</b>
+        <p>Memphis destaca en defensa permitiendo menos puntos y tiene récord superior en 10 partidos recientes. El Timberwolves muestra vulnerabilidades defensivas que Memphis puede explotar.</p>
+    </div>
+    <div class="bet-footer">
+        <div class="market-info">
+            <span>PICK SELECCIONADO</span>
+            <b>Memphis Grizzlies - Handicap -4.5</b>
+        </div>
+        <div class="odds-display">@1.30</div>
+    </div>
+</div>
 
-  <!-- PARTIDO 1 -->
-  <article class="ticket-card">
-    <div class="match-header">
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/143.png" alt="Indiana Pacers Logo" />
-        <b>Indiana Pacers</b>
-      </div>
-      <div class="versus">vs</div>
-      <div class="team" style="justify-content: flex-end;">
-        <b>Houston Rockets</b>
-        <img src="https://media.api-sports.io/basketball/teams/142.png" alt="Houston Rockets Logo" />
-      </div>
+<div class="match-card">
+    <div class="vulnerability-header">● ANÁLISIS DE INTELIGENCIA PREDICTIVA</div>
+    <div class="teams-grid">
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/144.png">
+            <span>Los Angeles Clippers</span>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/154.png">
+            <span>Philadelphia 76ers</span>
+        </div>
     </div>
-    <div class="pick-info">
-      <b>Pick:</b> Indiana Pacers &nbsp; <span class="odds">1.28</span>
+    <div class="intel-box">
+        <b>ANÁLISIS DE LA IA</b>
+        <p>Clippers mantiene mejor rendimiento defensivo en sus últimos 10 encuentros y Philadelphia ha tenido problemas en defender a equipos con juego físico fuerte.</p>
     </div>
-    <p class="analysis">
-      <b>Debilidad Rival:</b> Houston Rockets muestran gran inconsistencia defensiva, especialmente en casa ajena, lo que facilita el dominio local.<br/>
-      <b>Racha Reciente:</b> Indiana Pacers han ganado 7 de sus últimos 10 juegos, mostrando fortaleza en su ofensiva y mejor consistencia.
-    </p>
-  </article>
+    <div class="bet-footer">
+        <div class="market-info">
+            <span>PICK SELECCIONADO</span>
+            <b>Los Angeles Clippers - Handicap -3.5</b>
+        </div>
+        <div class="odds-display">@1.28</div>
+    </div>
+</div>
 
-  <!-- PARTIDO 2 -->
-  <article class="ticket-card">
-    <div class="match-header">
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/146.png" alt="Memphis Grizzlies Logo" />
-        <b>Memphis Grizzlies</b>
-      </div>
-      <div class="versus">vs</div>
-      <div class="team" style="justify-content: flex-end;">
-        <b>Minnesota Timberwolves</b>
-        <img src="https://media.api-sports.io/basketball/teams/149.png" alt="Minnesota Timberwolves Logo" />
-      </div>
+<div class="match-card">
+    <div class="vulnerability-header">● ANÁLISIS DE INTELIGENCIA PREDICTIVA</div>
+    <div class="teams-grid">
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/1263.png">
+            <span>Anadolu Efes</span>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/2341.png">
+            <span>Valencia</span>
+        </div>
     </div>
-    <div class="pick-info">
-      <b>Pick:</b> Memphis Grizzlies &nbsp; <span class="odds">1.32</span>
+    <div class="intel-box">
+        <b>ANÁLISIS DE LA IA</b>
+        <p>Anadolu Efes ha sido dominante en baloncesto europeo, con defensa sólida y mejor racha en últimos 10 partidos frente a un Valencia irregular en defensa.</p>
     </div>
-    <p class="analysis">
-      <b>Debilidad Rival:</b> Minnesota Timberwolves han tenido problemas ofensivos intermitentes y error elevado en tiros exteriores.<br/>
-      <b>Racha Reciente:</b> Memphis Grizzlies acumulan 8 victorias en sus últimos 10 encuentros, mostrando solidez defensiva y buen ritmo de juego.
-    </p>
-  </article>
+    <div class="bet-footer">
+        <div class="market-info">
+            <span>PICK SELECCIONADO</span>
+            <b>Anadolu Efes - Handicap -5.0</b>
+        </div>
+        <div class="odds-display">@1.33</div>
+    </div>
+</div>
 
-  <!-- PARTIDO 3 -->
-  <article class="ticket-card">
-    <div class="match-header">
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes Logo" />
-        <b>Anadolu Efes</b>
-      </div>
-      <div class="versus">vs</div>
-      <div class="team" style="justify-content: flex-end;">
-        <b>Valencia</b>
-        <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia Logo" />
-      </div>
+<div class="match-card">
+    <div class="vulnerability-header">● ANÁLISIS DE INTELIGENCIA PREDICTIVA</div>
+    <div class="teams-grid">
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/1276.png">
+            <span>Tofas</span>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/605.png">
+            <span>AEK Athens</span>
+        </div>
     </div>
-    <div class="pick-info">
-      <b>Pick:</b> Anadolu Efes &nbsp; <span class="odds">1.25</span>
+    <div class="intel-box">
+        <b>ANÁLISIS DE LA IA</b>
+        <p>Tofas ha mostrado defensas consistentes limitando anotaciones rivales y tiene mejor rendimiento en sus últimos 10 juegos frente a un AEK que sufre problemas fuera de casa.</p>
     </div>
-    <p class="analysis">
-      <b>Debilidad Rival:</b> Valencia sufre con lesiones en piezas claves y rendimiento irregular lejos de su cancha.<br/>
-      <b>Racha Reciente:</b> Anadolu Efes han ganado 7 de sus últimos 10 juegos manteniendo alta intensidad y dominio ofensivo.
-    </p>
-  </article>
+    <div class="bet-footer">
+        <div class="market-info">
+            <span>PICK SELECCIONADO</span>
+            <b>Tofas - Ganador del Partido</b>
+        </div>
+        <div class="odds-display">@1.25</div>
+    </div>
+</div>
 
-  <!-- PARTIDO 4 -->
-  <article class="ticket-card">
-    <div class="match-header">
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol. Logo" />
-        <b>Bahcesehir Kol.</b>
-      </div>
-      <div class="versus">vs</div>
-      <div class="team" style="justify-content: flex-end;">
-        <b>Slask Wroclaw</b>
-        <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Slask Wroclaw Logo" />
-      </div>
+<div class="match-card">
+    <div class="vulnerability-header">● ANÁLISIS DE INTELIGENCIA PREDICTIVA</div>
+    <div class="teams-grid">
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/614.png">
+            <span>Panathinaikos</span>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="team">
+            <img src="https://media.api-sports.io/basketball/teams/2338.png">
+            <span>Real Madrid</span>
+        </div>
     </div>
-    <div class="pick-info">
-      <b>Pick:</b> Bahcesehir Kol. &nbsp; <span class="odds">1.30</span>
+    <div class="intel-box">
+        <b>ANÁLISIS DE LA IA</b>
+        <p>Panathinaikos tiene racha positiva reciente y una defensa que ha permitido menos puntos en 10 juegos. Real Madrid presenta debilidades defensivas que Panathinaikos puede capitalizar.</p>
     </div>
-    <p class="analysis">
-      <b>Debilidad Rival:</b> Slask Wroclaw sufre con defensa débil y problemas en rotaciones que generan vulnerabilidad.<br/>
-      <b>Racha Reciente:</b> Bahcesehir Kol. tienen 6 victorias en sus últimos 10 juegos, mostrando buen balance ofensivo y control del tempo.
-    </p>
-  </article>
-
-  <!-- PARTIDO 5 -->
-  <article class="ticket-card">
-    <div class="match-header">
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Dubai Logo" />
-        <b>Dubai</b>
-      </div>
-      <div class="versus">vs</div>
-      <div class="team" style="justify-content: flex-end;">
-        <b>Olympiacos</b>
-        <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Olympiacos Logo" />
-      </div>
+    <div class="bet-footer">
+        <div class="market-info">
+            <span>PICK SELECCIONADO</span>
+            <b>Panathinaikos - Handicap +3.0</b>
+        </div>
+        <div class="odds-display">@1.22</div>
     </div>
-    <div class="pick-info">
-      <b>Pick:</b> Olympiacos &nbsp; <span class="odds">1.22</span>
-    </div>
-    <p class="analysis">
-      <b>Debilidad Rival:</b> Dubai presenta inconsistencias defensivas y bajas efectividad en triples comparativamente.<br/>
-      <b>Racha Reciente:</b> Olympiacos han ganado 8 de sus últimos 10 encuentros, destacando su experiencia y presión constante.
-    </p>
-  </article>
-
-  <button class="vip-access" onclick="window.location.href='https://t.me/CMSportsElite_PagoBot'">COMPRA EL ACCESO VIP</button>
-</main>
-</body>
-</html>
-```
+</div>
