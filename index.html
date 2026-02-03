@@ -13,85 +13,107 @@
         .match-card:hover { transform: translateY(-10px); }
         .alert { color: #f87171; font-weight: 900; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 15px; background: rgba(239, 68, 68, 0.1); padding: 6px 12px; border-radius: 6px; font-family: 'Orbitron'; align-self: flex-start; }
         .team { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .team > div { flex: 1; text-align: center; }
         .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6)); border-radius: 50%; background: rgba(255,255,255,0.03); padding: 5px; }
-        .team-name { font-weight: 700; font-size: 1.3rem; flex: 1; text-align: center; }
-        .analysis { background: rgba(0, 0, 0, 0.25); border-radius: 12px; padding: 15px; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.9rem; line-height: 1.3; }
+        .team-name { font-weight: 600; font-size: 1.2rem; }
+        .league { font-size: 0.9rem; color: #d4af37aa; font-weight: 600; margin-bottom: 10px; text-align: center; }
+        .analysis { background: rgba(0, 0, 0, 0.25); border-radius: 12px; padding: 15px; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.9rem; line-height: 1.3rem; }
         .odds-pill { background: var(--gold); color: #000; padding: 10px 30px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; text-align: center; margin-top: auto; box-shadow: 0 5px 20px rgba(191,149,63,0.4); }
         .vip-btn { margin-top: 60px; background: var(--gold); color: #000; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-family: 'Orbitron'; font-weight: 900; }
-        .liga { font-size: 0.85rem; color: #d4af37cc; text-align: center; margin-bottom: 5px; font-weight: 600; letter-spacing: 1.5px; }
     </style>
 </head>
 <body>
     <div class="header"><h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1></div>
     <div class="container">
         <div class="match-card">
-            <div class="liga">Eurocup</div>
+            <div class="league">Eurocup</div>
             <div class="team">
-                <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol.">
-                <div class="team-name">Bahcesehir Kol.</div>
-                <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Slask Wroclaw">
-                <div class="team-name">Slask Wroclaw</div>
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol.">
+                    <div class="team-name">Bahcesehir Kol.</div>
+                </div>
+                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Slask Wroclaw">
+                    <div class="team-name">Slask Wroclaw</div>
+                </div>
             </div>
             <div class="analysis">
-                El Bahcesehir Kol. afronta el partido con bajas clave, pero se respalda en su defensa sólida. Los visitantes Slask Wroclaw muestran cierta inestabilidad con 4 derrotas en sus últimos 10 juegos.
-                Predominan partidos cerrados y baja eficiencia visitante.
+                Bahcesehir Kol. sufre bajas clave en su rotación principal, afectando defensa. Slask Wroclaw viene en forma, ganando 7 de últimos 10 juegos. Partido con ligera ventaja de local.
             </div>
             <div class="odds-pill">1.20</div>
         </div>
         <div class="match-card">
-            <div class="liga">Euroleague</div>
+            <div class="league">Euroleague</div>
             <div class="team">
-                <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes">
-                <div class="team-name">Anadolu Efes</div>
-                <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia">
-                <div class="team-name">Valencia</div>
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Dubai">
+                    <div class="team-name">Dubai</div>
+                </div>
+                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Olympiacos">
+                    <div class="team-name">Olympiacos</div>
+                </div>
             </div>
             <div class="analysis">
-                Anadolu Efes mantiene un gran rendimiento local, pese a la ausencia temporal de su estrella. Valencia con 6 victorias y 4 derrotas en últimos 10, buscando recuperación.
-                Predominan los ataques rápidos y transiciones.
-            </div>
-            <div class="odds-pill">1.25</div>
-        </div>
-        <div class="match-card">
-            <div class="liga">Champions League</div>
-            <div class="team">
-                <img src="https://media.api-sports.io/basketball/teams/1276.png" alt="Tofas">
-                <div class="team-name">Tofas</div>
-                <img src="https://media.api-sports.io/basketball/teams/605.png" alt="AEK Athens">
-                <div class="team-name">AEK Athens</div>
-            </div>
-            <div class="analysis">
-                Tofas con una plantilla obligada a rotar por bajas, lastrado por erráticos últimos juegos (5 derrotas en 10). AEK es sólido fuera, pero sufre en defensa y falta profundidad en banquillo.
-            </div>
-            <div class="odds-pill">1.22</div>
-        </div>
-        <div class="match-card">
-            <div class="liga">Euroleague</div>
-            <div class="team">
-                <img src="https://media.api-sports.io/basketball/teams/796.png" alt="Zalgiris Kaunas">
-                <div class="team-name">Zalgiris Kaunas</div>
-                <img src="https://media.api-sports.io/basketball/teams/16.png" alt="Monaco">
-                <div class="team-name">Monaco</div>
-            </div>
-            <div class="analysis">
-                Kaunas con bajas en posiciones clave y solo 3 victorias en últimos 10 partidos, enfrenta a un Monaco con plantilla completa y buen ritmo ganador.
-                El duelo será táctico y ajustado.
+                Dubai presenta bajas ofensivas importantes y solo ha ganado 3 de sus últimos 10. Olympiacos se mantiene sólido y con plantilla completa, favorito claro.
             </div>
             <div class="odds-pill">1.30</div>
         </div>
         <div class="match-card">
-            <div class="liga">Champions League</div>
+            <div class="league">Champions League</div>
             <div class="team">
-                <img src="https://media.api-sports.io/basketball/teams/5923.png" alt="Wurzburg">
-                <div class="team-name">Wurzburg</div>
-                <img src="https://media.api-sports.io/basketball/teams/2334.png" alt="Joventut Badalona">
-                <div class="team-name">Joventut Badalona</div>
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/1276.png" alt="Tofas">
+                    <div class="team-name">Tofas</div>
+                </div>
+                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/605.png" alt="AEK Athens">
+                    <div class="team-name">AEK Athens</div>
+                </div>
             </div>
             <div class="analysis">
-                Wurzburg muestra errores en defensa y bajas importantes. Joventut llega con 7 victorias en últimos 10, aunque sin su base titular.
-                Partidazo con ligera ventaja visitante.
+                Tofas sin bajas y buen momento con 6 victorias en últimos 10. AEK Athens registra dudas con dos titulares lesionados y solo 4 victorias recientes.
+            </div>
+            <div class="odds-pill">1.25</div>
+        </div>
+        <div class="match-card">
+            <div class="league">Euroleague</div>
+            <div class="team">
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes">
+                    <div class="team-name">Anadolu Efes</div>
+                </div>
+                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia">
+                    <div class="team-name">Valencia</div>
+                </div>
+            </div>
+            <div class="analysis">
+                Anadolu Efes está completo y ha ganado 8 de sus últimos 10 partidos. Valencia presenta bajas importantes y registra solo 3 victorias recientes.
             </div>
             <div class="odds-pill">1.35</div>
+        </div>
+        <div class="match-card">
+            <div class="league">Eurocup</div>
+            <div class="team">
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/533.png" alt="Ulm">
+                    <div class="team-name">Ulm</div>
+                </div>
+                <div style="font-weight: 900; font-size: 1.4rem; align-self: center;">vs</div>
+                <div>
+                    <img src="https://media.api-sports.io/basketball/teams/1615.png" alt="Buducnost">
+                    <div class="team-name">Buducnost</div>
+                </div>
+            </div>
+            <div class="analysis">
+                Ulm tiene bajas en defensa, con 4 victorias en últimos 10. Buducnost cuenta con plantilla completa pero irregular, 5 triunfos en 10 juegos.
+            </div>
+            <div class="odds-pill">1.22</div>
         </div>
     </div>
     <a href="https://im.page/cmsportselite" class="vip-btn">COMPRA EL ACCESO VIP</a>
