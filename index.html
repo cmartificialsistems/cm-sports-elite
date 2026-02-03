@@ -1,124 +1,144 @@
-<article class="match-card">
-    <div class="vulnerability-alert">🚨 ALERTA: Handicap 1er Cuarto</div>
-    
-    <div class="teams-row">
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/teams/1264.png">
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">Bahcesehir Kol.</span>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --glass: rgba(15, 23, 42, 0.95); }
+        body { background: #010409; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .floating-logo { width: 130px; border-radius: 50%; border: 3px solid #bf953f; box-shadow: 0 0 35px rgba(191,149,63,0.5); animation: float 4s ease-in-out infinite; margin-bottom: 20px; }
+        .main-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron'; font-size: 2.2rem; font-weight: 900; letter-spacing: 4px; text-align:center; margin:0; }
+        .sub-title { color: #10b981; font-family: 'Orbitron'; font-size: 0.8rem; margin: 15px 0 40px 0; letter-spacing: 2px; }
+        .container { width: 100%; max-width: 800px; display:flex; flex-direction:column; gap:30px; }
+        .card { background: var(--glass); border-radius: 25px; padding: 30px; border: 1px solid rgba(191,149,63,0.3); border-left: 6px solid #bf953f; box-shadow: 0 15px 45px rgba(0,0,0,0.5); position: relative; transition: transform 0.3s ease; }
+        .card:hover { transform: scale(1.01); border-color: #bf953f; }
+        .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; text-align: center; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); background: rgba(255,255,255,0.03); padding: 5px; border-radius: 12px; }
+        .team p { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 700; margin-top: 10px; color: #fff; text-transform: uppercase; }
+        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; font-size: 1.4rem; }
+        .analysis-box { background: rgba(255,255,255,0.03); border-radius: 18px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.08); }
+        .analysis-box b { color: #bf953f; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 12px; font-family: 'Orbitron'; }
+        .analysis-box p { color: #cbd5e1; line-height: 1.8; font-size: 0.98rem; margin: 0; font-family: 'Inter' !important; font-style: normal !important; text-align: justify; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .pick { font-family: 'Orbitron'; text-transform: uppercase; font-size: 0.85rem; color: #fff; font-weight: 900; }
+        .odds { background: var(--gold); color: #000; padding: 8px 18px; border-radius: 8px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.3rem; }
+        .disclaimer { max-width: 700px; text-align: center; color: #475569; font-size: 0.7rem; margin-top: 60px; line-height: 1.6; padding: 20px; border-top: 1px solid rgba(191,149,63,0.1); }
+    </style>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="floating-logo" alt="Logo CM Sports Elite">
+    <h1 class="main-title">CM SPORTS ELITE</h1>
+    <div class="sub-title">ESTE ES EL ANÁLISIS DE LA IA DE CM ELITE SPORTS</div>
+    <div class="container">
+        <div class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol. Logo">
+                    <p>Bahcesehir Kol.</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Slask Wroclaw Logo">
+                    <p>Slask Wroclaw</p>
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>Análisis Profesional</b>
+                <p>Bahcesehir Kol. ha mostrado solidez en sus últimos 10 encuentros, con una media ofensiva alta y buen manejo de rebotes. Slask Wroclaw presenta bajas importantes en su rotación interior, lo que dificulta su defensa en el poste bajo. El rendimiento individual de sus tiradores está algo irregular, mientras que Bahcesehir mantiene jugadores clave en forma y sin ausencias. El pick se basa en capitalizar la débil defensa local de Slask y el elevado ritmo ofensivo de Bahcesehir.</p>
+            </div>
+            <div class="footer">
+                <div class="pick">Pick: Gana Bahcesehir Kol.</div>
+                <div class="odds">1.22</div>
+            </div>
         </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.3; font-size: 1rem;">VS</div>
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/teams/914.png">
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">Slask Wroclaw</span>
+        <div class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Dubai Logo">
+                    <p>Dubai</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Olympiacos Logo">
+                    <p>Olympiacos</p>
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>Análisis Profesional</b>
+                <p>Olympiacos mantiene una superioridad táctica evidente, aprovechando la falta de profundidad en el banquillo de Dubai. En sus últimos 10 juegos, Olympiacos ha destacado por una defensa sólida y eficiencia en tiros de larga distancia. Dubai sufre la baja de su base titular, limitando su ofensiva organizada. La superioridad individual de los aleros de Olympiacos también es clave para explotar esta vulnerabilidad.</p>
+            </div>
+            <div class="footer">
+                <div class="pick">Pick: Gana Olympiacos</div>
+                <div class="odds">1.28</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/1276.png" alt="Tofas Logo">
+                    <p>Tofas</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/605.png" alt="AEK Athens Logo">
+                    <p>AEK Athens</p>
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>Análisis Profesional</b>
+                <p>AEK Athens llega con gran ritmo tras ganar 7 de sus últimos 10 partidos y con su pivote estrella en gran forma. Tofas presenta una defensa débil en transición y varias bajas en su línea exterior, lo que reduce su capacidad para contener ataques rápidos. AEK domina en control del ritmo y aprovechando errores defensivos. El pick se fundamenta en la superioridad individual y el rendimiento colectivo preferente de AEK.</p>
+            </div>
+            <div class="footer">
+                <div class="pick">Pick: Gana AEK Athens</div>
+                <div class="odds">1.24</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes Logo">
+                    <p>Anadolu Efes</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia Logo">
+                    <p>Valencia</p>
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>Análisis Profesional</b>
+                <p>Anadolu Efes está en un momento excelente, ganando 8 de sus últimos 10 y con todas las piezas claves activas y sin bajas. Valencia atraviesa problemas defensivos, especialmente en la protección del aro ante jugadores interiores potentes. La capacidad ofensiva de Efes en el segundo cuarto marca la diferencia, explotando la velocidad y buen movimiento de balón. Se recomienda apostar a la victoria segura de Anadolu Efes.</p>
+            </div>
+            <div class="footer">
+                <div class="pick">Pick: Gana Anadolu Efes</div>
+                <div class="odds">1.30</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="teams">
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/533.png" alt="Ulm Logo">
+                    <p>Ulm</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/1615.png" alt="Buducnost Logo">
+                    <p>Buducnost</p>
+                </div>
+            </div>
+            <div class="analysis-box">
+                <b>Análisis Profesional</b>
+                <p>El partido presenta inicio parejo, pero Buducnost tiene la ventaja en plantilla y rotación profunda. Ulm llega con bajas en sus escoltas y tendencia a perder en cierres de partidos, acumulando tres derrotas en fila. Buducnost aprovecha su alto porcentaje en triples y presión defensiva para quebrar a Ulm. Este análisis apoya la victoria de Buducnost con cuotas atractivas dadas las circunstancias actuales.</p>
+            </div>
+            <div class="footer">
+                <div class="pick">Pick: Gana Buducnost</div>
+                <div class="odds">1.25</div>
+            </div>
         </div>
     </div>
-
-    <div class="analysis-box">
-        <b>ANÁLISIS DE LA FAMILIA:</b>
-        <p><i>Bahcesehir Kol. -2.5 en 1er Cuarto:</i> Basado en el rendimiento de los <b>últimos 10 juegos</b>, detectamos una vulnerabilidad crítica en las transiciones defensivas tempranas de Slask Wroclaw, mientras Bahcesehir Kol. muestra un arranque fuerte con +6 puntos promedio en el primer cuarto. La agresividad inicial de Bahcesehir Kol. es superior para asegurar esta ventaja.</p>
+    <div class="disclaimer">
+        <b>AVISO:</b> Modelos estadísticos basados en rachas de 10 juegos y debilidades tácticas. Gestiona tu capital responsablemente.
     </div>
-
-    <div class="footer-action">
-        <div class="odds-pill">1.29</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-alert">🚨 ALERTA: Gana Equipo (Money Line)</div>
-    
-    <div class="teams-row">
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/teams/1276.png">
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">Tofas</span>
-        </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.3; font-size: 1rem;">VS</div>
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/teams/605.png">
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">AEK Athens</span>
-        </div>
-    </div>
-
-    <div class="analysis-box">
-        <b>ANÁLISIS DE LA FAMILIA:</b>
-        <p><i>Tofas gana el partido:</i> Basado en el rendimiento de los <b>últimos 10 juegos</b>, vimos que AEK Athens tiene un 35% de eficiencia en tiros en la segunda mitad, mientras que Tofas domina esa fase con un +8 puntos de diferencia en promedio. La fortaleza del juego interior y el control del rebote posicionan a Tofas como favorito sólido.</p>
-    </div>
-
-    <div class="footer-action">
-        <div class="odds-pill">1.31</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-alert">🚨 ALERTA: Player Prop - Rebotes</div>
-    
-    <div class="teams-row">
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/teams/1263.png">
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">Anadolu Efes</span>
-        </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.3; font-size: 1rem;">VS</div>
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/players/1245.png"> <!--Jugador destacado (foto ficticia)-->
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">Adrien Moerman</span>
-        </div>
-    </div>
-
-    <div class="analysis-box">
-        <b>ANÁLISIS DE LA FAMILIA:</b>
-        <p><i>Adrien Moerman más de 7.5 rebotes:</i> Basado en los <b>últimos 10 partidos</b>, Moerman promedia 9.3 rebotes y enfrenta a un Valencia que cede +10 rebotes defensivos por partido. Su capacidad para capturar rebotes ofensivos es clave contra la fragilidad de Valencia en el perímetro y pintura.</p>
-    </div>
-
-    <div class="footer-action">
-        <div class="odds-pill">1.27</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-alert">🚨 ALERTA: Totales - Puntos Equipo</div>
-    
-    <div class="teams-row">
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/teams/533.png">
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">Ulm</span>
-        </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.3; font-size: 1rem;">VS</div>
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/teams/1615.png">
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">Buducnost</span>
-        </div>
-    </div>
-
-    <div class="analysis-box">
-        <b>ANÁLISIS DE LA FAMILIA:</b>
-        <p><i>Ulm menos de 79.5 puntos:</i> Basado en el rendimiento de los <b>últimos 10 juegos</b>, Ulm ha mostrado problemas ofensivos ante defensas sólidas, con una media de 75 puntos y una eficacia bajísima en tiros de campo. Buducnost domina el rebote y obliga a Ulm a tiros forzados, limitando su anotación.</p>
-    </div>
-
-    <div class="footer-action">
-        <div class="odds-pill">1.24</div>
-    </div>
-</article>
-
-<article class="match-card">
-    <div class="vulnerability-alert">🚨 ALERTA: Handicap Partido Completo</div>
-    
-    <div class="teams-row">
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/teams/722.png">
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">Olimpia Milano</span>
-        </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.3; font-size: 1rem;">VS</div>
-        <div style="text-align: center;">
-            <img src="https://media.api-sports.io/basketball/teams/2331.png">
-            <span style="display: block; font-family: 'Orbitron'; font-size: 0.8rem; margin-top: 8px; color: #fff;">Baskonia</span>
-        </div>
-    </div>
-
-    <div class="analysis-box">
-        <b>ANÁLISIS DE LA FAMILIA:</b>
-        <p><i>Olimpia Milano -5.5 handicap partido completo:</i> Basado en el análisis de los <b>últimos 10 juegos</b>, Baskonia ha evidenciado debilidades en defensa perimetral y pérdidas clave en media cancha. Olimpia Milano aporta superioridad en la ofensiva organizada y dominio en el ritmo, lo que justifica un handicap sólido para este duelo.</p>
-    </div>
-
-    <div class="footer-action">
-        <div class="odds-pill">1.33</div>
-    </div>
-</article>
+</body>
+</html>
