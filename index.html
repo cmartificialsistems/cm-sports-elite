@@ -2,236 +2,198 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️ - Baloncesto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Orbitron&display=swap" rel="stylesheet" />
-  <style>
-    /* Reset & base */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      background-color: #010409;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 2rem 1rem 3rem;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    h1 {
-      width: 100%;
-      color: #bf953f;
-      text-align: center;
-      margin-bottom: 2rem;
-      font-weight: 700;
-    }
-
-    .ticket-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-      max-width: 1200px;
-      width: 100%;
-    }
-
-    /* Card base with Glassmorphism and gold left border */
-    .card {
-      backdrop-filter: saturate(180%) blur(16px);
-      background: rgba(191, 149, 63, 0.15);
-      border-left: 6px solid #bf953f;
-      border-radius: 12px;
-      padding: 1rem 1.5rem 1rem 1rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      box-shadow: 0 8px 32px 0 rgba(191, 149, 63, 0.2);
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    /* Logos & player pics area */
-    .logo-wrapper {
-      flex-shrink: 0;
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 0 8px #bf953faa;
-      background: rgba(255 255 255 / 0.12);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .logo-wrapper img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    /* Content area */
-    .content {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      gap: .4rem;
-    }
-    .matchup {
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.03em;
-    }
-
-    .odds {
-      font-family: 'Orbitron', monospace;
-      font-size: 1.35rem;
-      color: #bf953f;
-      font-weight: 700;
-    }
-    .bet-type {
-      font-style: italic;
-      font-weight: 600;
-      color: #d5b76a;
-    }
-    .analysis {
-      font-family: 'Inter', sans-serif;
-      color: #e7d9a5;
-      font-size: 0.92rem;
-      max-width: 600px;
-      line-height: 1.3;
-    }
-
-    /* Button styling */
-    .btn-buy {
-      display: inline-block;
-      margin: 2rem auto 0;
-      padding: 0.9rem 2.5rem;
-      background: linear-gradient(90deg, #bf953f, #e1b153);
-      border: none;
-      border-radius: 40px;
-      font-family: 'Orbitron', monospace;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: #010409;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow:
-        0 0 5px #bf953f,
-        0 0 15px #bf953f88;
-      transition: all 0.3s ease;
-      text-align: center;
-    }
-    .btn-buy:hover,
-    .btn-buy:focus {
-      box-shadow:
-        0 0 12px #bf953f,
-        0 0 30px #e1b153;
-      transform: scale(1.05);
-      outline: none;
-    }
-
-    /* Responsive */
-    @media (max-width: 660px) {
-      body {
-        justify-content: center;
-      }
-      .card {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 1rem;
-      }
-      .logo-wrapper {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 0.4rem;
-      }
-      .content {
-        max-width: 100%;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️ - Baloncesto</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Orbitron&display=swap');
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: #010409;
+    color: #bf953f;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1 {
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    font-weight: 700;
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+  .card {
+    background: rgba(255 255 255 / 0.07);
+    border-left: 6px solid #bf953f;
+    border-radius: 14px;
+    padding: 1rem 1.5rem 1.5rem 1.2rem;
+    box-shadow:
+      0 4px 30px rgba(191, 149, 63, 0.35);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    background: #101214;
+    box-shadow: 0 0 8px #bf953f88;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .logo img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
+  }
+  .content {
+    flex: 1;
+  }
+  .teams {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #bf953f;
+  }
+  .teams b {
+    font-weight: 700;
+  }
+  .teams i {
+    font-style: italic;
+    font-weight: 500;
+  }
+  .market {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  .market b {
+    color: #f0d77a;
+  }
+  .analysis {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: #d3bb6ddd;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  .odds {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    font-size: 1.42rem;
+    color: #bf953f;
+    user-select: none;
+  }
+  .btn-container {
+    text-align: center;
+  }
+  .btn-vip {
+    background: transparent;
+    border: 2.5px solid #bf953f;
+    border-radius: 8px;
+    color: #bf953f;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.875rem 2.25rem;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  .btn-vip:hover, .btn-vip:focus {
+    background: #bf953f;
+    color: #010409;
+    box-shadow: 0 0 12px #bf953fcc;
+  }
+</style>
 </head>
 <body>
-  <main class="ticket-container" role="main" aria-label="Ticket de Inteligencia Artificial de Baloncesto">
-    <h1>🎟️ <b>TICKET DE INTELIGENCIA ARTIFICIAL</b> 🎟️</h1>
+<h1>🎟️ <b>Ticket de Inteligencia Artificial</b> 🎟️</h1>
+<div class="container">
 
-    <!-- 1 -->
-    <article class="card" aria-labelledby="match1-title">
-      <div class="logo-wrapper" aria-hidden="true">
-        <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Logo Bahcesehir Kol." />
-      </div>
-      <div class="content">
-        <p id="match1-title" class="matchup"><b>Hándicap 1er Cuarto: Slask Wroclaw +4.5</b></p>
-        <p class="odds" aria-label="Cuota 1.33"><b>1.33</b></p>
-        <p class="analysis">Slask Wroclaw suele mantener el primer cuarto ajustado, presentando un amplio margen para cubrir el hándicap positivo +4.5 con solidez defensiva.</p>
-      </div>
-    </article>
+  <!-- Partido 1: Bahcesehir Kol. vs Slask Wroclaw - Ganador de Partido -->
+  <article class="card" aria-label="Pronóstico partido Bahcesehir Kol. vs Slask Wroclaw">
+    <div class="logo" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol. logo" />
+    </div>
+    <div class="content">
+      <div class="teams"><b>Bahcesehir Kol.</b> vs <i>Slask Wroclaw</i></div>
+      <div class="market"><b>Mercado:</b> Ganador de Partido: <b>Bahcesehir Kol.</b></div>
+      <div class="analysis">Equipo local con mejor defensa, arranca favorito en casa en este duelo muy parejo.</div>
+    </div>
+    <div class="odds" aria-label="Cuota 1.28">1.28</div>
+  </article>
 
-    <!-- 2 -->
-    <article class="card" aria-labelledby="match2-title">
-      <div class="logo-wrapper" aria-hidden="true">
-        <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Logo Dubai" />
-      </div>
-      <div class="logo-wrapper" aria-hidden="true" style="margin-left:-0.5rem">
-        <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Logo Olympiacos" />
-      </div>
-      <div class="content">
-        <p id="match2-title" class="matchup"><b>Ganador partidо: <i>Olympiacos</i></b></p>
-        <p class="odds" aria-label="Cuota 1.28"><b>1.28</b></p>
-        <p class="analysis"><i>Olympiacos</i> llega con ventaja de plantilla y experiencia, favorecido para llevarse el triunfo en esta visita, manteniendo ritmo alto y defensa intensa.</p>
-      </div>
-    </article>
+  <!-- Partido 2: Dubai vs Olympiacos - Handicap 1er Cuarto (+3.5 Dubai) -->
+  <article class="card" aria-label="Pronóstico partido Dubai vs Olympiacos">
+    <div class="logo" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Dubai logo" />
+    </div>
+    <div class="content">
+      <div class="teams"><b>Dubai</b> vs <i>Olympiacos</i></div>
+      <div class="market"><b>Mercado:</b> Handicap 1er Cuarto: <b>Dubai +3.5</b></div>
+      <div class="analysis">Olympiacos no suele arrancar muy fuerte; apuesta segura cubrir +3.5 en primer cuarto.</div>
+    </div>
+    <div class="odds" aria-label="Cuota 1.25">1.25</div>
+  </article>
 
-    <!-- 3 -->
-    <article class="card" aria-labelledby="match3-title">
-      <div class="logo-wrapper" aria-hidden="true" style="border-radius: 12px; overflow: hidden;">
-        <img src="https://media.api-sports.io/basketball/players/1930.png" alt="Foto jugador estrella Tofas" />
-      </div>
-      <div class="content">
-        <p id="match3-title" class="matchup"><b>Prop: Puntos del jugador estrella <i>Tofas</i> - Luka Mitrovic &gt; 19.5</b></p>
-        <p class="odds" aria-label="Cuota 1.30"><b>1.30</b></p>
-        <p class="analysis"><i>Luka Mitrovic</i> viene en racha, siendo clave en el ataque y superando habitualmente los 20 puntos contra rivales fuertes.</p>
-      </div>
-    </article>
+  <!-- Partido 3: Tofas vs AEK Athens - Prop: Puntos Jugador Estrella Tofas -->
+  <article class="card" aria-label="Pronóstico puntos jugador estrella Tofas en partido contra AEK Athens">
+    <div class="logo" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/1276.png" alt="Tofas logo" />
+    </div>
+    <div class="content">
+      <div class="teams"><b>Tofas</b> vs <i>AEK Athens</i></div>
+      <div class="market"><b>Prop apuesta:</b> <b>Jugador estrella Tofas > 18.5 pts</b></div>
+      <div class="analysis">En juegos clave, el líder ofensivo de Tofas tiende a superar 18.5 puntos con alto rendimiento.</div>
+    </div>
+    <div class="odds" aria-label="Cuota 1.30">1.30</div>
+  </article>
 
-    <!-- 4 -->
-    <article class="card" aria-labelledby="match4-title">
-      <div class="logo-wrapper" aria-hidden="true">
-        <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Logo Anadolu Efes" />
-      </div>
-      <div class="logo-wrapper" aria-hidden="true" style="margin-left:-0.5rem">
-        <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Logo Valencia" />
-      </div>
-      <div class="content">
-        <p id="match4-title" class="matchup"><b>Combo PRA: Anadolu Efes &gt; 60 (Puntos + Rebotes + Asistencias)</b></p>
-        <p class="odds" aria-label="Cuota 1.26"><b>1.26</b></p>
-        <p class="analysis">La combinación ofensiva y rebotes sólidos del Anadolu Efes aseguran un total combinado de PRA superior a 60, vital para ganar el encuentro.</p>
-      </div>
-    </article>
+  <!-- Partido 4: Anadolu Efes vs Valencia - Combo PRA (Puntos + Rebotes + Asistencias Jugador Efes) -->
+  <article class="card" aria-label="Pronóstico combo PRA jugador Anadolu Efes contra Valencia">
+    <div class="logo" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes logo" />
+    </div>
+    <div class="content">
+      <div class="teams"><b>Anadolu Efes</b> vs <i>Valencia</i></div>
+      <div class="market"><b>Combo PRA:</b> Jugador estrella Efes ≥ 30 (P+R+A)</div>
+      <div class="analysis">Estrategia combinada de puntos, rebotes y asistencias; el 5 veces All-Euroleague cumple este umbral.</div>
+    </div>
+    <div class="odds" aria-label="Cuota 1.33">1.33</div>
+  </article>
 
-    <!-- 5 -->
-    <article class="card" aria-labelledby="match5-title">
-      <div class="logo-wrapper" aria-hidden="true" style="border-radius: 50%; overflow: hidden;">
-        <img src="https://media.api-sports.io/basketball/players/2.png" alt="Foto jugador estrella Ulm" />
-      </div>
-      <div class="content">
-        <p id="match5-title" class="matchup"><b>Prop: Triples de jugador estrella <i>Ulm</i> - Paul Zipser &gt;= 2.5</b></p>
-        <p class="odds" aria-label="Cuota 1.31"><b>1.31</b></p>
-        <p class="analysis"><i>Paul Zipser</i> posee alta efectividad en triples, siendo fundamental para capitalizar desde la línea de 3 puntos con al menos 3 triples.</p>
-      </div>
-    </article>
+  <!-- Partido 5: Ulm vs Buducnost - Handicap Partido Completo Buducnost -4.0 -->
+  <article class="card" aria-label="Pronóstico handicap Buducnost en partido completo contra Ulm">
+    <div class="logo" aria-hidden="true">
+      <img src="https://media.api-sports.io/basketball/teams/1615.png" alt="Buducnost logo" />
+    </div>
+    <div class="content">
+      <div class="teams"><b>Ulm</b> vs <i>Buducnost</i></div>
+      <div class="market"><b>Handicap Partido Completo:</b> Buducnost -4.0</div>
+      <div class="analysis">Buducnost domina en estadísticas avanzadas y llegará con ventaja de al menos 4 puntos.</div>
+    </div>
+    <div class="odds" aria-label="Cuota 1.27">1.27</div>
+  </article>
 
-    <a href="https://im.page/cmsportselite" class="btn-buy" role="button" aria-label="Compra el acceso VIP">COMPRA EL ACCESO VIP</a>
-  </main>
+</div>
+
+<div class="btn-container">
+  <a class="btn-vip" href="https://im.page/cmsportselite" target="_blank" rel="noopener noreferrer" aria-label="Comprar acceso VIP">COMPRA EL ACCESO VIP</a>
+</div>
+
 </body>
 </html>
 ```
