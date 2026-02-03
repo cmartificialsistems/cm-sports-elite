@@ -4,234 +4,263 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️ - Baloncesto</title>
+<title>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️ - CM Sports Elite</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter&family=Orbitron&display=swap');
   body {
-    margin:0; 
-    background: #010409; 
-    color: gold; 
+    margin: 0;
+    background-color: #010409;
     font-family: 'Inter', sans-serif;
+    color: #d4af37;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    min-height: 100vh;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    padding: 40px 10px;
   }
   header {
-    width: 100%; 
-    max-width: 1200px; 
-    display: flex; 
-    align-items: center; 
-    gap: 15px;
-    margin-bottom: 30px;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid #d4af37;
+    margin-bottom: 1.5rem;
   }
   header img {
-    height: 50px;
+    height: 70px;
+    vertical-align: middle;
+    margin-right: 15px;
   }
   header h1 {
+    display: inline-block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    margin: 0;
-    color: gold;
+    font-weight: 700;
+    font-size: 1.9rem;
+    vertical-align: middle;
+    color: #d4af37;
+    user-select: none;
   }
   main {
-    width: 100%;
-    max-width: 1200px;
-    display: grid;
-    gap: 25px;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 0 15px;
   }
-  .card {
-    background: rgba(255, 215, 0, 0.1);
-    border-radius: 20px;
-    padding: 25px 20px;
-    box-shadow:
-      0 4px 30px rgba(255, 215, 0, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 215, 0, 0.5);
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d4af37;
+    user-select: none;
+  }
+  .ticket-card {
+    background: rgba(212, 175, 55, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #d4af37;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 0 12px rgba(212,175,55,0.4);
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    color: gold;
+    padding: 1.5rem 2rem;
   }
-  .matchup {
+  .match-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    gap: 12px;
+    user-select:none;
   }
   .team {
     flex: 1;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.25rem;
   }
   .team img {
-    height: 60px;
-    display: block;
-    margin: 0 auto 8px auto;
-    filter: drop-shadow(0 0 2px gold);
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    object-fit: contain;
+    background: rgba(212,175,55,0.1);
+    padding: 4px;
   }
-  .vs {
-    flex: 0 0 50px;
-    color: gold;
+  .versus {
     font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    user-select:none;
   }
-  .pick {
+  .pick-info {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    background: gold;
-    color: #010409;
-    padding: 6px 12px;
-    border-radius: 12px;
-    width: fit-content;
-    margin-top: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    user-select:none;
+  }
+  .pick-info b {
+    color: #d4af37;
   }
   .odds {
+    float: right;
+    background: #d4af37;
+    color: #010409;
     font-weight: 700;
-    font-size: 1.3rem;
-    margin-top: 2px;
     font-family: 'Orbitron', sans-serif;
+    padding: 3px 10px;
+    border-radius: 12px;
+    user-select:none;
   }
   .analysis {
-    font-size: 0.9rem;
     font-style: italic;
-    line-height: 1.3;
-    color: #ffd700cc;
+    line-height: 1.48;
+    font-size: 0.95rem;
+    color: #e6d79c;
   }
-  button.vip-btn {
-    margin-top: 40px;
-    padding: 15px 40px;
-    border: none;
-    background: gold;
+  button.vip-access {
+    display: block;
+    background: linear-gradient(45deg, #d4af37, #f5e27a);
     color: #010409;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
     font-weight: 700;
-    border-radius: 40px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 380px;
+    margin: 3rem auto 0;
     cursor: pointer;
-    box-shadow: 0 0 15px gold;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease;
+    user-select:none;
+    box-shadow: 0 0 15px #d4af37;
   }
-  button.vip-btn:hover {
-    background: #e6b800;
-    box-shadow: 0 0 20px #e6b800;
+  button.vip-access:hover {
+    background: linear-gradient(45deg, #f5e27a, #d4af37);
   }
 </style>
 </head>
 <body>
 <header>
-  <img src="https://cm-sports-elite.vip/logo-vip.png" alt="Logo VIP CM Sports Elite" />
-  <h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1>
+  <img src="https://i.imgur.com/bflYsVJ.png" alt="CM Sports Elite VIP Logo" />
+  <h1>CM Sports Elite VIP</h1>
 </header>
 <main>
-  <!-- 1 -->
-  <article class="card">
-    <div class="matchup">
+  <h2>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h2>
+
+  <!-- PARTIDO 1 -->
+  <article class="ticket-card">
+    <div class="match-header">
       <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/144.png" alt="Los Angeles Clippers" />
-        <b>Los Angeles Clippers</b>
+        <img src="https://media.api-sports.io/basketball/teams/143.png" alt="Indiana Pacers Logo" />
+        <b>Indiana Pacers</b>
       </div>
-      <div class="vs">vs</div>
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/154.png" alt="Philadelphia 76ers" />
-        <b>Philadelphia 76ers</b>
+      <div class="versus">vs</div>
+      <div class="team" style="justify-content: flex-end;">
+        <b>Houston Rockets</b>
+        <img src="https://media.api-sports.io/basketball/teams/142.png" alt="Houston Rockets Logo" />
       </div>
     </div>
-    <div class="pick">Pick: <b>Los Angeles Clippers - Handicap -4.5</b></div>
-    <div class="odds">Cuota: <b>1.28</b></div>
+    <div class="pick-info">
+      <b>Pick:</b> Indiana Pacers &nbsp; <span class="odds">1.28</span>
+    </div>
     <p class="analysis">
-      <i>Debilidad Rival:</i> Los 76ers vienen con serias inconsistencias defensivas, especialmente ante equipos con buen contraataque.<br/>
-      <i>Racha Reciente:</i> Clippers han ganado 7 de sus últimos 10 juegos mostrando agresividad y profundidad en el banquillo.
+      <b>Debilidad Rival:</b> Houston Rockets muestran gran inconsistencia defensiva, especialmente en casa ajena, lo que facilita el dominio local.<br/>
+      <b>Racha Reciente:</b> Indiana Pacers han ganado 7 de sus últimos 10 juegos, mostrando fortaleza en su ofensiva y mejor consistencia.
     </p>
   </article>
-  <!-- 2 -->
-  <article class="card">
-    <div class="matchup">
+
+  <!-- PARTIDO 2 -->
+  <article class="ticket-card">
+    <div class="match-header">
       <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes" />
+        <img src="https://media.api-sports.io/basketball/teams/146.png" alt="Memphis Grizzlies Logo" />
+        <b>Memphis Grizzlies</b>
+      </div>
+      <div class="versus">vs</div>
+      <div class="team" style="justify-content: flex-end;">
+        <b>Minnesota Timberwolves</b>
+        <img src="https://media.api-sports.io/basketball/teams/149.png" alt="Minnesota Timberwolves Logo" />
+      </div>
+    </div>
+    <div class="pick-info">
+      <b>Pick:</b> Memphis Grizzlies &nbsp; <span class="odds">1.32</span>
+    </div>
+    <p class="analysis">
+      <b>Debilidad Rival:</b> Minnesota Timberwolves han tenido problemas ofensivos intermitentes y error elevado en tiros exteriores.<br/>
+      <b>Racha Reciente:</b> Memphis Grizzlies acumulan 8 victorias en sus últimos 10 encuentros, mostrando solidez defensiva y buen ritmo de juego.
+    </p>
+  </article>
+
+  <!-- PARTIDO 3 -->
+  <article class="ticket-card">
+    <div class="match-header">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes Logo" />
         <b>Anadolu Efes</b>
       </div>
-      <div class="vs">vs</div>
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia" />
+      <div class="versus">vs</div>
+      <div class="team" style="justify-content: flex-end;">
         <b>Valencia</b>
+        <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia Logo" />
       </div>
     </div>
-    <div class="pick">Pick: <b>Anadolu Efes - Total Puntos Más de 165.5</b></div>
-    <div class="odds">Cuota: <b>1.30</b></div>
+    <div class="pick-info">
+      <b>Pick:</b> Anadolu Efes &nbsp; <span class="odds">1.25</span>
+    </div>
     <p class="analysis">
-      <i>Debilidad Rival:</i> Valencia ha demostrado problemas para controlar el ritmo en juegos de alta velocidad.<br/>
-      <i>Racha Reciente:</i> Anadolu Efes con 8 victorias en sus últimos 10 partidos, destacando su ofensiva explosiva.
+      <b>Debilidad Rival:</b> Valencia sufre con lesiones en piezas claves y rendimiento irregular lejos de su cancha.<br/>
+      <b>Racha Reciente:</b> Anadolu Efes han ganado 7 de sus últimos 10 juegos manteniendo alta intensidad y dominio ofensivo.
     </p>
   </article>
-  <!-- 3 -->
-  <article class="card">
-    <div class="matchup">
+
+  <!-- PARTIDO 4 -->
+  <article class="ticket-card">
+    <div class="match-header">
       <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/1276.png" alt="Tofas" />
-        <b>Tofas</b>
+        <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol. Logo" />
+        <b>Bahcesehir Kol.</b>
       </div>
-      <div class="vs">vs</div>
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/605.png" alt="AEK Athens" />
-        <b>AEK Athens</b>
+      <div class="versus">vs</div>
+      <div class="team" style="justify-content: flex-end;">
+        <b>Slask Wroclaw</b>
+        <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Slask Wroclaw Logo" />
       </div>
     </div>
-    <div class="pick">Pick: <b>Tofas Ganador</b></div>
-    <div class="odds">Cuota: <b>1.22</b></div>
+    <div class="pick-info">
+      <b>Pick:</b> Bahcesehir Kol. &nbsp; <span class="odds">1.30</span>
+    </div>
     <p class="analysis">
-      <i>Debilidad Rival:</i> AEK Athens viene en bajón con baja eficiencia en tiros exteriores.<br/>
-      <i>Racha Reciente:</i> Tofas ha ganado 6 de sus últimos 10 juegos, imponiéndose fuerte como local.
+      <b>Debilidad Rival:</b> Slask Wroclaw sufre con defensa débil y problemas en rotaciones que generan vulnerabilidad.<br/>
+      <b>Racha Reciente:</b> Bahcesehir Kol. tienen 6 victorias en sus últimos 10 juegos, mostrando buen balance ofensivo y control del tempo.
     </p>
   </article>
-  <!-- 4 -->
-  <article class="card">
-    <div class="matchup">
+
+  <!-- PARTIDO 5 -->
+  <article class="ticket-card">
+    <div class="match-header">
       <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/796.png" alt="Zalgiris Kaunas" />
-        <b>Zalgiris Kaunas</b>
+        <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Dubai Logo" />
+        <b>Dubai</b>
       </div>
-      <div class="vs">vs</div>
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/16.png" alt="Monaco" />
-        <b>Monaco</b>
+      <div class="versus">vs</div>
+      <div class="team" style="justify-content: flex-end;">
+        <b>Olympiacos</b>
+        <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Olympiacos Logo" />
       </div>
     </div>
-    <div class="pick">Pick: <b>Zalgiris Kaunas - Total Rebotes Más de 38.5</b></div>
-    <div class="odds">Cuota: <b>1.25</b></div>
-    <p class="analysis">
-      <i>Debilidad Rival:</i> Monaco ha mostrado debilidad clara en el rebote defensivo en sus últimos partidos.<br/>
-      <i>Racha Reciente:</i> Zalgiris con 7 victorias en 10 encuentros recientes y dominio en la pintura.
-    </p>
-  </article>
-  <!-- 5 -->
-  <article class="card">
-    <div class="matchup">
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/5923.png" alt="Wurzburg" />
-        <b>Wurzburg</b>
-      </div>
-      <div class="vs">vs</div>
-      <div class="team">
-        <img src="https://media.api-sports.io/basketball/teams/2334.png" alt="Joventut Badalona" />
-        <b>Joventut Badalona</b>
-      </div>
+    <div class="pick-info">
+      <b>Pick:</b> Olympiacos &nbsp; <span class="odds">1.22</span>
     </div>
-    <div class="pick">Pick: <b>Joventut Badalona Ganador</b></div>
-    <div class="odds">Cuota: <b>1.33</b></div>
     <p class="analysis">
-      <i>Debilidad Rival:</i> Wurzburg tiene baja efectividad en defensa perimetral y rotaciones lentas.<br/>
-      <i>Racha Reciente:</i> Joventut se mantiene sólido con 6 triunfos en los últimos 10 partidos, destacando el trabajo colectivo.
+      <b>Debilidad Rival:</b> Dubai presenta inconsistencias defensivas y bajas efectividad en triples comparativamente.<br/>
+      <b>Racha Reciente:</b> Olympiacos han ganado 8 de sus últimos 10 encuentros, destacando su experiencia y presión constante.
     </p>
   </article>
+
+  <button class="vip-access" onclick="window.location.href='https://t.me/CMSportsElite_PagoBot'">COMPRA EL ACCESO VIP</button>
 </main>
-<button class="vip-btn" onclick="window.location.href='https://pay.cm-sports-elite.vip'">COMPRA EL ACCESO VIP</button>
 </body>
 </html>
 ```
