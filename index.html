@@ -1,173 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ticket Baloncesto Eurocup & Euroleague</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-  body {
-    margin: 0;
-    background-color: #0a0a0a;
-    font-family: 'Orbitron', sans-serif;
-    color: #ddd;
-  }
-  .ticket {
-    max-width: 480px;
-    margin: 20px auto;
-    border-left: 6px solid #cda434;
-    background: #121212;
-    padding: 20px 15px 30px 15px;
-    box-sizing: border-box;
-    letter-spacing: 0.03em;
-  }
-  .header {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 14px;
-    font-weight: 700;
-    color: #cda434;
-    margin-bottom: 15px;
-  }
-  .match {
-    display: flex;
-    align-items: center;
-    border-top: 1px solid #333;
-    padding: 12px 0;
-  }
-  .match:first-child {
-    border-top: none;
-  }
-  .logos {
-    display: flex;
-    flex-shrink: 0;
-    gap: 10px;
-    width: 90px;
-    justify-content: center;
-    align-items: center;
-  }
-  .logos img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-  }
-  .teams {
-    flex: 1;
-    font-size: 16px;
-    color: #eee;
-    user-select: none;
-  }
-  .teams .local {
-    font-weight: 700;
-    color: #f7f7f7;
-  }
-  .teams .vs {
-    display: block;
-    font-size: 12px;
-    color: #777;
-    margin: 3px 0;
-  }
-  .teams .visitante {
-    font-weight: 600;
-    color: #cfcfcf;
-  }
-  .bottom {
-    margin-top: 25px;
-    border-top: 1px solid #333;
-    padding-top: 12px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    font-weight: 700;
-    color: #cda434;
-  }
-  .pick {
-    text-transform: uppercase;
-  }
-  .cuota {
-    font-family: 'Orbitron', monospace;
-    background: #222;
-    border-radius: 4px;
-    padding: 2px 8px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.85); --border: rgba(191, 149, 63, 0.35); --bg: #010409; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .header h1 { font-family: 'Orbitron'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 50px; }
+        .container { width: 100%; max-width: 1400px; display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+        .match-card { background: var(--glass); border: 1px solid var(--border); border-left: 6px solid #bf953f; border-radius: 25px; padding: 25px; width: 380px; box-shadow: 0 0 25px rgba(191,149,63,0.1); display: flex; flex-direction: column; transition: all 0.3s ease; position: relative; }
+        .match-card:hover { transform: translateY(-10px); }
+        .league-label { position: absolute; top: 15px; right: 25px; font-family: 'Orbitron'; font-size: 0.65rem; color: #bf953f; opacity: 0.7; }
+        .teams { display: flex; justify-content: space-around; align-items: center; margin: 20px 0; }
+        .team { text-align: center; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6)); border-radius: 50%; background: rgba(255,255,255,0.03); padding: 5px; }
+        .team span { display: block; font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; margin-top: 10px; }
+        .analysis-box { background: rgba(0, 0, 0, 0.25); border-radius: 12px; padding: 18px; margin-bottom: 25px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .analysis-box b { color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; display: block; margin-bottom: 10px; }
+        .analysis-box p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; }
+        .footer-line { display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; }
+        .pick-text { font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; text-transform: uppercase; font-weight: 900; }
+        .odds-pill { background: var(--gold); color: #000; padding: 10px 30px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; text-align: center; box-shadow: 0 5px 20px rgba(191,149,63,0.4); }
+        .vip-btn { margin-top: 60px; background: var(--gold); color: #000; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-family: 'Orbitron'; font-weight: 900; box-shadow: 0 0 30px rgba(191,149,63,0.3); transition: all 0.3s ease; }
+    </style>
 </head>
 <body>
-<div class="ticket" role="main" aria-label="Ticket de apuestas baloncesto Eurocup y Euroleague">
-  <div class="header" aria-label="Liga">
-    Eurocup
-  </div>
-
-  <div class="match" aria-label="Partido Bahcesehir Kol. contra Slask Wroclaw">
-    <div class="logos" aria-hidden="true">
-      <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Bahcesehir Kol." />
-      <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Slask Wroclaw" />
+    <div class="header"><h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1></div>
+    <div class="container">
+        <p style="font-family:'Orbitron'; font-size:1.2rem; color:#bf953f; opacity:0.6; text-align:center; width:100%;">Analizando Eventos 🔄</p>
     </div>
-    <div class="teams">
-      <span class="local">Bahcesehir Kol.</span>
-      <span class="vs">vs</span>
-      <span class="visitante">Slask Wroclaw</span>
-    </div>
-  </div>
-
-  <div class="header" aria-label="Liga">
-    Euroleague
-  </div>
-  <div class="match" aria-label="Partido Dubai contra Olympiacos">
-    <div class="logos" aria-hidden="true">
-      <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Dubai" />
-      <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Olympiacos" />
-    </div>
-    <div class="teams">
-      <span class="local">Dubai</span>
-      <span class="vs">vs</span>
-      <span class="visitante">Olympiacos</span>
-    </div>
-  </div>
-
-  <div class="match" aria-label="Partido Anadolu Efes contra Valencia">
-    <div class="logos" aria-hidden="true">
-      <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Anadolu Efes" />
-      <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Valencia" />
-    </div>
-    <div class="teams">
-      <span class="local">Anadolu Efes</span>
-      <span class="vs">vs</span>
-      <span class="visitante">Valencia</span>
-    </div>
-  </div>
-
-  <div class="match" aria-label="Partido Zalgiris Kaunas contra Monaco">
-    <div class="logos" aria-hidden="true">
-      <img src="https://media.api-sports.io/basketball/teams/796.png" alt="Zalgiris Kaunas" />
-      <img src="https://media.api-sports.io/basketball/teams/16.png" alt="Monaco" />
-    </div>
-    <div class="teams">
-      <span class="local">Zalgiris Kaunas</span>
-      <span class="vs">vs</span>
-      <span class="visitante">Monaco</span>
-    </div>
-  </div>
-
-  <div class="header" aria-label="Liga">
-    Eurocup
-  </div>
-  <div class="match" aria-label="Partido Ulm contra Buducnost">
-    <div class="logos" aria-hidden="true">
-      <img src="https://media.api-sports.io/basketball/teams/533.png" alt="Ulm" />
-      <img src="https://media.api-sports.io/basketball/teams/1615.png" alt="Buducnost" />
-    </div>
-    <div class="teams">
-      <span class="local">Ulm</span>
-      <span class="vs">vs</span>
-      <span class="visitante">Buducnost</span>
-    </div>
-  </div>
-
-  <div class="bottom" aria-label="Pick y cuota">
-    <div class="pick">No hay datos para apuesta</div>
-    <div class="cuota">N/A</div>
-  </div>
-</div>
+    <a href="https://im.page/cmsportselite" class="vip-btn">COMPRA EL ACCESO VIP</a>
 </body>
 </html>
