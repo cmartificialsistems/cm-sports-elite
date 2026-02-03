@@ -1,119 +1,334 @@
-<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #bf953f; border-radius: 20px; padding: 30px; margin-bottom: 30px; border-left: 8px solid #bf953f;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="https://media.api-sports.io/basketball/teams/143.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">Indiana Pacers</span>
-        </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.5; font-size: 1.2rem;">VS</div>
-        <div style="display: flex; align-items: center; gap: 15px; flex-direction: row-reverse;">
-            <img src="https://media.api-sports.io/basketball/teams/142.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">Houston Rockets</span>
-        </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CM SPORTS ELITE - Ticket Baloncesto</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@700&display=swap');
+  /* Variables de color dorado */
+  :root {
+    --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%);
+    --gold-color: #bf953f;
+    --gold-shadow: rgba(191, 149, 63, 0.7);
+    --red-subtle: rgba(150, 30, 30, 0.7);
+  }
+  /* Reset básico */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    background-color: #010409;
+    font-family: 'Inter', sans-serif;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  /* Animación float para logo */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+      filter: drop-shadow(0 4px 4px rgba(191, 149, 63, 0.75));
+    }
+    50% {
+      transform: translateY(-10px);
+      filter: drop-shadow(0 8px 8px rgba(191, 149, 63, 0.9));
+    }
+  }
+  /* Logo VIP */
+  .logo-vip {
+    width: 200px;
+    animation: float 4s ease-in-out infinite;
+    margin-bottom: 1rem;
+  }
+  /* Título principal */
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+    user-select: none;
+  }
+  /* Sección Injector */
+  #injector {
+    width: 100%;
+    max-width: 960px;
+    display: grid;
+    gap: 30px;
+  }
+  /* Tarjeta glassmorphism */
+  .card {
+    background: rgba(255, 255, 255, 0.12);
+    border-left: 6px solid var(--gold-color);
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    border-radius: 25px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px var(--gold-shadow);
+    transition: box-shadow 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 0 36px var(--gold-shadow);
+  }
+  /* Header tarjeta */
+  .card header {
+    background-color: var(--red-subtle);
+    border-radius: 15px;
+    padding: 7px 15px;
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffdddd;
+    user-select: none;
+  }
+  /* Grilla equipos */
+  .teams-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f3f2ee;
+  }
+  .team img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 3px var(--gold-color));
+    border-radius: 10px;
+    background: #101214;
+    padding: 3px;
+  }
+  .team-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .vs-text {
+    justify-self: center;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--gold-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    user-select: none;
+  }
+  /* Intel Box */
+  .intel-box {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #e0d8b0;
+    border-left: 5px solid var(--gold-color);
+    padding-left: 16px;
+    margin-bottom: 22px;
+    line-height: 1.3;
+    user-select: text;
+  }
+  /* Footer tarjeta */
+  .card footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .market-label {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--gold-color);
+    user-select: none;
+  }
+  /* Botón cuota dorada */
+  .btn-cuota {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: var(--gold-gradient);
+    border: none;
+    color: #1a1a1a;
+    padding: 10px 22px;
+    border-radius: 18px;
+    font-size: 1.25rem;
+    cursor: default;
+    box-shadow: 0 0 9px var(--gold-color);
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+  .btn-cuota:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 15px var(--gold-color);
+  }
+  /* Botón VIP final grande */
+  .btn-vip {
+    margin-top: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding: 18px 48px;
+    border-radius: 30px;
+    border: none;
+    background: var(--gold-gradient);
+    color: #1a1a1a;
+    box-shadow: 0 0 25px var(--gold-color);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    user-select: none;
+    transition: all 0.25s ease;
+  }
+  .btn-vip:hover {
+    filter: brightness(1.12);
+    box-shadow: 0 0 40px var(--gold-color);
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    .teams-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    .vs-text {
+      justify-self: start;
+      margin-bottom: 8px;
+    }
+    .card footer {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  }
+</style>
+</head>
+<body>
+<img src="IMAGENES/logo_vip_elite_gold.png" alt="Logo VIP CM SPORTS ELITE" class="logo-vip" />
+<h1>CM SPORTS ELITE</h1>
+<section id="injector">
+  <!-- Tarjeta 1 -->
+  <article class="card">
+    <header>ANÁLISIS DE VULNERABILIDAD RIVAL</header>
+    <div class="teams-grid" aria-label="Equipos partido 1">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/1264.png" alt="Logo Bahcesehir Kol." />
+        <span class="team-name">Bahcesehir Kol.</span>
+      </div>
+      <div class="vs-text" aria-hidden="true">VS</div>
+      <div class="team" style="justify-self: end;">
+        <span class="team-name">Slask Wroclaw</span>
+        <img src="https://media.api-sports.io/basketball/teams/914.png" alt="Logo Slask Wroclaw" />
+      </div>
     </div>
-    
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-        <div style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.3rem;"><b>Pick:</b> Indiana Pacers Ganador</div>
-        <div style="background: #bf953f; color: #000; padding: 8px 18px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.4rem; box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);">1.28</div>
+    <div class="intel-box">
+      <i>Bahcesehir Kol. mantiene una sólida racha ofensiva, mientras Slask Wroclaw ha mostrado debilidades en defensa en sus últimos encuentros.</i>
     </div>
-
-    <div style="font-family: 'Inter'; font-style: italic; color: #e2e8f0; line-height: 1.7; font-size: 1rem;">
-        <b>Debilidad Rival:</b> Houston Rockets presentan problemas defensivos en el perímetro, concediendo un 37% desde la línea de tres puntos.<br>
-        <b>Racha Reciente:</b> Indiana Pacers han ganado 7 de sus últimos 10 partidos, mostrando solidez ofensiva y defensa eficaz en transición.
+    <footer>
+      <span class="market-label">Mercado: Ganador del partido</span>
+      <button class="btn-cuota" type="button" aria-label="Cuota 1.28">1.28</button>
+    </footer>
+  </article>
+  <!-- Tarjeta 2 -->
+  <article class="card">
+    <header>ANÁLISIS DE VULNERABILIDAD RIVAL</header>
+    <div class="teams-grid" aria-label="Equipos partido 2">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/6496.png" alt="Logo Dubai" />
+        <span class="team-name">Dubai</span>
+      </div>
+      <div class="vs-text" aria-hidden="true">VS</div>
+      <div class="team" style="justify-self: end;">
+        <span class="team-name">Olympiacos</span>
+        <img src="https://media.api-sports.io/basketball/teams/1542.png" alt="Logo Olympiacos" />
+      </div>
     </div>
-</div>
-
-<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #bf953f; border-radius: 20px; padding: 30px; margin-bottom: 30px; border-left: 8px solid #bf953f;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="https://media.api-sports.io/basketball/teams/146.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">Memphis Grizzlies</span>
-        </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.5; font-size: 1.2rem;">VS</div>
-        <div style="display: flex; align-items: center; gap: 15px; flex-direction: row-reverse;">
-            <img src="https://media.api-sports.io/basketball/teams/149.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">Minnesota Timberwolves</span>
-        </div>
+    <div class="intel-box">
+      <i>Olympiacos presenta una defensa férrea, pero Dubai ha mejorado su efectividad en triples recientemente, presionando rivales.</i>
     </div>
-    
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-        <div style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.3rem;"><b>Pick:</b> Memphis Grizzlies Ganador</div>
-        <div style="background: #bf953f; color: #000; padding: 8px 18px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.4rem; box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);">1.33</div>
+    <footer>
+      <span class="market-label">Mercado: Ganador del partido</span>
+      <button class="btn-cuota" type="button" aria-label="Cuota 1.32">1.32</button>
+    </footer>
+  </article>
+  <!-- Tarjeta 3 -->
+  <article class="card">
+    <header>ANÁLISIS DE VULNERABILIDAD RIVAL</header>
+    <div class="teams-grid" aria-label="Equipos partido 3">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/1276.png" alt="Logo Tofas" />
+        <span class="team-name">Tofas</span>
+      </div>
+      <div class="vs-text" aria-hidden="true">VS</div>
+      <div class="team" style="justify-self: end;">
+        <span class="team-name">AEK Athens</span>
+        <img src="https://media.api-sports.io/basketball/teams/605.png" alt="Logo AEK Athens" />
+      </div>
     </div>
-
-    <div style="font-family: 'Inter'; font-style: italic; color: #e2e8f0; line-height: 1.7; font-size: 1rem;">
-        <b>Debilidad Rival:</b> Minnesota Timberwolves tienen dificultades defendiendo el poste bajo, concediendo un alto porcentaje de canastas cercanas.<br>
-        <b>Racha Reciente:</b> Memphis Grizzlies están en racha con 8 victorias en sus últimos 10 encuentros, destacando su defensa interior y control del rebote.
+    <div class="intel-box">
+      <i>AEK Athens ha tenido problemas en transición defensiva, mientras Tofas sigue aumentando su rendimiento en casa.</i>
     </div>
-</div>
-
-<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #bf953f; border-radius: 20px; padding: 30px; margin-bottom: 30px; border-left: 8px solid #bf953f;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="https://media.api-sports.io/basketball/teams/144.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">Los Angeles Clippers</span>
-        </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.5; font-size: 1.2rem;">VS</div>
-        <div style="display: flex; align-items: center; gap: 15px; flex-direction: row-reverse;">
-            <img src="https://media.api-sports.io/basketball/teams/154.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">Philadelphia 76ers</span>
-        </div>
+    <footer>
+      <span class="market-label">Mercado: Ganador del partido</span>
+      <button class="btn-cuota" type="button" aria-label="Cuota 1.25">1.25</button>
+    </footer>
+  </article>
+  <!-- Tarjeta 4 -->
+  <article class="card">
+    <header>ANÁLISIS DE VULNERABILIDAD RIVAL</header>
+    <div class="teams-grid" aria-label="Equipos partido 4">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/1263.png" alt="Logo Anadolu Efes" />
+        <span class="team-name">Anadolu Efes</span>
+      </div>
+      <div class="vs-text" aria-hidden="true">VS</div>
+      <div class="team" style="justify-self: end;">
+        <span class="team-name">Valencia</span>
+        <img src="https://media.api-sports.io/basketball/teams/2341.png" alt="Logo Valencia" />
+      </div>
     </div>
-    
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-        <div style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.3rem;"><b>Pick:</b> Philadelphia 76ers Ganador</div>
-        <div style="background: #bf953f; color: #000; padding: 8px 18px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.4rem; box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);">1.25</div>
+    <div class="intel-box">
+      <i>Valencia muestra inconsistencias en defensa, y Anadolu Efes ha convertido el juego interior en su mayor fortaleza.</i>
     </div>
-
-    <div style="font-family: 'Inter'; font-style: italic; color: #e2e8f0; line-height: 1.7; font-size: 1rem;">
-        <b>Debilidad Rival:</b> Clippers tienen una defensa irregular que permite un 45% de efectividad en tiros de campo al rival.<br>
-        <b>Racha Reciente:</b> Philadelphia 76ers vienen con 6 triunfos en sus últimos 10 partidos, mostrando consistencia en defensa y puntería en triples.
+    <footer>
+      <span class="market-label">Mercado: Ganador del partido</span>
+      <button class="btn-cuota" type="button" aria-label="Cuota 1.29">1.29</button>
+    </footer>
+  </article>
+  <!-- Tarjeta 5 -->
+  <article class="card">
+    <header>ANÁLISIS DE VULNERABILIDAD RIVAL</header>
+    <div class="teams-grid" aria-label="Equipos partido 5">
+      <div class="team">
+        <img src="https://media.api-sports.io/basketball/teams/533.png" alt="Logo Ulm" />
+        <span class="team-name">Ulm</span>
+      </div>
+      <div class="vs-text" aria-hidden="true">VS</div>
+      <div class="team" style="justify-self: end;">
+        <span class="team-name">Buducnost</span>
+        <img src="https://media.api-sports.io/basketball/teams/1615.png" alt="Logo Buducnost" />
+      </div>
     </div>
-</div>
-
-<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #bf953f; border-radius: 20px; padding: 30px; margin-bottom: 30px; border-left: 8px solid #bf953f;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="https://media.api-sports.io/basketball/teams/1276.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">Tofas</span>
-        </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.5; font-size: 1.2rem;">VS</div>
-        <div style="display: flex; align-items: center; gap: 15px; flex-direction: row-reverse;">
-            <img src="https://media.api-sports.io/basketball/teams/605.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">AEK Athens</span>
-        </div>
+    <div class="intel-box">
+      <i>Buducnost ha mostrado desgaste en partidos seguidos, Ulm aprovecha la localía para incrementar presión ofensiva.</i>
     </div>
-    
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-        <div style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.3rem;"><b>Pick:</b> Tofas Ganador</div>
-        <div style="background: #bf953f; color: #000; padding: 8px 18px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.4rem; box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);">1.30</div>
-    </div>
-
-    <div style="font-family: 'Inter'; font-style: italic; color: #e2e8f0; line-height: 1.7; font-size: 1rem;">
-        <b>Debilidad Rival:</b> AEK Athens muestra vulnerabilidad defendiendo jugadas en el pick and roll, permitiendo penetraciones frecuentes.<br>
-        <b>Racha Reciente:</b> Tofas registra 7 victorias en sus últimos 10 encuentros, con un ataque efectivo y buena defensa colectiva.
-    </div>
-</div>
-
-<div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #bf953f; border-radius: 20px; padding: 30px; margin-bottom: 30px; border-left: 8px solid #bf953f;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="https://media.api-sports.io/basketball/teams/1263.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">Anadolu Efes</span>
-        </div>
-        <div style="font-family: 'Orbitron'; color: #bf953f; opacity: 0.5; font-size: 1.2rem;">VS</div>
-        <div style="display: flex; align-items: center; gap: 15px; flex-direction: row-reverse;">
-            <img src="https://media.api-sports.io/basketball/teams/2341.png" style="width: 55px; height: 55px; object-fit: contain;">
-            <span style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.1rem; font-weight: bold;">Valencia</span>
-        </div>
-    </div>
-    
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-        <div style="font-family: 'Orbitron'; color: #bf953f; font-size: 1.3rem;"><b>Pick:</b> Anadolu Efes Ganador</div>
-        <div style="background: #bf953f; color: #000; padding: 8px 18px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.4rem; box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);">1.29</div>
-    </div>
-
-    <div style="font-family: 'Inter'; font-style: italic; color: #e2e8f0; line-height: 1.7; font-size: 1rem;">
-        <b>Debilidad Rival:</b> Valencia sufre en la defensa del pick and roll y la presión en el balón, aumentando pérdidas de balón.<br>
-        <b>Racha Reciente:</b> Anadolu Efes ha ganado 8 de sus últimos 10 partidos, destacando su defensa agresiva y ofensiva balanceada.
-    </div>
-</div>
+    <footer>
+      <span class="market-label">Mercado: Ganador del partido</span>
+      <button class="btn-cuota" type="button" aria-label="Cuota 1.21">1.21</button>
+    </footer>
+  </article>
+</section>
+<a href="https://im.page/cmsportselite" target="_blank" rel="noopener" class="btn-vip" role="button" aria-label="Acceder a CM Sports Elite VIP">¡ACTIVA TU VIP AQUÍ!</a>
+</body>
+</html>
