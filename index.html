@@ -2,86 +2,117 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TICKET DE INTELIGENCIA ARTIFICIAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
-        .ticket { max-width: 600px; margin: auto; border: 2px solid #333; border-radius: 10px; background: #fff; padding: 20px; }
-        .partido { margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-        .equipos { display: flex; justify-content: space-between; align-items: center; }
-        .logo { width: 50px; }
-        h2 { text-align: center; }
-        .cuota { font-weight: bold; }
+        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.85); --border: rgba(191, 149, 63, 0.35); --bg: #010409; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .header h1 { font-family: 'Orbitron'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 50px; }
+        .container { width: 100%; max-width: 1400px; display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+        .match-card { background: var(--glass); border: 1px solid var(--border); border-left: 6px solid #bf953f; border-radius: 25px; padding: 25px; width: 380px; box-shadow: 0 0 25px rgba(191,149,63,0.1); display: flex; flex-direction: column; transition: all 0.3s ease; position: relative; }
+        .match-card:hover { transform: translateY(-10px); }
+        .league-label { position: absolute; top: 15px; right: 25px; font-family: 'Orbitron'; font-size: 0.65rem; color: #bf953f; opacity: 0.7; }
+        .teams { display: flex; justify-content: space-around; align-items: center; margin: 20px 0; }
+        .team { text-align: center; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6)); border-radius: 50%; background: rgba(255,255,255,0.03); padding: 5px; }
+        .team span { display: block; font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; margin-top: 10px; }
+        .analysis { background: rgba(0, 0, 0, 0.25); border-radius: 12px; padding: 18px; margin-bottom: 25px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .analysis b { color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; display: block; margin-bottom: 10px; }
+        .analysis p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; }
+        .footer-line { display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; }
+        .pick-text { font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; text-transform: uppercase; font-weight: 900; }
+        .odds-pill { background: var(--gold); color: #000; padding: 10px 30px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; text-align: center; box-shadow: 0 5px 20px rgba(191,149,63,0.4); }
+        .vip-btn { margin-top: 60px; background: var(--gold); color: #000; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-family: 'Orbitron'; font-weight: 900; box-shadow: 0 0 30px rgba(191,149,63,0.3); transition: all 0.3s ease; }
     </style>
 </head>
 <body>
-    <div class="ticket">
-        <h2>TICKET DE INTELIGENCIA ARTIFICIAL</h2>
-        <div class="partido">
-            <div class="equipos">
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/717.png" alt="Brescia" class="logo">
-                    <strong>Brescia</strong>
-                </div>
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/732.png" alt="Virtus Bologna" class="logo">
-                    <strong>Virtus Bologna</strong>
-                </div>
+    <div class="header"><h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1></div>
+    <div class="container">
+        <article class="match-card">
+            <div class="league-label">Lega A</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/717.png"><span>Brescia</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/732.png"><span>Virtus Bologna</span></div>
             </div>
-            <div class="cuota">Winner: Virtus Bologna (cuota 1.25) - Gran capacidad ofensiva, promediando más de 85 puntos por partido en sus últimos cinco encuentros.</div>
-        </div>
-        <div class="partido">
-            <div class="equipos">
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/728.png" alt="Treviso" class="logo">
-                    <strong>Treviso</strong>
-                </div>
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/722.png" alt="Olimpia Milano" class="logo">
-                    <strong>Olimpia Milano</strong>
-                </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>Victoria de Virtus Bologna:</b> Brescia muestra una baja eficiencia defensiva en la pintura, permitiendo demasiados puntos cerca del aro, mientras que Virtus se encuentra en una buena racha ofensiva, acumulando más de 90 puntos en sus últimos 4 partidos.</p>
             </div>
-            <div class="cuota">Handicap: Olimpia Milano -5 (cuota 1.30) - Defensa sólida, permitiendo solo un 45% de tiros de campo en los últimos partidos.</div>
-        </div>
-        <div class="partido">
-            <div class="equipos">
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/1863.png" alt="Chicago State" class="logo">
-                    <strong>Chicago State</strong>
-                </div>
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/201.png" alt="St. Francis (PA)" class="logo">
-                    <strong>St. Francis (PA)</strong>
-                </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Winner</div>
+                <div class="odds-pill">1.30</div>
             </div>
-            <div class="cuota">Totales: Más de 150.5 (cuota 1.35) - Ambos equipos han superado este total en sus últimos partidos juntos.</div>
-        </div>
-        <div class="partido">
-            <div class="equipos">
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/1844.png" alt="Bucknell" class="logo">
-                    <strong>Bucknell</strong>
-                </div>
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/2029.png" alt="Navy" class="logo">
-                    <strong>Navy</strong>
-                </div>
+        </article>
+        
+        <article class="match-card">
+            <div class="league-label">Lega A</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/728.png"><span>Treviso</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/722.png"><span>Olimpia Milano</span></div>
             </div>
-            <div class="cuota">Winner: Bucknell (cuota 1.20) - Tienen ventaja en la pintura donde Navy sufre con las bajas.</div>
-        </div>
-        <div class="partido">
-            <div class="equipos">
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/2127.png" alt="St. John's" class="logo">
-                    <strong>St. John's (N.Y.)</strong>
-                </div>
-                <div>
-                    <img src="https://media.api-sports.io/basketball/teams/207.png" alt="Xavier" class="logo">
-                    <strong>Xavier</strong>
-                </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>Victoria de Olimpia Milano:</b> Treviso ha sido inconsistente en su defensa, permitiendo un alto número de triples a sus oponentes, lo que Olimpia Milano puede capitalizar al ser uno de los mejores equipos en disparos desde el perímetro.</p>
             </div>
-            <div class="cuota">Handicap: St. John's +4 (cuota 1.25) - Han demostrado ser competitivos en sus últimos encuentros, incluso contra equipos fuertes.</div>
-        </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Winner</div>
+                <div class="odds-pill">1.25</div>
+            </div>
+        </article>
+        
+        <article class="match-card">
+            <div class="league-label">NCAA</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1863.png"><span>Chicago State</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/201.png"><span>St. Francis (PA)</span></div>
+            </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>Victoria de St. Francis (PA):</b> Chicago State ha mostrado debilidades en el rebote defensivo, lo que permite segundas oportunidades, mientras que St. Francis ha tenido una racha de anotación sólida en sus últimos 5 juegos, promediando más de 80 puntos.</p>
+            </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Winner</div>
+                <div class="odds-pill">1.28</div>
+            </div>
+        </article>
+        
+        <article class="match-card">
+            <div class="league-label">NCAA</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1844.png"><span>Bucknell</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2029.png"><span>Navy</span></div>
+            </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>Victoria de Navy:</b> Bucknell tiene problemas defensivos, permitiendo +80 puntos en sus últimos partidos, mientras que Navy ha mostrado buena consistencia en la ofensiva, superando los 75 puntos en sus últimas 3 salidas.</p>
+            </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Winner</div>
+                <div class="odds-pill">1.33</div>
+            </div>
+        </article>
+
+        <article class="match-card">
+            <div class="league-label">NCAA</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2127.png"><span>St. John's (N.Y.)</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/207.png"><span>Xavier</span></div>
+            </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>Victoria de Xavier:</b> St. John's ha tenido problemas con su defensa, permitiendo un gran número de puntos en transiciones rápidas, mientras que Xavier ha logrado anotar consistentemente en los últimos partidos, promediando bien por encima de 80 puntos.</p>
+            </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Winner</div>
+                <div class="odds-pill">1.31</div>
+            </div>
+        </article>
     </div>
+    <a href="https://im.page/cmsportselite" class="vip-btn">COMPRA EL ACCESO VIP</a>
 </body>
 </html>
