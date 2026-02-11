@@ -4,47 +4,115 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.95); --border: rgba(191, 149, 63, 0.4); --bg: #010409; }
+        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.85); --border: rgba(191, 149, 63, 0.35); --bg: #010409; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .header h1 { font-family: 'Orbitron'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 50px; text-align: center; }
-        .ticket { background: var(--glass); border-radius: 15px; padding: 20px; box-shadow: 0 5px 10px var(--border); width: 100%; max-width: 600px; }
-        .partido { margin-bottom: 15px; }
-        .partido img { width: 40px; vertical-align: middle; margin-right: 10px; }
-        .partido h2 { font-size: 1.5rem; display: inline; }
-        .cuota { font-weight: bold; color: #ffc107; }
+        .header h1 { font-family: 'Orbitron'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 50px; }
+        .container { width: 100%; max-width: 1400px; display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+        .match-card { background: var(--glass); border: 1px solid var(--border); border-left: 6px solid #bf953f; border-radius: 25px; padding: 25px; width: 380px; box-shadow: 0 0 25px rgba(191,149,63,0.1); display: flex; flex-direction: column; transition: all 0.3s ease; position: relative; }
+        .match-card:hover { transform: translateY(-10px); }
+        .league-label { position: absolute; top: 15px; right: 25px; font-family: 'Orbitron'; font-size: 0.65rem; color: #bf953f; opacity: 0.7; }
+        .teams { display: flex; justify-content: space-around; align-items: center; margin: 20px 0; }
+        .team { text-align: center; }
+        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6)); border-radius: 50%; background: rgba(255,255,255,0.03); padding: 5px; }
+        .team span { display: block; font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; margin-top: 10px; }
+        .analysis { background: rgba(0, 0, 0, 0.25); border-radius: 12px; padding: 18px; margin-bottom: 25px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .analysis b { color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; display: block; margin-bottom: 10px; }
+        .analysis p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; }
+        .footer-line { display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; }
+        .pick-text { font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; text-transform: uppercase; font-weight: 900; }
+        .odds-pill { background: var(--gold); color: #000; padding: 10px 30px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; text-align: center; box-shadow: 0 5px 20px rgba(191,149,63,0.4); }
+        .vip-btn { margin-top: 60px; background: var(--gold); color: #000; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-family: 'Orbitron'; font-weight: 900; box-shadow: 0 0 30px rgba(191,149,63,0.3); transition: all 0.3s ease; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🎟️ Ticket de Inteligencia Artificial 🎟️</h1>
+    <div class="header"><h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1></div>
+    <div class="container">
+        <article class="match-card">
+            <div class="league-label">BBL</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/526.png"><span>Frankfurt</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/535.png"><span>Trier</span></div>
+            </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>Ganador Frankfurt:</b> Frankfurt muestra una sólida eficiencia ofensiva, anotando un promedio de 85 puntos por juego, mientras que Trier permite una alta media de puntos debido a su débil defensa perimetral.</p>
+            </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Ganador Frankfurt</div>
+                <div class="odds-pill">1.25</div>
+            </div>
+        </article>
+        
+        <article class="match-card">
+            <div class="league-label">NCAA</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1820.png"><span>Army</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1922.png"><span>Boston University</span></div>
+            </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>Ganador Army:</b> Army ha mostrado una gran consistencia en su juego, con una racha de 5 partidos superando los 75 puntos, mientras que Boston University ha luchado en defensa permitiendo demasiados puntos en la segunda mitad.</p>
+            </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Ganador Army</div>
+                <div class="odds-pill">1.30</div>
+            </div>
+        </article>
+
+        <article class="match-card">
+            <div class="league-label">NCAA</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1936.png"><span>Holy Cross</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1945.png"><span>Colgate</span></div>
+            </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>TOTAL Más de 145.5:</b> Ambos equipos han demostrado ser ofensivamente poderosos, con Holy Cross permitiendo un promedio de 80 puntos por juego en sus últimos 5 partidos.</p>
+            </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Más de 145.5</div>
+                <div class="odds-pill">1.20</div>
+            </div>
+        </article>
+
+        <article class="match-card">
+            <div class="league-label">NCAA</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1985.png"><span>Maryland</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1998.png"><span>Iowa</span></div>
+            </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>Ganador Maryland:</b> Maryland ha estado en una racha impresionante de ataques, anotando más de 80 puntos en sus últimos 3 encuentros, y Iowa permite altos totales en los partidos.</p>
+            </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Ganador Maryland</div>
+                <div class="odds-pill">1.35</div>
+            </div>
+        </article>
+
+        <article class="match-card">
+            <div class="league-label">NCAA</div>
+            <div class="teams">
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2199.png"><span>Western Carolina</span></div>
+                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2201.png"><span>Citadel</span></div>
+            </div>
+            <div class="analysis">
+                <b>ANÁLISIS PROFESIONAL:</b>
+                <p><b>Ganador Western Carolina:</b> Western Carolina presenta una notable defensa, limitando a sus rivales a menos de 70 puntos en sus últimos 4 partidos, un claro factor en su ventaja sobre Citadel.</p>
+            </div>
+            <div class="footer-line">
+                <div class="pick-text">PICK: Ganador Western Carolina</div>
+                <div class="odds-pill">1.30</div>
+            </div>
+        </article>
     </div>
-    <div class="ticket">
-        <div class="partido">
-            <img src="https://media.api-sports.io/basketball/teams/526.png" alt="Frankfurt logo">
-            <h2>Frankfurt vs Trier</h2>
-            <p class="cuota">Winner: 1.25 | Handicaps: -5.5 | Totales: 162.5</p>
-        </div>
-        <div class="partido">
-            <img src="https://media.api-sports.io/basketball/teams/1820.png" alt="Army logo">
-            <h2>Army vs Boston University</h2>
-            <p class="cuota">Winner: 1.30 | Handicaps: -3.5 | Totales: 150.5</p>
-        </div>
-        <div class="partido">
-            <img src="https://media.api-sports.io/basketball/teams/1936.png" alt="Holy Cross logo">
-            <h2>Holy Cross vs Colgate</h2>
-            <p class="cuota">Winner: 1.32 | Handicaps: +2.5 | Totales: 158.5</p>
-        </div>
-        <div class="partido">
-            <img src="https://media.api-sports.io/basketball/teams/1985.png" alt="Maryland logo">
-            <h2>Maryland vs Iowa</h2>
-            <p class="cuota">Winner: 1.27 | Handicaps: -4.5 | Totales: 165.5</p>
-        </div>
-        <div class="partido">
-            <img src="https://media.api-sports.io/basketball/teams/2199.png" alt="Western Carolina logo">
-            <h2>Western Carolina vs Citadel</h2>
-            <p class="cuota">Winner: 1.35 | Handicaps: -6.5 | Totales: 155.5</p>
-        </div>
-    </div>
+    <a href="https://im.page/cmsportselite" class="vip-btn">COMPRA EL ACCESO VIP</a>
 </body>
 </html>
