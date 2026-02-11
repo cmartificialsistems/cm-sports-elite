@@ -13,20 +13,20 @@
         .match-card { background: var(--card-bg); border-left: 5px solid #bf953f; border-radius: 25px; padding: 30px; width: 440px; position: relative; box-shadow: 0 15px 50px rgba(0,0,0,0.6); display: flex; flex-direction: column; border-top: 1px solid rgba(191,149,63,0.1); }
         .match-header { display: flex; justify-content: flex-end; margin-bottom: 25px; }
         .pred-pill { display: flex; align-items: center; gap: 8px; }
-        .pred-pill .text { color: #10b981; font-family: 'Orbitron'; font-weight: 900; font-size: 1rem; }
+        .pred-pill .text { color: #10b981; font-family: 'Orbitron'; font-weight: 900; font-size: 0.95rem; }
         .pred-pill .odd { border: 1px solid #10b981; border-radius: 6px; color: #10b981; padding: 3px 12px; font-weight: 700; font-size: 0.85rem; }
         .teams-row { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 30px; padding: 0 10px; }
-        .team { display: flex; flex-direction: column; align-items: center; width: 120px; }
-        .team img { width: 75px; height: 75px; object-fit: contain; margin-bottom: 15px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); }
+        .team { display: flex; flex-direction: column; align-items: center; width: 125px; }
+        .team img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 15px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); }
         .team span { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 900; color: #fff; text-align: center; text-transform: uppercase; }
         .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; opacity: 0.3; font-size: 1.4rem; }
         .neural-box { background: rgba(0,0,0,0.4); border: 1px solid rgba(191,149,63,0.2); border-radius: 15px; padding: 20px; margin-bottom: 25px; position: relative; border-left: 3px solid #bf953f; }
         .neural-box h3 { font-family: 'Orbitron'; color: #bf953f; font-size: 0.6rem; margin-bottom: 10px; border-bottom: 1px solid rgba(191,149,63,0.3); padding-bottom: 5px; display: inline-block; }
-        .neural-box p { font-size: 0.9rem; color: #cbd5e1; line-height: 1.5; margin: 0; }
+        .neural-box p { font-size: 0.9rem; color: #cbd5e1; line-height: 1.6; margin: 0; text-align: justify; }
         .vulnerability-alert { background: rgba(239, 68, 68, 0.1); border-radius: 8px; color: #f87171; font-family: 'Orbitron'; font-weight: 900; font-size: 0.7rem; padding: 12px 18px; width: fit-content; text-transform: uppercase; border: 1px solid rgba(239, 68, 68, 0.2); }
         .progress-bar { height: 5px; width: 100%; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 25px; overflow: hidden; }
         .progress-bar .fill { height: 100%; width: 94%; background: linear-gradient(90deg, #facc15, #22c55e); }
-        .vip-button { background: var(--gold); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 18px 55px; border-radius: 50px; text-decoration: none; margin-top: 60px; font-size: 1.3rem; box-shadow: 0 0 40px rgba(191,149,63,0.4); text-transform: uppercase; }
+        .vip-button { background: var(--gold); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 18px 55px; border-radius: 50px; text-decoration: none; margin-top: 60px; font-size: 1.3rem; box-shadow: 0 0 40px rgba(191,149,63,0.4); text-transform: uppercase; text-align: center; }
     </style>
 </head>
 <body>
@@ -35,86 +35,86 @@
     <div class="container">
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Winner</span><span class="odd">1.25</span></div>
+                <div class="pred-pill"><span class="text">Winner Army</span><span class="odd">1.25</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/1820.png"><span>Army</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1975.png"><span>Boston University</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2083.png"><span>Boston University</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>El equipo local tiene ventaja en casa con un mejor porcentaje de tiros.</p>
+                <p>Army ha mostrado un 61% de efectividad en sus últimos 5 partidos, mientras que Boston University tiene un 37%. Su promedio de puntos por partido en casa también supera a sus rivales. La baja de un jugador clave en Boston afecta su rendimiento crítico.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Bajo rendimiento defensivo</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Diferencia en puntos permitidos.</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
-        
+
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Handicap</span><span class="odd">1.30</span></div>
+                <div class="pred-pill"><span class="text">Winner Holy Cross</span><span class="odd">1.30</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/1936.png"><span>Holy Cross</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2154.png"><span>Colgate</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2140.png"><span>Colgate</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Batalla reñida, pero Holy Cross tiene el impulso de su afición.</p>
+                <p>Holy Cross tiene una racha de 4 victorias en sus últimos 5 partidos, mientras que Colgate ha promediado un 45% en tiros. Con alineaciones completas, el rendimiento local es notablemente superior, sobre todo en rebotes.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Lesiones en la plantilla</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Tiro libre inconsistente.</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
-        
+
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Totales</span><span class="odd">1.20</span></div>
+                <div class="pred-pill"><span class="text">Handicap Maryland -4.5</span><span class="odd">1.35</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/1985.png"><span>Maryland</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2056.png"><span>Iowa</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1988.png"><span>Iowa</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Se anticipa un encuentro con muchos puntos basados en su ofensiva.</p>
+                <p>Maryland ha dominado en las últimas semanas con un 58% de efectividad en tiros, mientras que Iowa lucha con la defensa. La baja del jugador más anotador de Iowa reduce la presión sobre Maryland en esta competición.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Defensa débil en última línea</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Defensa débil ante ataques rápidos.</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
 
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Winner</span><span class="odd">1.35</span></div>
+                <div class="pred-pill"><span class="text">Totals Over 145.5</span><span class="odd">1.20</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/2199.png"><span>Western Carolina</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2019.png"><span>Citadel</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2173.png"><span>Citadel</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Western Carolina se presenta fuerte en su casa, ventaja estratégica.</p>
+                <p>Ambos equipos han superado este total en 6 de sus últimos 7 enfrentamientos. Western Carolina presenta alta eficiencia en ataque, lo que aumenta la probabilidad de un partido de alta puntuación.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Resultados inconsistente</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Control del ritmo del juego.</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
 
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Handicap</span><span class="odd">1.28</span></div>
+                <div class="pred-pill"><span class="text">Handicap Ohio State -3.5</span><span class="odd">1.25</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/2058.png"><span>Ohio State</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1970.png"><span>USC</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2180.png"><span>USC</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Ohio State tiene un buen historial ante USC, se espera un buen desempeño.</p>
+                <p>Ohio State se presenta como favorito con un 70% de triunfos en casa y USC ha tenido dificultades para contener ataques defensivos rápidos. La combinación de estos factores sugiere una victoria considerable para el local.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Estrategia defensiva predecible</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Presión defensiva ineficaz.</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
     </div>
