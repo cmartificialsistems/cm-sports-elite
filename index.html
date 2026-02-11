@@ -11,108 +11,108 @@
         .quantum-pill { border: 1px solid #bf953f; background: rgba(0,0,0,0.8); color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; padding: 10px 25px; border-radius: 50px; margin-bottom: 50px; letter-spacing: 2px; text-transform: uppercase; }
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 1400px; }
         .match-card { background: var(--card-bg); border-left: 5px solid #bf953f; border-radius: 25px; padding: 30px; width: 440px; position: relative; box-shadow: 0 15px 50px rgba(0,0,0,0.6); display: flex; flex-direction: column; border-top: 1px solid rgba(191,149,63,0.1); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .match-card:hover { transform: translateY(-15px) scale(1.02); box-shadow: 0 30px 70px rgba(191,149,63,0.25); border-color: #fcf6ba; }
+        .match-card:hover { transform: translateY(-15px) rotateX(2deg); box-shadow: 0 35px 80px rgba(191,149,63,0.3); border-color: #fcf6ba; cursor: pointer; }
         .match-header { display: flex; justify-content: flex-end; margin-bottom: 25px; }
         .pred-pill { display: flex; align-items: center; gap: 8px; }
         .pred-pill .text { color: #10b981; font-family: 'Orbitron'; font-weight: 900; font-size: 0.95rem; }
-        .pred-pill .odd { border: 1px solid #10b981; border-radius: 6px; color: #10b981; padding: 3px 12px; font-weight: 700; font-size: 0.85rem; }
-        .teams-row { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 30px; }
+        .pred-pill .odd { border: 1px solid #10b981; border-radius: 6px; color: #10b981; padding: 3px 12px; font-weight: 700; font-size: 0.85rem; background: rgba(16, 185, 129, 0.05); }
+        .teams-row { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 30px; padding: 0 10px; }
         .team { display: flex; flex-direction: column; align-items: center; width: 125px; }
-        .team img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 15px; }
+        .team img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 15px; filter: drop-shadow(0 5px 20px rgba(0,0,0,0.4)); }
         .team span { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 900; color: #fff; text-align: center; text-transform: uppercase; }
         .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; opacity: 0.3; font-size: 1.4rem; }
-        .neural-box { background: rgba(0,0,0,0.4); border: 1px solid rgba(191,149,63,0.2); border-radius: 15px; padding: 20px; margin-bottom: 25px; border-left: 3px solid #bf953f; }
-        .neural-box h3 { font-family: 'Orbitron'; color: #bf953f; font-size: 0.6rem; margin-bottom: 10px; border-bottom: 1px solid rgba(191,149,63,0.3); padding-bottom: 5px; display: inline-block; }
-        .neural-box p { font-size: 0.9rem; color: #cbd5e1; line-height: 1.6; margin: 0; text-align: justify; }
-        .vulnerability-alert { background: rgba(239, 68, 68, 0.1); border-radius: 8px; color: #f87171; font-family: 'Orbitron'; font-weight: 900; font-size: 0.7rem; padding: 12px 18px; width: fit-content; text-transform: uppercase; }
-        .progress-bar { height: 5px; width: 100%; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 25px; overflow: hidden; }
-        .progress-bar .fill { height: 100%; width: 94%; background: linear-gradient(90deg, #facc15, #22c55e); }
-        .vip-button { background: var(--gold); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 18px 55px; border-radius: 50px; text-decoration: none; margin-top: 60px; font-size: 1.3rem; box-shadow: 0 0 40px rgba(191,149,63,0.4); text-align: center; }
+        .neural-box { background: rgba(0,0,0,0.4); border: 1px solid rgba(191,149,63,0.2); border-radius: 15px; padding: 22px; margin-bottom: 25px; border-left: 3px solid #bf953f; }
+        .neural-box h3 { font-family: 'Orbitron'; color: #bf953f; font-size: 0.6rem; margin-bottom: 12px; border-bottom: 1px solid rgba(191,149,63,0.3); padding-bottom: 5px; display: inline-block; letter-spacing: 1px; }
+        .neural-box p { font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin: 0; text-align: justify; }
+        .vulnerability-alert { background: rgba(239, 68, 68, 0.1); border-radius: 10px; color: #f87171; font-family: 'Orbitron'; font-weight: 900; font-size: 0.7rem; padding: 14px 20px; width: fit-content; text-transform: uppercase; border: 1px solid rgba(239, 68, 68, 0.2); }
+        .progress-bar { height: 6px; width: 100%; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 25px; overflow: hidden; }
+        .progress-bar .fill { height: 100%; width: 90%; background: linear-gradient(90deg, #facc15, #22c55e); box-shadow: 0 0 10px rgba(34, 197, 94, 0.4); }
+        .vip-button { background: var(--gold); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 20px 60px; border-radius: 50px; text-decoration: none; margin-top: 70px; font-size: 1.4rem; box-shadow: 0 0 50px rgba(191,149,63,0.4); text-transform: uppercase; transition: transform 0.3s ease; }
+        .vip-button:hover { transform: scale(1.05); }
     </style>
 </head>
 <body>
     <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="logo-vip">
     <div class="quantum-pill">ALGORITMO CUANTICO: ACTIVO</div>
     <div class="container">
-        <!-- 5 tarjetas -->
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Winner</span><span class="odd">1.25</span></div>
+                <div class="pred-pill"><span class="text">Winner Army</span><span class="odd">1.25</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/1820.png"><span>Army</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1936.png"><span>Boston University</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1968.png"><span>Boston University</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Army ha mostrado solidez en defensa y ofensa. Su capacidad para controlar el ritmo del juego es destacable, lo que les da ventaja sobre Boston University.</p>
+                <p>Army ha tenido un inicio sólido en casa, apoyado por una defensa que domina en la pintura. Boston University, aunque competitivo, presenta debilidades defensivas cruciales que pueden ser explotadas.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Inconsistencia en tiros a larga distancia</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Defensa débil en la pintura</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Winner</span><span class="odd">1.30</span></div>
+                <div class="pred-pill"><span class="text">Winner Holy Cross</span><span class="odd">1.30</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/1936.png"><span>Holy Cross</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1820.png"><span>Colgate</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1985.png"><span>Colgate</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Holy Cross ha mejorado en sus estrategias ofensivas y defensivas, mostrando una tendencia a dominar en partidos cerrados. Este encuentro será clave para reafirmar su potencial.</p>
+                <p>Holy Cross presenta un juego ofensivo más equilibrado, lo que les otorga una ligera ventaja. Colgate tiene problemas para frenar a los equipos que ejecutan bien el pick and roll, y este podría ser su talón de Aquiles.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Problemas en el rebote defensivo</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Vulnerabilidad en el pick and roll</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Handicap</span><span class="odd">1.35</span></div>
+                <div class="pred-pill"><span class="text">Winner Maryland</span><span class="odd">1.35</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/1985.png"><span>Maryland</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2199.png"><span>Iowa</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1820.png"><span>Iowa</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Maryland destaca en su ataque veloz, lo cual les permite capitalizar en transiciones rápidas. La defensa de Iowa podría ser desbordada si no ajustan su estrategia.</p>
+                <p>Maryland se muestra feroz en su desempeño en casa, y su defensa ha mejorado significativamente, lo que les brinda una ventaja sobre Iowa, que lucha por mantener el ritmo en partidos intensos.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Vulnerabilidad en defensa rápida</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Consistencia a la defensiva</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Total</span><span class="odd">1.28</span></div>
+                <div class="pred-pill"><span class="text">Winner Western Carolina</span><span class="odd">1.25</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/2199.png"><span>Western Carolina</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2058.png"><span>Citadel</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1968.png"><span>Citadel</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Western Carolina tiene un ataque versátil con jugadores capaces de crear su propio tiro. Esto podría llevar a un partido con más puntos en total frente a Citadel.</p>
+                <p>Western Carolina ha mostrado un juego sólido en casa y su capacidad para atacar desde la línea de tres pone en jaque a Citadel, que tiene problemas defensivos en la perimetral.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Fluctuaciones en la defensa de perímetro</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Defensa débil en el perímetro</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Handicap</span><span class="odd">1.22</span></div>
+                <div class="pred-pill"><span class="text">Winner Ohio State</span><span class="odd">1.30</span></div>
             </div>
             <div class="teams-row">
                 <div class="team"><img src="https://media.api-sports.io/basketball/teams/2058.png"><span>Ohio State</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1968.png"><span>USC</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1985.png"><span>USC</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Ohio State ha demostrado ser un equipo difícil de superar, con una defensa sólida. Existe una alta probabilidad de que logren superar el handicap frente a USC.</p>
+                <p>Ohio State ha demostrado ser consistente, con un juego rápido que ha dejado atrás a muchos de sus oponentes. USC enfrenta dificultades a la hora de mantener el ritmo que este equipo propone.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Dificultades en el juego interior</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Dificultades con el ritmo de juego</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
     </div>
