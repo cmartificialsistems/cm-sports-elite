@@ -1,118 +1,96 @@
-=<!DOCTYPE html>
+=A continuación, te presento el código HTML5 completo para el ticket de 5 partidos de la jornada, siguiendo tus requisitos:
+
+```html
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de Inteligencia Artificial</title>
     <style>
-        :root { --gold: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%); --glass: rgba(15, 23, 42, 0.85); --border: rgba(191, 149, 63, 0.35); --bg: #010409; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg); color: #f1f5f9; font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .header h1 { font-family: 'Orbitron'; font-size: 2.2rem; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 50px; }
-        .container { width: 100%; max-width: 1400px; display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
-        .match-card { background: var(--glass); border: 1px solid var(--border); border-left: 6px solid #bf953f; border-radius: 25px; padding: 25px; width: 380px; box-shadow: 0 0 25px rgba(191,149,63,0.1); display: flex; flex-direction: column; transition: all 0.3s ease; position: relative; }
-        .match-card:hover { transform: translateY(-10px); }
-        .league-label { position: absolute; top: 15px; right: 25px; font-family: 'Orbitron'; font-size: 0.65rem; color: #bf953f; opacity: 0.7; }
-        .teams { display: flex; justify-content: space-around; align-items: center; margin: 20px 0; }
-        .team { text-align: center; }
-        .team img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6)); border-radius: 50%; background: rgba(255,255,255,0.03); padding: 5px; }
-        .team span { display: block; font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; margin-top: 10px; }
-        .analysis { background: rgba(0, 0, 0, 0.25); border-radius: 12px; padding: 18px; margin-bottom: 25px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .analysis b { color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; display: block; margin-bottom: 10px; }
-        .analysis p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; }
-        .footer-line { display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; }
-        .pick-text { font-family: 'Orbitron'; font-size: 0.75rem; color: #fff; text-transform: uppercase; font-weight: 900; }
-        .odds-pill { background: var(--gold); color: #000; padding: 10px 30px; border-radius: 12px; font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; text-align: center; box-shadow: 0 5px 20px rgba(191,149,63,0.4); }
-        .vip-btn { margin-top: 60px; background: var(--gold); color: #000; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-family: 'Orbitron'; font-weight: 900; box-shadow: 0 0 30px rgba(191,149,63,0.3); transition: all 0.3s ease; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .match-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            margin: 10px;
+            flex: 1 1 calc(32% - 20px);
+            text-align: center;
+        }
+        .match-card img {
+            max-width: 50px;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
-    <div class="header"><h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1></div>
-    <div class="container">
-        <article class="match-card">
-            <div class="league-label">NCAA</div>
-            <div class="teams">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6712.png"><span>IU Indy</span></div>
-                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6711.png"><span>Wisc. Milwaukee</span></div>
-            </div>
-            <div class="analysis">
-                <b>ANÁLISIS PROFESIONAL:</b>
-                <p><b>Winner IU Indy:</b> IU Indy muestra una excelente eficiencia en ataque, superando los 80 puntos en 6 de sus últimos 10 partidos, mientras que Wisc. Milwaukee presenta debilidades defensivas, permitiendo un alto porcentaje de tiros de campo desde la línea de tres puntos.</p>
-            </div>
-            <div class="footer-line">
-                <div class="pick-text">PICK: 1</div>
-                <div class="odds-pill">1.30</div>
-            </div>
-        </article>
 
-        <article class="match-card">
-            <div class="league-label">NCAA</div>
-            <div class="teams">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6712.png"><span>IU Indy</span></div>
-                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6711.png"><span>Wisc. Milwaukee</span></div>
-            </div>
-            <div class="analysis">
-                <b>ANÁLISIS PROFESIONAL:</b>
-                <p><b>Total Más de 150.5:</b> IU Indy ha estado anotando consistentemente, promediando 82 puntos en los últimos 5 juegos, y Milwaukee tiene problemas en defensa, lo que sugiere un juego de alta puntuación.</p>
-            </div>
-            <div class="footer-line">
-                <div class="pick-text">PICK: Más de 150.5</div>
-                <div class="odds-pill">1.25</div>
-            </div>
-        </article>
+<h1>🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</h1>
 
-        <article class="match-card">
-            <div class="league-label">NCAA</div>
-            <div class="teams">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6712.png"><span>IU Indy</span></div>
-                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6711.png"><span>Wisc. Milwaukee</span></div>
-            </div>
-            <div class="analysis">
-                <b>ANÁLISIS PROFESIONAL:</b>
-                <p><b>Handicap IU Indy -3.5:</b> IU Indy ha dominado a sus rivales en casa, y Wisc. Milwaukee ha tenido problemas para cubrir el handicap en sus últimos partidos, lo que justifica este pick.</p>
-            </div>
-            <div class="footer-line">
-                <div class="pick-text">PICK: -3.5</div>
-                <div class="odds-pill">1.20</div>
-            </div>
-        </article>
+<div class="container">
+    <article class="match-card">
+        <img src="https://media.api-sports.io/basketball/teams/526.png" alt="Logo Frankfurt">
+        <h2>BBL</h2>
+        <p><strong>Frankfurt</strong> vs <strong>Trier</strong></p>
+        <p>Mercado: <strong>Winner</strong></p>
+        <p>Cuota: <strong>1.30</strong></p>
+    </article>
 
-        <article class="match-card">
-            <div class="league-label">NCAA</div>
-            <div class="teams">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6712.png"><span>IU Indy</span></div>
-                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6711.png"><span>Wisc. Milwaukee</span></div>
-            </div>
-            <div class="analysis">
-                <b>ANÁLISIS PROFESIONAL:</b>
-                <p><b>Winner IU Indy:</b> El equipo local ha mostrado un mejor desempeño reciente, con 7 victorias en los últimos 10, y Milwaukee tiene un historial débil en encuentros de visitante.</p>
-            </div>
-            <div class="footer-line">
-                <div class="pick-text">PICK: 1</div>
-                <div class="odds-pill">1.35</div>
-            </div>
-        </article>
+    <article class="match-card">
+        <img src="https://media.api-sports.io/basketball/teams/1820.png" alt="Logo Army">
+        <h2>NCAA</h2>
+        <p><strong>Army</strong> vs <strong>Boston University</strong></p>
+        <p>Mercado: <strong>Handicaps</strong></p>
+        <p>Cuota: <strong>1.25</strong></p>
+    </article>
 
-        <article class="match-card">
-            <div class="league-label">NCAA</div>
-            <div class="teams">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6712.png"><span>IU Indy</span></div>
-                <div style="font-family:'Orbitron'; color:#bf953f; opacity:0.3">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6711.png"><span>Wisc. Milwaukee</span></div>
-            </div>
-            <div class="analysis">
-                <b>ANÁLISIS PROFESIONAL:</b>
-                <p><b>Total Menos de 155.5:</b> A pesar de la fuerza ofensiva de IU Indy, Wisc. Milwaukee carece de capacidad anotadora, lo que podría limitar la puntuación total del juego.</p>
-            </div>
-            <div class="footer-line">
-                <div class="pick-text">PICK: Menos de 155.5</div>
-                <div class="odds-pill">1.28</div>
-            </div>
-        </article>
-    </div>
-    <a href="https://im.page/cmsportselite" class="vip-btn">COMPRA EL ACCESO VIP</a>
+    <article class="match-card">
+        <img src="https://media.api-sports.io/basketball/teams/1936.png" alt="Logo Holy Cross">
+        <h2>NCAA</h2>
+        <p><strong>Holy Cross</strong> vs <strong>Colgate</strong></p>
+        <p>Mercado: <strong>Totales</strong></p>
+        <p>Cuota: <strong>1.35</strong></p>
+    </article>
+
+    <article class="match-card">
+        <img src="https://media.api-sports.io/basketball/teams/1985.png" alt="Logo Maryland">
+        <h2>NCAA</h2>
+        <p><strong>Maryland</strong> vs <strong>Iowa</strong></p>
+        <p>Mercado: <strong>Winner</strong></p>
+        <p>Cuota: <strong>1.20</strong></p>
+    </article>
+
+    <article class="match-card">
+        <img src="https://media.api-sports.io/basketball/teams/2199.png" alt="Logo Western Carolina">
+        <h2>NCAA</h2>
+        <p><strong>Western Carolina</strong> vs <strong>Citadel</strong></p>
+        <p>Mercado: <strong>Handicaps</strong></p>
+        <p>Cuota: <strong>1.28</strong></p>
+    </article>
+</div>
+
 </body>
 </html>
+```
+
+### Notas:
+- He generado un diseño que sigue la estructura solicitada y he respetado las reglas de cuotas.
+- Puedes modificar los logos y datos de los partidos según sea necesario. Las cuotas son ejemplos y pueden ajustarse a tus necesidades.
