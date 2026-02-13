@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* CSS styles as previously defined */
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
         :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --bg: #010409; --card-bg: rgba(15, 23, 42, 0.95); }
         body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; }
@@ -23,11 +24,11 @@
         .team span { font-family: 'Orbitron'; font-size: 0.8rem; font-weight: 900; color: #fff; text-align: center; text-transform: uppercase; }
         .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; opacity: 0.3; font-size: 1.4rem; }
         .neural-box { background: rgba(0,0,0,0.4); border: 1px solid rgba(191,149,63,0.2); border-radius: 15px; padding: 22px; margin-bottom: 25px; border-left: 3px solid #bf953f; }
-        .neural-box h3 { font-family: 'Orbitron'; color: #bf953f; font-size: 0.6rem; margin-bottom: 12px; border-bottom: 1px solid rgba(191,149,63,0.3); padding-bottom: 5px; display: inline-block; letter-spacing: 1px; }
+        .neural-box h3 { font-family: 'Orbitron'; color: #bf953f; font-size: 0.6rem; margin-bottom: 12px; border-bottom: 1px solid rgba(191,149,63,0.3); padding-bottom: 5px; }
         .neural-box p { font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin: 0; text-align: justify; }
         .vulnerability-alert { background: rgba(239, 68, 68, 0.1); border-radius: 10px; color: #f87171; font-family: 'Orbitron'; font-weight: 900; font-size: 0.7rem; padding: 14px 20px; width: fit-content; text-transform: uppercase; border: 1px solid rgba(239, 68, 68, 0.2); }
         .progress-bar { height: 6px; width: 100%; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 25px; overflow: hidden; }
-        .progress-bar .fill { height: 100%; width: 92%; background: linear-gradient(90deg, #facc15, #22c55e); box-shadow: 0 0 10px rgba(34, 197, 94, 0.4); }
+        .progress-bar .fill { height: 100%; width: 94%; background: linear-gradient(90deg, #facc15, #22c55e); box-shadow: 0 0 10px rgba(34, 197, 94, 0.4); }
         .vip-button { background: var(--gold); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 20px 60px; border-radius: 50px; text-decoration: none; margin-top: 70px; font-size: 1.4rem; box-shadow: 0 0 50px rgba(191,149,63,0.4); text-transform: uppercase; }
     </style>
 </head>
@@ -37,86 +38,35 @@
     <div class="container">
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Ganador: Kvarner</span><span class="odd">1.25</span></div>
+                <div class="pred-pill"><span class="text">Ganador</span><span class="odd">1.30</span></div>
             </div>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1458.png"><span>Kvarner</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1992.png"><span>Merrimack Warriors</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1457.png"><span>Cibona</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2036.png"><span>Marist</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Kvarner se muestra sólido en defensa y ha ganado 3 de sus últimos 5 partidos. Cibona, aunque fuerte en ataque, ha tenido problemas defensivos que podría costarles.</p>
+                <p>Merrimack presenta una defensa sólida y Marist lucha en la ofensiva, lo que favorece al local para llevarse la victoria.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Dispersión defensiva en tretas de Kvarner.</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Ofensiva ineficaz de Marist.</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
-
+        
         <article class="match-card">
             <div class="match-header">
-                <div class="pred-pill"><span class="text">Ganador: Zalgiris Kaunas</span><span class="odd">1.30</span></div>
+                <div class="pred-pill"><span class="text">Ganador</span><span class="odd">1.25</span></div>
             </div>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/796.png"><span>Zalgiris Kaunas</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2036.png"><span>Niagara</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1181.png"><span>Hapoel Tel-Aviv</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2011.png"><span>Manhattan</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Zalgiris presenta un potente juego en equipo con tiros efectivos. Hapoel enfrenta lesiones que debilitan su rotación, afectando su rendimiento ofensivo.</p>
+                <p>Niagara muestra consistencia en los partidos recientes, y Manhattan tiene un historial débil fuera de casa.</p>
             </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Lesiones en jugadores clave de Hapoel.</div>
-            <div class="progress-bar"><div class="fill"></div></div>
-        </article>
-
-        <article class="match-card">
-            <div class="match-header">
-                <div class="pred-pill"><span class="text">Ganador: Monaco</span><span class="odd">1.35</span></div>
-            </div>
-            <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/16.png"><span>Monaco</span></div>
-                <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/705.png"><span>Baskonia</span></div>
-            </div>
-            <div class="neural-box">
-                <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Monaco tiene una racha ganadora y ha mejorado su ofensiva. Baskonia, aunque competitivo, no ha podido mantener un ritmo constante en defensa.</p>
-            </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Inconsistencia defensiva de Baskonia.</div>
-            <div class="progress-bar"><div class="fill"></div></div>
-        </article>
-
-        <article class="match-card">
-            <div class="match-header">
-                <div class="pred-pill"><span class="text">Ganador: Wurzburg</span><span class="odd">1.20</span></div>
-            </div>
-            <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/5923.png"><span>Wurzburg</span></div>
-                <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/5621.png"><span>Heidelberg</span></div>
-            </div>
-            <div class="neural-box">
-                <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Wurzburg ha mostrado un rendimiento sólido en casa, convirtiendo sus tiros libres. Heidelberg atraviesa un bache de resultados en las últimas semanas.</p>
-            </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Inestabilidad en tiros de campo por parte de Heidelberg.</div>
-            <div class="progress-bar"><div class="fill"></div></div>
-        </article>
-
-        <article class="match-card">
-            <div class="match-header">
-                <div class="pred-pill"><span class="text">Ganador: Dubrava</span><span class="odd">1.25</span></div>
-            </div>
-            <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/411.png"><span>Dubrava</span></div>
-                <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/413.png"><span>Dubrovnik</span></div>
-            </div>
-            <div class="neural-box">
-                <h3>ANALISIS DE RED NEURONAL</h3>
-                <p>Dubrava ha sido fuerte en su campo y tiene un juego cohesivo. Dubrovnik luchó en la defensa y ha permitido muchos puntos en contra.</p>
-            </div>
-            <div class="vulnerability-alert">DEBILIDAD RIVAL: Fragilidad defensiva de Dubrovnik.</div>
+            <div class="vulnerability-alert">DEBILIDAD RIVAL: Vulnerabilidad en su defensa de Manhattan.</div>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
     </div>
