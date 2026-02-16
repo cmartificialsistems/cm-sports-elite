@@ -6,117 +6,49 @@
     <style>
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
         :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --bg: #010409; --card-bg: rgba(15, 23, 42, 0.95); }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        .logo-vip { width: 140px; margin-bottom: 20px; animation: float 4s infinite; }
-        .quantum-pill { border: 1px solid #bf953f; color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; padding: 8px 20px; border-radius: 50px; margin-bottom: 40px; }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .logo-vip { width: 140px; margin-bottom: 20px; animation: float 4s ease-in-out infinite; }
+        .quantum-pill { border: 1px solid #bf953f; color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; padding: 8px 25px; border-radius: 50px; margin-bottom: 40px; text-transform: uppercase; }
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1400px; }
-        .match-card { background: var(--card-bg); border-left: 5px solid #bf953f; border-radius: 20px; padding: 25px; width: 420px; border-top: 1px solid rgba(191,149,63,0.1); }
-        .pred-pill { display: flex; align-items: center; gap: 8px; }
-        .pred-pill .text { color: #10b981; font-family: 'Orbitron'; font-weight: 900; font-size: 0.85rem; }
-        .pred-pill .odd { border: 1px solid #10b981; color: #10b981; padding: 2px 10px; border-radius: 5px; font-weight: 700; }
-        .teams-row { display: flex; justify-content: space-between; align-items: center; margin: 25px 0; }
-        .team { display: flex; flex-direction: column; align-items: center; width: 110px; }
-        .team img { width: 70px; height: 70px; object-fit: contain; margin-bottom: 10px; }
-        .team span { font-family: 'Orbitron'; font-size: 0.7rem; text-align: center; }
-        .vs { font-family: 'Orbitron'; color: #bf953f; opacity: 0.3; }
-        .neural-box { background: rgba(0,0,0,0.3); border-radius: 12px; padding: 15px; border-left: 3px solid #bf953f; }
-        .neural-box h3 { font-family: 'Orbitron'; color: #bf953f; font-size: 0.5rem; margin-bottom: 8px; }
-        .neural-box p { font-size: 0.85rem; color: #ccc; line-height: 1.4; }
-        .vulnerability-alert { background: rgba(239, 68, 68, 0.1); border-radius: 8px; color: #f87171; font-family: 'Orbitron'; font-size: 0.6rem; padding: 10px; margin-top: 15px; width: fit-content; }
-        .vip-button { background: var(--gold); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 15px 40px; border-radius: 50px; text-decoration: none; margin-top: 40px; font-size: 1.1rem; }
+        .match-card { background: var(--card-bg); border-left: 5px solid #bf953f; border-radius: 20px; padding: 25px; width: 420px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); position: relative; border-top: 1px solid rgba(191,149,63,0.1); }
+        .match-title { font-size: 1.5rem; margin-bottom: 15px; }
+        .match-detail { font-size: 1.2rem; margin: 5px 0; }
     </style>
 </head>
 <body>
-    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="logo-vip">
-    <div class="quantum-pill">ALGORITMO CUANTICO: ACTIVO</div>
+    <img class="logo-vip" src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Logo VIP Elite Gold">
+    <div class="quantum-pill">🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</div>
     <div class="container">
         <div class="match-card">
-            <div class="teams-row">
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="East Texas A&M">
-                    <span>East Texas A&M</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="SE Louisiana">
-                    <span>SE Louisiana</span>
-                </div>
-            </div>
-            <div class="pred-pill">
-                <span class="text">GANADOR: </span>
-                <span class="odd">Victoria de East Texas A&M</span>
-            </div>
+            <div class="match-title">NCAA</div>
+            <div class="match-detail">Victoria de East Texas A&M</div>
+            <div class="match-detail">Handicap: East Texas A&M -3.5</div>
+            <div class="match-detail">Más de 150.5 pts</div>
         </div>
         <div class="match-card">
-            <div class="teams-row">
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Old Dominion">
-                    <span>Old Dominion</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Louisiana Lafayette">
-                    <span>Louisiana Lafayette</span>
-                </div>
-            </div>
-            <div class="pred-pill">
-                <span class="text">GANADOR: </span>
-                <span class="odd">Victoria de Old Dominion</span>
-            </div>
+            <div class="match-title">NCAA</div>
+            <div class="match-detail">Victoria de Old Dominion</div>
+            <div class="match-detail">Handicap: Old Dominion -5.5</div>
+            <div class="match-detail">Menos de 145.5 pts</div>
         </div>
         <div class="match-card">
-            <div class="teams-row">
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Boston University">
-                    <span>Boston University</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Colgate">
-                    <span>Colgate</span>
-                </div>
-            </div>
-            <div class="pred-pill">
-                <span class="text">TOTALES: </span>
-                <span class="odd">Más de 150.5</span>
-            </div>
+            <div class="match-title">NCAA</div>
+            <div class="match-detail">Victoria de Boston University</div>
+            <div class="match-detail">Handicap: Boston University -4.5</div>
+            <div class="match-detail">Más de 160.5 pts</div>
         </div>
         <div class="match-card">
-            <div class="teams-row">
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Al Markazia">
-                    <span>Al Markazia</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Homenetmen Beirut">
-                    <span>Homenetmen Beirut</span>
-                </div>
-            </div>
-            <div class="pred-pill">
-                <span class="text">HANDICAP: </span>
-                <span class="odd">Al Markazia -4.5</span>
-            </div>
+            <div class="match-title">Division 1</div>
+            <div class="match-detail">Victoria de Al Markazia</div>
+            <div class="match-detail">Handicap: Al Markazia -2.5</div>
+            <div class="match-detail">Menos de 155.5 pts</div>
         </div>
         <div class="match-card">
-            <div class="teams-row">
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Koroivos">
-                    <span>Koroivos</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team">
-                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Papagou">
-                    <span>Papagou</span>
-                </div>
-            </div>
-            <div class="pred-pill">
-                <span class="text">GANADOR: </span>
-                <span class="odd">Victoria de Koroivos</span>
-            </div>
+            <div class="match-title">A2</div>
+            <div class="match-detail">Victoria de Koroivos</div>
+            <div class="match-detail">Handicap: Koroivos -1.5</div>
+            <div class="match-detail">Más de 140.5 pts</div>
         </div>
     </div>
-    <a href="https://im.page/cmsportselite" class="vip-button">ACCESO VIP ELITE (3€)</a>
 </body>
 </html>
