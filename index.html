@@ -7,114 +7,126 @@
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
         :root { --gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --gold: #bf953f; --bg: #010409; --card-bg: rgba(15, 23, 42, 0.98); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 60px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .logo-vip { width: 170px; filter: drop-shadow(0 0 40px rgba(191,149,63,0.5)); margin-bottom: 30px; animation: float 4s ease-in-out infinite; border-radius: 15px; }
-        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; background: rgba(0,0,0,0.8); letter-spacing: 3px; box-shadow: 0 0 20px rgba(191,149,63,0.2); }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; max-width: 1450px; }
-        .match-card { background: var(--card-bg); border-radius: 30px; padding: 35px; width: 450px; position: relative; display: flex; flex-direction: column; border: 1px solid rgba(191,149,63,0.1); box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 30px rgba(191,149,63,0.05); transition: all 0.5s; }
+        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; background: rgba(0,0,0,0.8); letter-spacing: 2px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1500px; }
+        .match-card { background: var(--card-bg); border-radius: 30px; padding: 35px; width: 460px; position: relative; display: flex; flex-direction: column; border: 1px solid rgba(191,149,63,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 20px rgba(191,149,63,0.1); transition: 0.4s; }
         .match-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--gold-grad); border-radius: 30px 30px 0 0; }
-        .match-card:hover { transform: translateY(-15px); box-shadow: 0 40px 100px rgba(0,0,0,0.9), 0 0 50px rgba(191,149,63,0.25); border-color: rgba(191,149,63,0.4); }
-        .match-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; margin-top: 10px; }
-        .league-label { font-family: 'Orbitron'; color: var(--gold); font-size: 0.7rem; font-weight: 900; opacity: 0.8; }
+        .match-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; margin-top: 5px; }
+        .league-label { font-family: 'Orbitron'; color: var(--gold); font-size: 0.7rem; font-weight: 900; opacity: 0.7; }
+        .pred-pill { display: flex; align-items: center; gap: 10px; }
+        .pred-pill .text { color: #fcf6ba; font-family: 'Orbitron'; font-weight: 900; font-size: 0.9rem; text-transform: uppercase; }
+        .pred-pill .odd { border: 1px solid var(--gold); border-radius: 8px; color: #fcf6ba; padding: 4px 15px; font-weight: 900; background: rgba(191, 149, 63, 0.2); }
         .teams-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; }
         .team { display: flex; flex-direction: column; align-items: center; width: 130px; }
-        .team img { width: 85px; height: 85px; object-fit: contain; margin-bottom: 15px; }
+        .team img { width: 85px; height: 85px; object-fit: contain; margin-bottom: 15px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); }
         .team span { font-family: 'Orbitron'; font-size: 0.85rem; font-weight: 900; color: #fff; text-align: center; }
         .vs { font-family: 'Orbitron'; color: var(--gold); font-weight: 900; opacity: 0.2; font-size: 1.6rem; }
+        .neural-box { background: rgba(0,0,0,0.4); border: 1px solid rgba(191,149,63,0.2); border-radius: 20px; padding: 25px; margin-bottom: 25px; border-left: 4px solid var(--gold); min-height: 140px; }
+        .neural-box h3 { font-family: 'Orbitron'; color: var(--gold); font-size: 0.6rem; margin-bottom: 12px; border-bottom: 1px solid rgba(191,149,63,0.2); padding-bottom: 5px; display: inline-block; }
+        .neural-box p { font-size: 1rem; color: #cbd5e1; line-height: 1.6; text-align: justify; }
+        .vulnerability-alert { background: rgba(239, 68, 68, 0.1); border-radius: 12px; color: #f87171; font-family: 'Orbitron'; font-weight: 900; font-size: 0.75rem; padding: 15px 25px; width: fit-content; text-transform: uppercase; border: 1px solid rgba(239, 68, 68, 0.2); }
         .progress-bar { height: 8px; width: 100%; background: rgba(255,255,255,0.05); border-radius: 20px; margin-top: 30px; overflow: hidden; }
-        .progress-bar .fill { height: 100%; width: 94%; background: var(--gold-grad); box-shadow: 0 0 20px rgba(191,149,63,0.4); }
-        .vip-button { background: var(--gold-grad); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 22px 70px; border-radius: 60px; text-decoration: none; margin-top: 60px; font-size: 1.5rem; box-shadow: 0 0 50px rgba(191,149,63,0.5); text-transform: uppercase; }
+        .progress-bar .fill { height: 100%; width: 94%; background: var(--gold-grad); box-shadow: 0 0 15px rgba(191,149,63,0.3); }
+        .vip-button { background: var(--gold-grad); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 22px 70px; border-radius: 60px; text-decoration: none; margin-top: 60px; font-size: 1.5rem; box-shadow: 0 0 40px rgba(191,149,63,0.4); text-transform: uppercase; }
     </style>
 </head>
 <body>
     <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="logo-vip">
     <div class="quantum-pill">ALGORITMO CUÁNTICO DE ÉLITE ACTIVO</div>
     <div class="container">
-        <div class="match-card">
-            <div class="match-header">
+
+        <article class="match-card">
+            <header class="match-header">
                 <span class="league-label">NCAA</span>
-            </div>
+                <div class="pred-pill"><span class="text">VICTORIA DE East Texas A&M</span><span class="odd">1.25</span></div>
+            </header>
             <div class="teams-row">
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/7806.png" alt="East Texas A&M">
-                    <span>East Texas A&M</span>
-                </div>
-                <span class="vs">vs</span>
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/2098.png" alt="SE Louisiana">
-                    <span>SE Louisiana</span>
-                </div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/7806.png"><span>East Texas A&M</span></div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2098.png"><span>SE Louisiana</span></div>
             </div>
-            <div class="progress-bar"><div class="fill" style="width: 1.25%;"></div></div>
-        </div>
-        <div class="match-card">
-            <div class="match-header">
+            <div class="neural-box">
+                <h3>ANÁLISIS DE RED NEURONAL</h3>
+                <p><b>East Texas A&M muestra un juego defensivo formidable. SE Louisiana tiene problemas en el rebote. Fortalezas en ataque pueden ser limitadas por su defensa.</b></p>
+            </div>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Rebote deficiente</footer>
+            <div class="progress-bar"><div class="fill"></div></div>
+        </article>
+
+        <article class="match-card">
+            <header class="match-header">
                 <span class="league-label">NCAA</span>
-            </div>
+                <div class="pred-pill"><span class="text">VICTORIA DE Old Dominion</span><span class="odd">1.30</span></div>
+            </header>
             <div class="teams-row">
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/2061.png" alt="Old Dominion">
-                    <span>Old Dominion</span>
-                </div>
-                <span class="vs">vs</span>
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/1975.png" alt="Louisiana Lafayette">
-                    <span>Louisiana Lafayette</span>
-                </div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2061.png"><span>Old Dominion</span></div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1975.png"><span>Louisiana Lafayette</span></div>
             </div>
-            <div class="progress-bar"><div class="fill" style="width: 1.30%;"></div></div>
-        </div>
-        <div class="match-card">
-            <div class="match-header">
+            <div class="neural-box">
+                <h3>ANÁLISIS DE RED NEURONAL</h3>
+                <p><b>Old Dominion posee una defensa sólida. Louisiana Lafayette ha tenido dificultades en el cierre de partidos. Tendencias favorables en los últimos encuentros para Old Dominion.</b></p>
+            </div>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Inconsistencia en cierre de partidos</footer>
+            <div class="progress-bar"><div class="fill"></div></div>
+        </article>
+
+        <article class="match-card">
+            <header class="match-header">
                 <span class="league-label">NCAA</span>
-            </div>
+                <div class="pred-pill"><span class="text">MÁS DE 150 PTS</span><span class="odd">1.25</span></div>
+            </header>
             <div class="teams-row">
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/1837.png" alt="Boston University">
-                    <span>Boston University</span>
-                </div>
-                <span class="vs">vs</span>
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/1491.png" alt="Colgate">
-                    <span>Colgate</span>
-                </div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1837.png"><span>Boston University</span></div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1491.png"><span>Colgate</span></div>
             </div>
-            <div class="progress-bar"><div class="fill" style="width: 1.28%;"></div></div>
-        </div>
-        <div class="match-card">
-            <div class="match-header">
+            <div class="neural-box">
+                <h3>ANÁLISIS DE RED NEURONAL</h3>
+                <p><b>Ambos equipos tienen fuertes ofensivas. La defensa de Colgate es vulnerable. Tendencia a partidos con alta puntuación en encuentros previos.</b></p>
+            </div>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa susceptible</footer>
+            <div class="progress-bar"><div class="fill"></div></div>
+        </article>
+
+        <article class="match-card">
+            <header class="match-header">
                 <span class="league-label">Division 1</span>
-            </div>
+                <div class="pred-pill"><span class="text">VICTORIA DE Al Markazia</span><span class="odd">1.20</span></div>
+            </header>
             <div class="teams-row">
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/7308.png" alt="Al Markazia">
-                    <span>Al Markazia</span>
-                </div>
-                <span class="vs">vs</span>
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/6358.png" alt="Homenetmen Beirut">
-                    <span>Homenetmen Beirut</span>
-                </div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/7308.png"><span>Al Markazia</span></div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6358.png"><span>Homenetmen Beirut</span></div>
             </div>
-            <div class="progress-bar"><div class="fill" style="width: 1.20%;"></div></div>
-        </div>
-        <div class="match-card">
-            <div class="match-header">
+            <div class="neural-box">
+                <h3>ANÁLISIS DE RED NEURONAL</h3>
+                <p><b>Al Markazia ha mostrado una mejora significativa. Homenetmen Beirut lucha con lesiones. Los enfrentamientos anteriores favorecen a Al Markazia.</b></p>
+            </div>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Lesiones en la plantilla</footer>
+            <div class="progress-bar"><div class="fill"></div></div>
+        </article>
+
+        <article class="match-card">
+            <header class="match-header">
                 <span class="league-label">A2</span>
-            </div>
+                <div class="pred-pill"><span class="text">MÁS DE 145 PTS</span><span class="odd">1.30</span></div>
+            </header>
             <div class="teams-row">
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/600.png" alt="Koroivos">
-                    <span>Koroivos</span>
-                </div>
-                <span class="vs">vs</span>
-                <div class="team">
-                    <img src="https://media.api-sports.io/basketball/teams/1536.png" alt="Papagou">
-                    <span>Papagou</span>
-                </div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/600.png"><span>Koroivos</span></div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1536.png"><span>Papagou</span></div>
             </div>
-            <div class="progress-bar"><div class="fill" style="width: 1.35%;"></div></div>
-        </div>
+            <div class="neural-box">
+                <h3>ANÁLISIS DE RED NEURONAL</h3>
+                <p><b>Koroivos se encuentra en forma ofensiva. Papagou presenta debilidades defensivas en la pintura. Históricamente, sus enfrentamientos son explosivos en puntuación.</b></p>
+            </div>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Debilidades defensivas</footer>
+            <div class="progress-bar"><div class="fill"></div></div>
+        </article>
+        
     </div>
     <a href="https://im.page/cmsportselite" class="vip-button">ACCESO VIP ELITE (3€)</a>
 </body>
