@@ -9,7 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 60px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .logo-vip { width: 170px; filter: drop-shadow(0 0 40px rgba(191,149,63,0.5)); margin-bottom: 30px; animation: float 4s ease-in-out infinite; border-radius: 15px; }
-        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; background: rgba(0,0,0,0.8); letter-spacing: 2px; }
+        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 2px; background: rgba(0,0,0,0.8); }
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1500px; }
         .match-card { background: var(--card-bg); border-radius: 30px; padding: 35px; width: 460px; position: relative; display: flex; flex-direction: column; border: 1px solid rgba(191,149,63,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 20px rgba(191,149,63,0.1); transition: 0.4s; }
         .match-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--gold-grad); border-radius: 30px 30px 0 0; }
@@ -36,97 +36,91 @@
     <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="logo-vip">
     <div class="quantum-pill">ALGORITMO CUÁNTICO DE ÉLITE ACTIVO</div>
     <div class="container">
-
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">NCAA</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE East Texas A&M</span><span class="odd">1.25</span></div>
+                <span class="league-label">Liga Premier</span>
+                <div class="pred-pill"><span class="text">VICTORIA DE Liverpool</span><span class="odd">1.25</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/7806.png"><span>East Texas A&M</span></div>
+                <div class="team"><img src="https://logo.com/liverpool.png"><span>Liverpool</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2098.png"><span>SE Louisiana</span></div>
+                <div class="team"><img src="https://logo.com/arsenal.png"><span>Arsenal</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>East Texas A&M muestra un juego defensivo formidable. SE Louisiana tiene problemas en el rebote. Fortalezas en ataque pueden ser limitadas por su defensa.</b></p>
+                <p><b>Liverpool tiene una defensa sólida, Arsenal lucha con lesiones. La capacidad ofensiva de Liverpool es superior. Arsenal enfrenta dificultades en partidos fuera de casa. La confianza de Liverpool podría ser crucial.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Rebote deficiente</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Falta de titulares en defensa</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
-
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">NCAA</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Old Dominion</span><span class="odd">1.30</span></div>
+                <span class="league-label">La Liga</span>
+                <div class="pred-pill"><span class="text">MÁS DE 2.5 PTS</span><span class="odd">1.30</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2061.png"><span>Old Dominion</span></div>
+                <div class="team"><img src="https://logo.com/barcelona.png"><span>Barcelona</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1975.png"><span>Louisiana Lafayette</span></div>
+                <div class="team"><img src="https://logo.com/madrid.png"><span>Real Madrid</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Old Dominion posee una defensa sólida. Louisiana Lafayette ha tenido dificultades en el cierre de partidos. Tendencias favorables en los últimos encuentros para Old Dominion.</b></p>
+                <p><b>Ambos equipos tienen ataque potente. Históricamente, sus encuentros son de alta anotación. La motivación del título podría generar un juego abierto. El estado físico de los delanteros es óptimo. Factor local clave para Barcelona.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Inconsistencia en cierre de partidos</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa expuesta en contraataques</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
-
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">NCAA</span>
-                <div class="pred-pill"><span class="text">MÁS DE 150 PTS</span><span class="odd">1.25</span></div>
+                <span class="league-label">Serie A</span>
+                <div class="pred-pill"><span class="text">VICTORIA DE Juventus</span><span class="odd">1.35</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1837.png"><span>Boston University</span></div>
+                <div class="team"><img src="https://logo.com/juventus.png"><span>Juventus</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1491.png"><span>Colgate</span></div>
+                <div class="team"><img src="https://logo.com/inter.png"><span>Inter de Milán</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Ambos equipos tienen fuertes ofensivas. La defensa de Colgate es vulnerable. Tendencia a partidos con alta puntuación en encuentros previos.</b></p>
+                <p><b>Juventus tiene la mejor defensa de la liga. Inter luchará en ataque bajo presión. Históricamente, Juventus domina en casa. La forma actual de los delanteros aumenta la ventaja. Lesiones clave en Inter podrían afectar el rendimiento.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa susceptible</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Lesiones en el centro del campo</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
-
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">Division 1</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Al Markazia</span><span class="odd">1.20</span></div>
+                <span class="league-label">Bundesliga</span>
+                <div class="pred-pill"><span class="text">HANDBICAP DE -1.5 Bayern</span><span class="odd">1.25</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/7308.png"><span>Al Markazia</span></div>
+                <div class="team"><img src="https://logo.com/bayern.png"><span>Bayern Múnich</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/6358.png"><span>Homenetmen Beirut</span></div>
+                <div class="team"><img src="https://logo.com/dortmund.png"><span>Dortmund</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Al Markazia ha mostrado una mejora significativa. Homenetmen Beirut lucha con lesiones. Los enfrentamientos anteriores favorecen a Al Markazia.</b></p>
+                <p><b>Bayern posee un ataque fuerte y rápido. Dortmund no ha podido contenerlos en anteriores encuentros. La diferencia de juego en casa es marcada. Bayern ha mejorado su defensa. Dortmund lucha en partidos importantes.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Lesiones en la plantilla</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Vulnerabilidad en defensa ante equipos grandes</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
-
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">A2</span>
-                <div class="pred-pill"><span class="text">MÁS DE 145 PTS</span><span class="odd">1.30</span></div>
+                <span class="league-label">Ligue 1</span>
+                <div class="pred-pill"><span class="text">MÁS DE 1.5 PTS</span><span class="odd">1.20</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/600.png"><span>Koroivos</span></div>
+                <div class="team"><img src="https://logo.com/psg.png"><span>PSG</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/1536.png"><span>Papagou</span></div>
+                <div class="team"><img src="https://logo.com/marsella.png"><span>Marsella</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Koroivos se encuentra en forma ofensiva. Papagou presenta debilidades defensivas en la pintura. Históricamente, sus enfrentamientos son explosivos en puntuación.</b></p>
+                <p><b>PSG tiene un ataque implacable. Marsella se enfoca en la defensa, pero puede debilitarse. Los partidos pasados muestran muchos goles. La presión en el equipo local es significativa. Las estrellas de PSG pueden marcar la diferencia.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Debilidades defensivas</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Depender demasiado de un solo jugador</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
-        
     </div>
     <a href="https://im.page/cmsportselite" class="vip-button">ACCESO VIP ELITE (3€)</a>
 </body>
