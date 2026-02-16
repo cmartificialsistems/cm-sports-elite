@@ -6,49 +6,135 @@
     <style>
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
         :root { --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --bg: #010409; --card-bg: rgba(15, 23, 42, 0.95); }
-        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .logo-vip { width: 140px; margin-bottom: 20px; animation: float 4s ease-in-out infinite; }
-        .quantum-pill { border: 1px solid #bf953f; color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; padding: 8px 25px; border-radius: 50px; margin-bottom: 40px; text-transform: uppercase; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1400px; }
-        .match-card { background: var(--card-bg); border-left: 5px solid #bf953f; border-radius: 20px; padding: 25px; width: 420px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); position: relative; border-top: 1px solid rgba(191,149,63,0.1); }
-        .match-title { font-size: 1.5rem; margin-bottom: 15px; }
-        .match-detail { font-size: 1.2rem; margin: 5px 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .logo-vip { width: 180px; filter: drop-shadow(0 0 30px rgba(191,149,63,0.4)); margin-bottom: 25px; border-radius: 15px; animation: float 4s ease-in-out infinite; }
+        .quantum-pill { border: 1px solid #bf953f; background: rgba(0,0,0,0.8); color: #bf953f; font-family: 'Orbitron'; font-size: 0.7rem; padding: 10px 25px; border-radius: 50px; margin-bottom: 50px; letter-spacing: 2px; text-transform: uppercase; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 1400px; }
+        .match-card { background: var(--card-bg); border-left: 5px solid #bf953f; border-radius: 25px; padding: 30px; width: 440px; position: relative; box-shadow: 0 15px 50px rgba(0,0,0,0.6); display: flex; flex-direction: column; border-top: 1px solid rgba(191,149,63,0.1); transition: all 0.4s; }
+        .match-header { display: flex; justify-content: flex-end; margin-bottom: 25px; }
+        .pred-pill { display: flex; align-items: center; gap: 8px; }
+        .pred-pill .text { color: #10b981; font-family: 'Orbitron'; font-weight: 900; font-size: 0.85rem; text-transform: uppercase; }
+        .pred-pill .odd { border: 1px solid #10b981; border-radius: 6px; color: #10b981; padding: 3px 12px; font-weight: 700; background: rgba(16, 185, 129, 0.05); }
+        .teams-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        .team { display: flex; flex-direction: column; align-items: center; width: 125px; }
+        .team img { width: 75px; height: 75px; object-fit: contain; margin-bottom: 15px; }
+        .team span { font-family: 'Orbitron'; font-size: 0.75rem; font-weight: 900; color: #fff; text-align: center; }
+        .vs { font-family: 'Orbitron'; color: #bf953f; font-weight: 900; opacity: 0.3; font-size: 1.3rem; }
+        .neural-box { background: rgba(0,0,0,0.3); border-radius: 15px; padding: 20px; border-left: 3px solid #bf953f; margin-bottom: 20px; }
+        .neural-box h3 { font-family: 'Orbitron'; color: #bf953f; font-size: 0.55rem; margin-bottom: 10px; }
+        .neural-box p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.5; }
+        .vulnerability-alert { background: rgba(239, 68, 68, 0.1); border-radius: 10px; color: #f87171; font-family: 'Orbitron'; font-weight: 900; font-size: 0.65rem; padding: 12px 18px; width: fit-content; border: 1px solid rgba(239, 68, 68, 0.2); }
+        .progress-bar { height: 6px; width: 100%; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 20px; overflow: hidden; }
+        .progress-bar .fill { height: 100%; width: 94%; background: linear-gradient(90deg, #facc15, #22c55e); }
+        .vip-button { background: var(--gold); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 18px 50px; border-radius: 50px; text-decoration: none; margin-top: 50px; font-size: 1.3rem; box-shadow: 0 0 40px rgba(191,149,63,0.3); }
     </style>
 </head>
 <body>
-    <img class="logo-vip" src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="Logo VIP Elite Gold">
-    <div class="quantum-pill">🎟️ TICKET DE INTELIGENCIA ARTIFICIAL 🎟️</div>
+    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="logo-vip">
+    <div class="quantum-pill">ALGORITMO CUANTICO: ACTIVO</div>
     <div class="container">
         <div class="match-card">
-            <div class="match-title">NCAA</div>
-            <div class="match-detail">Victoria de East Texas A&M</div>
-            <div class="match-detail">Handicap: East Texas A&M -3.5</div>
-            <div class="match-detail">Más de 150.5 pts</div>
+            <div class="match-header">
+                <div class="pred-pill">
+                    <span class="text">Victoria de East Texas A&M</span>
+                    <span class="odd">1.25</span>
+                </div>
+            </div>
+            <div class="teams-row">
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" alt="East Texas A&M">
+                    <span>East Texas A&M</span>
+                </div>
+                <span class="vs">VS</span>
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="SE Louisiana">
+                    <span>SE Louisiana</span>
+                </div>
+            </div>
+            <p class="neural-box">MÁS DE 150 PTS</p>
         </div>
         <div class="match-card">
-            <div class="match-title">NCAA</div>
-            <div class="match-detail">Victoria de Old Dominion</div>
-            <div class="match-detail">Handicap: Old Dominion -5.5</div>
-            <div class="match-detail">Menos de 145.5 pts</div>
+            <div class="match-header">
+                <div class="pred-pill">
+                    <span class="text">Victoria de Old Dominion</span>
+                    <span class="odd">1.30</span>
+                </div>
+            </div>
+            <div class="teams-row">
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Old Dominion">
+                    <span>Old Dominion</span>
+                </div>
+                <span class="vs">VS</span>
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Louisiana Lafayette">
+                    <span>Louisiana Lafayette</span>
+                </div>
+            </div>
+            <p class="neural-box">MENOS DE 145 PTS</p>
         </div>
         <div class="match-card">
-            <div class="match-title">NCAA</div>
-            <div class="match-detail">Victoria de Boston University</div>
-            <div class="match-detail">Handicap: Boston University -4.5</div>
-            <div class="match-detail">Más de 160.5 pts</div>
+            <div class="match-header">
+                <div class="pred-pill">
+                    <span class="text">Victoria de Boston University</span>
+                    <span class="odd">1.35</span>
+                </div>
+            </div>
+            <div class="teams-row">
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Boston University">
+                    <span>Boston University</span>
+                </div>
+                <span class="vs">VS</span>
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Colgate">
+                    <span>Colgate</span>
+                </div>
+            </div>
+            <p class="neural-box">MÁS DE 155 PTS</p>
         </div>
         <div class="match-card">
-            <div class="match-title">Division 1</div>
-            <div class="match-detail">Victoria de Al Markazia</div>
-            <div class="match-detail">Handicap: Al Markazia -2.5</div>
-            <div class="match-detail">Menos de 155.5 pts</div>
+            <div class="match-header">
+                <div class="pred-pill">
+                    <span class="text">Victoria de Homenetmen Beirut</span>
+                    <span class="odd">1.20</span>
+                </div>
+            </div>
+            <div class="teams-row">
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Homenetmen Beirut">
+                    <span>Homenetmen Beirut</span>
+                </div>
+                <span class="vs">VS</span>
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Al Markazia">
+                    <span>Al Markazia</span>
+                </div>
+            </div>
+            <p class="neural-box">MENOS DE 140 PTS</p>
         </div>
         <div class="match-card">
-            <div class="match-title">A2</div>
-            <div class="match-detail">Victoria de Koroivos</div>
-            <div class="match-detail">Handicap: Koroivos -1.5</div>
-            <div class="match-detail">Más de 140.5 pts</div>
+            <div class="match-header">
+                <div class="pred-pill">
+                    <span class="text">Victoria de Koroivos</span>
+                    <span class="odd">1.25</span>
+                </div>
+            </div>
+            <div class="teams-row">
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Koroivos">
+                    <span>Koroivos</span>
+                </div>
+                <span class="vs">VS</span>
+                <div class="team">
+                    <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite_gold.png" alt="Papagou">
+                    <span>Papagou</span>
+                </div>
+            </div>
+            <p class="neural-box">MÁS DE 120 PTS</p>
         </div>
     </div>
+    <a href="https://im.page/cmsportselite" class="vip-button">ACCESO VIP ELITE (3€)</a>
 </body>
 </html>
