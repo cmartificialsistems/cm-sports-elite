@@ -9,7 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 60px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .logo-vip { width: 170px; filter: drop-shadow(0 0 40px rgba(191,149,63,0.5)); margin-bottom: 30px; animation: float 4s ease-in-out infinite; border-radius: 15px; }
-        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 2px; background: rgba(0,0,0,0.8); }
+        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; background: rgba(0,0,0,0.8); letter-spacing: 2px; }
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1500px; }
         .match-card { background: var(--card-bg); border-radius: 30px; padding: 35px; width: 460px; position: relative; display: flex; flex-direction: column; border: 1px solid rgba(191,149,63,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 20px rgba(191,149,63,0.1); transition: 0.4s; }
         .match-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--gold-grad); border-radius: 30px 30px 0 0; }
@@ -38,87 +38,91 @@
     <div class="container">
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">Liga Premier</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Liverpool</span><span class="odd">1.25</span></div>
+                <span class="league-label">Liga 1</span>
+                <div class="pred-pill"><span class="text">Victoria de Equipo A</span><span class="odd">1.25</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://logo.com/liverpool.png"><span>Liverpool</span></div>
+                <div class="team"><img src="https://example.com/logo_a.png"><span>Equipo A</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://logo.com/arsenal.png"><span>Arsenal</span></div>
+                <div class="team"><img src="https://example.com/logo_b.png"><span>Equipo B</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Liverpool tiene una defensa sólida, Arsenal lucha con lesiones. La capacidad ofensiva de Liverpool es superior. Arsenal enfrenta dificultades en partidos fuera de casa. La confianza de Liverpool podría ser crucial.</b></p>
+                <p><b>Equipo A tiene una defensa sólida.</b><br><b>Equipo B presenta fraquezas en ataque.</b><br><b>Historial reciente favorece al equipo A.</b><br><b>Condiciones en casa respaldan al equipo A.</b><br><b>Lesiones afectan a los titulares de equipo B.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Falta de titulares en defensa</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Lesiones en defensa</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
+
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">La Liga</span>
-                <div class="pred-pill"><span class="text">MÁS DE 2.5 PTS</span><span class="odd">1.30</span></div>
+                <span class="league-label">Liga 1</span>
+                <div class="pred-pill"><span class="text">Más de 2.5 PTS</span><span class="odd">1.30</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://logo.com/barcelona.png"><span>Barcelona</span></div>
+                <div class="team"><img src="https://example.com/logo_c.png"><span>Equipo C</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://logo.com/madrid.png"><span>Real Madrid</span></div>
+                <div class="team"><img src="https://example.com/logo_d.png"><span>Equipo D</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Ambos equipos tienen ataque potente. Históricamente, sus encuentros son de alta anotación. La motivación del título podría generar un juego abierto. El estado físico de los delanteros es óptimo. Factor local clave para Barcelona.</b></p>
+                <p><b>Ambos equipos tienen buen promedio de goles.</b><br><b>Defensas vulnerables en partidos recientes.</b><br><b>Condiciones climáticas favorecen el ataque.</b><br><b>Enfrentamientos pasados con muchos goles.</b><br><b>Jugadores clave en forma ofensiva.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa expuesta en contraataques</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa endeble</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
+
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">Serie A</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Juventus</span><span class="odd">1.35</span></div>
+                <span class="league-label">Liga 2</span>
+                <div class="pred-pill"><span class="text">Equipo E [Handicap +1]</span><span class="odd">1.25</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://logo.com/juventus.png"><span>Juventus</span></div>
+                <div class="team"><img src="https://example.com/logo_e.png"><span>Equipo E</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://logo.com/inter.png"><span>Inter de Milán</span></div>
+                <div class="team"><img src="https://example.com/logo_f.png"><span>Equipo F</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Juventus tiene la mejor defensa de la liga. Inter luchará en ataque bajo presión. Históricamente, Juventus domina en casa. La forma actual de los delanteros aumenta la ventaja. Lesiones clave en Inter podrían afectar el rendimiento.</b></p>
+                <p><b>Equipo E ha mejorado su rendimiento en casa.</b><br><b>Equipo F lucha en partidos fuera de casa.</b><br><b>Historial reciente sugiere ventaja para Equipo E.</b><br><b>Lesiones de jugadores claves para Equipo F.</b><br><b>Estrategia ofensiva efectiva de Equipo E.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Lesiones en el centro del campo</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Baja moral tras derrotas</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
+
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">Bundesliga</span>
-                <div class="pred-pill"><span class="text">HANDBICAP DE -1.5 Bayern</span><span class="odd">1.25</span></div>
+                <span class="league-label">Liga 2</span>
+                <div class="pred-pill"><span class="text">Victoria de Equipo G</span><span class="odd">1.35</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://logo.com/bayern.png"><span>Bayern Múnich</span></div>
+                <div class="team"><img src="https://example.com/logo_g.png"><span>Equipo G</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://logo.com/dortmund.png"><span>Dortmund</span></div>
+                <div class="team"><img src="https://example.com/logo_h.png"><span>Equipo H</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Bayern posee un ataque fuerte y rápido. Dortmund no ha podido contenerlos en anteriores encuentros. La diferencia de juego en casa es marcada. Bayern ha mejorado su defensa. Dortmund lucha en partidos importantes.</b></p>
+                <p><b>Equipo G tiene un ataque más eficiente.</b><br><b>Equipo H presenta problemas defensivos.</b><br><b>Ventaja en local para Equipo G.</b><br><b>Estadísticas históricas favorecen a Equipo G.</b><br><b>Equipo H con un jugador clave ausente.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Vulnerabilidad en defensa ante equipos grandes</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Falta de experiencia en partidos clave</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
+
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">Ligue 1</span>
-                <div class="pred-pill"><span class="text">MÁS DE 1.5 PTS</span><span class="odd">1.20</span></div>
+                <span class="league-label">Liga 3</span>
+                <div class="pred-pill"><span class="text">Menos de 3.5 PTS</span><span class="odd">1.25</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://logo.com/psg.png"><span>PSG</span></div>
+                <div class="team"><img src="https://example.com/logo_i.png"><span>Equipo I</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://logo.com/marsella.png"><span>Marsella</span></div>
+                <div class="team"><img src="https://example.com/logo_j.png"><span>Equipo J</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>PSG tiene un ataque implacable. Marsella se enfoca en la defensa, pero puede debilitarse. Los partidos pasados muestran muchos goles. La presión en el equipo local es significativa. Las estrellas de PSG pueden marcar la diferencia.</b></p>
+                <p><b>Ambas defensas son sólidas en este torneo.</b><br><b>Historial de enfrentamientos con pocos goles.</b><br><b>Tendencia hacia juegos más cerrados.</b><br><b>Ambos equipos luchan por puntos clave.</b><br><b>Falta de creatividad en el medio campo.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Depender demasiado de un solo jugador</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Ofensivas inconsistentes</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
     </div>
