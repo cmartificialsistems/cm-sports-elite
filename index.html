@@ -9,7 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 60px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .logo-vip { width: 170px; filter: drop-shadow(0 0 40px rgba(191,149,63,0.5)); margin-bottom: 30px; animation: float 4s ease-in-out infinite; border-radius: 15px; }
-        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; background: rgba(0,0,0,0.8); letter-spacing: 2px; }
+        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 2px; background: rgba(0,0,0,0.8); }
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1500px; }
         .match-card { background: var(--card-bg); border-radius: 30px; padding: 35px; width: 460px; position: relative; display: flex; flex-direction: column; border: 1px solid rgba(191,149,63,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 20px rgba(191,149,63,0.1); transition: 0.4s; }
         .match-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--gold-grad); border-radius: 30px 30px 0 0; }
@@ -38,87 +38,87 @@
     <div class="container">
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">BBL</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Ulm</span><span class="odd">1.25</span></div>
+                <span class="league-label">La Liga</span>
+                <div class="pred-pill"><span class="text">VICTORIA DE REAL MADRID</span><span class="odd">1.30</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/533.png"><span>Ulm</span></div>
+                <div class="team"><img src="https://example.com/logo_r madrid.png"><span>Real Madrid</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/532.png"><span>Oldenburg</span></div>
+                <div class="team"><img src="https://example.com/logo_rayo.png"><span>Rayo Vallecano</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Ulm tiene una mejor defensa, pero Oldenburg muestra eficiencia en ataque.</b></p>
+                <p><b>Real Madrid posee más posesión. Rayo sufre en defensa. Local juega bien en casa. Visitante lucha ante grandes. Factores de partido favorecen a Real.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Puntos bajos en defensa.</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa ineficaz del Rayo</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">BBL</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Rostock</span><span class="odd">1.25</span></div>
+                <span class="league-label">Premier League</span>
+                <div class="pred-pill"><span class="text">TOTALES MÁS DE 2.5 PTS</span><span class="odd">1.25</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/561.png"><span>Rostock</span></div>
+                <div class="team"><img src="https://example.com/logo_citi.png"><span>Manchester City</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/520.png"><span>Bamberg</span></div>
+                <div class="team"><img src="https://example.com/logo_arsenal.png"><span>Arsenal</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Rostock presenta una gran capacidad ofensiva, mientras que Bamberg lucha en defensa.</b></p>
+                <p><b>Ambos equipos atacan con fuerza. Defensivas vulnerables muestran debilidad. Historial de goles entre ellos es alto. Posesión igualada. Gran probabilidad de goles.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Falta de cohesión defensiva.</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa de Arsenal expuesta</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">BBL</span>
-                <div class="pred-pill"><span class="text">MÁS DE 150 PTS</span><span class="odd">1.30</span></div>
+                <span class="league-label">Serie A</span>
+                <div class="pred-pill"><span class="text">HANDICAP NÁPOLES -1</span><span class="odd">1.20</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/521.png"><span>Basketball Braunschweig</span></div>
+                <div class="team"><img src="https://example.com/logo_napoli.png"><span>Nápoles</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/5923.png"><span>Wurzburg</span></div>
+                <div class="team"><img src="https://example.com/logo_cagliari.png"><span>Cagliari</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Ambos equipos tienen alta capacidad anotadora, lo que promete un partido con muchos puntos.</b></p>
+                <p><b>Nápoles juega agresivo en casa. Cagliari rinde bajo presión. Cagliari tiene bajas clave. Nápoles generalmente gana por márgenes amplios. Factores de localía ayudan a Nápoles.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Su tendencia a permitir puntos.</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Bajas de Cagliari afectando rendimiento</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">BBL</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Bonn</span><span class="odd">1.30</span></div>
+                <span class="league-label">Bundesliga</span>
+                <div class="pred-pill"><span class="text">VICTORIA DE BAYERN MÚNICH</span><span class="odd">1.35</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/524.png"><span>Bonn</span></div>
+                <div class="team"><img src="https://example.com/logo_bayern.png"><span>Bayern Múnich</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/534.png"><span>Vechta</span></div>
+                <div class="team"><img src="https://example.com/logo_leipzig.png"><span>RB Leipzig</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Bonn tiene un desempeño superior en casa y Vechta tiende a luchar en partidos fuera.</b></p>
+                <p><b>Bayern domina en casa. Leipzig tiene un historial flojo en este estadio. Bayern recupera jugadores clave. Factores ofensivos de Bayern son contundentes. Defensa de Leipzig vulnerable ante ataques rápidos.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Ineficiencia fuera de casa.</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa de Leipzig se tambalea</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">BBL</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Chemnitz</span><span class="odd">1.25</span></div>
+                <span class="league-label">Ligue 1</span>
+                <div class="pred-pill"><span class="text">TOTALES MENOS DE 3.5 PTS</span><span class="odd">1.25</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/550.png"><span>Chemnitz</span></div>
+                <div class="team"><img src="https://example.com/logo_psg.png"><span>Paris Saint-Germain</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/552.png"><span>Heidelberg</span></div>
+                <div class="team"><img src="https://example.com/logo_nice.png"><span>OGC Nice</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Chemnitz muestra fortaleza en su plantilla, en contraste con Heidelberg que tiene debilidades defensivas.</b></p>
+                <p><b>PSG juega defensivamente sin Neymar. Nice se propone conservar balón. Expectativas de liga son bajas. Historial reciente muestra pocos goles. Rivalidades acentuadas llevan a un juego cerrado.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Vulnerable en el rebote.</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Estrategia defensiva de PSG sin su estrella</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
     </div>
