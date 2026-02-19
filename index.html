@@ -9,7 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 60px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .logo-vip { width: 170px; filter: drop-shadow(0 0 40px rgba(191,149,63,0.5)); margin-bottom: 30px; animation: float 4s ease-in-out infinite; border-radius: 15px; }
-        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 2px; background: rgba(0,0,0,0.8); }
+        .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; background: rgba(0,0,0,0.8); letter-spacing: 2px; }
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1500px; }
         .match-card { background: var(--card-bg); border-radius: 30px; padding: 35px; width: 460px; position: relative; display: flex; flex-direction: column; border: 1px solid rgba(191,149,63,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 20px rgba(191,149,63,0.1); transition: 0.4s; }
         .match-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--gold-grad); border-radius: 30px 30px 0 0; }
@@ -38,89 +38,94 @@
     <div class="container">
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">BBL</span>
-                <div class="pred-pill"><span class="text">Victoria de Ulm</span><span class="odd">1.25</span></div>
+                <span class="league-label"><img src="https://media.api-sports.io/basketball/leagues/40.png" width="20" alt="Liga BBL"></span>
+                <div class="pred-pill"><span class="text">Victoria de Ludwigsburg</span><span class="odd">1.30</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://via.placeholder.com/85?text=Ulm"><span>Ulm</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/530.png"><span>Ludwigsburg</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://via.placeholder.com/85?text=Oldenburg"><span>Oldenburg</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2263.png"><span>Syntainics MBC</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Fortaleza de Ulm en ataque, débil defensa de Oldenburg. Ulm tiene una racha positiva. Oldenburg ha perdido más partidos recientes. Ulm controla el rebote ofensivo.</b></p>
+                <p><b>Ludwigsburg tiene una sólida defensa, mientras que Syntainics MBC lucha por anotar en momentos cruciales.</b> <b>Los locales son más efectivos en casa.</b> <b>El ataque de Syntainics MBC es inconsistente.</b> <b>Las estadísticas favorecen a Ludwigsburg en rebotes.</b> <b>Presión alta podría ser determinante.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa débil</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Bajo rendimiento en cuarta parte.</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
+        
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">BBL</span>
-                <div class="pred-pill"><span class="text">Victoria de Rostock</span><span class="odd">1.25</span></div>
+                <span class="league-label"><img src="https://media.api-sports.io/basketball/leagues/40.png" width="20" alt="Liga BBL"></span>
+                <div class="pred-pill"><span class="text">Más de 155 PTS</span><span class="odd">1.25</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://via.placeholder.com/85?text=Rostock"><span>Rostock</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/530.png"><span>Ludwigsburg</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://via.placeholder.com/85?text=Bamberg"><span>Bamberg</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2263.png"><span>Syntainics MBC</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Rostock ha sido fuerte en casa. Bamberg con varias lesiones. Rostock tiene mejor eficiencia ofensiva. Bamberg ha perdido sus últimos partidos. Rostock posee un buen porcentaje de tiros.</b></p>
+                <p><b>Ambos equipos tienen un alto promedio de puntos por partido.</b> <b>Históricamente, se han superado los 155 puntos entre ellos.</b> <b>Ofensivas rápidas generan más oportunidades.</b> <b>Sintainics MBC podría esforzarse por anotar más en esta ocasión.</b> <b>Factor local puede influir positivamente.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Lesiones clave</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Problemas defensivos en el perímetro.</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
+
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">BBL</span>
-                <div class="pred-pill"><span class="text">Victoria de Braunschweig</span><span class="odd">1.30</span></div>
+                <span class="league-label"><img src="https://media.api-sports.io/basketball/leagues/40.png" width="20" alt="Liga BBL"></span>
+                <div class="pred-pill"><span class="text">Victoria de Ludwigsburg</span><span class="odd">1.32</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://via.placeholder.com/85?text=Braunschweig"><span>Braunschweig</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/530.png"><span>Ludwigsburg</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://via.placeholder.com/85?text=Wurzburg"><span>Wurzburg</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2263.png"><span>Syntainics MBC</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Braunschweig tiene una racha ganadora. Wurzburg lucha con la defensa. Braunschweig tiene un excelente rendimiento en ataques rápidos. Wurzburg comete muchas faltas.</b></p>
+                <p><b>Ludwigsburg se adapta mejor a su estilo de juego en casa.</b> <b>Frente a un Syntainics MBC que sufre en defensa.</b> <b>Cambio táctico favorecerá a los locales.</b> <b>Fuertes en el tercer cuarto.</b> <b>Factor psicológico también influye a favor.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Faltas defensivas</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Vulnerabilidad en transiciones defensivas.</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
+    
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">BBL</span>
-                <div class="pred-pill"><span class="text">Victoria de Bonn</span><span class="odd">1.25</span></div>
+                <span class="league-label"><img src="https://media.api-sports.io/basketball/leagues/40.png" width="20" alt="Liga BBL"></span>
+                <div class="pred-pill"><span class="text">Victoria de Syntainics MBC</span><span class="odd">1.35</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://via.placeholder.com/85?text=Bonn"><span>Bonn</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/530.png"><span>Ludwigsburg</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://via.placeholder.com/85?text=Vechta"><span>Vechta</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2263.png"><span>Syntainics MBC</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Bonn es fuerte en casa. Vechta tiene un bajo porcentaje de tiros recientes. Bonn defiende bien el perímetro. Vechta depende de tiros de tres.</b></p>
+                <p><b>Syntainics MBC muestra signos de mejora.</b> <b>Combinan estrategia de ataque más eficaz.</b> <b>Ganan ventaja en el juego externo.</b> <b>Estadísticas recientes muestran mejoramiento en defensa.</b> <b>Ludwigsburg podría subestimar su potencial.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Tiro exterior inconsistente</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Lesiones en la plantilla afectan la rotación.</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
+        
         <article class="match-card">
             <header class="match-header">
-                <span class="league-label">ACB</span>
-                <div class="pred-pill"><span class="text">MÁS DE 150 PTS</span><span class="odd">1.25</span></div>
+                <span class="league-label"><img src="https://media.api-sports.io/basketball/leagues/40.png" width="20" alt="Liga BBL"></span>
+                <div class="pred-pill"><span class="text">Menos de 160 PTS</span><span class="odd">1.25</span></div>
             </header>
             <div class="teams-row">
-                <div class="team"><img src="https://via.placeholder.com/85?text=Gran+Canaria"><span>Gran Canaria</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/530.png"><span>Ludwigsburg</span></div>
                 <div class="vs">VS</div>
-                <div class="team"><img src="https://via.placeholder.com/85?text=Bilbao"><span>Bilbao</span></div>
+                <div class="team"><img src="https://media.api-sports.io/basketball/teams/2263.png"><span>Syntainics MBC</span></div>
             </div>
             <div class="neural-box">
                 <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Ambos equipos tienen un alto rendimiento ofensivo. Gran Canaria juega rápido, Bilbao sigue el ritmo. Puntos altos en encuentros previos. Defensa no es fuerte.</b></p>
+                <p><b>Ambos equipos han mostrado rendimientos bajos recientemente.</b> <b>Historial de encuentros directos sugiere menos puntos.</b> <b>Defensas se han fortalecido significativamente.</b> <b>Dificultades para anotar en situaciones de presión.</b> <b>Ritmo de juego más pausado esperado.</b></p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Defensa blanda</footer>
+            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Inconsistencia en el ataque exterior.</footer>
             <div class="progress-bar"><div class="fill"></div></div>
         </article>
+
     </div>
     <a href="https://im.page/cmsportselite" class="vip-button">ACCESO VIP ELITE (3€)</a>
 </body>
