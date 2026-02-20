@@ -1,4 +1,4 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,137 +11,108 @@
         .logo-vip { width: 170px; filter: drop-shadow(0 0 40px rgba(191,149,63,0.5)); margin-bottom: 30px; animation: float 4s ease-in-out infinite; border-radius: 15px; }
         .quantum-pill { border: 1px solid var(--gold); border-radius: 50px; color: var(--gold); font-family: 'Orbitron'; font-size: 0.75rem; padding: 12px 30px; margin-bottom: 60px; text-transform: uppercase; background: rgba(0,0,0,0.8); letter-spacing: 2px; }
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1500px; }
-        .match-card { background: var(--card-bg); border-radius: 30px; padding: 35px; width: 460px; position: relative; display: flex; flex-direction: column; border: 1px solid rgba(191,149,63,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 20px rgba(191,149,63,0.1); transition: 0.4s; }
-        .match-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--gold-grad); border-radius: 30px 30px 0 0; }
+        .match-card { background: var(--card-bg); border-radius: 30px; padding: 35px; width: 460px; position: relative; display: flex; flex-direction: column; border: 1px solid rgba(191,149,63,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 20px rgba(191,149,63,0.1); }
+        .match-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--gold-grad); border-radius: 30px 30px 0 0; }
         .match-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; margin-top: 5px; }
         .league-label { font-family: 'Orbitron'; color: var(--gold); font-size: 0.7rem; font-weight: 900; opacity: 0.7; }
         .pred-pill { display: flex; align-items: center; gap: 10px; }
         .pred-pill .text { color: #fcf6ba; font-family: 'Orbitron'; font-weight: 900; font-size: 0.9rem; text-transform: uppercase; }
-        .pred-pill .odd { border: 1px solid var(--gold); border-radius: 8px; color: #fcf6ba; padding: 4px 15px; font-weight: 900; background: rgba(191, 149, 63, 0.2); }
+        .pred-pill .odd { border: 1px solid var(--gold); border-radius: 8px; color: #fcf6ba; padding: 4px 15px; font-weight: 900; background: rgba(191,149,63,0.2); }
         .teams-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; }
         .team { display: flex; flex-direction: column; align-items: center; width: 130px; }
-        .team img { width: 85px; height: 85px; object-fit: contain; margin-bottom: 15px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); }
+        .team img { width: 85px; height: 85px; object-fit: contain; margin-bottom: 15px; }
         .team span { font-family: 'Orbitron'; font-size: 0.85rem; font-weight: 900; color: #fff; text-align: center; }
         .vs { font-family: 'Orbitron'; color: var(--gold); font-weight: 900; opacity: 0.2; font-size: 1.6rem; }
-        .neural-box { background: rgba(0,0,0,0.4); border: 1px solid rgba(191,149,63,0.2); border-radius: 20px; padding: 25px; margin-bottom: 25px; border-left: 4px solid var(--gold); min-height: 140px; }
-        .neural-box h3 { font-family: 'Orbitron'; color: var(--gold); font-size: 0.6rem; margin-bottom: 12px; border-bottom: 1px solid rgba(191,149,63,0.2); padding-bottom: 5px; display: inline-block; }
+        .neural-box { background: rgba(0,0,0,0.4); border: 1px solid rgba(191,149,63,0.2); border-radius: 20px; padding: 25px; margin-bottom: 25px; border-left: 4px solid var(--gold); }
+        .neural-box h3 { font-family: 'Orbitron'; color: var(--gold); font-size: 0.6rem; margin-bottom: 12px; }
         .neural-box p { font-size: 1rem; color: #cbd5e1; line-height: 1.6; text-align: justify; }
-        .vulnerability-alert { background: rgba(239, 68, 68, 0.1); border-radius: 12px; color: #f87171; font-family: 'Orbitron'; font-weight: 900; font-size: 0.75rem; padding: 15px 25px; width: fit-content; text-transform: uppercase; border: 1px solid rgba(239, 68, 68, 0.2); }
+        .vulnerability-alert { background: rgba(239,68,68,0.1); border-radius: 12px; color: #f87171; font-family: 'Orbitron'; font-weight: 900; font-size: 0.75rem; padding: 15px 25px; border: 1px solid rgba(239,68,68,0.2); }
         .progress-bar { height: 8px; width: 100%; background: rgba(255,255,255,0.05); border-radius: 20px; margin-top: 30px; overflow: hidden; }
-        .progress-bar .fill { height: 100%; width: 94%; background: var(--gold-grad); box-shadow: 0 0 15px rgba(191,149,63,0.3); }
-        .vip-button { background: var(--gold-grad); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 22px 70px; border-radius: 60px; text-decoration: none; margin-top: 60px; font-size: 1.5rem; box-shadow: 0 0 40px rgba(191,149,63,0.4); text-transform: uppercase; }
+        .progress-bar .fill { height: 100%; width: 94%; background: var(--gold-grad); }
+        .vip-button { background: var(--gold-grad); color: #000; font-family: 'Orbitron'; font-weight: 900; padding: 22px 70px; border-radius: 60px; text-decoration: none; margin-top: 60px; font-size: 1.5rem; text-transform: uppercase; }
     </style>
 </head>
 <body>
     <img src="https://raw.githubusercontent.com/cmartificialsistems/cm-sports-elite/main/IMAGENES/logo_vip_elite_gold.png" class="logo-vip">
-    <div class="quantum-pill">ALGORITMO CUÁNTICO DE ÉLITE ACTIVO</div>
+    <div class="quantum-pill">ALGORITMO CUANTICO DE ELITE ACTIVO</div>
     <div class="container">
-        <article class="match-card">
-            <header class="match-header">
-                <span class="league-label">NBA - G League</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Cleveland Charge</span><span class="odd">1.25</span></div>
-            </header>
+
+        <div id="partido-1" class="match-card">
+            <div class="match-header">
+                <span class="league-label">Leaders Cup</span>
+                <div class="pred-pill">
+                    <span class="text">Lyon-Villeurbanne vs Cholet</span>
+                    <span class="odd">1.25</span>
+                </div>
+            </div>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/7507.png"><span>Noblesville Boom</span></div>
-                <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/3169.png"><span>Cleveland Charge</span></div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/26.png" alt="Lyon-Villeurbanne">
+                    <span>Lyon-Villeurbanne</span>
+                </div>
+                <span class="vs">vs</span>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/18.png" alt="Cholet">
+                    <span>Cholet</span>
+                </div>
             </div>
             <div class="neural-box">
-                <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Fortaleza en tiros de 3 puntos vs debilidad en defensa interior.</b></p>
-                <p><b>Mayor eficiencia en rebotes ofensivos vs menor experiencia en partidos clave.</b></p>
-                <p><b> Buenos registros de asistencias vs inconsistencia en la rotación.</b></p>
-                <p><b>Estadísticas de faltas altas vs capacidad de reacción limitada.</b></p>
-                <p><b>Mejor rendimiento local vs fuerza visitante en partidos recientes.</b></p>
+                <h3>Análisis Neural</h3>
+                <p>Lyon-Villeurbanne ha mostrado una mejora significante en sus últimos encuentros. Cholet tiene un historial reciente con dificultades para anotar. Las estadisticas indican que el equipo local mantiene una ventaja en el rebote. Evaluando los partidos anteriores, se estima que Lyon tiene una mayor probabilidad de victoria. El rendimiento en casa de Lyon es sólido.</p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Menor rotación de jugadores clave</footer>
-            <div class="progress-bar"><div class="fill"></div></div>
-        </article>
-        <article class="match-card">
-            <header class="match-header">
-                <span class="league-label">NBA - G League</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Westchester</span><span class="odd">1.30</span></div>
-            </header>
+        </div>
+
+        <div id="partido-2" class="match-card">
+            <div class="match-header">
+                <span class="league-label">IBL</span>
+                <div class="pred-pill">
+                    <span class="text">Dewa United vs Rajawali Medan</span>
+                    <span class="odd">1.25</span>
+                </div>
+            </div>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/275.png"><span>Westchester</span></div>
-                <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/3403.png"><span>Grand Rapids Gold</span></div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/3412.png" alt="Dewa United">
+                    <span>Dewa United</span>
+                </div>
+                <span class="vs">vs</span>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/3413.png" alt="Rajawali Medan">
+                    <span>Rajawali Medan</span>
+                </div>
             </div>
             <div class="neural-box">
-                <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Buena eficacia en el ataque vs debilidad en la defensa exterior.</b></p>
-                <p><b>Control en el ritmo del juego vs falta de cohesión en el equipo visitante.</b></p>
-                <p><b>Mejores estadísticas de tiros libres vs poca profundidad en el banquillo.</b></p>
-                <p><b>Rendimiento superior en casa vs falta de motivación en pista ajena.</b></p>
-                <p><b>Capacidad para forzar errores del rival vs errores en la toma de decisiones.</b></p>
+                <h3>Análisis Neural</h3>
+                <p>Dewa United presenta un buen rendimiento en casa, con una defensa robusta. Rajawali Medan ha tenido problemas de consistencia en su juego. Las estadísticas muestran que Dewa ha anotado más puntos de local. La comparación de los últimos enfrentamientos favorece a Dewa. Cualquier ventaja fuera de casa para Rajawali será crucial.</p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Baja efectividad en tiros lejanos</footer>
-            <div class="progress-bar"><div class="fill"></div></div>
-        </article>
-        <article class="match-card">
-            <header class="match-header">
-                <span class="league-label">NBA - G League</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Delaware Blue Coats</span><span class="odd">1.22</span></div>
-            </header>
+        </div>
+
+        <div id="partido-3" class="match-card">
+            <div class="match-header">
+                <span class="league-label">1. ZLS Women</span>
+                <div class="pred-pill">
+                    <span class="text">Crvena zvezda W vs Ras W</span>
+                    <span class="odd">1.25</span>
+                </div>
+            </div>
             <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/255.png"><span>Delaware Blue Coats</span></div>
-                <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/3170.png"><span>Maine Celtics</span></div>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/3930.png" alt="Crvena zvezda W">
+                    <span>Crvena zvezda W</span>
+                </div>
+                <span class="vs">vs</span>
+                <div class="team">
+                    <img src="https://media.api-sports.io/basketball/teams/6584.png" alt="Ras W">
+                    <span>Ras W</span>
+                </div>
             </div>
             <div class="neural-box">
-                <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Altos porcentajes de acierto vs inseguridad en finales de partido.</b></p>
-                <p><b>Mejor desempeño de la banca vs dependencia de jugadores estrellas.</b></p>
-                <p><b>Fortaleza en el juego defensivo vs vulnerabilidad en ataques rápidos.</b></p>
-                <p><b>Mejor balance en rebotes vs problemas de comunicación en cancha.</b></p>
-                <p><b>Solidez en el tiro de media distancia vs debilidad en el perímetro.</b></p>
+                <h3>Análisis Neural</h3>
+                <p>Crvena zvezda W tiene un sólido récord en la liga y un ataque ofensivo eficiente. Ras W, por el contrario, ha enfrentado dificultades para finalizar las jugadas. Los números sugieren que Crvena zvezda domina en los rebotes. En la última serie de encuentros, Crvena ha salido victorioso en más ocasiones. La ventaja del local puede jugar un papel crucial.</p>
             </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Dificultad para cerrar partidos</footer>
-            <div class="progress-bar"><div class="fill"></div></div>
-        </article>
-        <article class="match-card">
-            <header class="match-header">
-                <span class="league-label">NBA - G League</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Capital City Go-Go</span><span class="odd">1.25</span></div>
-            </header>
-            <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/253.png"><span>Capital City Go-Go</span></div>
-                <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/261.png"><span>Osceola Magic</span></div>
-            </div>
-            <div class="neural-box">
-                <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Gran acierto en tiros bajo presión vs fallo en tiros de larga distancia.</b></p>
-                <p><b>Capacidad para controlar el ritmo del juego vs poca adaptabilidad ante cambios.</b></p>
-                <p><b>Rendimiento sólido defensivo vs debilidad en transición.</b></p>
-                <p><b>Mejor condición física vs falta de recursos alternativos.</b></p>
-                <p><b>Mayor dominio sobre el rebote defensivo vs problemas con faltas.</b></p>
-            </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Fragilidad en el juego interior</footer>
-            <div class="progress-bar"><div class="fill"></div></div>
-        </article>
-        <article class="match-card">
-            <header class="match-header">
-                <span class="league-label">NBA</span>
-                <div class="pred-pill"><span class="text">VICTORIA DE Philadelphia 76ers</span><span class="odd">1.20</span></div>
-            </header>
-            <div class="teams-row">
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/154.png"><span>Philadelphia 76ers</span></div>
-                <div class="vs">VS</div>
-                <div class="team"><img src="https://media.api-sports.io/basketball/teams/132.png"><span>Atlanta Hawks</span></div>
-            </div>
-            <div class="neural-box">
-                <h3>ANÁLISIS DE RED NEURONAL</h3>
-                <p><b>Potente ataque en el perímetro vs vulnerabilidad en defensa exterior.</b></p>
-                <p><b>Rendimiento superior de las estrellas vs falta de profundidad en el banquillo.</b></p>
-                <p><b>Capacidad para forzar pérdidas del rival vs problemas en el control del balón.</b></p>
-                <p><b>Mejor en la pintura vs momentos de debilidad en el tercer cuarto.</b></p>
-                <p><b>Estadísticas positivas en tiros libres vs inconsistencia en el juego colectivo.</b></p>
-            </div>
-            <footer class="vulnerability-alert">DEBILIDAD RIVAL: Inconsistencia en el juego defensivo</footer>
-            <div class="progress-bar"><div class="fill"></div></div>
-        </article>
+        </div>
+
     </div>
-    <a href="https://im.page/cmsportselite" class="vip-button">ACCESO VIP ELITE (3€)</a>
+    <a href="https://im.page/cmsportselite" class="vip-button">ACCESO VIP ELITE (3 euros)</a>
 </body>
 </html>
